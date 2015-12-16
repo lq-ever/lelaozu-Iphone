@@ -48,8 +48,10 @@ namespace lelaozuIphone
 			alarmInfoListParam =  new AlarmInfoListParam(){UserId = Constants.MyInfo.UId};
 			alarmSource = new AlarmTableSource (alarmInfoLists, this, tableView);
 			tableView.Source = alarmSource;
+
 			btn_search.TouchUpInside += (object sender, EventArgs e) => 
 			{
+				btnSearchFlag = true;
 				LoadData();
 			};
 
@@ -99,10 +101,20 @@ namespace lelaozuIphone
 		/// </summary>
 		private  void LoadData()
 		{
+			//在状态栏中设置show网络指示器
+			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
+			if(btnSearchFlag)
+				BTProgressHUD.Show("正在查询报警信息...",-1,ProgressHUD.MaskType.None);
 			pageIndex = 1;
 			UpdateAlarmInfoListParam ();
 			//调用webservice获取数据
 			restSharpRequestUtil.ExcuteAsync ((response) => {
+				InvokeOnMainThread(()=>
+					{
+						BTProgressHUD.Dismiss();
+						//在状态栏中hide使用网络指示器
+						UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+					});
 				if(response.ResponseStatus == RestSharp.ResponseStatus.Completed && response.StatusCode == System.Net.HttpStatusCode.OK)
 				{
 					var result = response.Content;
@@ -118,20 +130,27 @@ namespace lelaozuIphone
 								alarmSource.alarmList.AddRange(alarmInfoLists);
 								tableView.ReloadData();
 							});
-
-
 					}
 					else
 					{
-						
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowToast("获取报警列表信息错误",showToastCentered:false,timeoutMs:1000);
+							});
 					}
 				}
 				else if(response.ResponseStatus == RestSharp.ResponseStatus.TimedOut)
 				{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+						});
 				}
 				else{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+						});
 				}
 				InvokeOnMainThread(()=>
 					{
@@ -217,6 +236,7 @@ namespace lelaozuIphone
 		{
 			if (!IsRefreshing) {
 				IsRefreshing = true;
+				btnSearchFlag = false;
 				LoadData ();
 			} 
 		}
@@ -227,6 +247,7 @@ namespace lelaozuIphone
 		{
 			if (!IsRefreshing) {
 				IsRefreshing = true;
+				btnSearchFlag = false;
 				LoadMoreData ();
 			}
 		}
@@ -256,16 +277,28 @@ namespace lelaozuIphone
 					else
 					{
 						pageIndex--;
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowToast("获取报警列表信息错误",showToastCentered:false,timeoutMs:1000);
+							});
 
 					}
 				}
 				else if(response.ResponseStatus == RestSharp.ResponseStatus.TimedOut)
 				{
 					pageIndex--;
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+						});
 				}
 				else
 				{
 					pageIndex --;
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+						});
 				}
 				InvokeOnMainThread(()=>
 					{

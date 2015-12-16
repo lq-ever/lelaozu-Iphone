@@ -29,6 +29,7 @@ namespace lelaozuIphone
 		{
 			if (healthInfoItem == null)
 				return;
+			BTProgressHUD.Show("正在加载体检详细信息...",-1,ProgressHUD.MaskType.Black);
 			healthScrollView.ContentSize = new CGSize (Constants.Screen_Width, 713);
 			healthScrollView.Bounces = false;
 			healthScrollView.ScrollEnabled = true;
@@ -220,7 +221,7 @@ namespace lelaozuIphone
 //			lbl_UrineRoutineRPO.Text = string.IsNullOrEmpty(healthInfoItem.UrineRoutinePRO)?"-":healthInfoItem.UrineRoutinePRO;
 //			//尿糖(GLU)
 //			lbl_UrineRoutineGLU.Text = string.IsNullOrEmpty(healthInfoItem.UrineRoutineGLU)?"-":healthInfoItem.UrineRoutineGLU;
-				
+			BTProgressHUD.Dismiss();	
 		}
 
 		public override void DidReceiveMemoryWarning ()

@@ -31,22 +31,17 @@ namespace lelaozuIphone
 		{
 			var email = txt_email.Text;
 			if (string.IsNullOrEmpty (email)) {
-//				Toast.MakeText(this,"邮箱不能为空,请输入邮箱",ToastLength.Short).Show();
-//				return ;
+				BTProgressHUD.ShowToast ("邮箱不能为空,请输入邮箱",showToastCentered:false,timeoutMs:1000);
+				return ;
 			}
 			if (!RegexUtil.IsEmail (email)) {
-//				Toast.MakeText(this,"输入邮箱不规范",ToastLength.Short).Show();
-//				return ;
+				BTProgressHUD.ShowToast ("输入邮箱不规范",showToastCentered:false,timeoutMs:1000);
+				return ;
 			}
-//			ProgressDialogUtil.StartProgressDialog(this,"正在保存...");
-//			//检测网络连接
-//			if(!EldYoungUtil.IsConnected(this))
-//			{
-//				Toast.MakeText(this,"网络连接超时,请检测网络",ToastLength.Short).Show();	
-//				ProgressDialogUtil.StopProgressDialog();
-//				return;
-//			}
 
+			BTProgressHUD.Show("正在保存...",-1,ProgressHUD.MaskType.Black);
+			//在状态栏中设置show网络指示器
+			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
 			//调用restapi注册,将用户名、密码信息写
 			var updateMyInfoParam = new UpdateMyInfoParam () {
 				Uid = Constants.MyInfo.UId,ParamType = "Email",ParamValue = email
@@ -78,6 +73,12 @@ namespace lelaozuIphone
 			var restSharpRequestUtil = new RestSharpRequestUtil(updateMyInfoParam.Url,requestParams);
 			restSharpRequestUtil.ExcuteAsync((RestSharp.IRestResponse response) => 
 				{
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.Dismiss();
+							//在状态栏中hide使用网络指示器
+							UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+						});
 					if(response.ResponseStatus == RestSharp.ResponseStatus.Completed && response.StatusCode == System.Net.HttpStatusCode.OK)
 					{
 						//获取并解析返回resultJson获取安全码结果值
@@ -85,46 +86,34 @@ namespace lelaozuIphone
 						var updateMyInfoJson = JsonConvert.DeserializeObject<UpdateMyInfoJson>(result);
 						if(updateMyInfoJson.statuscode == "1")
 						{
-//							RunOnUiThread(()=>
-//								{
-//									Toast.MakeText(this,"保存成功",ToastLength.Short).Show();
-//									Global.MyInfo.Email = email;
-//									ProgressDialogUtil.StopProgressDialog();
-//									this.Finish();
-//									OverridePendingTransition(Android.Resource.Animation.SlideInLeft,Android.Resource.Animation.SlideOutRight);
-//								});
 							InvokeOnMainThread(()=>
 								{
+									BTProgressHUD.ShowSuccessWithStatus("保存成功",1000);
 									Constants.MyInfo.Email = email;
 									this.NavigationController.PopViewController(true);
 								});
 						}
 						else
 						{
-//							RunOnUiThread(()=>
-//								{
-//									Toast.MakeText(this,updateMyInfoJson.message,ToastLength.Short).Show();
-//									ProgressDialogUtil.StopProgressDialog();
-//									return;
-//								});
+							InvokeOnMainThread(()=>
+								{
+									BTProgressHUD.ShowToast(updateMyInfoJson.message,showToastCentered:false,timeoutMs:1000);
+								});
 						}
 					}
 					else if(response.ResponseStatus == RestSharp.ResponseStatus.TimedOut){
-//						RunOnUiThread(()=>
-//							{
-//								Toast.MakeText(this,"网络连接超时，请重试",ToastLength.Short).Show();
-//								ProgressDialogUtil.StopProgressDialog();
-//								return;
-//							});
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+							}
+						);
 					}
 					else
 					{
-//						RunOnUiThread(()=>
-//							{
-//								Toast.MakeText(this,response.StatusDescription,ToastLength.Short).Show();
-//								ProgressDialogUtil.StopProgressDialog();
-//								return;
-//							});
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+							});
 					}
 
 				});

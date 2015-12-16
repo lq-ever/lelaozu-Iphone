@@ -16,10 +16,6 @@ namespace lelaozuIphone
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton btn_add { get; set; }
-
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton btn_Search { get; set; }
 
 		[Outlet]
@@ -32,10 +28,6 @@ namespace lelaozuIphone
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (btn_add != null) {
-				btn_add.Dispose ();
-				btn_add = null;
-			}
 			if (btn_Search != null) {
 				btn_Search.Dispose ();
 				btn_Search = null;

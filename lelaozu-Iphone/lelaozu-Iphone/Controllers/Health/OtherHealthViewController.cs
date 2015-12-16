@@ -51,6 +51,7 @@ namespace lelaozuIphone
 			tableView.Source = healthSource;
 			btn_Search.TouchUpInside += (sender, e) => 
 			{
+				btnSearchFlag = true;
 				LoadData();
 			};
 			#region 配置下拉上拉刷新头部
@@ -88,8 +89,7 @@ namespace lelaozuIphone
 //				txt_MyUser.Text = selectUser.TrueName;
 //			};
 			InitUserPicker ();
-			//第一次进入自动刷新
-			header.BeginRefreshing();
+
 		}
 
 		/// <summary>
@@ -174,9 +174,19 @@ namespace lelaozuIphone
 				IsRefreshing = false;
 				return;
 			}
+			//在状态栏中设置show网络指示器
+			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
+			if(btnSearchFlag)
+				BTProgressHUD.Show("正在查询健康体检信息...",-1,ProgressHUD.MaskType.Black);
 			pageIndex =1;
 			UpdateHealthInfoListParam ();
 			restSharpRequestUtil.ExcuteAsync ((response) => {
+				InvokeOnMainThread(()=>
+					{
+						BTProgressHUD.Dismiss();
+						//在状态栏中hide使用网络指示器
+						UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+					});
 				if(response.ResponseStatus == RestSharp.ResponseStatus.Completed && response.StatusCode == System.Net.HttpStatusCode.OK)
 				{
 					var result = response.Content;
@@ -194,15 +204,24 @@ namespace lelaozuIphone
 					}
 					else
 					{
-
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowToast("查询健康体检信息错误",showToastCentered:false,timeoutMs:1000);
+							});
 					}
 				}
 				else if(response.ResponseStatus == RestSharp.ResponseStatus.TimedOut)
 				{
-
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+						});
 				}
 				else{
-
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+						});
 				}
 				InvokeOnMainThread(()=>
 					{
@@ -278,6 +297,7 @@ namespace lelaozuIphone
 		{
 			if (!IsRefreshing) {
 				IsRefreshing = true;
+				btnSearchFlag = false;
 				LoadData ();
 			} 
 		}
@@ -288,6 +308,7 @@ namespace lelaozuIphone
 		{
 			if (!IsRefreshing) {
 				IsRefreshing = true;
+				btnSearchFlag = false;
 				LoadMoreData ();
 			}
 		}
@@ -321,16 +342,28 @@ namespace lelaozuIphone
 					else
 					{
 						pageIndex --;
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowToast("获取更多体检信息错误",showToastCentered:false,timeoutMs:1000);
+							});
 
 					}
 				}
 				else if(response.ResponseStatus == RestSharp.ResponseStatus.TimedOut)
 				{
 					pageIndex--;
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+						});
 				}
 				else
 				{
 					pageIndex --;
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+						});
 				}
 				InvokeOnMainThread(()=>
 					{

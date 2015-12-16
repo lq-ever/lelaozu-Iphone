@@ -67,22 +67,22 @@ namespace lelaozuIphone
 			var userPwd = txt_Password.Text;
 			if(string.IsNullOrEmpty(userName)||string.IsNullOrEmpty(userPwd))
 			{
-				BTProgressHUD.ShowToast ("用户名或密码不能为空,请填写...",ProgressHUD.ToastPosition.Bottom,1000);
+				BTProgressHUD.ShowToast ("用户名或密码不能为空,请填写...",showToastCentered:false,timeoutMs:1000);
 				return;
 			}
 			if (!RegexUtil.IsValidUserName (userName)) {
 				
-				BTProgressHUD.ShowToast ("请输入正确规范用户名，由中英文、数字、下划线组成",ProgressHUD.ToastPosition.Bottom,1000);
+				BTProgressHUD.ShowToast ("请输入正确规范用户名，由中英文、数字、下划线组成",showToastCentered:false,timeoutMs:1000);
 				return;
 			}
 			if (!RegexUtil.IsPassWord (userPwd)) {
-				BTProgressHUD.ShowToast ( "请输入正确规范密码，由字母、数字和符号两种以上组成",ProgressHUD.ToastPosition.Bottom,1000);
+				BTProgressHUD.ShowToast ( "请输入正确规范密码，由字母、数字和符号两种以上组成",showToastCentered:false,timeoutMs:1000);
 				return;
 			}
-			BTProgressHUD.Show("正在登录中...",-1,ProgressHUD.MaskType.Clear);
-		
+			BTProgressHUD.Show("正在登录中...",-1,ProgressHUD.MaskType.Black);
 			//在状态栏中设置show网络指示器
 			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
+
 			var loginParam = new LoginParam () {
 				LoginName = userName,LoginPwd = userPwd
 			};
@@ -90,6 +90,12 @@ namespace lelaozuIphone
 			SetRestRequestParams (loginParam);
 			var restSharpRequestUtil = new RestSharpRequestUtil (loginParam.Url, requestParams);
 			restSharpRequestUtil.ExcuteAsync ((response) => {
+				InvokeOnMainThread(()=>
+					{
+						BTProgressHUD.Dismiss();
+						//在状态栏中hide使用网络指示器
+						UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+					});
 				if(response.ResponseStatus == RestSharp.ResponseStatus.Completed && response.StatusCode == System.Net.HttpStatusCode.OK)
 				{
 					//获取并解析返回resultJson获取安全码结果值
@@ -115,9 +121,8 @@ namespace lelaozuIphone
 					{
 						InvokeOnMainThread(()=>
 							{
-								BTProgressHUD.ShowToast(loginJson.message,ProgressHUD.ToastPosition.Bottom,1000);
+								BTProgressHUD.ShowToast(loginJson.message,showToastCentered:false,timeoutMs:1000);
 							});
-						
 					}
 					
 				}
@@ -125,7 +130,7 @@ namespace lelaozuIphone
 				{
 					InvokeOnMainThread(()=>
 						{
-							BTProgressHUD.ShowToast("网络超时...",ProgressHUD.ToastPosition.Bottom,1000);
+							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
 						}
 					);
 
@@ -137,10 +142,9 @@ namespace lelaozuIphone
 							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
 						});
 				}
+
 			});
-			BTProgressHUD.Dismiss();
-			//在状态栏中hide使用网络指示器
-			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+
 		}
 
 

@@ -47,14 +47,10 @@ namespace lelaozuIphone
 		/// </summary>
 		private void QuerryBindGuardian(string condition)
 		{
-			//ProgressDialogUtil.StartProgressDialog(this,"正在加载中...");
-			//检测网络连接
-//			if(!EldYoungUtil.IsConnected(this))
-//			{
-//				Toast.MakeText(this,"网络连接超时,请检测网络",ToastLength.Short).Show();
-//				ProgressDialogUtil.StopProgressDialog();
-//				return;
-//			}
+			BTProgressHUD.Show("正在加载中...",-1,ProgressHUD.MaskType.Black);
+			//在状态栏中设置show网络指示器
+			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
+
 			searchGuardianParam.Condition = condition;
 
 			if (!requestParams.ContainsKey ("econdition"))
@@ -81,9 +77,6 @@ namespace lelaozuIphone
 				requestParams.Add ("key", searchGuardianParam.Key);
 			else
 				requestParams ["key"] = searchGuardianParam.Key;
-
-
-
 			//设置restsharprequest
 			if (restSharpRequestUtil == null)
 				restSharpRequestUtil = new RestSharpRequestUtil (searchGuardianParam.Url, requestParams);
@@ -94,9 +87,14 @@ namespace lelaozuIphone
 
 			//调用web服务
 			restSharpRequestUtil.ExcuteAsync ((RestSharp.IRestResponse response) => {
+				InvokeOnMainThread(()=>
+					{
+						BTProgressHUD.Dismiss();
+						//在状态栏中hide使用网络指示器
+						UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+					});
 				if(response.ResponseStatus == RestSharp.ResponseStatus.Completed && response.StatusCode == System.Net.HttpStatusCode.OK)
 				{
-
 					var result = response.Content;
 					var searchGardianlistInfoJson = JsonConvert.DeserializeObject<SearchGuardianListJson>(result);
 					if(searchGardianlistInfoJson.statuscode == "1")
@@ -111,17 +109,24 @@ namespace lelaozuIphone
 					}
 					else
 					{
-						
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowToast("获取会员信息失败",showToastCentered:false,timeoutMs:1000);
+							});
 					}
-
-
 				}
 				else if(response.ResponseStatus == RestSharp.ResponseStatus.TimedOut)
 				{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+						});
 				}
 				else{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+						});
 				}
 			});
 		}

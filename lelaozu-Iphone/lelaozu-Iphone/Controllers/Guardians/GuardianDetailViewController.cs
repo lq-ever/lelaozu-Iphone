@@ -28,6 +28,9 @@ namespace lelaozuIphone
 		{
 			if (string.IsNullOrEmpty (UId))
 				return;
+			//在状态栏中设置show网络指示器
+			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
+			BTProgressHUD.Show("正在加载用户详细数据...",-1,ProgressHUD.MaskType.Black);
 			guardianInfoDetailParam = new GuardianDetailInfoParam (){ Id = UId };
 			if (!requestParams.ContainsKey ("key"))
 				requestParams.Add ("key", guardianInfoDetailParam.Key);
@@ -54,6 +57,12 @@ namespace lelaozuIphone
 			}
 			//调用监护人详情web服务
 			restSharpRequestUtil.ExcuteAsync ((RestSharp.IRestResponse response) => {
+				InvokeOnMainThread(()=>
+					{
+						BTProgressHUD.Dismiss();
+						//在状态栏中hide使用网络指示器
+						UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+					});
 				if(response.ResponseStatus == RestSharp.ResponseStatus.Completed && response.StatusCode == System.Net.HttpStatusCode.OK)
 				{
 
@@ -85,17 +94,26 @@ namespace lelaozuIphone
 					}
 					else
 					{
-						
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowToast("获取用户详情信息失败...",showToastCentered:false,timeoutMs:1000);
+							});
 					}
 
 
 				} 
 				else if(response.ResponseStatus == RestSharp.ResponseStatus.TimedOut)
 				{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+						});
 				}
 				else{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+						});
 				}
 			});
 		}

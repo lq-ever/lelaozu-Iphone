@@ -83,13 +83,24 @@ namespace lelaozuIphone
 					}
 					else
 					{
-						
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowToast("获取监护人列表信息失败...",showToastCentered:false,timeoutMs:1000);
+							});
 					}
 				}
 				else if(response.ResponseStatus == RestSharp.ResponseStatus.TimedOut)
 				{
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+						});
 				}
 				else{
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+						});
 				}
 				InvokeOnMainThread(()=>
 					{
@@ -185,17 +196,29 @@ namespace lelaozuIphone
 					else
 					{
 						pageIndex --;
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowToast("获取更多监护人列表信息出错...",showToastCentered:false,timeoutMs:1000);
+							});
 
 					}
 				}
 				else if(response.ResponseStatus == RestSharp.ResponseStatus.TimedOut)
 				{
 					pageIndex--;
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+						});
 
 				}
 				else
 				{
 					pageIndex --;
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+						});
 				}
 				InvokeOnMainThread(()=>
 					{

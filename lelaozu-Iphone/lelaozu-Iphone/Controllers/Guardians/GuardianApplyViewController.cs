@@ -55,12 +55,6 @@ namespace lelaozuIphone
 		/// </summary>
 		private void LoadData()
 		{
-			//检测网络连接
-//			if(!EldYoungUtil.IsConnected(this))
-//			{
-//				Toast.MakeText(this,"网络连接超时,请检测网络",ToastLength.Short).Show();
-//				return;
-//			}
 			if (!requestParams.ContainsKey ("key"))
 				requestParams.Add ("key", getApplyInfoParam.Key);
 			else
@@ -106,18 +100,27 @@ namespace lelaozuIphone
 					}
 					else
 					{
-						
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowToast("获取监护申请信息失败,稍后在试...",showToastCentered:false,timeoutMs:1000);
+							});
 					}
 
 
 				}
 				else if(response.ResponseStatus == RestSharp.ResponseStatus.TimedOut)
 				{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+						});
 				}
 				else
 				{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+						});
 				}
 				InvokeOnMainThread(()=>
 					{

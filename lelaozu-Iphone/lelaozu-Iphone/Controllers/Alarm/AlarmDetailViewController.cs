@@ -16,7 +16,6 @@ namespace lelaozuIphone
 		private RestSharpRequestUtil restSharpRequestUtil;
 		private Dictionary<string,string> requestParams = new Dictionary<string,string> ();
 		private AlarmInfoDetailParam alarmInfoDetailParam;//请求参数对象
-		private List<AlarmInfoHandDetailItem> alarmInfoHandleDetailLists = new List<AlarmInfoHandDetailItem>();
 
 		public AlarmDetailViewController () : base ("AlarmDetailViewController", null)
 		{
@@ -42,6 +41,10 @@ namespace lelaozuIphone
 		{
 			if (string.IsNullOrEmpty (AlarmId))
 				return;
+			BTProgressHUD.Show("正在加载报警详细数据......",-1,ProgressHUD.MaskType.Black);
+			//在状态栏中设置show网络指示器
+			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
+
 			alarmInfoDetailParam = new AlarmInfoDetailParam (){ AId = AlarmId };
 
 			if (!requestParams.ContainsKey ("key"))
@@ -70,6 +73,12 @@ namespace lelaozuIphone
 			}
 			//调用webservice
 			restSharpRequestUtil.ExcuteAsync ((RestSharp.IRestResponse response) => {
+				InvokeOnMainThread(()=>
+					{
+						BTProgressHUD.Dismiss();
+						//在状态栏中hide使用网络指示器
+						UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+					});
 				if(response.ResponseStatus == ResponseStatus.Completed && response.StatusCode == System.Net.HttpStatusCode.OK)
 				{
 
@@ -120,18 +129,29 @@ namespace lelaozuIphone
 					}
 					else
 					{
-						
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowToast("获取报警详情信息错误...",showToastCentered:false,timeoutMs:1000);
+							}
+						);
 					}
 
 
 				}
 				else if(response.ResponseStatus == ResponseStatus.TimedOut)
 				{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+						}
+					);
 				}
 				else
 				{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+						});
 				}
 
 
