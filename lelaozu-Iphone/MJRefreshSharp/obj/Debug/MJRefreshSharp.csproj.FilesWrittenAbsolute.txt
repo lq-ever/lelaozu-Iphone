@@ -1,0 +1,6 @@
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefreshSharp/obj/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefreshSharp/obj/Debug/MJRefreshSharp.Resources.arrow@2x.png
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefreshSharp/bin/Debug/MJRefreshSharp.dll.mdb
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefreshSharp/bin/Debug/MJRefreshSharp.dll
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefreshSharp/obj/Debug/MJRefreshSharp.dll
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefreshSharp/obj/Debug/MJRefreshSharp.dll.mdb

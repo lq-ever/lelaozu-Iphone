@@ -436,7 +436,7 @@
     <BundleResource Include="Resources\setting.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MJRefreshSharp-master\MJRefreshSharp\MJRefreshSharp.csproj">
+    <ProjectReference Include="..\MJRefreshSharp\MJRefreshSharp.csproj">
       <Project>{64719EB4-D897-4CBF-AEFA-A2C85B60F04B}</Project>
       <Name>MJRefreshSharp</Name>
     </ProjectReference>
