@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{E854B3FC-FBDF-45D8-B10A-5E419A494FB6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>lelaozuIphone</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>lelaozu-Iphone</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer: Yuan Wang (23WBZ773NB)</CodesignKey>
+    <MtouchProfiling>true</MtouchProfiling>
+    <CodesignProvision>8f2567a4-ee7e-4d06-bc19-d138ff74787b</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchFloat32>true</MtouchFloat32>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignKey>iPhone Developer: Yuan Wang (23WBZ773NB)</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchProfiling>true</MtouchProfiling>
+    <CodesignProvision>8f2567a4-ee7e-4d06-bc19-d138ff74787b</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\Xamarin.iOS10\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Images.imageset\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <InterfaceDefinition Include="UserGuiderViewController.xib" />
+    <InterfaceDefinition Include="LoginViewController.xib" />
+    <InterfaceDefinition Include="Main_AlarmController.xib" />
+    <InterfaceDefinition Include="Controllers\Health\HealthDetailViewController.xib" />
+    <InterfaceDefinition Include="Main_GuardianController.xib" />
+    <InterfaceDefinition Include="Main_HealthController.xib" />
+    <InterfaceDefinition Include="Controllers\Health\MyHealthViewController.xib" />
+    <InterfaceDefinition Include="Controllers\Health\OtherHealthViewController.xib" />
+    <InterfaceDefinition Include="CustomTableViewCell\HealthListTableViewCell.xib" />
+    <InterfaceDefinition Include="Controllers\Alarm\MyAlarmViewController.xib" />
+    <InterfaceDefinition Include="Controllers\Alarm\AlarmDetailViewController.xib" />
+    <InterfaceDefinition Include="Controllers\Alarm\AlarmLocationViewController.xib" />
+    <InterfaceDefinition Include="CustomTableViewCell\AlarmListTableViewCell.xib" />
+    <InterfaceDefinition Include="Controllers\Alarm\OtherAlarmViewController.xib" />
+    <InterfaceDefinition Include="CustomTableViewCell\AlarmHandleCell.xib" />
+    <InterfaceDefinition Include="Controllers\Guardians\MyGuardianViewController.xib" />
+    <InterfaceDefinition Include="Controllers\Guardians\OtherGuardianViewController.xib" />
+    <InterfaceDefinition Include="CustomTableViewCell\GuardianListCell.xib" />
+    <InterfaceDefinition Include="Controllers\Guardians\GuardianDetailViewController.xib" />
+    <InterfaceDefinition Include="Controllers\Guardians\GuardianApplyViewController.xib" />
+    <InterfaceDefinition Include="Controllers\Guardians\BindGuardianViewController.xib" />
+    <InterfaceDefinition Include="CustomTableViewCell\BindGuardianTableViewCell.xib" />
+    <InterfaceDefinition Include="CustomTableViewCell\GuardianApplyTableViewCell.xib" />
+    <InterfaceDefinition Include="Controllers\My\AccountSecurityViewController.xib" />
+    <InterfaceDefinition Include="Controllers\My\AdviceViewController.xib" />
+    <InterfaceDefinition Include="Controllers\My\PersonInfoViewController.xib" />
+    <InterfaceDefinition Include="Controllers\My\PersonInfoBirthViewController.xib" />
+    <InterfaceDefinition Include="Controllers\My\PersonInfoEmailViewController.xib" />
+    <InterfaceDefinition Include="Controllers\My\PersonInfoFixedPhoneViewController.xib" />
+    <InterfaceDefinition Include="Controllers\My\PersonInfoGenderViewController.xib" />
+    <InterfaceDefinition Include="Controllers\My\PersonInfoIdCardNoViewController.xib" />
+    <InterfaceDefinition Include="Main_MyController.xib" />
+    <InterfaceDefinition Include="CustomTableViewCell\MainMyTableViewCell.xib" />
+    <InterfaceDefinition Include="CustomTableViewCell\PersonInfoTableViewCell.xib" />
+    <InterfaceDefinition Include="Controllers\My\PersonInfoCardLocationViewController.xib" />
+    <InterfaceDefinition Include="Controllers\My\PersonInfoTrueNameViewController.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Main_HealthController.cs" />
+    <Compile Include="Main_HealthController.designer.cs">
+      <DependentUpon>Main_HealthController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserGuiderViewController.cs" />
+    <Compile Include="UserGuiderViewController.designer.cs">
+      <DependentUpon>UserGuiderViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginViewController.cs" />
+    <Compile Include="LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Utils\RegexUtil.cs" />
+    <Compile Include="Utils\EnDeCryptUtil.cs" />
+    <Compile Include="Main_AlarmController.cs" />
+    <Compile Include="Main_AlarmController.designer.cs">
+      <DependentUpon>Main_AlarmController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\RestSharpRequestUtil.cs" />
+    <Compile Include="Model\PersonInfoItem.cs" />
+    <Compile Include="Common\Enum.cs" />
+    <Compile Include="Model\Alarm\AlarmInfoDetailItem.cs" />
+    <Compile Include="Model\Alarm\AlarmInfoHandDetailItem.cs" />
+    <Compile Include="Model\Alarm\AlarmInfoListItem.cs" />
+    <Compile Include="Model\AdviceRecordInfoItem.cs" />
+    <Compile Include="Model\Alarm\AlarmTypeItem.cs" />
+    <Compile Include="Model\Alarm\AllMyUserListItem.cs" />
+    <Compile Include="Model\Guardian\GetApplyInfoListItem.cs" />
+    <Compile Include="Model\Guardian\GuardianDetailInfoItem.cs" />
+    <Compile Include="Model\Guardian\GuardianInfoListItem.cs" />
+    <Compile Include="Model\Guardian\SearchGuardianListItem.cs" />
+    <Compile Include="Model\Health\HealthInfoItem.cs" />
+    <Compile Include="Model\Health\HealthStand.cs" />
+    <Compile Include="Json\BaseJson.cs" />
+    <Compile Include="Json\LoginJson.cs" />
+    <Compile Include="Json\AdviceRecordInfoJson.cs" />
+    <Compile Include="Json\AdviceWriteJson.cs" />
+    <Compile Include="Json\ApplyForGuardianJson.cs" />
+    <Compile Include="Json\ExamineBundGuardianJson.cs" />
+    <Compile Include="Json\GetAppVersionJson.cs" />
+    <Compile Include="Json\GetApplyInfoJson.cs" />
+    <Compile Include="Json\GetMyInfoJson.cs" />
+    <Compile Include="Json\GuardianDetailInfoJson.cs" />
+    <Compile Include="Json\GuardianInfoJson.cs" />
+    <Compile Include="Json\HeadImgJson.cs" />
+    <Compile Include="Json\RegisterJson.cs" />
+    <Compile Include="Json\SearchAlarmDeatilInfoJson.cs" />
+    <Compile Include="Json\SearchAlarmInfoJson.cs" />
+    <Compile Include="Json\SearchAllMyUserJson.cs" />
+    <Compile Include="Json\SearchGuardianListJson.cs" />
+    <Compile Include="Json\SearchHealthInfoJson.cs" />
+    <Compile Include="Json\SendCodeJson.cs" />
+    <Compile Include="Json\SetPasswordJson.cs" />
+    <Compile Include="Json\SmsJson.cs" />
+    <Compile Include="Json\UnBindGuardianJson.cs" />
+    <Compile Include="Json\UpdateMyInfoJson.cs" />
+    <Compile Include="Json\UpdatePersonInfoJson.cs" />
+    <Compile Include="Param\BaseParam.cs" />
+    <Compile Include="Param\LoginParam.cs" />
+    <Compile Include="Param\AdviceRecordInfoListParam.cs" />
+    <Compile Include="Param\AdviceWriteParam.cs" />
+    <Compile Include="Param\AlarmInfoDetailParam.cs" />
+    <Compile Include="Param\AlarmInfoListParam.cs" />
+    <Compile Include="Param\ApplyBindGuardianParam.cs" />
+    <Compile Include="Param\ExamineBundGuardianParam.cs" />
+    <Compile Include="Param\GetAppVersionParam.cs" />
+    <Compile Include="Param\GetApplyInfoParam.cs" />
+    <Compile Include="Param\GetMyInfoParam.cs" />
+    <Compile Include="Param\GuardianDetailInfoParam.cs" />
+    <Compile Include="Param\GuardianMeInfoListParam.cs" />
+    <Compile Include="Param\HeadImgPostParam.cs" />
+    <Compile Include="Param\MineGuardianInfoListParam.cs" />
+    <Compile Include="Param\ModiyPasswordParam.cs" />
+    <Compile Include="Param\RegisterInfoParam.cs" />
+    <Compile Include="Param\SearchAllMyUserParam.cs" />
+    <Compile Include="Param\SearchGuardianParam.cs" />
+    <Compile Include="Param\SearchHealthInforParam.cs" />
+    <Compile Include="Param\SendCodeParam.cs" />
+    <Compile Include="Param\SmsInfoParam.cs" />
+    <Compile Include="Param\UnBindGuardianParam.cs" />
+    <Compile Include="Param\UpdateMyInfoParam.cs" />
+    <Compile Include="Param\UpdatePersonInfoParam.cs" />
+    <Compile Include="MainTabBarController.cs" />
+    <Compile Include="External\BTProgressHUD\ProgressHUD.cs" />
+    <Compile Include="External\BTProgressHUD\NSObjectExtensions.cs" />
+    <Compile Include="External\BTProgressHUD\Ring.cs" />
+    <Compile Include="External\BTProgressHUD\BTProgressHUD.cs" />
+    <Compile Include="Main_GuardianController.cs" />
+    <Compile Include="Main_GuardianController.designer.cs">
+      <DependentUpon>Main_GuardianController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Health\MyHealthViewController.cs" />
+    <Compile Include="Controllers\Health\MyHealthViewController.designer.cs">
+      <DependentUpon>MyHealthViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Health\OtherHealthViewController.cs" />
+    <Compile Include="Controllers\Health\OtherHealthViewController.designer.cs">
+      <DependentUpon>OtherHealthViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomTableViewCell\HealthListTableViewCell.cs" />
+    <Compile Include="CustomTableViewCell\HealthListTableViewCell.designer.cs">
+      <DependentUpon>HealthListTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\HealthTableSource.cs" />
+    <Compile Include="Custom\UserPickerModel.cs" />
+    <Compile Include="Controllers\Health\HealthDetailViewController.cs" />
+    <Compile Include="Controllers\Health\HealthDetailViewController.designer.cs">
+      <DependentUpon>HealthDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Alarm\MyAlarmViewController.cs" />
+    <Compile Include="Controllers\Alarm\MyAlarmViewController.designer.cs">
+      <DependentUpon>MyAlarmViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Alarm\OtherAlarmViewController.cs" />
+    <Compile Include="Controllers\Alarm\OtherAlarmViewController.designer.cs">
+      <DependentUpon>OtherAlarmViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Alarm\AlarmLocationViewController.cs" />
+    <Compile Include="Controllers\Alarm\AlarmLocationViewController.designer.cs">
+      <DependentUpon>AlarmLocationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomTableViewCell\AlarmListTableViewCell.cs" />
+    <Compile Include="CustomTableViewCell\AlarmListTableViewCell.designer.cs">
+      <DependentUpon>AlarmListTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\AlarmTableSource.cs" />
+    <Compile Include="Utils\FormatUtil.cs" />
+    <Compile Include="Custom\AlarmTypePickerModel.cs" />
+    <Compile Include="Custom\CustomPickerModel.cs" />
+    <Compile Include="Controllers\Alarm\AlarmDetailViewController.cs" />
+    <Compile Include="Controllers\Alarm\AlarmDetailViewController.designer.cs">
+      <DependentUpon>AlarmDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomTableViewCell\AlarmHandleCell.cs" />
+    <Compile Include="CustomTableViewCell\AlarmHandleCell.designer.cs">
+      <DependentUpon>AlarmHandleCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\AlarmHandleSource.cs" />
+    <Compile Include="Controllers\Guardians\MyGuardianViewController.cs" />
+    <Compile Include="Controllers\Guardians\MyGuardianViewController.designer.cs">
+      <DependentUpon>MyGuardianViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Guardians\OtherGuardianViewController.cs" />
+    <Compile Include="Controllers\Guardians\OtherGuardianViewController.designer.cs">
+      <DependentUpon>OtherGuardianViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomTableViewCell\GuardianListCell.cs" />
+    <Compile Include="CustomTableViewCell\GuardianListCell.designer.cs">
+      <DependentUpon>GuardianListCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\GuardianListTableSource.cs" />
+    <Compile Include="Controllers\Guardians\GuardianDetailViewController.cs" />
+    <Compile Include="Controllers\Guardians\GuardianDetailViewController.designer.cs">
+      <DependentUpon>GuardianDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Guardians\GuardianApplyViewController.cs" />
+    <Compile Include="Controllers\Guardians\GuardianApplyViewController.designer.cs">
+      <DependentUpon>GuardianApplyViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Guardians\BindGuardianViewController.cs" />
+    <Compile Include="Controllers\Guardians\BindGuardianViewController.designer.cs">
+      <DependentUpon>BindGuardianViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomTableViewCell\BindGuardianTableViewCell.cs" />
+    <Compile Include="CustomTableViewCell\BindGuardianTableViewCell.designer.cs">
+      <DependentUpon>BindGuardianTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\BindGuardianTableSource.cs" />
+    <Compile Include="CustomTableViewCell\GuardianApplyTableViewCell.cs" />
+    <Compile Include="CustomTableViewCell\GuardianApplyTableViewCell.designer.cs">
+      <DependentUpon>GuardianApplyTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\GuardianApplyTableSource.cs" />
+    <Compile Include="Controllers\My\AccountSecurityViewController.cs" />
+    <Compile Include="Controllers\My\AccountSecurityViewController.designer.cs">
+      <DependentUpon>AccountSecurityViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\My\AdviceViewController.cs" />
+    <Compile Include="Controllers\My\AdviceViewController.designer.cs">
+      <DependentUpon>AdviceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\My\PersonInfoViewController.cs" />
+    <Compile Include="Controllers\My\PersonInfoViewController.designer.cs">
+      <DependentUpon>PersonInfoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\My\PersonInfoBirthViewController.cs" />
+    <Compile Include="Controllers\My\PersonInfoBirthViewController.designer.cs">
+      <DependentUpon>PersonInfoBirthViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\My\PersonInfoEmailViewController.cs" />
+    <Compile Include="Controllers\My\PersonInfoEmailViewController.designer.cs">
+      <DependentUpon>PersonInfoEmailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\My\PersonInfoFixedPhoneViewController.cs" />
+    <Compile Include="Controllers\My\PersonInfoFixedPhoneViewController.designer.cs">
+      <DependentUpon>PersonInfoFixedPhoneViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\My\PersonInfoGenderViewController.cs" />
+    <Compile Include="Controllers\My\PersonInfoGenderViewController.designer.cs">
+      <DependentUpon>PersonInfoGenderViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\My\PersonInfoIdCardNoViewController.cs" />
+    <Compile Include="Controllers\My\PersonInfoIdCardNoViewController.designer.cs">
+      <DependentUpon>PersonInfoIdCardNoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomTableViewCell\MainMyTableViewCell.cs" />
+    <Compile Include="CustomTableViewCell\MainMyTableViewCell.designer.cs">
+      <DependentUpon>MainMyTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\FuncTypeControllerFactory.cs" />
+    <Compile Include="CustomTableViewCell\PersonInfoTableViewCell.cs" />
+    <Compile Include="CustomTableViewCell\PersonInfoTableViewCell.designer.cs">
+      <DependentUpon>PersonInfoTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_MyController.cs" />
+    <Compile Include="Main_MyController.designer.cs">
+      <DependentUpon>Main_MyController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\PersonInfoTableSource.cs" />
+    <Compile Include="Controllers\My\PersonInfoCardLocationViewController.cs" />
+    <Compile Include="Controllers\My\PersonInfoCardLocationViewController.designer.cs">
+      <DependentUpon>PersonInfoCardLocationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\My\PersonInfoTrueNameViewController.cs" />
+    <Compile Include="Controllers\My\PersonInfoTrueNameViewController.designer.cs">
+      <DependentUpon>PersonInfoTrueNameViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Setting.bundle\" />
+    <Folder Include="Common\" />
+    <Folder Include="Model\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Controllers\Health\" />
+    <Folder Include="Controllers\Alarm\" />
+    <Folder Include="Controllers\Guardians\" />
+    <Folder Include="Model\Guardian\" />
+    <Folder Include="Model\Health\" />
+    <Folder Include="Json\" />
+    <Folder Include="Param\" />
+    <Folder Include="External\" />
+    <Folder Include="External\BTProgressHUD\" />
+    <Folder Include="CustomTableViewCell\" />
+    <Folder Include="Custom\" />
+    <Folder Include="Controllers\My\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images.xcassets\Images.imageset\Root.plist" />
+    <BundleResource Include="Resources\guider1.png" />
+    <BundleResource Include="Resources\guider2.png" />
+    <BundleResource Include="Resources\guider3.png" />
+    <BundleResource Include="Resources\guider4.png" />
+    <BundleResource Include="Resources\ic_launch.png" />
+    <BundleResource Include="Resources\ic_menu_alarm_selected.png" />
+    <BundleResource Include="Resources\ic_menu_guardian_selected.png" />
+    <BundleResource Include="Resources\ic_menu_health_selected.png" />
+    <BundleResource Include="Resources\ic_menu_mine_selected.png" />
+    <BundleResource Include="Resources\ic_menu_alarm_normal.png" />
+    <BundleResource Include="Resources\ic_menu_guardian_normal.png" />
+    <BundleResource Include="Resources\ic_menu_health_normal.png" />
+    <BundleResource Include="Resources\ic_menu_mine_normal.png" />
+    <BundleResource Include="Resources\error.png" />
+    <BundleResource Include="Resources\error%402x.png" />
+    <BundleResource Include="Resources\error_7.png" />
+    <BundleResource Include="Resources\error_7%402x.png" />
+    <BundleResource Include="Resources\success.png" />
+    <BundleResource Include="Resources\success%402x.png" />
+    <BundleResource Include="Resources\success_7.png" />
+    <BundleResource Include="Resources\success_7%402x.png" />
+    <BundleResource Include="Resources\uparrow.png" />
+    <BundleResource Include="Resources\ic_basicInformation.png" />
+    <BundleResource Include="Resources\ic_sex_man.png" />
+    <BundleResource Include="Resources\ic_sex_woman.png" />
+    <BundleResource Include="Resources\ic_medicalHistory.png" />
+    <BundleResource Include="Resources\ic_myInfo_advision_jianyi.png" />
+    <BundleResource Include="Resources\ic_myInfo_advision_qita.png" />
+    <BundleResource Include="Resources\ic_myInfo_advision_tousu.png" />
+    <BundleResource Include="Resources\ic_myInfo_advision_zixun.png" />
+    <BundleResource Include="Resources\ic_myInfomation_aboutUs.png" />
+    <BundleResource Include="Resources\ic_myInfomation_accountSecurity.png" />
+    <BundleResource Include="Resources\ic_myInfomation_advice.png" />
+    <BundleResource Include="Resources\ic_myInfomation_cacheRemover.png" />
+    <BundleResource Include="Resources\ic_myInfomation_call.png" />
+    <BundleResource Include="Resources\ic_myInfomation_message.png" />
+    <BundleResource Include="Resources\ic_myInfomation_personalData.png" />
+    <BundleResource Include="Resources\ic_myInfomation_phone.png" />
+    <BundleResource Include="Resources\ic_myInfomation_userName.png" />
+    <BundleResource Include="Resources\ic_myInfomation_versionDetection.png" />
+    <BundleResource Include="Resources\myInfomation_headImage.png" />
+    <BundleResource Include="Resources\myInfomation_setup_aboutus_logo.png" />
+    <BundleResource Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MJRefreshSharp-master\MJRefreshSharp\MJRefreshSharp.csproj">
+      <Project>{64719EB4-D897-4CBF-AEFA-A2C85B60F04B}</Project>
+      <Name>MJRefreshSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

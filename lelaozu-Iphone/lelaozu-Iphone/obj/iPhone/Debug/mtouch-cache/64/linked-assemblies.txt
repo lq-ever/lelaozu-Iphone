@@ -1,0 +1,13 @@
+/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/mtouch-cache/64/Link/System.Runtime.Serialization.dll
+/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/mtouch-cache/64/Link/System.dll
+/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/mtouch-cache/64/Link/System.Xml.dll
+/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/mtouch-cache/64/Link/Mono.Dynamic.Interpreter.dll
+/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/mtouch-cache/64/Link/lelaozu-Iphone.exe
+/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/mtouch-cache/64/Link/RestSharp.dll
+/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/mtouch-cache/64/Link/Newtonsoft.Json.dll
+/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/mtouch-cache/64/Link/System.Xml.Linq.dll
+/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/mtouch-cache/64/Link/Xamarin.iOS.dll
+/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/mtouch-cache/64/Link/MJRefreshSharp.dll
+/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/mtouch-cache/64/Link/System.Core.dll
+/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/mtouch-cache/64/Link/mscorlib.dll
+/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/mtouch-cache/64/Link/System.ServiceModel.Internals.dll
