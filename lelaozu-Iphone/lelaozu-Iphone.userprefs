@@ -1,28 +1,9 @@
 ﻿<Properties StartupItem="lelaozu-Iphone/lelaozu-Iphone.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.9.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/External/BTProgressHUD/ProgressHUD.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/Controllers/Guardians/BindGuardianViewController.cs">
     <Files>
-      <File FileName="lelaozu-Iphone/Main_MyController.cs" Line="1" Column="1" />
-      <File FileName="lelaozu-Iphone/Custom/GuardianListTableSource.cs" Line="1" Column="1" />
-      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="75" Column="42" />
-      <File FileName="lelaozu-Iphone/External/BTProgressHUD/BTProgressHUD.cs" Line="15" Column="19" />
-      <File FileName="lelaozu-Iphone/External/BTProgressHUD/ProgressHUD.cs" Line="986" Column="8" />
+      <File FileName="lelaozu-Iphone/Controllers/Guardians/BindGuardianViewController.cs" Line="6" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="lelaozu-Iphone" expanded="True">
-            <Node name="lelaozu-Iphone" expanded="True">
-              <Node name="External" expanded="True">
-                <Node name="BTProgressHUD" expanded="True">
-                  <Node name="ProgressHUD.cs" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -1,4 +1,4 @@
-﻿// WARNING
+// WARNING
 //
 // This file has been generated automatically by Xamarin Studio from the outlets and
 // actions declared in your storyboard file.
@@ -14,9 +14,24 @@ namespace lelaozuIphone
 	[Register ("PersonInfoTrueNameViewController")]
 	partial class PersonInfoTrueNameViewController
 	{
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btn_save { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextField txt_trueName { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (btn_save != null) {
+				btn_save.Dispose ();
+				btn_save = null;
+			}
+			if (txt_trueName != null) {
+				txt_trueName.Dispose ();
+				txt_trueName = null;
+			}
 		}
 	}
 }
-

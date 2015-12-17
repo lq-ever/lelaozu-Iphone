@@ -27,7 +27,7 @@
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer: Yuan Wang (23WBZ773NB)</CodesignKey>
     <MtouchProfiling>true</MtouchProfiling>
-    <CodesignProvision>8f2567a4-ee7e-4d06-bc19-d138ff74787b</CodesignProvision>
+    <CodesignProvision>e30a50db-8e8c-40c3-ab3b-9e192ba9b814</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>

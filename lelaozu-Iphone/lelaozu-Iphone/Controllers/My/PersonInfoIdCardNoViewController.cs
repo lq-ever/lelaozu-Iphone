@@ -21,6 +21,7 @@ namespace lelaozuIphone
 			txt_idCardNo.Text = FormatUtil.StrVaueFormat (Constants.MyInfo.IDNumber);
 			btn_save.TouchUpInside += (sender, e) => 
 			{
+				Save();
 			};
 		}
 		/// <summary>

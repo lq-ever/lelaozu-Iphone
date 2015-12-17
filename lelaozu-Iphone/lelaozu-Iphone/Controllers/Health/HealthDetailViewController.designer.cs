@@ -96,11 +96,7 @@ namespace lelaozuIphone
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel lbl_BloodPressureParaOne { get; set; }
-
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel lbl_BloodPressureParaTwo { get; set; }
+		UILabel lbl_BloodPressurePara { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -120,11 +116,7 @@ namespace lelaozuIphone
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel lbl_height { get; set; }
-
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel lbl_Height { get; set; }
+		UILabel lbl_HeightWeight { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -152,11 +144,11 @@ namespace lelaozuIphone
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel lbl_Weight { get; set; }
+		UILabel tv_UrineRoutineKET { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel tv_UrineRoutineKET { get; set; }
+		UIView view_ncg { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
@@ -240,13 +232,9 @@ namespace lelaozuIphone
 				lbl_BloodOxygenParaOne.Dispose ();
 				lbl_BloodOxygenParaOne = null;
 			}
-			if (lbl_BloodPressureParaOne != null) {
-				lbl_BloodPressureParaOne.Dispose ();
-				lbl_BloodPressureParaOne = null;
-			}
-			if (lbl_BloodPressureParaTwo != null) {
-				lbl_BloodPressureParaTwo.Dispose ();
-				lbl_BloodPressureParaTwo = null;
+			if (lbl_BloodPressurePara != null) {
+				lbl_BloodPressurePara.Dispose ();
+				lbl_BloodPressurePara = null;
 			}
 			if (lbl_BMI != null) {
 				lbl_BMI.Dispose ();
@@ -264,13 +252,9 @@ namespace lelaozuIphone
 				lbl_HeartRate.Dispose ();
 				lbl_HeartRate = null;
 			}
-			if (lbl_height != null) {
-				lbl_height.Dispose ();
-				lbl_height = null;
-			}
-			if (lbl_Height != null) {
-				lbl_Height.Dispose ();
-				lbl_Height = null;
+			if (lbl_HeightWeight != null) {
+				lbl_HeightWeight.Dispose ();
+				lbl_HeightWeight = null;
 			}
 			if (lbl_TestTime != null) {
 				lbl_TestTime.Dispose ();
@@ -296,13 +280,13 @@ namespace lelaozuIphone
 				lbl_UrineRoutineWBC.Dispose ();
 				lbl_UrineRoutineWBC = null;
 			}
-			if (lbl_Weight != null) {
-				lbl_Weight.Dispose ();
-				lbl_Weight = null;
-			}
 			if (tv_UrineRoutineKET != null) {
 				tv_UrineRoutineKET.Dispose ();
 				tv_UrineRoutineKET = null;
+			}
+			if (view_ncg != null) {
+				view_ncg.Dispose ();
+				view_ncg = null;
 			}
 		}
 	}

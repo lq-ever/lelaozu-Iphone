@@ -20,7 +20,7 @@ namespace lelaozuIphone
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "个人信息";
 
-			LoadData ();
+			//LoadData ();
 			tableView.Source = new PersonInfoTableSource (this);
 		   
 		}
@@ -30,6 +30,9 @@ namespace lelaozuIphone
 		/// </summary>
 		private void LoadData()
 		{
+			sectionOneInfoLists.Clear ();
+			sectionTwoInfoLists.Clear ();
+			secitonThreeInfoLists.Clear ();
 			//sectionOne
 			sectionOneInfoLists.Add (new InfoItem (){Title= "用户名" ,TitleValue = Constants.MyInfo.UserName,IsSkip = false});
 			sectionOneInfoLists.Add (new InfoItem (){Title ="真实姓名",TitleValue = FormatUtil.StrVaueFormat(Constants.MyInfo.TrueName),IsSkip = true,FuncType= FuncType.PersonInfoTrueName});
@@ -56,9 +59,14 @@ namespace lelaozuIphone
 			sectionTwoInfoLists.Add (new InfoItem (){ Title = "电子邮箱",TitleValue = FormatUtil.StrVaueFormat(Constants.MyInfo.Email),IsSkip = true,FuncType = FuncType.PersonInfoEmail});
 			//sectionThree
 			secitonThreeInfoLists.Add(new InfoItem(){Title="身份证所在地",TitleValue=FormatUtil.StrVaueFormat(Constants.MyInfo.IDAddress),IsSkip = true,FuncType = FuncType.PersonInfoCardLocation});
-
+			tableView.ReloadData ();
 		}
 
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (animated);
+			LoadData ();
+		}
 		public override void DidReceiveMemoryWarning ()
 		{
 			base.DidReceiveMemoryWarning ();

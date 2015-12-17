@@ -17,11 +17,7 @@ namespace lelaozuIphone
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
-
 			this.NavigationItem.Title="体检详情";
-
-			healthScrollView.BackgroundColor = UIColor.LightTextColor;
-
 			LoadData ();
 		}
 
@@ -30,16 +26,20 @@ namespace lelaozuIphone
 			if (healthInfoItem == null)
 				return;
 			BTProgressHUD.Show("正在加载体检详细信息...",-1,ProgressHUD.MaskType.Black);
-			healthScrollView.ContentSize = new CGSize (Constants.Screen_Width, 713);
-			healthScrollView.Bounces = false;
+			healthScrollView.ContentSize = new CGSize (Constants.Screen_Width, view_ncg.Frame.Y+view_ncg.Frame.Height+10);
+			healthScrollView.Bounces = true;
 			healthScrollView.ScrollEnabled = true;
 			healthScrollView.ShowsVerticalScrollIndicator = true;
+			healthScrollView.BackgroundColor = UIColor.LightGray;
+			Console.WriteLine (healthScrollView.Frame.Y);
+
 
 			//身体质量指数
 			lbl_TestTime.Text = string.IsNullOrEmpty (healthInfoItem.TestTime) ? "-" : Convert.ToDateTime(healthInfoItem.TestTime).ToString("yyyy-MM-dd HH:mm:ss");
-
-			lbl_Height.Text = string.IsNullOrEmpty (healthInfoItem.Height) ? "-" : healthInfoItem.Height+"cm/";
-			lbl_Weight.Text = string.IsNullOrEmpty (healthInfoItem.Weight) ? "-" : healthInfoItem.Weight+"kg";
+//
+//			lbl_Height.Text = string.IsNullOrEmpty (healthInfoItem.Height) ? "-" : healthInfoItem.Height+"cm/";
+//			lbl_Weight.Text = string.IsNullOrEmpty (healthInfoItem.Weight) ? "-" : healthInfoItem.Weight+"kg";
+			lbl_HeightWeight.Text = (string.IsNullOrEmpty (healthInfoItem.Height) ? "-/" : healthInfoItem.Height+"cm/")+(string.IsNullOrEmpty (healthInfoItem.Weight) ? "-" : healthInfoItem.Weight+"kg");
 			if (!string.IsNullOrEmpty (healthInfoItem.Height) && !string.IsNullOrEmpty (healthInfoItem.Weight)) {
 				var bmi = Convert.ToDouble (healthInfoItem.Weight) / ((Convert.ToDouble (healthInfoItem.Height) / 100) * (Convert.ToDouble (healthInfoItem.Height) / 100));
 				lbl_BMI.Text = string.Format ("{0:F}", bmi); // bmi.ToString ();
@@ -81,8 +81,9 @@ namespace lelaozuIphone
 				img_BloodOxygenParaOne_Arraw.Hidden = true;
 
 			//血压
-			lbl_BloodPressureParaOne.Text = string.IsNullOrEmpty(healthInfoItem.BloodPressureParaOne)?"-":healthInfoItem.BloodPressureParaOne;
-			lbl_BloodPressureParaTwo.Text = string.IsNullOrEmpty (healthInfoItem.BloodPressureParaTwo) ? "-" : healthInfoItem.BloodPressureParaTwo;
+//			lbl_BloodPressureParaOne.Text = string.IsNullOrEmpty(healthInfoItem.BloodPressureParaOne)?"-":healthInfoItem.BloodPressureParaOne;
+//			lbl_BloodPressureParaTwo.Text = string.IsNullOrEmpty (healthInfoItem.BloodPressureParaTwo) ? "-" : healthInfoItem.BloodPressureParaTwo;
+			lbl_BloodPressurePara.Text = (string.IsNullOrEmpty (healthInfoItem.BloodPressureParaOne) ? "-" : healthInfoItem.BloodPressureParaOne + "/" )+ (string.IsNullOrEmpty (healthInfoItem.BloodPressureParaTwo) ? "-" : healthInfoItem.BloodPressureParaTwo);
 			//心率
 			lbl_HeartRate.Text = string.IsNullOrEmpty(healthInfoItem.HeartRate)?"-":healthInfoItem.HeartRate;
 

@@ -23,7 +23,7 @@ namespace lelaozuIphone
 			//初始化控件
 			scrollView = new UIScrollView(Constants.Screen_Frame);
 			scrollView.PagingEnabled = true;
-			scrollView.Bounces = false;
+			scrollView.Bounces = true;
 			scrollView.ScrollEnabled = true;
 			scrollView.ShowsVerticalScrollIndicator = false;
 			scrollView.ShowsHorizontalScrollIndicator = false;
