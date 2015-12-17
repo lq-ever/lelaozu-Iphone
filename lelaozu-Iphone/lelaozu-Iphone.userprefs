@@ -1,8 +1,9 @@
 ﻿<Properties StartupItem="lelaozu-Iphone/lelaozu-Iphone.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.9.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/Controllers/Guardians/BindGuardianViewController.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="lelaozu-Iphone/Controllers/Guardians/BindGuardianViewController.cs" Line="6" Column="1" />
+      <File FileName="lelaozu-Iphone/Controllers/Health/HealthDetailViewController.cs" Line="33" Column="57" />
+      <File FileName="lelaozu-Iphone/External/BTProgressHUD/ProgressHUD.cs" Line="134" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
