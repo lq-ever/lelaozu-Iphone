@@ -4,6 +4,7 @@ using UIKit;
 using System.Collections.Generic;
 using MJRefresh;
 using Newtonsoft.Json;
+using Foundation;
 
 namespace lelaozuIphone
 {
@@ -28,7 +29,13 @@ namespace lelaozuIphone
 		private AlarmTableSource alarmSource;
 		private List<AlarmTypeItem> alarmTypeList;
 		private string alarmTypeId;//选择的报警类型
-		private UserPickerModel userPickModel;//我监护的人数据
+
+
+		private UIAlertController alertdateController;//日期controller
+		private UIDatePicker datePicker;// 日期控件
+		private UIAlertController alertAlarmTypeController;//报警方式controller
+		private UIPickerView pickerView;//报警方式 pickerView
+
 		public OtherAlarmViewController () : base ("OtherAlarmViewController", null)
 		{
 		}
@@ -45,6 +52,54 @@ namespace lelaozuIphone
 			defaultStartTime = DateTime.Now.AddDays (-7).ToString ("yyyy-MM-dd");
 			txt_endTime.Text = defaultEndTime;
 			txt_startTime.Text = defaultStartTime;
+
+			//set alamtime datepicker
+			txt_startTime.ShouldBeginEditing = (textField) => {
+				if(alertdateController==null && datePicker==null)
+				{
+					alertdateController = UIAlertController.Create("请选择日期","\n\n\n\n\n\n\n\n",UIAlertControllerStyle.ActionSheet);
+					datePicker = new UIDatePicker();
+					datePicker.Mode = UIDatePickerMode.Date;
+					datePicker.Locale = NSLocale.FromLocaleIdentifier("zh_Hans_CN");
+					alertdateController.View.AddSubview(datePicker);
+					var formater = new  NSDateFormatter();
+					formater.DateFormat = "yyyy-MM-dd";
+					alertdateController.AddAction(UIAlertAction.Create("确定",UIAlertActionStyle.Default,(Action)=>
+						{
+							textField.Text = formater.StringFor(datePicker.Date);
+						}));
+					alertdateController.AddAction(UIAlertAction.Create("取消",UIAlertActionStyle.Cancel,(Action)=>
+						{
+						}));
+				}
+
+				PresentViewController(alertdateController,true,null);
+				return textField.ResignFirstResponder();
+			};
+
+			txt_endTime.ShouldBeginEditing = (textField) => {
+				if(alertdateController==null && datePicker==null)
+				{
+					alertdateController = UIAlertController.Create("请选择日期","\n\n\n\n\n\n\n\n",UIAlertControllerStyle.ActionSheet);
+					datePicker = new UIDatePicker();
+					datePicker.Mode = UIDatePickerMode.Date;
+					datePicker.Locale = NSLocale.FromLocaleIdentifier("zh_Hans_CN");
+					alertdateController.View.AddSubview(datePicker);
+					var formater = new  NSDateFormatter();
+					formater.DateFormat = "yyyy-MM-dd";
+					alertdateController.AddAction(UIAlertAction.Create("确定",UIAlertActionStyle.Default,(Action)=>
+						{
+							textField.Text = formater.StringFor(datePicker.Date);
+						}));
+					alertdateController.AddAction(UIAlertAction.Create("取消",UIAlertActionStyle.Cancel,(Action)=>
+						{
+						}));
+				}
+
+				PresentViewController(alertdateController,true,null);
+				return textField.ResignFirstResponder();
+			};
+
 			alarmInfoListParam =  new AlarmInfoListParam();
 			alarmSource = new AlarmTableSource (alarmInfoLists, this, tableView);
 			tableView.Source = alarmSource;
@@ -72,12 +127,41 @@ namespace lelaozuIphone
 			};
 			tableView.SetFooter (footer);
 
-			myUserPicker.ShowSelectionIndicator = true;
-			txt_MyUser.InputView = myUserPicker;
-			myUserPicker.RemoveFromSuperview ();//加上，否则会报错
-			//todo:
+
+
 			InitAlarmTypePicker();
 			InitUserPicker ();
+
+			//set myUserController
+			txt_MyUser.ShouldBeginEditing = (textField) => {
+				AllMyUserListItem selectItem = null;
+				var alertMyUserController = UIAlertController.Create("选择我的监护人","\n\n\n\n\n\n\n\n",UIAlertControllerStyle.ActionSheet);
+				var pickerView = new UIPickerView();
+				var userPickModel = new CustomPickerModel<AllMyUserListItem>(myUserLists);
+
+				userPickModel.PickerAction =(item)=>
+				{
+					selectItem = item;
+				};
+
+				pickerView.Model = userPickModel;
+
+				alertMyUserController.AddAction(UIAlertAction.Create("确定",UIAlertActionStyle.Default,(Action)=>
+					{
+						if(selectItem!=null)
+						{
+							myUserId = selectItem.UId;
+							textField.Text = selectItem.TrueName;
+						}
+					}));
+				alertMyUserController.AddAction(UIAlertAction.Create("取消",UIAlertActionStyle.Cancel,(Action)=>
+					{
+					}));
+				alertMyUserController.View.AddSubview(pickerView);
+				PresentViewController(alertMyUserController,true,null);
+				return textField.ResignFirstResponder();
+
+			};
 
 
 		}
@@ -95,6 +179,38 @@ namespace lelaozuIphone
 			};
 			alarmTypeId = alarmTypeList [0].AlarmTypeId;
 			txt_alarmType.Text = alarmTypeList [0].AlarmTypeDesc;
+
+			//set alarmtype 
+			txt_alarmType.ShouldBeginEditing = (textField) => {
+				AlarmTypeItem selectItem = null;
+				if(alertAlarmTypeController ==null && pickerView ==null)
+				{
+					alertAlarmTypeController = UIAlertController.Create("选择报警类型","\n\n\n\n\n\n\n\n",UIAlertControllerStyle.ActionSheet);
+					pickerView = new UIPickerView();
+					var alarmTypeModel = new CustomPickerModel<AlarmTypeItem>(alarmTypeList);
+					alarmTypeModel.PickerAction = (item)=>
+					{
+						selectItem = item;
+					};
+					pickerView.Model = alarmTypeModel;
+
+					alertAlarmTypeController.View.AddSubview(pickerView);
+					alertAlarmTypeController.AddAction(UIAlertAction.Create("确定",UIAlertActionStyle.Default,(Action)=>
+						{
+							if(selectItem!=null)
+							{
+								alarmTypeId = selectItem.AlarmTypeId;
+								textField.Text = selectItem.AlarmTypeDesc;
+							}
+						}));
+					alertAlarmTypeController.AddAction(UIAlertAction.Create("取消",UIAlertActionStyle.Cancel,(Action)=>
+						{
+						}));
+
+				}
+				PresentViewController(alertAlarmTypeController,true,null);
+				return textField.ResignFirstResponder();
+			};
 		}
 
 		/// <summary>
@@ -138,21 +254,12 @@ namespace lelaozuIphone
 						myUserLists = searchMyUserJson.data;
 						InvokeOnMainThread(()=>
 							{
-								userPickModel = new UserPickerModel (myUserLists);
-								myUserPicker.Model = userPickModel;
 								//设置默认值
 								if(myUserLists.Count>0)
 								{
 									myUserId = myUserLists[0].UId;
 									txt_MyUser.Text = myUserLists[0].TrueName;
 								}
-
-								userPickModel.PickerChanged += (object sender, PickerChangedEventArgs e) => 
-								{
-									var selectUser = e.UserItem;
-									myUserId = selectUser.UId;
-									txt_MyUser.Text = selectUser.TrueName;
-								};
 								//第一次进入自动刷新
 								header.BeginRefreshing();
 							});

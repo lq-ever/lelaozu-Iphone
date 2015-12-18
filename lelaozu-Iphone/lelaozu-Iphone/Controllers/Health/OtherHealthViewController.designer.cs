@@ -20,10 +20,6 @@ namespace lelaozuIphone
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIPickerView myUserPicker { get; set; }
-
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		UITableView tableView { get; set; }
 
 		[Outlet]
@@ -39,10 +35,6 @@ namespace lelaozuIphone
 			if (btn_Search != null) {
 				btn_Search.Dispose ();
 				btn_Search = null;
-			}
-			if (myUserPicker != null) {
-				myUserPicker.Dispose ();
-				myUserPicker = null;
 			}
 			if (tableView != null) {
 				tableView.Dispose ();

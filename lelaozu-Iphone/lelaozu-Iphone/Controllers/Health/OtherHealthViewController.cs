@@ -4,6 +4,7 @@ using UIKit;
 using System.Collections.Generic;
 using MJRefresh;
 using Newtonsoft.Json;
+using Foundation;
 
 namespace lelaozuIphone
 {
@@ -27,7 +28,8 @@ namespace lelaozuIphone
 		MJRefreshAutoNormalFooter footer;
 		private HealthTableSource healthSource;
 		private string defaultTime;
-		private UserPickerModel pickModel;
+		private UIAlertController alertdateController;
+		private UIDatePicker datePicker;// 日期控件
 		public OtherHealthViewController () : base ("OtherHealthViewController", null)
 		{
 		}
@@ -36,7 +38,6 @@ namespace lelaozuIphone
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
-
 			InitView();
 		}
 		private void InitView()
@@ -53,6 +54,32 @@ namespace lelaozuIphone
 			{
 				btnSearchFlag = true;
 				LoadData();
+			};
+
+			//set the time 
+			txt_healthTime.ShouldBeginEditing = (textField) => {
+				if(alertdateController==null && datePicker==null)
+				{
+					alertdateController = UIAlertController.Create("请选择日期","\n\n\n\n\n\n\n\n",UIAlertControllerStyle.ActionSheet);
+					datePicker = new UIDatePicker();
+					datePicker.Mode = UIDatePickerMode.Date;
+					datePicker.Locale = NSLocale.FromLocaleIdentifier("zh_Hans_CN");
+					alertdateController.View.AddSubview(datePicker);
+					var formater = new  NSDateFormatter();
+					formater.DateFormat = "yyyy-MM-dd";
+
+					alertdateController.AddAction(UIAlertAction.Create("确定",UIAlertActionStyle.Default,(Action)=>
+						{
+							textField.Text = formater.StringFor(datePicker.Date);
+						}));
+					alertdateController.AddAction(UIAlertAction.Create("取消",UIAlertActionStyle.Cancel,(Action)=>
+						{
+
+						}));
+				}
+
+				PresentViewController(alertdateController,true,null);
+				return textField.ResignFirstResponder();
 			};
 			#region 配置下拉上拉刷新头部
 			header = new MJRefreshNormalHeader();
@@ -73,23 +100,37 @@ namespace lelaozuIphone
 			};
 			tableView.SetFooter (footer);
 			#endregion
-			//todo load myuser
-			myUserPicker.ShowSelectionIndicator = true;
-
-			txt_MyUser.InputView = myUserPicker;
-			myUserPicker.RemoveFromSuperview ();//加上，否则会报错
-			//myUserLists = new List<AllMyUserListItem> (){ new AllMyUserListItem(){UId ="1002255",TrueName="liuqiang"},new AllMyUserListItem(){UId ="1002255",TrueName="liuqiang"},new AllMyUserListItem(){UId ="1002255",TrueName="liuqiang"}};
-//			pickModel = new UserPickerModel (myUserLists);
-//			myUserPicker.Model = pickModel;
-//
-//			pickModel.PickerChanged += (object sender, PickerChangedEventArgs e) => 
-//			{
-//				var selectUser = e.UserItem;
-//				myUserId = selectUser.UId;
-//				txt_MyUser.Text = selectUser.TrueName;
-//			};
 			InitUserPicker ();
+			//set myUserController
+			txt_MyUser.ShouldBeginEditing = (textField) => {
+				AllMyUserListItem selectItem = null;
+				var alertMyUserController = UIAlertController.Create("选择我的监护人","\n\n\n\n\n\n\n\n",UIAlertControllerStyle.ActionSheet);
+				var pickerView = new UIPickerView();
+				var userPickModel = new CustomPickerModel<AllMyUserListItem>(myUserLists);
 
+				userPickModel.PickerAction =(item)=>
+				{
+					selectItem = item;
+				};
+
+				pickerView.Model = userPickModel;
+
+				alertMyUserController.AddAction(UIAlertAction.Create("确定",UIAlertActionStyle.Default,(Action)=>
+					{
+						if(selectItem!=null)
+						{
+							myUserId = selectItem.UId;
+							textField.Text = selectItem.TrueName;
+						}
+					}));
+				alertMyUserController.AddAction(UIAlertAction.Create("取消",UIAlertActionStyle.Cancel,(Action)=>
+					{
+					}));
+				alertMyUserController.View.AddSubview(pickerView);
+				PresentViewController(alertMyUserController,true,null);
+				return textField.ResignFirstResponder();
+
+			};
 		}
 
 		/// <summary>
@@ -133,8 +174,6 @@ namespace lelaozuIphone
 						myUserLists = searchMyUserJson.data;
 						InvokeOnMainThread(()=>
 							{
-								pickModel = new UserPickerModel (myUserLists);
-								myUserPicker.Model = pickModel;
 								//设置默认值
 								if(myUserLists.Count>0)
 								{
@@ -142,22 +181,11 @@ namespace lelaozuIphone
 								    txt_MyUser.Text = myUserLists[0].TrueName;
 								}
 
-
-								pickModel.PickerChanged += (object sender, PickerChangedEventArgs e) => 
-								{
-									var selectUser = e.UserItem;
-									myUserId = selectUser.UId;
-									txt_MyUser.Text = selectUser.TrueName;
-								};
 								//第一次进入自动刷新
 								header.BeginRefreshing();
 							});
 
 					}
-				}
-				else
-				{
-
 				}
 
 			});

@@ -4,6 +4,7 @@ using UIKit;
 using System.Collections.Generic;
 using MJRefresh;
 using Newtonsoft.Json;
+using Foundation;
 
 namespace lelaozuIphone
 {
@@ -27,6 +28,11 @@ namespace lelaozuIphone
 		private List<AlarmTypeItem> alarmTypeList;
 		private string alarmTypeId;//选择的报警类型
 
+		private UIAlertController alertdateController;//日期controller
+		private UIDatePicker datePicker;// 日期控件
+		private UIAlertController alertAlarmTypeController;//报警方式controller
+		private UIPickerView pickerView;//报警方式 pickerView
+
 		public MyAlarmViewController () : base ("MyAlarmViewController", null)
 		{
 		}
@@ -44,17 +50,64 @@ namespace lelaozuIphone
 			defaultStartTime = DateTime.Now.AddDays (-7).ToString ("yyyy-MM-dd");
 			txt_endTime.Text = defaultEndTime;
 			txt_startTime.Text = defaultStartTime;
+			//set alamtime datepicker
+			txt_startTime.ShouldBeginEditing = (textField) => {
+				if(alertdateController==null && datePicker==null)
+				{
+					alertdateController = UIAlertController.Create("请选择日期","\n\n\n\n\n\n\n\n",UIAlertControllerStyle.ActionSheet);
+					datePicker = new UIDatePicker();
+					datePicker.Mode = UIDatePickerMode.Date;
+					datePicker.Locale = NSLocale.FromLocaleIdentifier("zh_Hans_CN");
+					alertdateController.View.AddSubview(datePicker);
+					var formater = new  NSDateFormatter();
+					formater.DateFormat = "yyyy-MM-dd";
+					alertdateController.AddAction(UIAlertAction.Create("确定",UIAlertActionStyle.Default,(Action)=>
+						{
+							textField.Text = formater.StringFor(datePicker.Date);
+						}));
+					alertdateController.AddAction(UIAlertAction.Create("取消",UIAlertActionStyle.Cancel,(Action)=>
+						{
+						}));
+				}
+
+				PresentViewController(alertdateController,true,null);
+				return textField.ResignFirstResponder();
+			};
+
+			txt_endTime.ShouldBeginEditing = (textField) => {
+				if(alertdateController==null && datePicker==null)
+				{
+					alertdateController = UIAlertController.Create("请选择日期","\n\n\n\n\n\n\n\n",UIAlertControllerStyle.ActionSheet);
+					datePicker = new UIDatePicker();
+					datePicker.Mode = UIDatePickerMode.Date;
+					datePicker.Locale = NSLocale.FromLocaleIdentifier("zh_Hans_CN");
+					alertdateController.View.AddSubview(datePicker);
+					var formater = new  NSDateFormatter();
+					formater.DateFormat = "yyyy-MM-dd";
+					alertdateController.AddAction(UIAlertAction.Create("确定",UIAlertActionStyle.Default,(Action)=>
+						{
+							textField.Text = formater.StringFor(datePicker.Date);
+						}));
+					alertdateController.AddAction(UIAlertAction.Create("取消",UIAlertActionStyle.Cancel,(Action)=>
+						{
+						}));
+				}
+
+				PresentViewController(alertdateController,true,null);
+				return textField.ResignFirstResponder();
+			};
 
 			alarmInfoListParam =  new AlarmInfoListParam(){UserId = Constants.MyInfo.UId};
 			alarmSource = new AlarmTableSource (alarmInfoLists, this, tableView);
 			tableView.Source = alarmSource;
-
+			//search
 			btn_search.TouchUpInside += (object sender, EventArgs e) => 
 			{
 				btnSearchFlag = true;
 				LoadData();
 			};
 
+			//set tableview header and footer
 			header = new MJRefreshNormalHeader();
 			header.SetTitle(Constants.PullDownLbl, MJRefreshState.Idle);
 			header.SetTitle(Constants.PullDownReleaseLbl, MJRefreshState.Pulling);
@@ -80,6 +133,8 @@ namespace lelaozuIphone
 			header.BeginRefreshing();
 
 		}
+
+
 		/// <summary>
 		/// 初始化报警类型
 		/// </summary>
@@ -94,6 +149,37 @@ namespace lelaozuIphone
 			};
 			alarmTypeId = alarmTypeList [0].AlarmTypeId;
 			txt_alarmType.Text = alarmTypeList [0].AlarmTypeDesc;
+			//set alarmtype 
+			txt_alarmType.ShouldBeginEditing = (textField) => {
+				AlarmTypeItem selectItem = null;
+				if(alertAlarmTypeController ==null && pickerView ==null)
+				{
+					alertAlarmTypeController = UIAlertController.Create("选择报警类型","\n\n\n\n\n\n\n\n",UIAlertControllerStyle.ActionSheet);
+					pickerView = new UIPickerView();
+					var alarmTypeModel = new CustomPickerModel<AlarmTypeItem>(alarmTypeList);
+					alarmTypeModel.PickerAction = (item)=>
+					{
+						selectItem = item;
+					};
+					pickerView.Model = alarmTypeModel;
+					alertAlarmTypeController.View.AddSubview(pickerView);
+					alertAlarmTypeController.AddAction(UIAlertAction.Create("确定",UIAlertActionStyle.Default,(Action)=>
+						{
+							if(selectItem!=null)
+							{
+								alarmTypeId = selectItem.AlarmTypeId;
+								textField.Text = selectItem.AlarmTypeDesc;
+							}
+						}));
+					alertAlarmTypeController.AddAction(UIAlertAction.Create("取消",UIAlertActionStyle.Cancel,(Action)=>
+						{
+						}));
+					
+				}
+				PresentViewController(alertAlarmTypeController,true,null);
+				return textField.ResignFirstResponder();
+			};
+
 		}
 
 		/// <summary>

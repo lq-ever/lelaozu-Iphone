@@ -10,7 +10,6 @@
                 <outlet property="txt_healthTime" destination="9" id="name-outlet-9"/>
                 <outlet property="btn_Search" destination="12" id="name-outlet-12"/>
                 <outlet property="tableView" destination="13" id="name-outlet-13"/>
-                <outlet property="myUserPicker" destination="16" id="name-outlet-16"/>
                 <outlet property="txt_MyUser" destination="19" id="name-outlet-19"/>
             </connections>
         </placeholder>
@@ -48,9 +47,6 @@
                     <rect key="frame" x="0.0" y="77" width="375" height="444"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <pickerView contentMode="scaleToFill" id="16" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                    <rect key="frame" x="0.0" y="358" width="375" height="171"/>
-                </pickerView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="19" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                     <rect key="frame" x="114" y="44" width="187" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -79,5 +75,25 @@
         <image name="success_7.png" width="28" height="28"/>
         <image name="uparrow.png" width="17" height="29"/>
         <image name="ic_basicInformation.png" width="48" height="42"/>
+        <image name="ic_sex_man.png" width="42" height="42"/>
+        <image name="ic_sex_woman.png" width="42" height="42"/>
+        <image name="ic_medicalHistory.png" width="48" height="42"/>
+        <image name="ic_myInfo_advision_jianyi.png" width="48" height="48"/>
+        <image name="ic_myInfo_advision_qita.png" width="48" height="48"/>
+        <image name="ic_myInfo_advision_tousu.png" width="48" height="48"/>
+        <image name="ic_myInfo_advision_zixun.png" width="48" height="48"/>
+        <image name="ic_myInfomation_aboutUs.png" width="45" height="51"/>
+        <image name="ic_myInfomation_accountSecurity.png" width="45" height="51"/>
+        <image name="ic_myInfomation_advice.png" width="45" height="51"/>
+        <image name="ic_myInfomation_cacheRemover.png" width="45" height="51"/>
+        <image name="ic_myInfomation_call.png" width="114" height="114"/>
+        <image name="ic_myInfomation_message.png" width="45" height="34"/>
+        <image name="ic_myInfomation_personalData.png" width="45" height="51"/>
+        <image name="ic_myInfomation_phone.png" width="36" height="54"/>
+        <image name="ic_myInfomation_userName.png" width="36" height="54"/>
+        <image name="ic_myInfomation_versionDetection.png" width="45" height="51"/>
+        <image name="myInfomation_headImage.png" width="258" height="258"/>
+        <image name="myInfomation_setup_aboutus_logo.png" width="400" height="400"/>
+        <image name="setting.png" width="72" height="72"/>
     </resources>
 </document>

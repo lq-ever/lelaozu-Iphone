@@ -32,7 +32,7 @@ namespace lelaozuIphone
 		}
 		public override nfloat GetRowHeight (UIPickerView pickerView, nint component)
 		{
-			return 40f;
+			return 35f;
 		}
 		public override void Selected (UIPickerView pickerView, nint row, nint component)
 		{

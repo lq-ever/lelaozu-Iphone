@@ -3,12 +3,15 @@
 using UIKit;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Foundation;
 
 namespace lelaozuIphone
 {
 	public partial class PersonInfoBirthViewController : UIViewController
 	{
 		private Dictionary<string,string> requestParams = new Dictionary<string,string> ();
+		private UIAlertController alertdateController;//日期controller
+		private UIDatePicker datePicker;// 日期控件
 		public PersonInfoBirthViewController () : base ("PersonInfoBirthViewController", null)
 		{
 		}
@@ -19,6 +22,30 @@ namespace lelaozuIphone
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "生日";
 			txt_birth.Text = FormatUtil.StrToShortData(Constants.MyInfo.Age);
+			//set the time
+			txt_birth.ShouldBeginEditing = (textField) => {
+
+				if(alertdateController==null && datePicker==null)
+				{
+					alertdateController = UIAlertController.Create("请选择日期","\n\n\n\n\n\n\n\n",UIAlertControllerStyle.ActionSheet);
+					datePicker = new UIDatePicker();
+					datePicker.Mode = UIDatePickerMode.Date;
+					datePicker.Locale = NSLocale.FromLocaleIdentifier("zh_Hans_CN");
+					alertdateController.View.AddSubview(datePicker);
+					var formater = new  NSDateFormatter();
+					formater.DateFormat = "yyyy-MM-dd";
+					alertdateController.AddAction(UIAlertAction.Create("确定",UIAlertActionStyle.Default,(Action)=>
+						{
+							textField.Text = formater.StringFor(datePicker.Date);
+						}));
+					alertdateController.AddAction(UIAlertAction.Create("取消",UIAlertActionStyle.Cancel,(Action)=>
+						{
+						}));
+				}
+
+				PresentViewController(alertdateController,true,null);
+				return textField.ResignFirstResponder();
+			};
 			btn_save.TouchUpInside += (sender, e) => 
 			{
 				Save();

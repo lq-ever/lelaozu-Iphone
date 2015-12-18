@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using MJRefresh;
 using System.Threading.Tasks;
+using Foundation;
 
 namespace lelaozuIphone
 {
@@ -23,6 +24,8 @@ namespace lelaozuIphone
 		private HealthTableSource healthSource;
 		private bool IsRefreshing = false;//是否正在获取数据
 		private bool btnSearchFlag = false;//监听是否点击查询
+		private UIAlertController alertdateController;
+		private UIDatePicker datePicker;// 日期控件
 		public MyHealthViewController () : base ("MyHealthViewController", null)
 		{
 			
@@ -49,7 +52,30 @@ namespace lelaozuIphone
 				btnSearchFlag = true;
 				LoadData();
 			};
+			//set the time 
+			txt_healthTime.ShouldBeginEditing = (textField) => {
+				if(alertdateController==null && datePicker==null)
+				{
+					alertdateController = UIAlertController.Create("请选择日期","\n\n\n\n\n\n\n\n",UIAlertControllerStyle.ActionSheet);
+					datePicker = new UIDatePicker();
+					datePicker.Mode = UIDatePickerMode.Date;
+					datePicker.Locale = NSLocale.FromLocaleIdentifier("zh_Hans_CN");
+					alertdateController.View.AddSubview(datePicker);
+					var formater = new  NSDateFormatter();
+					formater.DateFormat = "yyyy-MM-dd";
+					alertdateController.AddAction(UIAlertAction.Create("确定",UIAlertActionStyle.Default,(Action)=>
+						{
+							textField.Text = formater.StringFor(datePicker.Date);
+						}));
+					alertdateController.AddAction(UIAlertAction.Create("取消",UIAlertActionStyle.Cancel,(Action)=>
+						{
+						}));
+				}
 
+				PresentViewController(alertdateController,true,null);
+				return textField.ResignFirstResponder();
+			};
+			//set refresh header and footer
 			header = new MJRefreshNormalHeader();
 			header.SetTitle(Constants.PullDownLbl, MJRefreshState.Idle);
 			header.SetTitle(Constants.PullDownReleaseLbl, MJRefreshState.Pulling);
@@ -57,6 +83,7 @@ namespace lelaozuIphone
 			header.LastUpdatedTimeLabel.Hidden = true;
 			header.RefreshingBlock = () =>  {
 				OnPullDownToRefresh();
+
 			};
 			tableView.SetHeader (header);
 
@@ -70,6 +97,7 @@ namespace lelaozuIphone
 			//第一次进入自动刷新
 			header.BeginRefreshing();
 		}
+
 		/// <summary>
 		/// Loads the data.
 		/// </summary>
