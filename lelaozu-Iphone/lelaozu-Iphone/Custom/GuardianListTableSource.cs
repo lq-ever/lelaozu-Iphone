@@ -126,18 +126,30 @@ namespace lelaozuIphone
 		{
 			
 			var item = (sender as UIButton).ValueForKeyPath (GuardianListCell.Key) as  GuardianInfoListItem;
-			var indexPath = (sender as UIButton).ValueForKeyPath (_indexPath);
+			var indexPath = (sender as UIButton).ValueForKeyPath (_indexPath) as NSIndexPath;
+			var unbindAlertController = UIAlertController.Create ("解绑", "您确定要解绑吗？", UIAlertControllerStyle.Alert);
+			unbindAlertController.AddAction (UIAlertAction.Create ("确定", UIAlertActionStyle.Default, (action) => {
+				UnBindGuardian(item,indexPath);
+			}));
+				
+			unbindAlertController.AddAction (UIAlertAction.Create ("取消", UIAlertActionStyle.Cancel, (action) => {
+				
+			}));
+			controller.PresentViewController (unbindAlertController, true, null);
 
 		}
 		/// <summary>
 		/// 解绑监护人
 		/// </summary>
 		/// <param name="userId">User identifier.</param>
-		private void UnBindGuardian(GuardianInfoListItem item)
+		private void UnBindGuardian(GuardianInfoListItem item,NSIndexPath indexPath)
 		{
 			//调用webservice
 
-			//检测网络连接
+		
+			BTProgressHUD.Show("正在解绑中...",-1,ProgressHUD.MaskType.Black);
+			//在状态栏中设置show网络指示器
+			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
 
 			unBindGuardianParam.Id = item.Id;
 			if (!requestParams.ContainsKey ("key"))
@@ -164,9 +176,14 @@ namespace lelaozuIphone
 				restSharpRequestUtil.RequestParams = requestParams;
 			//调用解绑web服务
 			restSharpRequestUtil.ExcuteAsync ((RestSharp.IRestResponse response) => {
+				InvokeOnMainThread(()=>
+					{
+						BTProgressHUD.Dismiss();
+						//在状态栏中hide使用网络指示器
+						UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+					});
 				if(response.ResponseStatus == RestSharp.ResponseStatus.Completed && response.StatusCode == System.Net.HttpStatusCode.OK)
 				{
-
 					var result = response.Content;
 					var unBindGuardianJson = JsonConvert.DeserializeObject<UnBindGuardianJson>(result);
 					if(unBindGuardianJson.statuscode == "1")
@@ -176,28 +193,44 @@ namespace lelaozuIphone
 							InvokeOnMainThread(()=>
 								{
 									//解绑成功
-									//View.DeleteRows();
+									BTProgressHUD.ShowSuccessWithStatus("解绑成功",1000);
+									View.DeleteRows(new NSIndexPath[]{ indexPath },UITableViewRowAnimation.Left);
 								});
 						}
 						else
 						{
-							
+
+							InvokeOnMainThread(()=>
+								{
+									BTProgressHUD.ShowToast("解绑失败，稍后在试...",showToastCentered:false,timeoutMs:1000);
+								});
 						}
 					}
 					else
 					{
-						
+
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowToast("解绑失败，稍后在试...",showToastCentered:false,timeoutMs:1000);
+							});
 					}
 
 
 				}
 				else if(response.ResponseStatus == RestSharp.ResponseStatus.TimedOut)
 				{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+						}
+					);
 				}
 				else
 				{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+						});
 				}
 			});	
 		}

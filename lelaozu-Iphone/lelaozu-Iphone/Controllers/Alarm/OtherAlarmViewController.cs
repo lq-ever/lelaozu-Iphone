@@ -185,7 +185,7 @@ namespace lelaozuIphone
 				AlarmTypeItem selectItem = null;
 				if(alertAlarmTypeController ==null && pickerView ==null)
 				{
-					alertAlarmTypeController = UIAlertController.Create("选择报警类型","\n\n\n\n\n\n\n\n",UIAlertControllerStyle.ActionSheet);
+					alertAlarmTypeController = UIAlertController.Create("选择报警类型\n\n\n\n\n\n\n\n","",UIAlertControllerStyle.ActionSheet);
 					pickerView = new UIPickerView();
 					var alarmTypeModel = new CustomPickerModel<AlarmTypeItem>(alarmTypeList);
 					alarmTypeModel.PickerAction = (item)=>

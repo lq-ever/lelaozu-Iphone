@@ -2,6 +2,7 @@
 using UIKit;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Foundation;
 
 namespace lelaozuIphone
 {
@@ -14,6 +15,7 @@ namespace lelaozuIphone
 		private ApplyBindGuardianParam applyBindGuardianParam = new ApplyBindGuardianParam(){UserId = Constants.MyInfo.UId};//请求参数对象
 		private RestSharpRequestUtil restSharpRequestUtil;
 
+		private UIAlertAction SendAction;
 		public Action RefreshAction {
 			get;
 			set;
@@ -164,10 +166,42 @@ namespace lelaozuIphone
 		}
 		private void ActionHandler(object sender, EventArgs e)
 		{
-			
+			NSObject observer = null;
 			var item = (sender as UIButton).ValueForKey (BindGuardianTableViewCell.Key) as  SearchGuardianListItem;
 //				var applybindPopWindow = new ApplybindPopWindow (activity, item){applyBindEventHandler = ApplyBindGuardian};
 //				applybindPopWindow.ShowPopWindow (activity.FindViewById<LinearLayout> (Resource.Id.ll_MainGuardian));
+
+			Action removeTextFieldObserver = () => {
+				if(observer !=null)
+					NSNotificationCenter.DefaultCenter.RemoveObserver(observer);
+			};
+			var applyBindAlertController = UIAlertController.Create ("申请绑定", "\n\n\n\n\n\n\n\n", UIAlertControllerStyle.Alert);
+			applyBindAlertController.AddTextField ((textfield) => {
+				textfield.Placeholder = "请输入申请留言";
+				textfield.Text = FormatUtil.StrVaueFormat(item.Remark);
+				observer = NSNotificationCenter.DefaultCenter.AddObserver(UITextField.TextFieldTextDidChangeNotification,HandleTextFieldTextDidChangeNotification);
+			});
+			var sendAction = UIAlertAction.Create ("发送", UIAlertActionStyle.Default, (action) => {
+				removeTextFieldObserver();
+			});
+			var cancelAction = UIAlertAction.Create ("取消", UIAlertActionStyle.Cancel, (action) => {
+				removeTextFieldObserver();
+			});
+			SendAction = sendAction;
+			if(FormatUtil.StrVaueFormat(item.Remark).Length<=0)
+				sendAction.Enabled = false;
+			
+			//add the actions
+			applyBindAlertController.AddAction (sendAction);
+			applyBindAlertController.AddAction (cancelAction);
+			controller.PresentViewController (applyBindAlertController, true, null);
+				
+		}
+
+		private void HandleTextFieldTextDidChangeNotification(NSNotification notification)
+		{
+			var textField = notification.Object as UITextField;
+			SendAction.Enabled = textField.Text.Length >= 1;
 		}
 
 		/// <summary>
@@ -178,14 +212,10 @@ namespace lelaozuIphone
 		private void ApplyBindGuardian(SearchGuardianListItem item,string applyMsgContent)
 		{
 
-			//ProgressDialogUtil.StartProgressDialog(activity,"正在申请中...");
-			//检测网络连接
-//			if(!EldYoungUtil.IsConnected(activity))
-//			{
-//				Toast.MakeText(activity,"网络连接超时,请检测网路",ToastLength.Short).Show();
-//				ProgressDialogUtil.StopProgressDialog();
-//				return;
-//			}
+
+			BTProgressHUD.Show("正在申请中...",-1,ProgressHUD.MaskType.Black);
+			//在状态栏中设置show网络指示器
+			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
 
 			applyBindGuardianParam.GId = item.UId;
 			applyBindGuardianParam.ApplyContent = applyMsgContent;
@@ -227,6 +257,12 @@ namespace lelaozuIphone
 			}
 
 			restSharpRequestUtil.ExcuteAsync ((RestSharp.IRestResponse response) => {
+				InvokeOnMainThread(()=>
+					{
+						BTProgressHUD.Dismiss();
+						//在状态栏中hide使用网络指示器
+						UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+					});
 				if(response.ResponseStatus == RestSharp.ResponseStatus.Completed && response.StatusCode == System.Net.HttpStatusCode.OK)
 				{
 
@@ -237,31 +273,42 @@ namespace lelaozuIphone
 					{
 						if(applyGuardianJson.data == "1")
 						{
-							
+							InvokeOnMainThread(()=>
+								{
+									BTProgressHUD.ShowSuccessWithStatus("申请绑定监护人成功",1000);
+								});
 						}
 						else
 						{
-							
+							InvokeOnMainThread(()=>
+								{
+									BTProgressHUD.ShowToast("申请绑定失败，稍后在试...",showToastCentered:false,timeoutMs:1000);
+								});
 						}
 					}
 					else
 					{
-						
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowToast("申请绑定失败，稍后在试...",showToastCentered:false,timeoutMs:1000);
+							});
 					}	
 				}
 				else if(response.ResponseStatus == RestSharp.ResponseStatus.TimedOut)
 				{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+						}
+					);
 				}
 				else
 				{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+						});
 				}
-//				activity.RunOnUiThread(()=>
-//					{
-//						if(RefreshAction!=null)
-//							RefreshAction();
-//					});
 				InvokeOnMainThread(()=>
 					{
 						if(RefreshAction!=null)

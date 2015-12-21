@@ -15,6 +15,7 @@ namespace lelaozuIphone
 		private ExamineBundGuardianParam examinebundGuardianParam = new ExamineBundGuardianParam();//请求参数对象
 		private RestSharpRequestUtil restSharpRequestUtil;
 		private NSString actionFlag = new NSString ("actionFlag");
+		private NSString _indexPath = new NSString("indexPath");
 
 		public GuardianApplyTableSource (List<GetApplyInfoListItem> _applyInfoList,UIViewController _controller,UITableView view)
 		{
@@ -92,10 +93,10 @@ namespace lelaozuIphone
 			//性别
 			var imgSexname = item.Sex == Sex.Male ? "ic_sex_man.png" : "ic_sex_woman.png";
 			cell.Img_Sex.Image = UIImage.FromFile (imgSexname);
-			SetGuardianStatusAndAction (cell, item);
+			SetGuardianStatusAndAction (cell, item,indexPath);
 			return cell;
 		}
-		private void SetGuardianStatusAndAction( GuardianApplyTableViewCell cell,GetApplyInfoListItem item)
+		private void SetGuardianStatusAndAction( GuardianApplyTableViewCell cell,GetApplyInfoListItem item,NSIndexPath indexPath)
 		{
 			if (item.BindDeriction == 0) {
 				cell.Btn_Agree.Hidden = true;
@@ -123,9 +124,12 @@ namespace lelaozuIphone
 					cell.Lbl_BindStatus.Hidden = true;
 
 					cell.Btn_Agree.SetValueForKey (item, GuardianApplyTableViewCell.Key);
-					cell.Btn_Disagree.SetValueForKey (item, GuardianApplyTableViewCell.Key);
 					cell.Btn_Agree.SetValueForKey (new NSString ("1"), actionFlag);
+					cell.Btn_Agree.SetValueForKey (indexPath, _indexPath);
+					cell.Btn_Disagree.SetValueForKey (item, GuardianApplyTableViewCell.Key);
 					cell.Btn_Disagree.SetValueForKey (new NSString ("0"), actionFlag);
+					cell.Btn_Disagree.SetValueForKey (indexPath, _indexPath);
+
 					cell.Btn_Agree.TouchUpInside -= ActionHandler;
 					cell.Btn_Agree.TouchUpInside += ActionHandler;
 					cell.Btn_Disagree.TouchUpInside -= ActionHandler;
@@ -156,16 +160,14 @@ namespace lelaozuIphone
 		{
 			var btnAction = sender as UIButton;
 			var item = (GetApplyInfoListItem)btnAction.ValueForKey(GuardianApplyTableViewCell.Key);
-			//var actionflag = btnAction.GetTag (Resource.Id.ll_action);
 			var actionflag = (btnAction.ValueForKey(actionFlag) as NSString).ToString();
-//			ProgressDialogUtil.StartProgressDialog(activity,"正在处理中...");
-//			//检测网络连接
-//			if(!EldYoungUtil.IsConnected(activity))
-//			{
-//				Toast.MakeText(activity,"网络连接超时,请检测网路",ToastLength.Short).Show();
-//				ProgressDialogUtil.StopProgressDialog();
-//				return;
-//			}
+			var indexPath = (sender as UIButton).ValueForKeyPath (_indexPath) as NSIndexPath;
+
+
+			BTProgressHUD.Show("正在处理中...",-1,ProgressHUD.MaskType.Black);
+			//在状态栏中设置show网络指示器
+			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
+
 
 			examinebundGuardianParam.Ifagreen = actionflag.ToString();
 			examinebundGuardianParam.Id = item.Id;
@@ -203,6 +205,12 @@ namespace lelaozuIphone
 				restSharpRequestUtil.Url = examinebundGuardianParam.Url;
 			}
 			restSharpRequestUtil.ExcuteAsync ((RestSharp.IRestResponse response) => {
+				InvokeOnMainThread(()=>
+					{
+						BTProgressHUD.Dismiss();
+						//在状态栏中hide使用网络指示器
+						UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+					});
 				if(response.ResponseStatus == RestSharp.ResponseStatus.Completed &&response.StatusCode == System.Net.HttpStatusCode.OK)
 				{
 
@@ -210,33 +218,36 @@ namespace lelaozuIphone
 					var examinebundGuardianJson = JsonConvert.DeserializeObject<ExamineBundGuardianJson>(result);
 					if(examinebundGuardianJson.statuscode == "1")
 					{
-//						activity.RunOnUiThread(()=>
-//							{
-//								Toast.MakeText(activity,"处理成功...",ToastLength.Short).Show();
-//								ProgressDialogUtil.StopProgressDialog();
-//								Remove(item);
-//								return;
-//							});
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowSuccessWithStatus("处理成功...",1000);
+								View.DeleteRows(new NSIndexPath[]{ indexPath },UITableViewRowAnimation.Left);
+							});
 					}
 					else
 					{
-//						activity.RunOnUiThread(()=>
-//							{
-//								Toast.MakeText(activity,"处理失败,稍后在试...",ToastLength.Short).Show();
-//								ProgressDialogUtil.StopProgressDialog();
-//								return;
-//							});
+						InvokeOnMainThread(()=>
+							{
+								BTProgressHUD.ShowToast("处理失败,稍后在试...",showToastCentered:false,timeoutMs:1000);
+							});
 					}
 
 
 				}
 				else if(response.ResponseStatus == RestSharp.ResponseStatus.TimedOut)
 				{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+						}
+					);
 				}
 				else
 				{
-					
+					InvokeOnMainThread(()=>
+						{
+							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+						});
 				}
 			});
 
