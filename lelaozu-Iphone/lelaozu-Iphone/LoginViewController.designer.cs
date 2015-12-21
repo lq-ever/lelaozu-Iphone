@@ -16,7 +16,15 @@ namespace lelaozuIphone
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btn_forgetPwd { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton btn_Login { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btn_register { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -28,9 +36,17 @@ namespace lelaozuIphone
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (btn_forgetPwd != null) {
+				btn_forgetPwd.Dispose ();
+				btn_forgetPwd = null;
+			}
 			if (btn_Login != null) {
 				btn_Login.Dispose ();
 				btn_Login = null;
+			}
+			if (btn_register != null) {
+				btn_register.Dispose ();
+				btn_register = null;
 			}
 			if (txt_Password != null) {
 				txt_Password.Dispose ();

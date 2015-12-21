@@ -19,7 +19,7 @@ namespace lelaozuIphone
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
-
+			this.NavigationController.NavigationBarHidden = true;
 			//初始化控件
 			scrollView = new UIScrollView(Constants.Screen_Frame);
 			scrollView.PagingEnabled = true;

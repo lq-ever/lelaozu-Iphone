@@ -92,3 +92,6 @@
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/MJRefreshSharp.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/MJRefreshSharp.dll.mdb
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/RegisterViewController.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/SendSecurityCodeController.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/SettingViewController.nib

@@ -10,14 +10,7 @@ namespace lelaozuIphone
 {
 	public partial class LoginViewController : UIViewController
 	{
-//		private Main_AlarmController main_alarmController;
-//		private Main_HealthController main_healthController;
-//		private Main_GuardianController main_guardianController;
-//		private Main_MyController main_myController;
-
-		
 		private Dictionary<string,string> requestParams = new Dictionary<string,string> ();//请求参数
-
 
 		public LoginViewController () : base ("LoginViewController", null)
 		{
@@ -28,12 +21,7 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			InitView ();
-
-
 		}
-
-
-
 		private void InitView()
 		{
 			txt_Username.ReturnKeyType = UIReturnKeyType.Done;
@@ -50,11 +38,24 @@ namespace lelaozuIphone
 				txt_Username.Text = string.IsNullOrEmpty(NSUserDefaults.StandardUserDefaults.StringForKey (Constants.Login_UserName))?string.Empty:NSUserDefaults.StandardUserDefaults.StringForKey (Constants.Login_UserName);
 				txt_Password.Text = string.IsNullOrEmpty (NSUserDefaults.StandardUserDefaults.StringForKey (Constants.Login_PassWorde)) ? string.Empty : NSUserDefaults.StandardUserDefaults.StringForKey (Constants.Login_PassWorde);
 			}
-
+			//register
+			btn_register.TouchUpInside += (object sender, EventArgs e) => 
+			{
+				this.NavigationController.PushViewController(new RegisterViewController(),true);
+			};
+			//forgetPwd
+			btn_forgetPwd.TouchUpInside += (object sender, EventArgs e) => 
+			{
+				var forgetPwdController = new SendSecurityCodeController(){SendType ="",PhoneNumber= string.Empty};
+				this.NavigationController.PushViewController(forgetPwdController,true);
+			};
+			//login
 			btn_Login.TouchUpInside += (sender, e) => 
 			{
 				Login();
 			};
+
+
 		}
 		/// <summary>
 		/// login
@@ -114,6 +115,7 @@ namespace lelaozuIphone
 								}
 								// login sucess  set tabbarcontroller as  rootviewcontroller
 								this.View.Window.RootViewController = new MainTabBarController();
+
 
 							});
 					}
@@ -180,6 +182,11 @@ namespace lelaozuIphone
 
 		}
 
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (animated);
+			this.NavigationController.NavigationBarHidden = true;
+		}
 		public override void DidReceiveMemoryWarning ()
 		{
 			base.DidReceiveMemoryWarning ();

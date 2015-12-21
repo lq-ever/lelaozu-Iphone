@@ -20,6 +20,10 @@ namespace lelaozuIphone
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIImageView img_head { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIImageView img_setting { get; set; }
 
 		[Outlet]
@@ -43,6 +47,10 @@ namespace lelaozuIphone
 			if (img_call != null) {
 				img_call.Dispose ();
 				img_call = null;
+			}
+			if (img_head != null) {
+				img_head.Dispose ();
+				img_head = null;
 			}
 			if (img_setting != null) {
 				img_setting.Dispose ();

@@ -27,11 +27,11 @@ namespace lelaozuIphone
 
 			if (string.IsNullOrEmpty (Constants.LastVersionCode) || Constants.CurrentVersionCode != Constants.LastVersionCode) {
 				//goto guider
-				rootViewController = new UserGuiderViewController();
+				rootViewController = new UINavigationController(new UserGuiderViewController());
 
 			} else {
 				//goto zhujiemian
-				rootViewController = new LoginViewController();
+				rootViewController = new UINavigationController(new LoginViewController());
 			}		
 			Window.RootViewController = rootViewController;
 			Window.BackgroundColor = UIColor.White;

@@ -131,6 +131,9 @@
     <InterfaceDefinition Include="CustomTableViewCell\PersonInfoTableViewCell.xib" />
     <InterfaceDefinition Include="Controllers\My\PersonInfoCardLocationViewController.xib" />
     <InterfaceDefinition Include="Controllers\My\PersonInfoTrueNameViewController.xib" />
+    <InterfaceDefinition Include="RegisterViewController.xib" />
+    <InterfaceDefinition Include="SendSecurityCodeController.xib" />
+    <InterfaceDefinition Include="SettingViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -367,6 +370,18 @@
     <Compile Include="Controllers\My\PersonInfoTrueNameViewController.cs" />
     <Compile Include="Controllers\My\PersonInfoTrueNameViewController.designer.cs">
       <DependentUpon>PersonInfoTrueNameViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterViewController.cs" />
+    <Compile Include="RegisterViewController.designer.cs">
+      <DependentUpon>RegisterViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendSecurityCodeController.cs" />
+    <Compile Include="SendSecurityCodeController.designer.cs">
+      <DependentUpon>SendSecurityCodeController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingViewController.cs" />
+    <Compile Include="SettingViewController.designer.cs">
+      <DependentUpon>SettingViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
