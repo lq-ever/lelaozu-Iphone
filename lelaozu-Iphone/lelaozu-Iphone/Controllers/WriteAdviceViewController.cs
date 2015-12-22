@@ -29,6 +29,7 @@ namespace lelaozuIphone
 			{
 				PublishAdvice();
 			};
+			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 
 		}
 		/// <summary>

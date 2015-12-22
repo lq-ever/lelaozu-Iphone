@@ -20,6 +20,10 @@ namespace lelaozuIphone
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIScrollView scrollView { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextView txt_adviceContent { get; set; }
 
 		[Outlet]
@@ -35,6 +39,10 @@ namespace lelaozuIphone
 			if (btn_publish != null) {
 				btn_publish.Dispose ();
 				btn_publish = null;
+			}
+			if (scrollView != null) {
+				scrollView.Dispose ();
+				scrollView = null;
 			}
 			if (txt_adviceContent != null) {
 				txt_adviceContent.Dispose ();
