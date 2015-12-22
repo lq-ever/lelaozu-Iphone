@@ -343,10 +343,18 @@ namespace lelaozuIphone
 		/// </summary>
 		private void LoadMoreData()
 		{
+			//在状态栏中设置show网络指示器
+			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
 			pageIndex++;
 			UpdateAlarmInfoListParam ();
 			//调用webservice获取数据
 			restSharpRequestUtil.ExcuteAsync ((response) => {
+				InvokeOnMainThread(()=>
+					{
+						BTProgressHUD.Dismiss();
+						//在状态栏中hide使用网络指示器
+						UIApplication.SharedApplication.NetworkActivityIndicatorVisible = false;
+					});
 				if(response.ResponseStatus == RestSharp.ResponseStatus.Completed &&response.StatusCode == System.Net.HttpStatusCode.OK)
 				{
 					var result = response.Content;

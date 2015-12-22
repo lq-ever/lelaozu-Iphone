@@ -128,6 +128,7 @@ namespace lelaozuIphone
 				item = vc.sectionTwoList[indexPath.Row];
 			//create targetcontroller
 			var controller = FuncTypeControllerFactory.CreateFuncViewController(item.FuncType);
+			controller.HidesBottomBarWhenPushed = true;
 			vc.NavigationController.PushViewController (controller, true);
 			tableView.DeselectRow (indexPath, true);
 

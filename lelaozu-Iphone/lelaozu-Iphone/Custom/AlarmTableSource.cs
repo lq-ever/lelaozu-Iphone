@@ -88,6 +88,7 @@ namespace lelaozuIphone
 			cell.Lbl_AlarmTime.Text = FormatUtil.StrToTimeFormat (item.AlarmTime);
 			cell.Lbl_AlarmStatus.Text = FormatUtil.StrVaueFormat (item.Status);
 			cell.Lbl_AlarmContent.Text = FormatUtil.StrVaueFormat (item.AlarmContent);
+			cell.Accessory = UITableViewCellAccessory.DisclosureIndicator;
 			return cell;
 
 		}
