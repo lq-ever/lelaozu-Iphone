@@ -1,8 +1,9 @@
 ﻿using System;
+using Foundation;
 
 namespace lelaozuIphone
 {
-	public class HealthInfoItem
+	public class HealthInfoItem:NSObject
 	{
 		public HealthInfoItem ()
 		{

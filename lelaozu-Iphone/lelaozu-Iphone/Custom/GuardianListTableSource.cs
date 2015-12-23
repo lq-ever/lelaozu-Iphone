@@ -101,7 +101,16 @@ namespace lelaozuIphone
 				cell = GuardianListCell.CreateCell ();
 			}
 			cell.Lbl_Name.Text = FormatUtil.StrVaueFormat (item.TrueName);
-			cell.Lbl_Location.Text = FormatUtil.StrVaueFormat (item.ContactAddress);
+			//设置地址
+			if (string.IsNullOrEmpty (item.ContactAddress))
+				cell.Lbl_Location.Text = string.Empty;
+			else {
+				if (item.ContactAddress.Contains ("|"))
+					cell.Lbl_Location.Text = item.ContactAddress.Split (new char[]{ '|' }) [1];
+				else
+					cell.Lbl_Location.Text = item.ContactAddress;
+
+			}
 			cell.Lbl_PhoneNumber.Text = FormatUtil.StrVaueFormat (item.PhoneNumberOne);
 			var imgSexname = item.Sex == Sex.Male ? "ic_sex_man.png" : "ic_sex_woman.png";
 			cell.Img_Sex.Image = UIImage.FromFile (imgSexname);
@@ -109,8 +118,9 @@ namespace lelaozuIphone
 //			cell.Btn_Action.SetValueForKey (item, GuardianListCell.Key);
 //			cell.Btn_Action.SetValueForKey (indexPath, _indexPath);
 
-			cell.Btn_Action.SetValueForKeyPath (item, GuardianListCell.Key);
-			cell.Btn_Action.SetValueForKeyPath (indexPath, _indexPath);
+
+//			cell.Btn_Action.SetValueForKeyPath (item, GuardianListCell.Key);
+//			cell.Btn_Action.SetValueForKeyPath (indexPath, _indexPath);
 
 			cell.Btn_Action.TouchUpInside -= ActionHandle;
 		    cell.Btn_Action.TouchUpInside += ActionHandle;
@@ -125,11 +135,11 @@ namespace lelaozuIphone
 		private void ActionHandle(object sender, EventArgs e)
 		{
 			
-			var item = (sender as UIButton).ValueForKeyPath (GuardianListCell.Key) as  GuardianInfoListItem;
-			var indexPath = (sender as UIButton).ValueForKeyPath (_indexPath) as NSIndexPath;
+//			var item = (sender as UIButton).ValueForKeyPath (GuardianListCell.Key) as  GuardianInfoListItem;
+//			var indexPath = (sender as UIButton).ValueForKeyPath (_indexPath) as NSIndexPath;
 			var unbindAlertController = UIAlertController.Create ("解绑", "您确定要解绑吗？", UIAlertControllerStyle.Alert);
 			unbindAlertController.AddAction (UIAlertAction.Create ("确定", UIAlertActionStyle.Default, (action) => {
-				UnBindGuardian(item,indexPath);
+				//UnBindGuardian(item,indexPath);
 			}));
 				
 			unbindAlertController.AddAction (UIAlertAction.Create ("取消", UIAlertActionStyle.Cancel, (action) => {
