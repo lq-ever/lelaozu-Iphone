@@ -115,7 +115,7 @@ namespace lelaozuIphone
 						if(alarmdetailInfoJson.data.handdetail.Count>0)
 						{
 							var handleDetails = alarmdetailInfoJson.data.handdetail;
-							UITableView handleTableView = new UITableView(new CGRect(0,430,375,handleDetails.Count*120));
+							var handleTableView = new UITableView(new CGRect(0,430,375,handleDetails.Count*120));
 							InvokeOnMainThread(()=>
 								{
 									alarmScrollView.AddSubview(handleTableView);

@@ -30,10 +30,10 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="5" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="8" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                            <rect key="frame" x="0.0" y="5" width="375" height="43"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="9" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="ic_basicInformation.png">
@@ -49,7 +49,7 @@
                             </subviews>
                         </view>
                         <view contentMode="scaleToFill" id="11" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                            <rect key="frame" x="0.0" y="52" width="375" height="330"/>
+                            <rect key="frame" x="0.0" y="45" width="375" height="330"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="报警时间：" lineBreakMode="tailTruncation" minimumFontSize="10" id="12" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                     <rect key="frame" x="12" y="10" width="92" height="25"/>
@@ -229,7 +229,7 @@
                             <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                         </view>
                         <view contentMode="scaleToFill" id="45" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                            <rect key="frame" x="0.0" y="386" width="375" height="43"/>
+                            <rect key="frame" x="0.0" y="385" width="375" height="43"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="46" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="ic_basicInformation.png">
@@ -245,7 +245,7 @@
                             </subviews>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                    <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
                 </scrollView>
             </subviews>
         </view>
@@ -270,5 +270,25 @@
         <image name="success_7.png" width="28" height="28"/>
         <image name="uparrow.png" width="17" height="29"/>
         <image name="ic_basicInformation.png" width="48" height="42"/>
+        <image name="ic_sex_man.png" width="42" height="42"/>
+        <image name="ic_sex_woman.png" width="42" height="42"/>
+        <image name="ic_medicalHistory.png" width="48" height="42"/>
+        <image name="ic_myInfo_advision_jianyi.png" width="48" height="48"/>
+        <image name="ic_myInfo_advision_qita.png" width="48" height="48"/>
+        <image name="ic_myInfo_advision_tousu.png" width="48" height="48"/>
+        <image name="ic_myInfo_advision_zixun.png" width="48" height="48"/>
+        <image name="ic_myInfomation_aboutUs.png" width="45" height="51"/>
+        <image name="ic_myInfomation_accountSecurity.png" width="45" height="51"/>
+        <image name="ic_myInfomation_advice.png" width="45" height="51"/>
+        <image name="ic_myInfomation_cacheRemover.png" width="45" height="51"/>
+        <image name="ic_myInfomation_call.png" width="114" height="114"/>
+        <image name="ic_myInfomation_message.png" width="45" height="34"/>
+        <image name="ic_myInfomation_personalData.png" width="45" height="51"/>
+        <image name="ic_myInfomation_phone.png" width="36" height="54"/>
+        <image name="ic_myInfomation_userName.png" width="36" height="54"/>
+        <image name="ic_myInfomation_versionDetection.png" width="45" height="51"/>
+        <image name="myInfomation_headImage.png" width="258" height="258"/>
+        <image name="myInfomation_setup_aboutus_logo.png" width="400" height="400"/>
+        <image name="setting.png" width="72" height="72"/>
     </resources>
 </document>

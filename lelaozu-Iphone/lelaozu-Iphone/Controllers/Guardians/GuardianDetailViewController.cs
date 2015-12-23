@@ -22,6 +22,7 @@ namespace lelaozuIphone
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "详情";
 			LoadDetailData ();
+			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 		}
 
 		private void LoadDetailData()
