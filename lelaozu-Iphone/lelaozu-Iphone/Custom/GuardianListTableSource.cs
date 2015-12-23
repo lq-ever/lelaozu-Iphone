@@ -20,6 +20,11 @@ namespace lelaozuIphone
 		/// </summary>
 		private NSString _indexPath = new NSString("indexPath");
 
+		public Action RefreshAction {
+			get;
+			set;
+		}
+
 		public GuardianListTableSource (List<GuardianInfoListItem> _guardianInfoList,UIViewController _controller,UITableView view)
 		{
 			GuardianInfoList = _guardianInfoList;
@@ -122,6 +127,9 @@ namespace lelaozuIphone
 //			cell.Btn_Action.SetValueForKeyPath (item, GuardianListCell.Key);
 //			cell.Btn_Action.SetValueForKeyPath (indexPath, _indexPath);
 
+			cell.Btn_Action.Tag = indexPath.Row;
+
+
 			cell.Btn_Action.TouchUpInside -= ActionHandle;
 		    cell.Btn_Action.TouchUpInside += ActionHandle;
 
@@ -135,11 +143,13 @@ namespace lelaozuIphone
 		private void ActionHandle(object sender, EventArgs e)
 		{
 			
+			var index = (int)(sender as UIButton).Tag;
+			var item = GuardianInfoList[index];
 //			var item = (sender as UIButton).ValueForKeyPath (GuardianListCell.Key) as  GuardianInfoListItem;
 //			var indexPath = (sender as UIButton).ValueForKeyPath (_indexPath) as NSIndexPath;
 			var unbindAlertController = UIAlertController.Create ("解绑", "您确定要解绑吗？", UIAlertControllerStyle.Alert);
 			unbindAlertController.AddAction (UIAlertAction.Create ("确定", UIAlertActionStyle.Default, (action) => {
-				//UnBindGuardian(item,indexPath);
+				UnBindGuardian(item);
 			}));
 				
 			unbindAlertController.AddAction (UIAlertAction.Create ("取消", UIAlertActionStyle.Cancel, (action) => {
@@ -152,7 +162,7 @@ namespace lelaozuIphone
 		/// 解绑监护人
 		/// </summary>
 		/// <param name="userId">User identifier.</param>
-		private void UnBindGuardian(GuardianInfoListItem item,NSIndexPath indexPath)
+		private void UnBindGuardian(GuardianInfoListItem item)
 		{
 			//调用webservice
 
@@ -204,7 +214,9 @@ namespace lelaozuIphone
 								{
 									//解绑成功
 									BTProgressHUD.ShowSuccessWithStatus("解绑成功",1000);
-									View.DeleteRows(new NSIndexPath[]{ indexPath },UITableViewRowAnimation.Left);
+									//View.DeleteRows(new NSIndexPath[]{ indexPath },UITableViewRowAnimation.Left);
+									if(RefreshAction!=null)
+										RefreshAction();
 								});
 						}
 						else

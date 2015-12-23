@@ -39,6 +39,9 @@ namespace lelaozuIphone
 			myGuardianInfoListParam = new MineGuardianInfoListParam (){ UserId = Constants.MyInfo.UId };
 			guardianSource = new GuardianListTableSource(guardianInfoList,this,tableView);
 			tableView.Source = guardianSource;
+			guardianSource.RefreshAction = () => {
+				header.BeginRefreshing();
+			};
 			header = new MJRefreshNormalHeader();
 			header.SetTitle(Constants.PullDownLbl, MJRefreshState.Idle);
 			header.SetTitle(Constants.PullDownReleaseLbl, MJRefreshState.Pulling);
