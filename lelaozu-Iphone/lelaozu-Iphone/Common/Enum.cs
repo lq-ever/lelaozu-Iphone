@@ -29,7 +29,8 @@ namespace lelaozuIphone
 		PersonInfoBirth =7,//生日
 		PersonInfoFixedPhone=8,//固定电话
 		PersonInfoEmail =9,//邮箱
-		PersonInfoCardLocation=10//身份证所在地
+		PersonInfoCardLocation=10,//身份证所在地
+		SendSecurity = 11//发送验证码	
 	}
 }
 

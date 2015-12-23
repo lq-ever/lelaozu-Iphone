@@ -44,6 +44,9 @@ namespace lelaozuIphone
 			case FuncType.PersonInfoTrueName:
 				controller = new PersonInfoTrueNameViewController ();
 				break;
+			case FuncType.SendSecurity:
+				controller = new SendSecurityCodeController ();
+				break;
 			}
 			return controller;
 		}

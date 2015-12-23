@@ -98,3 +98,4 @@
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/MJRefreshSharp.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/MJRefreshSharp.dll.mdb
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/AdviceRecordTableViewCell.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/AccountSecurityTableViewCell.nib
