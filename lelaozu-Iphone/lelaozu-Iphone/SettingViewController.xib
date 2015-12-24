@@ -14,6 +14,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" id="5" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                    <rect key="frame" x="0.0" y="54" width="375" height="44"/>
+                    <items>
+                        <navigationItem id="6">
+                            <barButtonItem id="7" translatesAutoresizingMaskIntoConstraints="NO" key="leftBarButtonItem" style="done" title="df"/>
+                            <barButtonItem title="Item" id="8" translatesAutoresizingMaskIntoConstraints="NO" key="rightBarButtonItem"/>
+                        </navigationItem>
+                    </items>
+                    <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0" blue="0" alpha="1"/>
+                </navigationBar>
+            </subviews>
         </view>
     </objects>
     <resources>

@@ -15,7 +15,7 @@ namespace lelaozuIphone
 		private RestSharpRequestUtil restSharpRequestUtil;
 		private Dictionary<string,string> requestParams = new Dictionary<string,string> ();
 		private GetApplyInfoParam getApplyInfoParam;//请求参数对象
-		List<GetApplyInfoListItem> ApplyInfoList;
+		List<GetApplyInfoListItem> ApplyInfoList = new List<GetApplyInfoListItem>();
 
 		private bool IsRefreshing = false;//是否正在获取数据
 		MJRefreshNormalHeader header;

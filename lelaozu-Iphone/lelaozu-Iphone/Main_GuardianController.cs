@@ -18,10 +18,19 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title="监护人";
-			var rightBarButtonItem = new UIBarButtonItem ("add", UIBarButtonItemStyle.Done, (sender,e) => {
-				
+			var rightBarButtonItem = new UIBarButtonItem ("绑定", UIBarButtonItemStyle.Done, (sender,e) => {
+				var bindGuardianController = new BindGuardianViewController(){HidesBottomBarWhenPushed = true};	
+				this.NavigationController.PushViewController(bindGuardianController,true);
 			});
+
+			var leftBarButtonItem = new UIBarButtonItem ("申请处理", UIBarButtonItemStyle.Bordered, (sender, e) => {
+				var guardianApplyController = new GuardianApplyViewController();
+				this.NavigationController.PushViewController(guardianApplyController,true);
+			});
+		
 			this.NavigationItem.RightBarButtonItem = rightBarButtonItem;
+			this.NavigationItem.LeftBarButtonItem = leftBarButtonItem;
+
 			_myGuardianViewController = new MyGuardianViewController ();
 			_otherGuardianViewController = new OtherGuardianViewController ();
 

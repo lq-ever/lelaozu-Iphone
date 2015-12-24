@@ -68,13 +68,9 @@ namespace lelaozuIphone
 						callFailController.AddAction(UIAlertAction.Create("确定",UIAlertActionStyle.Default,null));
 						PresentViewController(callFailController,true,null);
 					};
-					//UIApplication.SharedApplication.OpenUrl(callUrl);
+
 				});
 			img_call.AddGestureRecognizer (callRecongnizer);
-				
-
-
-
 
 			//底部tableview
 			sectionOneList.Add (new MainMyItem(){  ImagPath="ic_myInfomation_personalData",Title="个人资料",FuncType = FuncType.PersonInfo});

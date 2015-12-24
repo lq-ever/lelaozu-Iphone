@@ -66,7 +66,7 @@ namespace lelaozuIphone
 		/// <param name="indexPath">Index path.</param>
 		public override void RowSelected (UITableView tableView, Foundation.NSIndexPath indexPath)
 		{
-			
+			tableView.DeselectRow (indexPath, true);
 		}
 		/// <summary>
 		/// Gets the cell.
@@ -83,7 +83,7 @@ namespace lelaozuIphone
 			}
 
 
-			cell.Accessory = UITableViewCellAccessory.DisclosureIndicator;
+			cell.Accessory = UITableViewCellAccessory.None;
 			cell.SelectionStyle = UITableViewCellSelectionStyle.Gray;
 			//todo:set imgeHead
 

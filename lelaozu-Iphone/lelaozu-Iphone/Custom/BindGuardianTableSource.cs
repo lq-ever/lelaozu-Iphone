@@ -67,6 +67,7 @@ namespace lelaozuIphone
 		/// <param name="indexPath">Index path.</param>
 		public override void RowSelected (UITableView tableView, Foundation.NSIndexPath indexPath)
 		{
+			tableView.DeselectRow (indexPath, true);
 		}
 		/// <summary>
 		/// Gets the cell.
@@ -174,10 +175,11 @@ namespace lelaozuIphone
 				if(observer !=null)
 					NSNotificationCenter.DefaultCenter.RemoveObserver(observer);
 			};
-			var applyBindAlertController = UIAlertController.Create ("申请绑定", "\n\n\n\n\n\n\n\n", UIAlertControllerStyle.Alert);
+			var applyBindAlertController = UIAlertController.Create ("申请绑定", "", UIAlertControllerStyle.Alert);
 			applyBindAlertController.AddTextField ((textfield) => {
 				textfield.Placeholder = "请输入申请留言";
 				textfield.Text = FormatUtil.StrVaueFormat(item.Remark);
+				textfield.Frame = new CoreGraphics.CGRect(textfield.Frame.X,textfield.Frame.Y,textfield.Frame.Width,textfield.Frame.Height +30);
 				observer = NSNotificationCenter.DefaultCenter.AddObserver(UITextField.TextFieldTextDidChangeNotification,HandleTextFieldTextDidChangeNotification);
 			});
 			var sendAction = UIAlertAction.Create ("发送", UIAlertActionStyle.Default, (action) => {

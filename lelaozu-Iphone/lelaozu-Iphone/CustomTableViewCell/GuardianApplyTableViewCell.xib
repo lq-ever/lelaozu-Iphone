@@ -13,7 +13,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="2" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="2" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="myInfomation_headImage.png">
                         <rect key="frame" x="5" y="5" width="80" height="80"/>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="3" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="张三丰">
@@ -49,14 +49,18 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                         <rect key="frame" x="313" y="14" width="46" height="30"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.00392156862745098" green="0.71372549019607845" blue="1" alpha="1"/>
                         <state key="normal" title="同意">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                         <rect key="frame" x="314" y="60" width="46" height="30"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.00392156862745098" green="0.71372549019607845" blue="1" alpha="1"/>
                         <state key="normal" title="拒绝">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                         </state>
                     </button>
                 </subviews>
@@ -96,5 +100,22 @@
         <image name="ic_sex_man.png" width="42" height="42"/>
         <image name="ic_sex_woman.png" width="42" height="42"/>
         <image name="ic_medicalHistory.png" width="48" height="42"/>
+        <image name="ic_myInfo_advision_jianyi.png" width="48" height="48"/>
+        <image name="ic_myInfo_advision_qita.png" width="48" height="48"/>
+        <image name="ic_myInfo_advision_tousu.png" width="48" height="48"/>
+        <image name="ic_myInfo_advision_zixun.png" width="48" height="48"/>
+        <image name="ic_myInfomation_aboutUs.png" width="45" height="51"/>
+        <image name="ic_myInfomation_accountSecurity.png" width="45" height="51"/>
+        <image name="ic_myInfomation_advice.png" width="45" height="51"/>
+        <image name="ic_myInfomation_cacheRemover.png" width="45" height="51"/>
+        <image name="ic_myInfomation_call.png" width="114" height="114"/>
+        <image name="ic_myInfomation_message.png" width="45" height="34"/>
+        <image name="ic_myInfomation_personalData.png" width="45" height="51"/>
+        <image name="ic_myInfomation_phone.png" width="36" height="54"/>
+        <image name="ic_myInfomation_userName.png" width="36" height="54"/>
+        <image name="ic_myInfomation_versionDetection.png" width="45" height="51"/>
+        <image name="myInfomation_headImage.png" width="258" height="258"/>
+        <image name="myInfomation_setup_aboutus_logo.png" width="400" height="400"/>
+        <image name="setting.png" width="72" height="72"/>
     </resources>
 </document>
