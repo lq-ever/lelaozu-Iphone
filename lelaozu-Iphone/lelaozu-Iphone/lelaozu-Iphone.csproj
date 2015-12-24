@@ -134,10 +134,10 @@
     <InterfaceDefinition Include="RegisterViewController.xib" />
     <InterfaceDefinition Include="SendSecurityCodeController.xib" />
     <InterfaceDefinition Include="SettingViewController.xib" />
-    <InterfaceDefinition Include="Controllers\WriteAdviceViewController.xib" />
     <InterfaceDefinition Include="Controllers\My\AdviceRecordViewController.xib" />
     <InterfaceDefinition Include="CustomTableViewCell\AdviceRecordTableViewCell.xib" />
     <InterfaceDefinition Include="CustomTableViewCell\AccountSecurityTableViewCell.xib" />
+    <InterfaceDefinition Include="Controllers\My\WriteAdviceViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -387,10 +387,6 @@
     <Compile Include="SettingViewController.designer.cs">
       <DependentUpon>SettingViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\WriteAdviceViewController.cs" />
-    <Compile Include="Controllers\WriteAdviceViewController.designer.cs">
-      <DependentUpon>WriteAdviceViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\My\AdviceRecordViewController.cs" />
     <Compile Include="Controllers\My\AdviceRecordViewController.designer.cs">
       <DependentUpon>AdviceRecordViewController.cs</DependentUpon>
@@ -403,6 +399,10 @@
     <Compile Include="CustomTableViewCell\AccountSecurityTableViewCell.cs" />
     <Compile Include="CustomTableViewCell\AccountSecurityTableViewCell.designer.cs">
       <DependentUpon>AccountSecurityTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\My\WriteAdviceViewController.cs" />
+    <Compile Include="Controllers\My\WriteAdviceViewController.designer.cs">
+      <DependentUpon>WriteAdviceViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

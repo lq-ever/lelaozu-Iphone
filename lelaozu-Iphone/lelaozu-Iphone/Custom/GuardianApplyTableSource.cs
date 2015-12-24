@@ -17,6 +17,10 @@ namespace lelaozuIphone
 		private NSString actionFlag = new NSString ("actionFlag");
 		private NSString _indexPath = new NSString("indexPath");
 
+		public Action RefreshAction {
+			get;
+			set;
+		}
 		public GuardianApplyTableSource (List<GetApplyInfoListItem> _applyInfoList,UIViewController _controller,UITableView view)
 		{
 			ApplyInfoList = _applyInfoList;
@@ -62,11 +66,7 @@ namespace lelaozuIphone
 		/// <param name="indexPath">Index path.</param>
 		public override void RowSelected (UITableView tableView, Foundation.NSIndexPath indexPath)
 		{
-			//			var item = SearchGuardianInfoList [indexPath.Row];
-			//			var guardianDetailController = new GuardianDetailViewController (){UId = item.UId};
-			//			guardianDetailController.HidesBottomBarWhenPushed = true;
-			//			controller.NavigationController.PushViewController(guardianDetailController,true);
-			//			tableView.DeselectRow (indexPath, true);
+			
 		}
 		/// <summary>
 		/// Gets the cell.
@@ -123,17 +123,20 @@ namespace lelaozuIphone
 					cell.Btn_Disagree.Hidden = false;
 					cell.Lbl_BindStatus.Hidden = true;
 
-					cell.Btn_Agree.SetValueForKey (item, GuardianApplyTableViewCell.Key);
-					cell.Btn_Agree.SetValueForKey (new NSString ("1"), actionFlag);
-					cell.Btn_Agree.SetValueForKey (indexPath, _indexPath);
-					cell.Btn_Disagree.SetValueForKey (item, GuardianApplyTableViewCell.Key);
-					cell.Btn_Disagree.SetValueForKey (new NSString ("0"), actionFlag);
-					cell.Btn_Disagree.SetValueForKey (indexPath, _indexPath);
+//					cell.Btn_Agree.SetValueForKey (item, GuardianApplyTableViewCell.Key);
+//					cell.Btn_Agree.SetValueForKey (new NSString ("1"), actionFlag);
+//					cell.Btn_Agree.SetValueForKey (indexPath, _indexPath);
+//					cell.Btn_Disagree.SetValueForKey (item, GuardianApplyTableViewCell.Key);
+//					cell.Btn_Disagree.SetValueForKey (new NSString ("0"), actionFlag);
+//					cell.Btn_Disagree.SetValueForKey (indexPath, _indexPath);
 
-					cell.Btn_Agree.TouchUpInside -= ActionHandler;
-					cell.Btn_Agree.TouchUpInside += ActionHandler;
-					cell.Btn_Disagree.TouchUpInside -= ActionHandler;
-					cell.Btn_Disagree.TouchUpInside += ActionHandler;
+					cell.Btn_Agree.Tag = indexPath.Row;
+					cell.Btn_Disagree.Tag = indexPath.Row;
+
+					cell.Btn_Agree.TouchUpInside -= AgreeActionHandler;
+					cell.Btn_Agree.TouchUpInside += AgreeActionHandler;
+					cell.Btn_Disagree.TouchUpInside -= DisAgreeActionHandler;
+					cell.Btn_Disagree.TouchUpInside += DisAgreeActionHandler;
 
 
 					break;
@@ -152,24 +155,34 @@ namespace lelaozuIphone
 			}
 		}
 		/// <summary>
-		/// 事件处理程序
+		/// agree事件处理程序
 		/// </summary>
 		/// <param name="sender">Sender.</param>
 		/// <param name="e">E.</param>
-		private void ActionHandler(object sender, EventArgs e)
+		private void AgreeActionHandler(object sender, EventArgs e)
 		{
-			var btnAction = sender as UIButton;
-			var item = (GetApplyInfoListItem)btnAction.ValueForKey(GuardianApplyTableViewCell.Key);
-			var actionflag = (btnAction.ValueForKey(actionFlag) as NSString).ToString();
-			var indexPath = (sender as UIButton).ValueForKeyPath (_indexPath) as NSIndexPath;
+			var index = (int)(sender as UIButton).Tag;
+			var item = ApplyInfoList[index];
+			DealApply (item, "1");
+		}
+		/// <summary>
+		/// Dises the agree action handler.
+		/// </summary>
+		/// <param name="sender">Sender.</param>
+		/// <param name="e">E.</param>
+		private void DisAgreeActionHandler(object sender, EventArgs e)
+		{
+			var index = (int)(sender as UIButton).Tag;
+			var item = ApplyInfoList[index];
+			DealApply (item, "0");
+		}
 
-
+		private void DealApply(GetApplyInfoListItem item,string actionFlag)
+		{
 			BTProgressHUD.Show("正在处理中...",-1,ProgressHUD.MaskType.Black);
 			//在状态栏中设置show网络指示器
 			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
-
-
-			examinebundGuardianParam.Ifagreen = actionflag.ToString();
+			examinebundGuardianParam.Ifagreen = actionFlag;
 			examinebundGuardianParam.Id = item.Id;
 
 			if (!requestParams.ContainsKey ("eId"))
@@ -221,7 +234,9 @@ namespace lelaozuIphone
 						InvokeOnMainThread(()=>
 							{
 								BTProgressHUD.ShowSuccessWithStatus("处理成功...",1000);
-								View.DeleteRows(new NSIndexPath[]{ indexPath },UITableViewRowAnimation.Left);
+								//View.DeleteRows(new NSIndexPath[]{ indexPath },UITableViewRowAnimation.Left);
+								if(RefreshAction == null)
+									RefreshAction();
 							});
 					}
 					else
@@ -250,7 +265,6 @@ namespace lelaozuIphone
 						});
 				}
 			});
-
 		}
 
 	}

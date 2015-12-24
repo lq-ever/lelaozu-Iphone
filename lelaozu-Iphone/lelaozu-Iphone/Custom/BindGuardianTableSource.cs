@@ -20,6 +20,8 @@ namespace lelaozuIphone
 			get;
 			set;
 		}
+
+		private string applyMsgContent;
 		public BindGuardianTableSource (List<SearchGuardianListItem> _searchGuardianInfoList,UIViewController _controller,UITableView view)
 		{
 			SearchGuardianInfoList = _searchGuardianInfoList;
@@ -65,11 +67,6 @@ namespace lelaozuIphone
 		/// <param name="indexPath">Index path.</param>
 		public override void RowSelected (UITableView tableView, Foundation.NSIndexPath indexPath)
 		{
-//			var item = SearchGuardianInfoList [indexPath.Row];
-//			var guardianDetailController = new GuardianDetailViewController (){UId = item.UId};
-//			guardianDetailController.HidesBottomBarWhenPushed = true;
-//			controller.NavigationController.PushViewController(guardianDetailController,true);
-//			tableView.DeselectRow (indexPath, true);
 		}
 		/// <summary>
 		/// Gets the cell.
@@ -84,12 +81,8 @@ namespace lelaozuIphone
 			if (cell == null) {
 				cell = BindGuardianTableViewCell.CreateCell ();
 			}
-
-
-			cell.Accessory = UITableViewCellAccessory.DisclosureIndicator;
+			cell.Accessory = UITableViewCellAccessory.None;
 			cell.SelectionStyle = UITableViewCellSelectionStyle.Gray;
-			//todo:set imgeHead
-
 			cell.Lbl_Name.Text = FormatUtil.StrVaueFormat (item.TrueName);
 			cell.Lbl_PhoneNumber.Text = FormatUtil.StrVaueFormat (item.PhoneNumberOne);
 			cell.Lbl_BindStatus.Text = GetGuardianStatus (item.IsPass);
@@ -101,16 +94,19 @@ namespace lelaozuIphone
 					cell.Lbl_Location.Text = item.ContactAddress.Split (new char[]{ '|' }) [1];
 				else
 					cell.Lbl_Location.Text = item.ContactAddress;
-
 			}
 			//性别
 			var imgSexname = item.Sex == Sex.Male ? "ic_sex_man.png" : "ic_sex_woman.png";
 			cell.Img_Sex.Image = UIImage.FromFile (imgSexname);
 			SetbtnAction(cell.Btn_Action,item.IsPass);//设置操作按钮文字和可用状态
-			//按钮绑定事件 			
-			cell.Btn_Action.SetValueForKey(item,BindGuardianTableViewCell.Key);
+				
+
+			cell.Btn_Action.Tag = indexPath.Row;
+			//按钮绑定事件 		
 			cell.Btn_Action.TouchUpInside -= ActionHandler;
 			cell.Btn_Action.TouchUpInside += ActionHandler;
+
+			//todo:set imgeHead
 
 			return cell;
 		}
@@ -141,25 +137,25 @@ namespace lelaozuIphone
 				btn_action.SetTitle("申请绑定",UIControlState.Normal);
 
 				btn_action.Enabled = true;
-				//btn_action.SetBackgroundResource (Resource.Color.blue);
+				btn_action.BackgroundColor = UIColor.Blue;
 				break;
 
 			case "1"://同意
 				btn_action.SetTitle("已绑定",UIControlState.Normal);
 				btn_action.Enabled = false;
-				//btn_action.SetBackgroundResource (Resource.Color.lightgray);
+				btn_action.BackgroundColor = UIColor.LightGray;
 				break;
 
 			case "2"://未同意
 				btn_action.SetTitle("申请绑定",UIControlState.Normal);
 				btn_action.Enabled = true;
-			//	btn_action.SetBackgroundResource (Resource.Color.blue);
+				btn_action.BackgroundColor = UIColor.Blue;
 				break;
 
 			default:
 				btn_action.SetTitle("申请绑定",UIControlState.Normal);
 				btn_action.Enabled = true;
-			//	btn_action.SetBackgroundResource (Resource.Color.blue);
+				btn_action.BackgroundColor = UIColor.Blue;
 				break;
 
 			}
@@ -167,10 +163,13 @@ namespace lelaozuIphone
 		private void ActionHandler(object sender, EventArgs e)
 		{
 			NSObject observer = null;
-			var item = (sender as UIButton).ValueForKey (BindGuardianTableViewCell.Key) as  SearchGuardianListItem;
-//				var applybindPopWindow = new ApplybindPopWindow (activity, item){applyBindEventHandler = ApplyBindGuardian};
-//				applybindPopWindow.ShowPopWindow (activity.FindViewById<LinearLayout> (Resource.Id.ll_MainGuardian));
+			//var item = (sender as UIButton).ValueForKey (BindGuardianTableViewCell.Key) as  SearchGuardianListItem;
 
+			var index = (int)(sender as UIButton).Tag;
+			var item = SearchGuardianInfoList[index];
+
+			//留言内容
+			applyMsgContent = item.Remark;
 			Action removeTextFieldObserver = () => {
 				if(observer !=null)
 					NSNotificationCenter.DefaultCenter.RemoveObserver(observer);
@@ -183,13 +182,16 @@ namespace lelaozuIphone
 			});
 			var sendAction = UIAlertAction.Create ("发送", UIAlertActionStyle.Default, (action) => {
 				removeTextFieldObserver();
+				ApplyBindGuardian(item,applyMsgContent);
 			});
 			var cancelAction = UIAlertAction.Create ("取消", UIAlertActionStyle.Cancel, (action) => {
 				removeTextFieldObserver();
 			});
 			SendAction = sendAction;
-			if(FormatUtil.StrVaueFormat(item.Remark).Length<=0)
+			if (FormatUtil.StrVaueFormat (item.Remark).Length <= 0)
 				sendAction.Enabled = false;
+			else
+				sendAction.Enabled = true;
 			
 			//add the actions
 			applyBindAlertController.AddAction (sendAction);
@@ -202,6 +204,7 @@ namespace lelaozuIphone
 		{
 			var textField = notification.Object as UITextField;
 			SendAction.Enabled = textField.Text.Length >= 1;
+			applyMsgContent = textField.Text;
 		}
 
 		/// <summary>
@@ -276,6 +279,8 @@ namespace lelaozuIphone
 							InvokeOnMainThread(()=>
 								{
 									BTProgressHUD.ShowSuccessWithStatus("申请绑定监护人成功",1000);
+									if(RefreshAction!=null)
+										RefreshAction();
 								});
 						}
 						else
@@ -309,11 +314,6 @@ namespace lelaozuIphone
 							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
 						});
 				}
-				InvokeOnMainThread(()=>
-					{
-						if(RefreshAction!=null)
-							RefreshAction();
-					});
 			});
 
 

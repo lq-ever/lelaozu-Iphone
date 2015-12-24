@@ -39,6 +39,10 @@ namespace lelaozuIphone
 			getApplyInfoParam = new GetApplyInfoParam (){ Id = Constants.MyInfo.UId };
 			guardianApplyTableSource = new GuardianApplyTableSource (ApplyInfoList, this, tableView);
 			tableView.Source = guardianApplyTableSource;
+			//refresh
+			guardianApplyTableSource.RefreshAction = () => {
+				header.BeginRefreshing();
+			};
 			header = new MJRefreshNormalHeader();
 			header.SetTitle(Constants.PullDownLbl, MJRefreshState.Idle);
 			header.SetTitle(Constants.PullDownReleaseLbl, MJRefreshState.Pulling);
@@ -48,6 +52,8 @@ namespace lelaozuIphone
 				OnPullDownToRefresh();
 			};
 			tableView.SetHeader (header);
+			//第一次进入自动刷新
+			header.BeginRefreshing();
 
 		}
 		/// <summary>

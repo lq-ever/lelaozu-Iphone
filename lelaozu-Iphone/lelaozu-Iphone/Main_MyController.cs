@@ -11,6 +11,7 @@ namespace lelaozuIphone
 	{
 		public List<MainMyItem> sectionOneList = new List<MainMyItem>();
 		public List<MainMyItem> sectionTwoList = new List<MainMyItem>() ;
+		UIImagePickerController imagePickerController;
 		public Main_MyController () : base ("Main_MyController", null)
 		{
 		}
@@ -28,17 +29,25 @@ namespace lelaozuIphone
 			});
 			img_setting.AddGestureRecognizer (settingRecognizer);
 
-			//点击头像
+			//点击头像 --圆角图片
 			img_head.UserInteractionEnabled = true;
+			var img = UIImage.FromFile ("myInfomation_headImage.png");
+			img_head.Layer.Contents = img.CGImage;
+			img_head.Layer.MasksToBounds = true;
+			img_head.Layer.CornerRadius = img_head.Frame.Size.Width/2;
+			img_head.Layer.BorderWidth = 1.0f;
+			img_head.Layer.BorderColor = UIColor.White.CGColor;
+			img_head.ClipsToBounds = true;
+
 			var headRecongnizer = new UITapGestureRecognizer ((UITapGestureRecognizer recoginizer) => {
 				var alertImageController = UIAlertController.Create("选择图片","",UIAlertControllerStyle.ActionSheet);
 				alertImageController.AddAction(UIAlertAction.Create("从相片库",UIAlertActionStyle.Default,(UIAlertAction obj) => 
 					{
-						
+						CallPhoto(UIImagePickerControllerSourceType.PhotoLibrary);
 					}));
 				alertImageController.AddAction(UIAlertAction.Create("拍照",UIAlertActionStyle.Default,(UIAlertAction obj) =>
 					{
-						
+						CallPhoto(UIImagePickerControllerSourceType.Camera);
 					}));
 				alertImageController.AddAction(UIAlertAction.Create(" 取消",UIAlertActionStyle.Cancel,(UIAlertAction obj)=>
 					{
@@ -77,6 +86,27 @@ namespace lelaozuIphone
 			scrollview.SetContentOffset(new CGPoint(0,0),true);
 
 		}
+
+		/// <summary>
+		/// Calls the photo.
+		/// </summary>
+		/// <param name="type">Type.</param>
+		private void CallPhoto(UIImagePickerControllerSourceType type)
+		{
+			if (UIImagePickerController.IsSourceTypeAvailable (type)) {
+				imagePickerController = new UIImagePickerController ();
+				imagePickerController.SourceType = type;
+				imagePickerController.AllowsEditing = true;
+				if (PresentedViewController == null)
+					PresentViewController (imagePickerController, true, null);
+				imagePickerController.Delegate = new AvatarPickerDelegate (img_head);
+				
+			} else {
+				var alertController = UIAlertController.Create("不支持","该设备不支持此操作",UIAlertControllerStyle.Alert);
+				alertController.AddAction(UIAlertAction.Create("确定",UIAlertActionStyle.Default,null));
+				PresentViewController(alertController,true,null);
+			}
+		}
 	
 		private void InitView()
 		{
@@ -89,6 +119,26 @@ namespace lelaozuIphone
 		}
 			
 	}
+	class AvatarPickerDelegate:UIImagePickerControllerDelegate 
+	{
+		UIImageView _avatar;
+		public AvatarPickerDelegate(UIImageView _imgView)
+		{
+			_avatar = _imgView;
+		}
+		public override void FinishedPickingImage (UIImagePickerController picker, UIImage image, NSDictionary editingInfo)
+		{
+			if (image == null)
+				return;
+			//更新显示图片
+			_avatar.Layer.Contents = image.CGImage;
+			//关闭UIImagePicker
+			picker.DismissViewController(true,null);
+			//todo:post the server
+
+		}
+    }
+
 	public class  mainMySource :UITableViewSource
 	{
 		private Main_MyController vc;
