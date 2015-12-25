@@ -155,6 +155,7 @@ namespace lelaozuIphone
 			unbindAlertController.AddAction (UIAlertAction.Create ("取消", UIAlertActionStyle.Cancel, (action) => {
 				
 			}));
+
 			controller.PresentViewController (unbindAlertController, true, null);
 
 		}

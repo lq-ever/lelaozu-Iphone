@@ -1,14 +1,11 @@
 ﻿<Properties StartupItem="lelaozu-Iphone/lelaozu-Iphone.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.9.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/Controllers/Guardians/OtherGuardianViewController.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="lelaozu-Iphone/Common/Enum.cs" Line="28" Column="27" />
-      <File FileName="lelaozu-Iphone/Custom/GuardianListTableSource.cs" Line="218" Column="26" />
-      <File FileName="lelaozu-Iphone/CustomTableViewCell/GuardianListCell.designer.cs" Line="23" Column="29" />
-      <File FileName="lelaozu-Iphone/Controllers/Guardians/GuardianApplyViewController.cs" Line="48" Column="24" />
-      <File FileName="lelaozu-Iphone/Controllers/Guardians/MyGuardianViewController.cs" Line="41" Column="38" />
-      <File FileName="lelaozu-Iphone/Controllers/Guardians/BindGuardianViewController.cs" Line="31" Column="14" />
-      <File FileName="lelaozu-Iphone/Controllers/Guardians/OtherGuardianViewController.cs" Line="33" Column="18" />
+      <File FileName="lelaozu-Iphone/Controllers/My/PersonInfoTrueNameViewController.cs" Line="44" Column="64" />
+      <File FileName="lelaozu-Iphone/Custom/GuardianApplyTableSource.cs" Line="86" Column="51" />
+      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="20" Column="4" />
+      <File FileName="lelaozu-Iphone/Main_MyController.cs" Line="38" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

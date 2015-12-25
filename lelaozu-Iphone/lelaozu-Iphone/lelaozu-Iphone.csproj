@@ -138,6 +138,8 @@
     <InterfaceDefinition Include="CustomTableViewCell\AdviceRecordTableViewCell.xib" />
     <InterfaceDefinition Include="CustomTableViewCell\AccountSecurityTableViewCell.xib" />
     <InterfaceDefinition Include="Controllers\My\WriteAdviceViewController.xib" />
+    <InterfaceDefinition Include="ServiceAgreeViewController.xib" />
+    <InterfaceDefinition Include="RegisterResultViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -404,6 +406,14 @@
     <Compile Include="Controllers\My\WriteAdviceViewController.designer.cs">
       <DependentUpon>WriteAdviceViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServiceAgreeViewController.cs" />
+    <Compile Include="ServiceAgreeViewController.designer.cs">
+      <DependentUpon>ServiceAgreeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterResultViewController.cs" />
+    <Compile Include="RegisterResultViewController.designer.cs">
+      <DependentUpon>RegisterResultViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -470,6 +480,10 @@
     <BundleResource Include="Resources\myInfomation_headImage.png" />
     <BundleResource Include="Resources\myInfomation_setup_aboutus_logo.png" />
     <BundleResource Include="Resources\setting.png" />
+    <BundleResource Include="Resources\ic_login_eye_normal.png" />
+    <BundleResource Include="Resources\ic_login_eye_selected.png" />
+    <BundleResource Include="Resources\ic_login_password.png" />
+    <BundleResource Include="Resources\ic_login_username.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MJRefreshSharp\MJRefreshSharp.csproj">

@@ -20,7 +20,9 @@ namespace lelaozuIphone
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
+			this.NavigationItem.Title = "登录";
 			InitView ();
+
 		}
 		private void InitView()
 		{
@@ -187,6 +189,7 @@ namespace lelaozuIphone
 			base.ViewDidAppear (animated);
 			this.NavigationController.NavigationBarHidden = true;
 		}
+
 		public override void DidReceiveMemoryWarning ()
 		{
 			base.DidReceiveMemoryWarning ();
