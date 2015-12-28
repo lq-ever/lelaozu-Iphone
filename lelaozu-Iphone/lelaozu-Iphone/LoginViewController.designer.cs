@@ -28,6 +28,10 @@ namespace lelaozuIphone
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton cb_password { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField txt_Password { get; set; }
 
 		[Outlet]
@@ -47,6 +51,10 @@ namespace lelaozuIphone
 			if (btn_register != null) {
 				btn_register.Dispose ();
 				btn_register = null;
+			}
+			if (cb_password != null) {
+				cb_password.Dispose ();
+				cb_password = null;
 			}
 			if (txt_Password != null) {
 				txt_Password.Dispose ();

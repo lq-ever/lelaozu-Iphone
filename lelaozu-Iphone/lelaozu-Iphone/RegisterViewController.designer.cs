@@ -20,6 +20,10 @@ namespace lelaozuIphone
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton cb_agree { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel lbl_linkAgree { get; set; }
 
 		[Outlet]
@@ -47,6 +51,10 @@ namespace lelaozuIphone
 			if (btn_next != null) {
 				btn_next.Dispose ();
 				btn_next = null;
+			}
+			if (cb_agree != null) {
+				cb_agree.Dispose ();
+				cb_agree = null;
 			}
 			if (lbl_linkAgree != null) {
 				lbl_linkAgree.Dispose ();

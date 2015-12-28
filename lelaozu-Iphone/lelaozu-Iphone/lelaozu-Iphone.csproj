@@ -489,6 +489,8 @@
     <BundleResource Include="Resources\ic_login_eye_selected.png" />
     <BundleResource Include="Resources\ic_login_password.png" />
     <BundleResource Include="Resources\ic_login_username.png" />
+    <BundleResource Include="Resources\ic_register_combox_normal.png" />
+    <BundleResource Include="Resources\ic_register_combox_selected.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MJRefreshSharp\MJRefreshSharp.csproj">

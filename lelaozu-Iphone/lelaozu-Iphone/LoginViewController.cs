@@ -35,8 +35,26 @@ namespace lelaozuIphone
 			txt_Password.ShouldReturn = (textField) => {
 				return textField.ResignFirstResponder();
 			};
-			// remember username password
-			if (true) {
+
+			//check password default true 记住密码
+			//cb_password.ButtonType = UIButtonType.Custom;
+			cb_password.SetImage(UIImage.FromFile("ic_register_combox_normal.png"),UIControlState.Normal);
+			cb_password.SetImage(UIImage.FromFile("ic_register_combox_selected.png"),UIControlState.Selected);
+			cb_password.Selected = true;
+			cb_password.AddTarget ((sender, e) => {
+				cb_password.Selected =!cb_password.Selected;
+				if(cb_password.Selected)
+					NSUserDefaults.StandardUserDefaults.SetBool(true,Constants.Remember_Check);
+				else
+					NSUserDefaults.StandardUserDefaults.SetBool(false,Constants.Remember_Check);
+					
+			}, UIControlEvent.TouchUpInside);
+
+			;
+
+			// remember username password如果选择了记住密码
+			if (NSUserDefaults.StandardUserDefaults.BoolForKey (Constants.Remember_Check)) {
+				cb_password.Selected = true;
 				txt_Username.Text = string.IsNullOrEmpty(NSUserDefaults.StandardUserDefaults.StringForKey (Constants.Login_UserName))?string.Empty:NSUserDefaults.StandardUserDefaults.StringForKey (Constants.Login_UserName);
 				txt_Password.Text = string.IsNullOrEmpty (NSUserDefaults.StandardUserDefaults.StringForKey (Constants.Login_PassWorde)) ? string.Empty : NSUserDefaults.StandardUserDefaults.StringForKey (Constants.Login_PassWorde);
 			}
@@ -110,7 +128,7 @@ namespace lelaozuIphone
 						InvokeOnMainThread(()=>
 							{
 								//remember usename\password
-								if(true)
+								if(cb_password.Selected)
 								{
 									NSUserDefaults.StandardUserDefaults.SetString(userName,Constants.Login_UserName);
 									NSUserDefaults.StandardUserDefaults.SetString(userPwd,Constants.Login_PassWorde);

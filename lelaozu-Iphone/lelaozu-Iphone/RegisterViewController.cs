@@ -37,6 +37,18 @@ namespace lelaozuIphone
 				this.NavigationController.PushViewController(new ServiceAgreeViewController(),true);
 			});
 			lbl_linkAgree.AddGestureRecognizer (agreeRecognizer);
+			//checkbox agree
+			cb_agree.SetImage(UIImage.FromFile("ic_register_combox_normal.png"),UIControlState.Normal);
+			cb_agree.SetImage(UIImage.FromFile("ic_register_combox_selected.png"),UIControlState.Selected);
+			cb_agree.Selected = true;
+			cb_agree.TouchUpInside+= (sender, e) => 
+			{
+				cb_agree.Selected =!cb_agree.Selected;
+				if(cb_agree.Selected)
+					btn_next.Enabled = true;
+				else
+					btn_next.Enabled = false;
+			};
 
 			//btn_next
 			btn_next.TouchUpInside += (object sender, EventArgs e) => 

@@ -50,6 +50,8 @@ namespace lelaozuIphone
 
 
 
+
+
 		/// <summary>
 		/// The screen frame.
 		/// </summary>
