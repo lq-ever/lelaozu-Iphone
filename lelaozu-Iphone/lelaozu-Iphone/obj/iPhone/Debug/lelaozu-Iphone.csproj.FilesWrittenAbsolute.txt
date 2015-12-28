@@ -192,3 +192,16 @@
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhone/Debug/Newtonsoft.Json.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhone/Debug/MJRefreshSharp.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhone/Debug/MJRefreshSharp.dll.mdb
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/ibtool/AccountSecurityTableViewCell.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/ibtool/AdviceRecordTableViewCell.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/ibtool/AdviceRecordViewController.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/ibtool/RegisterResultViewController.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/ibtool/RegisterViewController.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/ibtool/SendSecurityCodeController.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/ibtool/ServiceAgreeViewController.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/ibtool/SettingViewController.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/ibtool/WriteAdviceViewController.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/optimized/ic_login_eye_normal.png
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/optimized/ic_login_eye_selected.png
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/optimized/ic_login_password.png
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/optimized/ic_login_username.png

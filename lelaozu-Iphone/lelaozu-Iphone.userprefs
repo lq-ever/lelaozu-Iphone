@@ -1,11 +1,10 @@
 ﻿<Properties StartupItem="lelaozu-Iphone/lelaozu-Iphone.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.9.0" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/RegisterResultViewController.cs">
     <Files>
-      <File FileName="lelaozu-Iphone/Controllers/My/PersonInfoTrueNameViewController.cs" Line="44" Column="64" />
-      <File FileName="lelaozu-Iphone/Custom/GuardianApplyTableSource.cs" Line="86" Column="51" />
-      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="20" Column="4" />
-      <File FileName="lelaozu-Iphone/Main_MyController.cs" Line="38" Column="18" />
+      <File FileName="lelaozu-Iphone/Controllers/My/PersonInfoEmailViewController.cs" Line="116" Column="11" />
+      <File FileName="lelaozu-Iphone/RegisterResultViewController.cs" Line="81" Column="6" />
+      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="119" Column="74" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

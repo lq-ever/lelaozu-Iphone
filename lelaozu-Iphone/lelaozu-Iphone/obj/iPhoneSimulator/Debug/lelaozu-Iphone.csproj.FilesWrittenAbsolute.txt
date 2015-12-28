@@ -38,8 +38,10 @@
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/PersonInfoTableViewCell.nib
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/PersonInfoTrueNameViewController.nib
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/PersonInfoViewController.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/RegisterResultViewController.nib
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/RegisterViewController.nib
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/SendSecurityCodeController.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/ServiceAgreeViewController.nib
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/SettingViewController.nib
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/UserGuiderViewController.nib
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/WriteAdviceViewController.nib
@@ -88,6 +90,10 @@
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/myInfomation_headImage.png
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/myInfomation_setup_aboutus_logo.png
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/setting.png
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_login_eye_normal.png
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_login_eye_selected.png
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_login_password.png
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_login_username.png
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/Images.xcassets/Images.imageset/Root.plist
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/arrow@2x.png
@@ -99,9 +105,3 @@
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/MJRefreshSharp.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/MJRefreshSharp.dll.mdb
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_login_eye_normal.png
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_login_eye_selected.png
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_login_password.png
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_login_username.png
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/ServiceAgreeViewController.nib
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/ibtool/RegisterResultViewController.nib

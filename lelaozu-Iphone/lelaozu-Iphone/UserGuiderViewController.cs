@@ -66,7 +66,7 @@ namespace lelaozuIphone
 						//write currentversioncode 
 						NSUserDefaults.StandardUserDefaults.SetString(Constants.CurrentVersionCode,Constants.LastVersionStr);
 						//this.NavigationController.PushViewController(new LoginViewController(),true);
-						PresentViewController(new LoginViewController(),true,null);
+						PresentViewController(new UINavigationController(new LoginViewController()),true,null);
 					};
 					imageview.AddSubview(btn_Start);
 				}
