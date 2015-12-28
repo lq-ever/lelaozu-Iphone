@@ -140,6 +140,7 @@
     <InterfaceDefinition Include="Controllers\My\WriteAdviceViewController.xib" />
     <InterfaceDefinition Include="ServiceAgreeViewController.xib" />
     <InterfaceDefinition Include="RegisterResultViewController.xib" />
+    <InterfaceDefinition Include="SetPassWordViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -413,6 +414,10 @@
     <Compile Include="RegisterResultViewController.cs" />
     <Compile Include="RegisterResultViewController.designer.cs">
       <DependentUpon>RegisterResultViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetPassWordViewController.cs" />
+    <Compile Include="SetPassWordViewController.designer.cs">
+      <DependentUpon>SetPassWordViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

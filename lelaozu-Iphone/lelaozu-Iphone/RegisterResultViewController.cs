@@ -155,6 +155,7 @@ namespace lelaozuIphone
 					{
 						InvokeOnMainThread(()=>
 							{
+								BTProgressHUD.Show("验证码发送成功...",-1,ProgressHUD.MaskType.Black);
 								//start timer
 								timer.Fire();
 								securityCode = smsJson.data.ToString();
@@ -166,8 +167,8 @@ namespace lelaozuIphone
 					{
 						InvokeOnMainThread(()=>
 							{
-								
 								BTProgressHUD.ShowToast(smsJson.message,showToastCentered:false,timeoutMs:1000);
+								btn_send.Enabled = true;
 							});
 					}
 				}
@@ -176,6 +177,7 @@ namespace lelaozuIphone
 					InvokeOnMainThread(()=>
 						{
 							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
+							btn_send.Enabled = true;
 						}
 					);
 				}
@@ -184,6 +186,7 @@ namespace lelaozuIphone
 					InvokeOnMainThread(()=>
 						{
 							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+							btn_send.Enabled = true;
 						});
 				}
 
