@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="lelaozu-Iphone/lelaozu-Iphone.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.9.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/RegisterResultViewController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/RegisterViewController.cs">
     <Files>
-      <File FileName="lelaozu-Iphone/Controllers/My/PersonInfoEmailViewController.cs" Line="116" Column="11" />
-      <File FileName="lelaozu-Iphone/RegisterResultViewController.cs" Line="81" Column="6" />
-      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="119" Column="74" />
+      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="40" Column="6" />
+      <File FileName="lelaozu-Iphone/Common/Constants.cs" Line="46" Column="54" />
+      <File FileName="lelaozu-Iphone/RegisterViewController.cs" Line="25" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

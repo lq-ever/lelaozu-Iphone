@@ -6,11 +6,11 @@
 	<dict>
 		<key>.monotouch-32/MJRefreshSharp.dll</key>
 		<data>
-		QgIvbDC3etgNWpAdckda8BHIWcA=
+		awZLBdkfuHWR7MPJAg4hDIqUbJw=
 		</data>
 		<key>.monotouch-32/MJRefreshSharp.dll.mdb</key>
 		<data>
-		IMw4Ggo6+WAO5sl0VGuqgdlUrjY=
+		uKR770UZ9Uo3YuHiFlKlaaucT2I=
 		</data>
 		<key>.monotouch-32/Mono.Dynamic.Interpreter.dll</key>
 		<data>
@@ -78,19 +78,19 @@
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll</key>
 		<data>
-		INb2aeN/AE5ecZwArPSl7zlgTws=
+		8E0687ioOEC91R4e6XRIvS7SH3k=
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll.mdb</key>
 		<data>
-		ieUFEOaxJUaCnztl6CtYhrt/Pyw=
+		73117yLiIIFYlW6HiIJgoPMzAQs=
 		</data>
 		<key>.monotouch-32/lelaozu-Iphone.exe</key>
 		<data>
-		6vPxsGRka3MXtXTbSfGr0Osd8Us=
+		YQAYdbujO7BAdZ8sk60fLQrfN3I=
 		</data>
 		<key>.monotouch-32/lelaozu-Iphone.exe.mdb</key>
 		<data>
-		yBzohPrt3no35ugwHeJ1a5EkTeY=
+		sPaqCRZni4SmI7SZJMXyYAdVDkI=
 		</data>
 		<key>.monotouch-32/mscorlib.dll</key>
 		<data>
@@ -186,7 +186,7 @@
 		</data>
 		<key>LoginViewController.nib</key>
 		<data>
-		trBJeR07UPT1jp0vUa9TQtS8Ulc=
+		U4jtqJQ5NAyqPO8Taoecik9NK1w=
 		</data>
 		<key>MainMyTableViewCell.nib</key>
 		<data>
@@ -286,15 +286,19 @@
 		</data>
 		<key>RegisterViewController.nib</key>
 		<data>
-		t0OSeMzXQL4YGmYG0fh6JafODcs=
+		fr8GouYZpJ4kQS6CVqB8KRMsc3Y=
 		</data>
 		<key>SendSecurityCodeController.nib</key>
 		<data>
-		AieARJyKZrX3AyYNLVlvJbp8I6A=
+		/FXA7BQbc4IPCo/NFnmhG/EsAjM=
 		</data>
 		<key>ServiceAgreeViewController.nib</key>
 		<data>
 		PiWXytn8Peuh6iOI/pmIEU2nlhc=
+		</data>
+		<key>SetPassWordViewController.nib</key>
+		<data>
+		4dHm4nX3y3RsdhPc6OJJOczuR9E=
 		</data>
 		<key>SettingViewController.nib</key>
 		<data>
@@ -476,6 +480,14 @@
 		<data>
 		4CXDjDSZifXKfBH7T2Zh94xgUXo=
 		</data>
+		<key>ic_register_combox_normal.png</key>
+		<data>
+		ewsTlKGTHanrQJebTrxsEvQ3Qi0=
+		</data>
+		<key>ic_register_combox_selected.png</key>
+		<data>
+		bdTSt65H3BGgsInYW/NzLlYHZ50=
+		</data>
 		<key>ic_sex_man.png</key>
 		<data>
 		bjiedL1VggTETpt2Byyz9a3vQ/Q=
@@ -525,11 +537,11 @@
 	<dict>
 		<key>.monotouch-32/MJRefreshSharp.dll</key>
 		<data>
-		QgIvbDC3etgNWpAdckda8BHIWcA=
+		awZLBdkfuHWR7MPJAg4hDIqUbJw=
 		</data>
 		<key>.monotouch-32/MJRefreshSharp.dll.mdb</key>
 		<data>
-		IMw4Ggo6+WAO5sl0VGuqgdlUrjY=
+		uKR770UZ9Uo3YuHiFlKlaaucT2I=
 		</data>
 		<key>.monotouch-32/Mono.Dynamic.Interpreter.dll</key>
 		<data>
@@ -597,19 +609,19 @@
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll</key>
 		<data>
-		INb2aeN/AE5ecZwArPSl7zlgTws=
+		8E0687ioOEC91R4e6XRIvS7SH3k=
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll.mdb</key>
 		<data>
-		ieUFEOaxJUaCnztl6CtYhrt/Pyw=
+		73117yLiIIFYlW6HiIJgoPMzAQs=
 		</data>
 		<key>.monotouch-32/lelaozu-Iphone.exe</key>
 		<data>
-		6vPxsGRka3MXtXTbSfGr0Osd8Us=
+		YQAYdbujO7BAdZ8sk60fLQrfN3I=
 		</data>
 		<key>.monotouch-32/lelaozu-Iphone.exe.mdb</key>
 		<data>
-		yBzohPrt3no35ugwHeJ1a5EkTeY=
+		sPaqCRZni4SmI7SZJMXyYAdVDkI=
 		</data>
 		<key>.monotouch-32/mscorlib.dll</key>
 		<data>
@@ -701,7 +713,7 @@
 		</data>
 		<key>LoginViewController.nib</key>
 		<data>
-		trBJeR07UPT1jp0vUa9TQtS8Ulc=
+		U4jtqJQ5NAyqPO8Taoecik9NK1w=
 		</data>
 		<key>MainMyTableViewCell.nib</key>
 		<data>
@@ -797,15 +809,19 @@
 		</data>
 		<key>RegisterViewController.nib</key>
 		<data>
-		t0OSeMzXQL4YGmYG0fh6JafODcs=
+		fr8GouYZpJ4kQS6CVqB8KRMsc3Y=
 		</data>
 		<key>SendSecurityCodeController.nib</key>
 		<data>
-		AieARJyKZrX3AyYNLVlvJbp8I6A=
+		/FXA7BQbc4IPCo/NFnmhG/EsAjM=
 		</data>
 		<key>ServiceAgreeViewController.nib</key>
 		<data>
 		PiWXytn8Peuh6iOI/pmIEU2nlhc=
+		</data>
+		<key>SetPassWordViewController.nib</key>
+		<data>
+		4dHm4nX3y3RsdhPc6OJJOczuR9E=
 		</data>
 		<key>SettingViewController.nib</key>
 		<data>
@@ -986,6 +1002,14 @@
 		<key>ic_myInfomation_versionDetection.png</key>
 		<data>
 		4CXDjDSZifXKfBH7T2Zh94xgUXo=
+		</data>
+		<key>ic_register_combox_normal.png</key>
+		<data>
+		ewsTlKGTHanrQJebTrxsEvQ3Qi0=
+		</data>
+		<key>ic_register_combox_selected.png</key>
+		<data>
+		bdTSt65H3BGgsInYW/NzLlYHZ50=
 		</data>
 		<key>ic_sex_man.png</key>
 		<data>

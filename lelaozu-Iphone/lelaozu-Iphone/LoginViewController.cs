@@ -132,6 +132,7 @@ namespace lelaozuIphone
 								{
 									NSUserDefaults.StandardUserDefaults.SetString(userName,Constants.Login_UserName);
 									NSUserDefaults.StandardUserDefaults.SetString(userPwd,Constants.Login_PassWorde);
+									NSUserDefaults.StandardUserDefaults.SetBool(true,Constants.Remember_Check);
 								}
 								// login sucess  set tabbarcontroller as  rootviewcontroller
 								this.View.Window.RootViewController = new MainTabBarController();

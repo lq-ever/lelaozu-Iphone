@@ -205,3 +205,10 @@
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/optimized/ic_login_eye_selected.png
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/optimized/ic_login_password.png
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/optimized/ic_login_username.png
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/ibtool/SetPassWordViewController.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/optimized/ic_register_combox_normal.png
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/optimized/ic_register_combox_selected.png
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/ibtool/AboutUsViewController.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/ibtool/SettingTableViewCell.nib
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/actool/partial-info.plist
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/actool/asset-manifest.plist
