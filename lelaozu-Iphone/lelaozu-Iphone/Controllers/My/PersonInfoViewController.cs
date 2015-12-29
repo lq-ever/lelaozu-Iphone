@@ -62,9 +62,10 @@ namespace lelaozuIphone
 			tableView.ReloadData ();
 		}
 
-		public override void ViewDidAppear (bool animated)
+
+		public override void ViewWillAppear (bool animated)
 		{
-			base.ViewDidAppear (animated);
+			base.ViewWillAppear (animated);
 			LoadData ();
 		}
 		public override void DidReceiveMemoryWarning ()

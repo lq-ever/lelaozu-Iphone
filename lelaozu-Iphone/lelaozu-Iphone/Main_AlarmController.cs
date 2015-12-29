@@ -18,6 +18,13 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "报警信息";
+			this.NavigationController.NavigationBar.BarTintColor = Color.Blue;
+			this.NavigationController.NavigationBar.Translucent = false;
+			this.NavigationController.NavigationBar.TintColor = UIColor.White;
+			var titleAttributs = new UIStringAttributes ();
+			titleAttributs.ForegroundColor = UIColor.White;
+			titleAttributs.Font = UIFont.SystemFontOfSize(20f);
+			this.NavigationController.NavigationBar.TitleTextAttributes = titleAttributs;
 
 			_myAlarmViewController = new MyAlarmViewController ();
 			_otherAlarmViewController = new OtherAlarmViewController ();

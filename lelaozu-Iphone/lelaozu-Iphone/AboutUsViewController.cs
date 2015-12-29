@@ -16,6 +16,7 @@ namespace lelaozuIphone
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "关于我们";
 			lbl_appVersion.Text = "乐老族Iphone版 V"+ Constants.CurrentVersionCode;
+			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 		}
 
 		public override void DidReceiveMemoryWarning ()

@@ -21,6 +21,16 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "体检信息";
+			this.NavigationController.NavigationBar.BarTintColor = Color.Blue;
+			this.NavigationController.NavigationBar.Translucent = false;
+			this.NavigationController.NavigationBar.TintColor = UIColor.White;
+			var titleAttributs = new UIStringAttributes ();
+			titleAttributs.ForegroundColor = UIColor.White;
+			titleAttributs.Font = UIFont.SystemFontOfSize(20f);
+			this.NavigationController.NavigationBar.TitleTextAttributes = titleAttributs;
+
+	
+
 			_myHealthViewController = new MyHealthViewController ();
 			_otherHealthViewController = new OtherHealthViewController ();
 			AddChildViewController (_myHealthViewController);

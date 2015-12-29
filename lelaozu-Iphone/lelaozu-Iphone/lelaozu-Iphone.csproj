@@ -429,6 +429,8 @@
     <Compile Include="CustomTableViewCell\SettingTableViewCell.designer.cs">
       <DependentUpon>SettingTableViewCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\UIColorExtensions.cs" />
+    <Compile Include="Common\Color.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

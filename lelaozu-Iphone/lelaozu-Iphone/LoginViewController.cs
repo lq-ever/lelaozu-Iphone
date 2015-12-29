@@ -21,6 +21,8 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "登录";
+
+
 			InitView ();
 
 		}
@@ -50,7 +52,7 @@ namespace lelaozuIphone
 					
 			}, UIControlEvent.TouchUpInside);
 
-			;
+		
 
 			// remember username password如果选择了记住密码
 			if (NSUserDefaults.StandardUserDefaults.BoolForKey (Constants.Remember_Check)) {

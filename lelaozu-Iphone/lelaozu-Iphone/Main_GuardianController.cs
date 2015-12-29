@@ -18,6 +18,14 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title="监护人";
+			this.NavigationController.NavigationBar.BarTintColor = Color.Blue;
+			this.NavigationController.NavigationBar.Translucent = false;
+			this.NavigationController.NavigationBar.TintColor = UIColor.White;
+			var titleAttributs = new UIStringAttributes ();
+			titleAttributs.ForegroundColor = UIColor.White;
+			titleAttributs.Font = UIFont.SystemFontOfSize(20f);
+			this.NavigationController.NavigationBar.TitleTextAttributes = titleAttributs;
+
 			var rightBarButtonItem = new UIBarButtonItem ("绑定", UIBarButtonItemStyle.Done, (sender,e) => {
 				var bindGuardianController = new BindGuardianViewController(){HidesBottomBarWhenPushed = true};	
 				this.NavigationController.PushViewController(bindGuardianController,true);

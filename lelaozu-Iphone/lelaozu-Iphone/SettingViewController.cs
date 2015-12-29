@@ -89,9 +89,9 @@ namespace lelaozuIphone
 		{
 			
 			if (indexPath.Section == 0) {
-				//关于我们
-				controller.NavigationController.PushViewController(new AboutUsViewController(),true);
 				if (indexPath.Row ==0) {
+					//关于我们
+					controller.NavigationController.PushViewController(new AboutUsViewController(),true);
 				} else if (indexPath.Row == 1) {
 					//todo:版本检测
 				}

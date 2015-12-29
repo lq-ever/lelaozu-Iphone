@@ -36,6 +36,10 @@ namespace lelaozuIphone
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lbl_phoneNumber { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIScrollView scrollview { get; set; }
 
 		[Outlet]
@@ -63,6 +67,10 @@ namespace lelaozuIphone
 			if (lbl_nickName != null) {
 				lbl_nickName.Dispose ();
 				lbl_nickName = null;
+			}
+			if (lbl_phoneNumber != null) {
+				lbl_phoneNumber.Dispose ();
+				lbl_phoneNumber = null;
 			}
 			if (scrollview != null) {
 				scrollview.Dispose ();

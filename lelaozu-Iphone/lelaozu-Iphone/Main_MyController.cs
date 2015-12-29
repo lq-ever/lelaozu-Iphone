@@ -21,6 +21,14 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "我的";
+			this.NavigationController.NavigationBar.BarTintColor = Color.Blue;
+			this.NavigationController.NavigationBar.Translucent = false;
+			this.NavigationController.NavigationBar.TintColor = UIColor.White;
+			var titleAttributs = new UIStringAttributes ();
+			titleAttributs.ForegroundColor = UIColor.White;
+			titleAttributs.Font = UIFont.SystemFontOfSize(20f);
+			this.NavigationController.NavigationBar.TitleTextAttributes = titleAttributs;
+
 			//setting 设置
 			img_setting.UserInteractionEnabled = true;
 			var settingRecognizer = new UITapGestureRecognizer ((UITapGestureRecognizer obj) => {
@@ -68,10 +76,8 @@ namespace lelaozuIphone
 						callFailController.AddAction(UIAlertAction.Create("确定",UIAlertActionStyle.Default,null));
 						PresentViewController(callFailController,true,null);
 					};
-
 				});
 			img_call.AddGestureRecognizer (callRecongnizer);
-
 			//底部tableview
 			sectionOneList.Add (new MainMyItem(){  ImagPath="ic_myInfomation_personalData",Title="个人资料",FuncType = FuncType.PersonInfo});
 			sectionOneList.Add (new MainMyItem (){ ImagPath="ic_myInfomation_accountSecurity",Title ="账户安全",FuncType = FuncType.AccountSecurity});
@@ -80,6 +86,8 @@ namespace lelaozuIphone
 			tableView.Source = new mainMySource (this);
 			scrollview.ContentSize = new CGSize (Constants.Screen_Width,scrollview.Frame.Height+20);
 			scrollview.SetContentOffset(new CGPoint(0,0),true);
+			//赋值
+			SetShowInfo ();
 
 		}
 
@@ -103,11 +111,51 @@ namespace lelaozuIphone
 				PresentViewController(alertController,true,null);
 			}
 		}
-	
-		private void InitView()
+
+		/// <summary>
+		/// Sets the show info.
+		/// </summary>
+		private void SetShowInfo()
 		{
-			
+			//设置用户昵称和手机号
+			lbl_nickName.Text = string.IsNullOrEmpty(Constants.MyInfo.UserName)?"未设置昵称":Constants.MyInfo.UserName;
+			var iphoneNumber = Constants.MyInfo.PhoneNumberOne;
+			if (!string.IsNullOrEmpty (iphoneNumber)) {
+				var midleStr = iphoneNumber.Substring (3, 4);
+				var resultStr = iphoneNumber.Replace (midleStr, "****");
+				lbl_phoneNumber.Text = resultStr;
+			} else
+				lbl_phoneNumber.Text = "未绑定手机号";
+
+			//从Sd中找头像，转换成Bitmap
+			//
+			//			Bitmap bt = BitmapFactory.DecodeFile(path + "myHead.jpg");
+			//			if(bt!=null){
+			//
+			//				img_head.SetImageBitmap (bt);
+			//			}
+			//			else
+			//			{
+			//				//调用web服务获取
+			//				Global.imageLoader.DisplayImage(Global.MyInfo.HeadImgReleaseUrl,img_head,Global.Options);
+			//			}
+			//			//调用web服务获取
+			//Global.imageLoader.DisplayImage(Global.MyInfo.HeadImgReleaseUrl,img_head,Global.Options);
 		}
+
+//		public override void ViewWillAppear (bool animated)
+//		{
+//			base.ViewWillAppear (animated);
+//			this.NavigationController.SetNavigationBarHidden( true,true);
+//
+//		}
+//		public override void ViewWillDisappear (bool animated)
+//		{
+//			base.ViewWillDisappear (animated);
+//			this.NavigationController.SetNavigationBarHidden(false,true);
+//		}
+
+
 		public override void DidReceiveMemoryWarning ()
 		{
 			base.DidReceiveMemoryWarning ();
