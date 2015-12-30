@@ -76,7 +76,7 @@ namespace lelaozuIphone
 			//forgetPwd
 			btn_forgetPwd.TouchUpInside += (object sender, EventArgs e) => 
 			{
-				var forgetPwdController = new SendSecurityCodeController(){SendType ="",PhoneNumber= string.Empty};
+				var forgetPwdController = new SendSecurityCodeController(){SendType ="FindPwd",PhoneNumber= string.Empty};
 				this.NavigationController.PushViewController(forgetPwdController,true);
 			};
 			//login

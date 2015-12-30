@@ -459,14 +459,6 @@
     <BundleResource Include="Resources\guider3.png" />
     <BundleResource Include="Resources\guider4.png" />
     <BundleResource Include="Resources\ic_launch.png" />
-    <BundleResource Include="Resources\ic_menu_alarm_selected.png" />
-    <BundleResource Include="Resources\ic_menu_guardian_selected.png" />
-    <BundleResource Include="Resources\ic_menu_health_selected.png" />
-    <BundleResource Include="Resources\ic_menu_mine_selected.png" />
-    <BundleResource Include="Resources\ic_menu_alarm_normal.png" />
-    <BundleResource Include="Resources\ic_menu_guardian_normal.png" />
-    <BundleResource Include="Resources\ic_menu_health_normal.png" />
-    <BundleResource Include="Resources\ic_menu_mine_normal.png" />
     <BundleResource Include="Resources\error.png" />
     <BundleResource Include="Resources\error%402x.png" />
     <BundleResource Include="Resources\error_7.png" />
@@ -503,6 +495,22 @@
     <BundleResource Include="Resources\ic_login_username.png" />
     <BundleResource Include="Resources\ic_register_combox_normal.png" />
     <BundleResource Include="Resources\ic_register_combox_selected.png" />
+    <BundleResource Include="Resources\ic_menu_alarm_normal%403x.png" />
+    <BundleResource Include="Resources\ic_menu_alarm_selected%403x.png" />
+    <BundleResource Include="Resources\ic_menu_guardian_normal%403x.png" />
+    <BundleResource Include="Resources\ic_menu_guardian_selected%403x.png" />
+    <BundleResource Include="Resources\ic_menu_health_normal%403x.png" />
+    <BundleResource Include="Resources\ic_menu_health_selected%403x.png" />
+    <BundleResource Include="Resources\ic_menu_mine_normal%403x.png" />
+    <BundleResource Include="Resources\ic_menu_mine_selected%403x.png" />
+    <BundleResource Include="Resources\ic_menu_alarm_normal%402x.png" />
+    <BundleResource Include="Resources\ic_menu_alarm_selected%402x.png" />
+    <BundleResource Include="Resources\ic_menu_guardian_normal%402x.png" />
+    <BundleResource Include="Resources\ic_menu_guardian_selected%402x.png" />
+    <BundleResource Include="Resources\ic_menu_health_normal%402x.png" />
+    <BundleResource Include="Resources\ic_menu_health_selected%402x.png" />
+    <BundleResource Include="Resources\ic_menu_mine_normal%402x.png" />
+    <BundleResource Include="Resources\ic_menu_mine_selected%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MJRefresh\MJRefresh.csproj">

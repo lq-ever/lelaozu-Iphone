@@ -23,7 +23,7 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="11" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="12" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="短信验证码已发送，请填写验证码">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="12" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="短信验证码已发送，请填写验证码" hidden="YES">
                             <rect key="frame" x="26" y="99" width="298" height="21"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -31,13 +31,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="13" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="15821526948">
-                            <rect key="frame" x="42" y="152" width="217" height="30"/>
+                            <rect key="frame" x="42" y="152" width="190" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                             <color key="textColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="14" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                            <rect key="frame" x="267" y="152" width="83" height="30"/>
+                            <rect key="frame" x="240" y="152" width="108" height="30"/>
                             <color key="backgroundColor" colorSpace="calibratedRGB" red="0.10588235294117647" green="0.5725490196078431" blue="1" alpha="1"/>
                             <state key="normal" title="60s可重发">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,7 +45,7 @@
                             </state>
                         </button>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="16" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="请输入收到的短信验证码">
-                            <rect key="frame" x="42" y="212" width="308" height="30"/>
+                            <rect key="frame" x="42" y="212" width="293" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -75,14 +75,14 @@
         <image name="guider3.png" width="1080" height="1920"/>
         <image name="guider4.png" width="1080" height="1920"/>
         <image name="ic_launch.png" width="144" height="144"/>
-        <image name="ic_menu_alarm_selected.png" width="84" height="72"/>
-        <image name="ic_menu_guardian_selected.png" width="84" height="72"/>
-        <image name="ic_menu_health_selected.png" width="84" height="72"/>
-        <image name="ic_menu_mine_selected.png" width="84" height="72"/>
-        <image name="ic_menu_alarm_normal.png" width="84" height="72"/>
-        <image name="ic_menu_guardian_normal.png" width="84" height="72"/>
-        <image name="ic_menu_health_normal.png" width="84" height="72"/>
-        <image name="ic_menu_mine_normal.png" width="84" height="72"/>
+        <image name="ic_menu_alarm_selected.png" width="29" height="25"/>
+        <image name="ic_menu_guardian_selected.png" width="29" height="25"/>
+        <image name="ic_menu_health_selected.png" width="29" height="25"/>
+        <image name="ic_menu_mine_selected.png" width="29" height="25"/>
+        <image name="ic_menu_alarm_normal.png" width="29" height="25"/>
+        <image name="ic_menu_guardian_normal.png" width="29" height="25"/>
+        <image name="ic_menu_health_normal.png" width="29" height="25"/>
+        <image name="ic_menu_mine_normal.png" width="29" height="25"/>
         <image name="error.png" width="28" height="28"/>
         <image name="error_7.png" width="28" height="28"/>
         <image name="success.png" width="28" height="28"/>
@@ -113,5 +113,7 @@
         <image name="ic_login_eye_selected.png" width="64" height="37"/>
         <image name="ic_login_password.png" width="48" height="78"/>
         <image name="ic_login_username.png" width="48" height="78"/>
+        <image name="ic_register_combox_normal.png" width="42" height="42"/>
+        <image name="ic_register_combox_selected.png" width="42" height="42"/>
     </resources>
 </document>

@@ -30,7 +30,26 @@ namespace lelaozuIphone
 		}
 		private void InitView()
 		{
+			txt_registerUserName.ReturnKeyType = UIReturnKeyType.Done;
+			txt_registerUserName.ShouldReturn = (textField) => {
+				return textField.ResignFirstResponder();
+			};
 
+			txt_registerPwd.ReturnKeyType = UIReturnKeyType.Done;
+			txt_registerPwd.SecureTextEntry = true;
+			txt_registerPwd.ShouldReturn = (textField) => {
+				return textField.ResignFirstResponder();
+			};
+			txt_registerConfirmPwd.ReturnKeyType = UIReturnKeyType.Done;
+			txt_registerConfirmPwd.SecureTextEntry = true;
+			txt_registerConfirmPwd.ShouldReturn = (textField) => {
+				return textField.ResignFirstResponder();
+			};
+			txt_phoneNum.ReturnKeyType = UIReturnKeyType.Done;
+			txt_phoneNum.KeyboardType = UIKeyboardType.NumberPad;
+			txt_phoneNum.ShouldReturn = (textField) => {
+				return textField.ResignFirstResponder();
+			};
 			//linkAgree
 			lbl_linkAgree.UserInteractionEnabled = true;
 			var agreeRecognizer = new UITapGestureRecognizer ((UITapGestureRecognizer obj) => {
@@ -45,14 +64,26 @@ namespace lelaozuIphone
 			{
 				cb_agree.Selected =!cb_agree.Selected;
 				if(cb_agree.Selected)
+				{
 					btn_next.Enabled = true;
+					btn_next.BackgroundColor = Color.Blue;
+				}
+				
 				else
+				{
 					btn_next.Enabled = false;
+					btn_next.BackgroundColor = Color.LightGray;
+				}
 			};
 
 			//btn_next
+			btn_next.BackgroundColor = Color.Blue;
 			btn_next.TouchUpInside += (object sender, EventArgs e) => 
 			{
+				txt_phoneNum.ResignFirstResponder();
+				txt_registerConfirmPwd.ResignFirstResponder();
+				txt_registerPwd.ResignFirstResponder();
+				txt_registerUserName.ResignFirstResponder();
 				initInput();
 				if(ValidInput())
 				{

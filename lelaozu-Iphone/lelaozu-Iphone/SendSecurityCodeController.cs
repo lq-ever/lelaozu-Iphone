@@ -4,6 +4,9 @@ using UIKit;
 using Foundation;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using System.Threading;
+
+
 
 namespace lelaozuIphone
 {
@@ -32,6 +35,7 @@ namespace lelaozuIphone
 		private Dictionary<string,string> requestsendcodeParams = new Dictionary<string,string> ();
 		private string securityCode;
 		private NSTimer timer;
+		private int secondsCountDown= 15;
 		public SendSecurityCodeController () : base ("SendSecurityCodeController", null)
 		{
 		}
@@ -40,24 +44,32 @@ namespace lelaozuIphone
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
+			InitView();
 		}
 
 		public override void DidReceiveMemoryWarning ()
 		{
 			base.DidReceiveMemoryWarning ();
 			// Release any cached data, images, etc that aren't in use.
-			InitView();
+
 		}
 		/// <summary>
 		/// Inits the view.
 		/// </summary>
 		private void InitView()
 		{
+			//default hidden
+			lbl_sendCodeStatusShow.Hidden = true;
 			
 			if (sendType == "FindPwd") {
 				this.NavigationItem.Title = "找回登录密码";
 				txt_phoneNumber.Enabled = true;
 				txt_phoneNumber.Placeholder = "请输入手机号";
+				txt_phoneNumber.KeyboardType = UIKeyboardType.NumberPad;
+				txt_phoneNumber.ReturnKeyType = UIReturnKeyType.Done;
+				txt_phoneNumber.ShouldReturn = ((textField) => {
+					return textField.ResignFirstResponder();
+				});
 			} else if (sendType == "ModifyPwd") {
 				this.NavigationItem.Title = "修改登录密码";
 				txt_phoneNumber.Enabled = false;
@@ -82,38 +94,64 @@ namespace lelaozuIphone
 			lbl_customPhone.AddGestureRecognizer (callPhoneRecognizer);
 
 			//发送验证码
+
 			btn_sendCode.TouchUpInside += (sender, e) => 
 			{
 				lbl_sendCodeStatusShow.Hidden = true;
 				btn_sendCode.Enabled = false;
+				btn_sendCode.BackgroundColor = Color.LightGray;
 				SendCode();
 			};
 			//nstimer
-			var seconds = 60;
-			timer = NSTimer.CreateScheduledTimer (1, (NSTimer timer) => {
-				if(seconds ==1)
-				{
-					timer.Invalidate();
-					seconds =60;
-					btn_sendCode.SetTitle("发送验证码",UIControlState.Normal);
-					btn_sendCode.Enabled = true;
-				}
-				else
-				{
-					seconds --;
-					btn_sendCode.SetTitle(seconds+"秒后可重发",UIControlState.Normal);
-					btn_sendCode.Enabled = false;
-				}
+
+
+			timer = NSTimer.CreateScheduledTimer (1, this, new ObjCRuntime.Selector ("timeMethod"), null,true);
+
+//
+//			timer = NSTimer.CreateScheduledTimer (1, (NSTimer timer) => {
+//				if(secondsCountDown ==1)
+//				{
+//					timer.Invalidate();
+//					secondsCountDown =60;
+//					btn_sendCode.SetTitle("发送验证码",UIControlState.Normal);
+//					btn_sendCode.Enabled = true;
+//					btn_sendCode.BackgroundColor = Color.Blue;
+//
+//				}
+//				else
+//				{
+//					secondsCountDown --;
+//					btn_sendCode.SetTitle(secondsCountDown+"秒后可重发",UIControlState.Normal);
+//					btn_sendCode.Enabled = false;
+//					btn_sendCode.BackgroundColor = Color.LightGray;
+//				}
+//			});
+
+
+
+			//securityCode
+			txt_securityCode.ReturnKeyType = UIReturnKeyType.Done;
+			txt_securityCode.KeyboardType = UIKeyboardType.NumberPad;
+			txt_securityCode.ShouldReturn = ((textField) => {
+				return textField.ResignFirstResponder();
 			});
-			timer.Invalidate ();
-			txt_securityCode.ValueChanged += (sender, e) => 
+
+			txt_securityCode.EditingChanged += (sender, e) => 
 			{
 				if(txt_securityCode.Text.Length >0)
+				{
 					btn_next.Enabled = true;
+					btn_next.BackgroundColor = Color.Blue;
+				}
 				else
+				{
 					btn_next.Enabled = false;
+					btn_next.BackgroundColor = Color.Blue;
+				}
 			};
 			//下一步
+			btn_next.Enabled = false;
+			btn_next.BackgroundColor = Color.LightGray;
 			btn_next.TouchUpInside += (object sender, EventArgs e) => 
 			{
 				var inputCode = txt_securityCode.Text;
@@ -128,18 +166,6 @@ namespace lelaozuIphone
 					BTProgressHUD.ShowToast ("输入验证码不正确,请重新填写",showToastCentered:false,timeoutMs:1000);
 					return;
 				}
-//				var intent = new Intent(this,typeof(SetPasswordActivity));
-//				var nextbundle = new Bundle();
-//				nextbundle.PutString("SendType",sendType);
-//				if(sendType == "FindPwd")
-//				{
-//					nextbundle.PutString("PhoneNumber",phoneNumber);
-//				}
-//				intent.PutExtras(nextbundle);
-//				StartActivity(intent);
-//				if(sendType!="FindPwd")
-//					this.Finish();	
-//				ProgressDialogUtil.StopProgressDialog();
 
 				var setPassWordViewController = new SetPassWordViewController(){SendType = sendType};
 				if(sendType == "FindPwd")
@@ -151,6 +177,26 @@ namespace lelaozuIphone
 
 			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 
+		}
+		[Export("timeMethod")]
+		public void TimeFireMethod()
+		{
+			if(secondsCountDown ==1)
+			{
+				timer.Invalidate ();
+				secondsCountDown =60;
+				btn_sendCode.SetTitle("发送验证码",UIControlState.Normal);
+				btn_sendCode.Enabled = true;
+				btn_sendCode.BackgroundColor = Color.Blue;
+
+			}
+			else
+			{
+				secondsCountDown --;
+				btn_sendCode.SetTitle(secondsCountDown+"秒后可重发",UIControlState.Normal);
+				btn_sendCode.Enabled = false;
+				btn_sendCode.BackgroundColor = Color.LightGray;
+			}
 		}
 		private void SetPhoneNumberShow()
 		{
@@ -215,7 +261,7 @@ namespace lelaozuIphone
 						InvokeOnMainThread(()=>
 							{
 								securityCode = sendCodeJson.data.ToString();
-								BTProgressHUD.Show("验证码发送成功...",-1,ProgressHUD.MaskType.Black);
+								BTProgressHUD.ShowToast("验证码发送成功...",showToastCentered:false,timeoutMs:1000);
 								lbl_sendCodeStatusShow.Hidden = false;
 								timer.Fire();
 							});
@@ -226,6 +272,7 @@ namespace lelaozuIphone
 							{
 								BTProgressHUD.ShowToast(sendCodeJson.message,showToastCentered:false,timeoutMs:1000);
 								btn_sendCode.Enabled = true;
+								btn_sendCode.BackgroundColor = Color.Blue;
 							});
 					}
 				}
@@ -235,6 +282,7 @@ namespace lelaozuIphone
 						{
 							BTProgressHUD.ShowToast("网络超时...",showToastCentered:false,timeoutMs:1000);
 							btn_sendCode.Enabled = true;
+							btn_sendCode.BackgroundColor = Color.Blue;
 						});
 				}
 				else
@@ -243,6 +291,7 @@ namespace lelaozuIphone
 						{
 							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
 							btn_sendCode.Enabled = true;
+							btn_sendCode.BackgroundColor = Color.Blue;
 						});
 
 				}

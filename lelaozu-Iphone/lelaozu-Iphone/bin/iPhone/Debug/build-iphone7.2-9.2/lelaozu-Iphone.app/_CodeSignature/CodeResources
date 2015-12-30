@@ -78,19 +78,19 @@
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll</key>
 		<data>
-		6qUGX8t7oZkOxP3f9FBM8aSCZAE=
+		pv0fq4UB7/a+Fo/YpA5yTR66VTM=
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll.mdb</key>
 		<data>
-		TYiPZQTwnwmRezBdNno1/Cyx+5M=
+		MHTMnkjdczlDP0R9XJ7ZyEN9wRI=
 		</data>
 		<key>.monotouch-32/lelaozu-Iphone.exe</key>
 		<data>
-		OAC9Kt4itLJQ/1+3rgf5g2t33hI=
+		Hd0aVbieSJSN0iwb6LgrdQjtKZY=
 		</data>
 		<key>.monotouch-32/lelaozu-Iphone.exe.mdb</key>
 		<data>
-		9mt1qgI8np7MnNqblRkQQo2mJc8=
+		cQ7LmusRcrg/HQolOMCyjIy6os4=
 		</data>
 		<key>.monotouch-32/mscorlib.dll</key>
 		<data>
@@ -282,7 +282,7 @@
 		</data>
 		<key>RegisterResultViewController.nib</key>
 		<data>
-		Tz3kXx/GewH+OwkVpDOxJFE3aR0=
+		u/u7V41bSaAlX2+7a1TQs3e1IL8=
 		</data>
 		<key>RegisterViewController.nib</key>
 		<data>
@@ -392,33 +392,97 @@
 		<data>
 		C6rQlO5tW+CnQ0I4CqNPnMMTbio=
 		</data>
+		<key>ic_menu_alarm_normal@2x.png</key>
+		<data>
+		1qmrsmPo2ehbvxIC24ro4yHtTUM=
+		</data>
+		<key>ic_menu_alarm_normal@3x.png</key>
+		<data>
+		to021wU44jqxOamhI7t1FnV8u3Y=
+		</data>
 		<key>ic_menu_alarm_selected.png</key>
 		<data>
 		ZAMzNcWN6eBkMoRCxdsSqvucux4=
+		</data>
+		<key>ic_menu_alarm_selected@2x.png</key>
+		<data>
+		kJ4WhqTETHKcLtBRi1gU3d2VUYk=
+		</data>
+		<key>ic_menu_alarm_selected@3x.png</key>
+		<data>
+		395F5c0Cz5py6guSaw56PGOlhyw=
 		</data>
 		<key>ic_menu_guardian_normal.png</key>
 		<data>
 		xsgKykDSR1klzqu37O8417zTYGU=
 		</data>
+		<key>ic_menu_guardian_normal@2x.png</key>
+		<data>
+		oLs5iIloFED1H1ONhcJ+41p92R0=
+		</data>
+		<key>ic_menu_guardian_normal@3x.png</key>
+		<data>
+		gLHqkM2bI7QLULEakKn3OZfsYPM=
+		</data>
 		<key>ic_menu_guardian_selected.png</key>
 		<data>
 		R1DuR0bbbUaBOu/Dw1rDn+crAsQ=
+		</data>
+		<key>ic_menu_guardian_selected@2x.png</key>
+		<data>
+		/ScfZIaxCWAYGNY6FGGToW4s1k0=
+		</data>
+		<key>ic_menu_guardian_selected@3x.png</key>
+		<data>
+		XvLodoNv6ealAA8B2Ad9wK+Tyj4=
 		</data>
 		<key>ic_menu_health_normal.png</key>
 		<data>
 		FzvFCo2P9ZLfz2iyPFtB0Atlrjg=
 		</data>
+		<key>ic_menu_health_normal@2x.png</key>
+		<data>
+		OOwAUtRY0Mn8csFgzJlVm6vC/3o=
+		</data>
+		<key>ic_menu_health_normal@3x.png</key>
+		<data>
+		X8sQ63c/9Kp/jHe5mgEurq+WO70=
+		</data>
 		<key>ic_menu_health_selected.png</key>
 		<data>
 		VlA9A+jJxkSuXS2eHDcWWFzbtRA=
+		</data>
+		<key>ic_menu_health_selected@2x.png</key>
+		<data>
+		zfG+fdEBn6vwZCGYjIqOvuy+Hxk=
+		</data>
+		<key>ic_menu_health_selected@3x.png</key>
+		<data>
+		6ObdpyUICyZKsNhdVs5fi/P6Bw0=
 		</data>
 		<key>ic_menu_mine_normal.png</key>
 		<data>
 		8hLteEqpqdDSjxYXViOTBNd5Y18=
 		</data>
+		<key>ic_menu_mine_normal@2x.png</key>
+		<data>
+		4pziNkWkauF1srU+aitaphQwgSM=
+		</data>
+		<key>ic_menu_mine_normal@3x.png</key>
+		<data>
+		7EWlY6i9Si2OU9D3UXC4OS/h2I0=
+		</data>
 		<key>ic_menu_mine_selected.png</key>
 		<data>
 		EpJ+avJ2ZITAJSBiRo/CRHG+8qE=
+		</data>
+		<key>ic_menu_mine_selected@2x.png</key>
+		<data>
+		eCGdE+tyJURHjO9S3M9kc9E7vdY=
+		</data>
+		<key>ic_menu_mine_selected@3x.png</key>
+		<data>
+		xPmJuK0tMP2LLxP++m61oPv+3G0=
 		</data>
 		<key>ic_myInfo_advision_jianyi.png</key>
 		<data>
@@ -601,19 +665,19 @@
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll</key>
 		<data>
-		6qUGX8t7oZkOxP3f9FBM8aSCZAE=
+		pv0fq4UB7/a+Fo/YpA5yTR66VTM=
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll.mdb</key>
 		<data>
-		TYiPZQTwnwmRezBdNno1/Cyx+5M=
+		MHTMnkjdczlDP0R9XJ7ZyEN9wRI=
 		</data>
 		<key>.monotouch-32/lelaozu-Iphone.exe</key>
 		<data>
-		OAC9Kt4itLJQ/1+3rgf5g2t33hI=
+		Hd0aVbieSJSN0iwb6LgrdQjtKZY=
 		</data>
 		<key>.monotouch-32/lelaozu-Iphone.exe.mdb</key>
 		<data>
-		9mt1qgI8np7MnNqblRkQQo2mJc8=
+		cQ7LmusRcrg/HQolOMCyjIy6os4=
 		</data>
 		<key>.monotouch-32/mscorlib.dll</key>
 		<data>
@@ -797,7 +861,7 @@
 		</data>
 		<key>RegisterResultViewController.nib</key>
 		<data>
-		Tz3kXx/GewH+OwkVpDOxJFE3aR0=
+		u/u7V41bSaAlX2+7a1TQs3e1IL8=
 		</data>
 		<key>RegisterViewController.nib</key>
 		<data>
@@ -907,33 +971,97 @@
 		<data>
 		C6rQlO5tW+CnQ0I4CqNPnMMTbio=
 		</data>
+		<key>ic_menu_alarm_normal@2x.png</key>
+		<data>
+		1qmrsmPo2ehbvxIC24ro4yHtTUM=
+		</data>
+		<key>ic_menu_alarm_normal@3x.png</key>
+		<data>
+		to021wU44jqxOamhI7t1FnV8u3Y=
+		</data>
 		<key>ic_menu_alarm_selected.png</key>
 		<data>
 		ZAMzNcWN6eBkMoRCxdsSqvucux4=
+		</data>
+		<key>ic_menu_alarm_selected@2x.png</key>
+		<data>
+		kJ4WhqTETHKcLtBRi1gU3d2VUYk=
+		</data>
+		<key>ic_menu_alarm_selected@3x.png</key>
+		<data>
+		395F5c0Cz5py6guSaw56PGOlhyw=
 		</data>
 		<key>ic_menu_guardian_normal.png</key>
 		<data>
 		xsgKykDSR1klzqu37O8417zTYGU=
 		</data>
+		<key>ic_menu_guardian_normal@2x.png</key>
+		<data>
+		oLs5iIloFED1H1ONhcJ+41p92R0=
+		</data>
+		<key>ic_menu_guardian_normal@3x.png</key>
+		<data>
+		gLHqkM2bI7QLULEakKn3OZfsYPM=
+		</data>
 		<key>ic_menu_guardian_selected.png</key>
 		<data>
 		R1DuR0bbbUaBOu/Dw1rDn+crAsQ=
+		</data>
+		<key>ic_menu_guardian_selected@2x.png</key>
+		<data>
+		/ScfZIaxCWAYGNY6FGGToW4s1k0=
+		</data>
+		<key>ic_menu_guardian_selected@3x.png</key>
+		<data>
+		XvLodoNv6ealAA8B2Ad9wK+Tyj4=
 		</data>
 		<key>ic_menu_health_normal.png</key>
 		<data>
 		FzvFCo2P9ZLfz2iyPFtB0Atlrjg=
 		</data>
+		<key>ic_menu_health_normal@2x.png</key>
+		<data>
+		OOwAUtRY0Mn8csFgzJlVm6vC/3o=
+		</data>
+		<key>ic_menu_health_normal@3x.png</key>
+		<data>
+		X8sQ63c/9Kp/jHe5mgEurq+WO70=
+		</data>
 		<key>ic_menu_health_selected.png</key>
 		<data>
 		VlA9A+jJxkSuXS2eHDcWWFzbtRA=
+		</data>
+		<key>ic_menu_health_selected@2x.png</key>
+		<data>
+		zfG+fdEBn6vwZCGYjIqOvuy+Hxk=
+		</data>
+		<key>ic_menu_health_selected@3x.png</key>
+		<data>
+		6ObdpyUICyZKsNhdVs5fi/P6Bw0=
 		</data>
 		<key>ic_menu_mine_normal.png</key>
 		<data>
 		8hLteEqpqdDSjxYXViOTBNd5Y18=
 		</data>
+		<key>ic_menu_mine_normal@2x.png</key>
+		<data>
+		4pziNkWkauF1srU+aitaphQwgSM=
+		</data>
+		<key>ic_menu_mine_normal@3x.png</key>
+		<data>
+		7EWlY6i9Si2OU9D3UXC4OS/h2I0=
+		</data>
 		<key>ic_menu_mine_selected.png</key>
 		<data>
 		EpJ+avJ2ZITAJSBiRo/CRHG+8qE=
+		</data>
+		<key>ic_menu_mine_selected@2x.png</key>
+		<data>
+		eCGdE+tyJURHjO9S3M9kc9E7vdY=
+		</data>
+		<key>ic_menu_mine_selected@3x.png</key>
+		<data>
+		xPmJuK0tMP2LLxP++m61oPv+3G0=
 		</data>
 		<key>ic_myInfo_advision_jianyi.png</key>
 		<data>

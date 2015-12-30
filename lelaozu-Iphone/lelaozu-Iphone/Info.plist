@@ -28,8 +28,6 @@
 	</array>
 	<key>CFBundleName</key>
 	<string>乐老族</string>
-	<key>XSAppIconAssets</key>
-	<string>Resources/Images.xcassets/AppIcons.appiconset</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
