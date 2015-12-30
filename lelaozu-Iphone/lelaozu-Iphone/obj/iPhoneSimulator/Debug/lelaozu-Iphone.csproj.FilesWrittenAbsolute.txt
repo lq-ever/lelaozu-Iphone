@@ -110,3 +110,5 @@
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/lelaozu-Iphone.exe
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/lelaozu-Iphone.exe
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/lelaozu-Iphone.exe.mdb
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/MJRefresh.dll
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/MJRefresh.dll.mdb

@@ -32,6 +32,10 @@ namespace lelaozuIphone
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIScrollView scrollView { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField txt_Password { get; set; }
 
 		[Outlet]
@@ -55,6 +59,10 @@ namespace lelaozuIphone
 			if (cb_password != null) {
 				cb_password.Dispose ();
 				cb_password = null;
+			}
+			if (scrollView != null) {
+				scrollView.Dispose ();
+				scrollView = null;
 			}
 			if (txt_Password != null) {
 				txt_Password.Dispose ();

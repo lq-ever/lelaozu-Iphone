@@ -35,10 +35,12 @@ namespace lelaozuIphone
 		private void InitView()
 		{
 			txt_Username.ReturnKeyType = UIReturnKeyType.Done;
+			txt_Username.KeyboardType = UIKeyboardType.Default;
 			txt_Username.ShouldReturn = delegate(UITextField textField) {
 				return textField.ResignFirstResponder ();
 			};
 
+			txt_Password.ReturnKeyType = UIReturnKeyType.Done;
 			txt_Password.SecureTextEntry = true;
 			txt_Password.ShouldReturn = (textField) => {
 				return textField.ResignFirstResponder();
@@ -80,10 +82,46 @@ namespace lelaozuIphone
 			//login
 			btn_Login.TouchUpInside += (sender, e) => 
 			{
+				txt_Username.ResignFirstResponder();
+				txt_Password.ResignFirstResponder();
 				Login();
 			};
+//			//键盘将要显示时候
+//			UIKeyboard.Notifications.ObserveWillShow ((sender, e) => {
+//				var kbdBounds = e.FrameEnd;
+//				CoreGraphics.CGRect txtFrame;
+//				if(txt_Username.IsFirstResponder)
+//				{
+//					txtFrame = txt_Username.Frame;
+//					txtFrame.Y -= kbdBounds.Height;
+//					txt_Username.Frame = txtFrame;
+//				}
+//				else
+//				{
+//					txtFrame = txt_Password.Frame;
+//					txtFrame.Y -= kbdBounds.Height;
+//					txt_Password.Frame = txtFrame;
+//				}
+//			});
+//			//键盘将要消失时候
+//			UIKeyboard.Notifications.ObserveDidHide ((sender, e) => {
+//				var kbdBounds = e.FrameEnd;
+//				CoreGraphics.CGRect txtFrame;
+//				if(txt_Username.IsFirstResponder)
+//				{
+//					txtFrame = txt_Username.Frame;
+//					txtFrame.Y += kbdBounds.Height;
+//					txt_Username.Frame = txtFrame;
+//				}
+//				else
+//				{
+//					txtFrame = txt_Password.Frame;
+//					txtFrame.Y += kbdBounds.Height;
+//					txt_Password.Frame = txtFrame;
+//				}
+//			});
 
-
+			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 		}
 		/// <summary>
 		/// login

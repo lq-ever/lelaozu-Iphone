@@ -16,7 +16,7 @@
 	--sdk \
 	9.0 \
 	--targetver \
-	9.0 \
+	8.0 \
 	--new-refcount \
 	--abi=i386 \
 	--symbollist \
@@ -35,7 +35,7 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
-	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefreshSharp/bin/Debug/MJRefreshSharp.dll \
+	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefresh/bin/Debug/MJRefresh.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	-r \
@@ -43,7 +43,7 @@
 	-r \
 	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/packages/Newtonsoft.Json.7.0.1/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
 	-r \
-	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefreshSharp/bin/Debug/MJRefreshSharp.dll \
+	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefresh/bin/Debug/MJRefresh.dll \
 	--target-framework \
 	"Xamarin.iOS,v1.0" \
 	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug//lelaozu-Iphone.exe \
