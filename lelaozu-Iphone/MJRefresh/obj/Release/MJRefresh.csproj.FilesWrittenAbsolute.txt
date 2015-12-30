@@ -1,0 +1,5 @@
+/Users/shuoyang/Downloads/MJRefresh/MJRefresh/obj/Release/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/shuoyang/Downloads/MJRefresh/MJRefresh/bin/Debug/MJRefresh.dll.mdb
+/Users/shuoyang/Downloads/MJRefresh/MJRefresh/bin/Debug/MJRefresh.dll
+/Users/shuoyang/Downloads/MJRefresh/MJRefresh/obj/Release/MJRefresh.dll
+/Users/shuoyang/Downloads/MJRefresh/MJRefresh/obj/Release/MJRefresh.dll.mdb

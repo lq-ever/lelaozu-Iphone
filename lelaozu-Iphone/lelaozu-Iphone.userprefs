@@ -1,14 +1,21 @@
 ﻿<Properties StartupItem="lelaozu-Iphone/lelaozu-Iphone.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.9.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/RegisterViewController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6s.9.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/Controllers/Health/MyHealthViewController.cs">
     <Files>
-      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="40" Column="6" />
-      <File FileName="lelaozu-Iphone/Common/Constants.cs" Line="46" Column="54" />
-      <File FileName="lelaozu-Iphone/RegisterViewController.cs" Line="25" Column="44" />
+      <File FileName="lelaozu-Iphone/Main_AlarmController.cs" Line="1" Column="1" />
+      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="1" Column="1" />
+      <File FileName="lelaozu-Iphone/Main_HealthController.cs" Line="1" Column="1" />
+      <File FileName="lelaozu-Iphone/Controllers/Health/MyHealthViewController.cs" Line="125" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/Controllers/Health/MyHealthViewController.cs" line="45" column="1" />
+      <Breakpoint file="/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/Controllers/Health/MyHealthViewController.cs" line="58" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>MJRefreshSharp/MJRefreshSharp.csproj</String>
+  </DisabledProjects>
 </Properties>

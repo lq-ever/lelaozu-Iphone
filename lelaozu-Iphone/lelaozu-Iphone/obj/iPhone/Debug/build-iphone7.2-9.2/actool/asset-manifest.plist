@@ -6,7 +6,7 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/actool/partial-info.plist</string>
+			<string>/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/actool/partial-info.plist</string>
 		</array>
 	</dict>
 	<key>com.apple.actool.document.warnings</key>
@@ -17,7 +17,7 @@
 				<string>./AppIcons.appiconset/[car][120x120][][][1x][2d][(null)]</string>
 			</array>
 			<key>catalog</key>
-			<string>/Users/liuqiang/Projects/lelaozu-Iphone/lelaozu-Iphone/Resources/Images.xcassets</string>
+			<string>/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/Resources/Images.xcassets</string>
 			<key>message</key>
 			<string>The app icon set "AppIcons" has an unassigned child.</string>
 			<key>type</key>

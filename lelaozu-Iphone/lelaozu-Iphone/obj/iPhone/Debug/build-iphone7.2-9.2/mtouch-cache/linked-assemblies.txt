@@ -1,4 +1,4 @@
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/mtouch-cache/Link/System.Runtime.Serialization.dll
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/mtouch-cache/Link/MJRefresh.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/mtouch-cache/Link/System.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/mtouch-cache/Link/System.Xml.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/mtouch-cache/Link/Mono.Dynamic.Interpreter.dll
@@ -6,8 +6,8 @@
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/mtouch-cache/Link/RestSharp.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/mtouch-cache/Link/Newtonsoft.Json.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/mtouch-cache/Link/System.Xml.Linq.dll
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/mtouch-cache/Link/System.Runtime.Serialization.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/mtouch-cache/Link/Xamarin.iOS.dll
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/mtouch-cache/Link/MJRefreshSharp.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/mtouch-cache/Link/System.Core.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/mtouch-cache/Link/mscorlib.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhone/Debug/build-iphone7.2-9.2/mtouch-cache/Link/System.ServiceModel.Internals.dll

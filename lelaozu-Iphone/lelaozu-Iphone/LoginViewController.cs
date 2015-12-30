@@ -21,7 +21,13 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "登录";
-
+			this.NavigationController.NavigationBar.BarTintColor = Color.Blue;
+			this.NavigationController.NavigationBar.Translucent = false;
+			this.NavigationController.NavigationBar.TintColor = UIColor.White;
+			var titleAttributs = new UIStringAttributes ();
+			titleAttributs.ForegroundColor = UIColor.White;
+			titleAttributs.Font = UIFont.SystemFontOfSize(20f);
+			this.NavigationController.NavigationBar.TitleTextAttributes = titleAttributs;
 
 			InitView ();
 
@@ -129,6 +135,7 @@ namespace lelaozuIphone
 						Constants.MyInfo = loginJson.data.Table[0];
 						InvokeOnMainThread(()=>
 							{
+								
 								//remember usename\password
 								if(cb_password.Selected)
 								{
@@ -138,7 +145,6 @@ namespace lelaozuIphone
 								}
 								// login sucess  set tabbarcontroller as  rootviewcontroller
 								this.View.Window.RootViewController = new MainTabBarController();
-
 
 							});
 					}
@@ -204,18 +210,36 @@ namespace lelaozuIphone
 				requestParams ["md5"] = _loginParam.Md5;
 
 		}
-
-		public override void ViewDidAppear (bool animated)
+		public override void ViewWillAppear (bool animated)
 		{
-			base.ViewDidAppear (animated);
-			this.NavigationController.NavigationBarHidden = true;
-		}
+			base.ViewWillAppear (animated);
+			this.NavigationController.SetNavigationBarHidden( true,true);
 
+		}
+		public override void ViewWillDisappear (bool animated)
+		{
+			base.ViewWillDisappear (animated);
+			this.NavigationController.SetNavigationBarHidden(false,true);
+		}
+//		public override void ViewWillAppear (bool animated)
+//		{
+//			base.ViewWillAppear (animated);
+//			this.NavigationController.SetNavigationBarHidden (true, true);
+//		}
+//
+//		public override void ViewWillDisappear (bool animated)
+//		{
+//			base.ViewWillDisappear (animated);
+//			this.NavigationController.SetNavigationBarHidden (false, true);
+//		}
+	
 		public override void DidReceiveMemoryWarning ()
 		{
 			base.DidReceiveMemoryWarning ();
 			// Release any cached data, images, etc that aren't in use.
 		}
+
+				
 	}
 }
 

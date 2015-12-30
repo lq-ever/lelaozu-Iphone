@@ -74,7 +74,7 @@
     <MtouchUseSGen>true</MtouchUseSGen>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchProfiling>true</MtouchProfiling>
-    <CodesignProvision>8f2567a4-ee7e-4d06-bc19-d138ff74787b</CodesignProvision>
+    <CodesignProvision>00f54542-599b-48b9-988d-999f753c863f</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -505,9 +505,9 @@
     <BundleResource Include="Resources\ic_register_combox_selected.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MJRefreshSharp\MJRefreshSharp.csproj">
-      <Project>{64719EB4-D897-4CBF-AEFA-A2C85B60F04B}</Project>
-      <Name>MJRefreshSharp</Name>
+    <ProjectReference Include="..\MJRefresh\MJRefresh.csproj">
+      <Project>{0F570497-368C-4A8E-979D-FF00FC31BE7B}</Project>
+      <Name>MJRefresh</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

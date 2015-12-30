@@ -20,7 +20,6 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "账户安全";
-
 			tableView.Source = new AccountSecuritySource (this);
 
 		}
@@ -43,9 +42,10 @@ namespace lelaozuIphone
 			sectionTwoList.Add (new AccountSecurityItem{Title="身份认证",Desc="用于提升账号的安全和信任",TitleValue=identityValue, IsSkip = false  });
 			tableView.ReloadData ();
 		}
-		public override void ViewDidAppear (bool animated)
+
+		public override void ViewWillAppear (bool animated)
 		{
-			base.ViewDidAppear (animated);
+			base.ViewWillAppear (animated);
 			LoadData();
 		}
 

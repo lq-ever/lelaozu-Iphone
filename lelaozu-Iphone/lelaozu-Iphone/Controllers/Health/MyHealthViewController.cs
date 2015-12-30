@@ -30,7 +30,9 @@ namespace lelaozuIphone
 		{
 			
 		}
-
+		public MyHealthViewController (IntPtr handle):base(handle)
+		{
+		}
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();

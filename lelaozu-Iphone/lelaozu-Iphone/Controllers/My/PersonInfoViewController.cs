@@ -19,8 +19,6 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "个人信息";
-
-			//LoadData ();
 			tableView.Source = new PersonInfoTableSource (this);
 		   
 		}
