@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="lelaozu-Iphone/lelaozu-Iphone.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Jonny-Iphone" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.9.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/SendSecurityCodeController.cs">
     <Files>
-      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="42" Column="4" />
-      <File FileName="lelaozu-Iphone/Main.cs" Line="14" Column="40" />
+      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="79" Column="61" />
+      <File FileName="lelaozu-Iphone/SendSecurityCodeController.cs" Line="152" Column="9" />
+      <File FileName="lelaozu-Iphone/RegisterResultViewController.cs" Line="172" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

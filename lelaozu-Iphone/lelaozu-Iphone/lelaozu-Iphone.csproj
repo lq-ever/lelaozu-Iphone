@@ -92,9 +92,18 @@
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
     <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\Contents.json" />
     <ImageAsset Include="Resources\Images.xcassets\Images.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\menu_alarm_selected\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\menu_alarm_selected\ic_menu_alarm_selected%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\menu_alarm_selected\ic_menu_alarm_selected%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\ic_launch_57x57.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\ic_launch_114x114.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\ic_launch_120x120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\splash_750x1334.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\splash_1242x2208.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\splash_640x960.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\splash_640x1136.png" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <InterfaceDefinition Include="UserGuiderViewController.xib" />
     <InterfaceDefinition Include="LoginViewController.xib" />
     <InterfaceDefinition Include="Main_AlarmController.xib" />
@@ -496,7 +505,6 @@
     <BundleResource Include="Resources\ic_register_combox_normal.png" />
     <BundleResource Include="Resources\ic_register_combox_selected.png" />
     <BundleResource Include="Resources\ic_menu_alarm_normal%403x.png" />
-    <BundleResource Include="Resources\ic_menu_alarm_selected%403x.png" />
     <BundleResource Include="Resources\ic_menu_guardian_normal%403x.png" />
     <BundleResource Include="Resources\ic_menu_guardian_selected%403x.png" />
     <BundleResource Include="Resources\ic_menu_health_normal%403x.png" />
@@ -504,7 +512,6 @@
     <BundleResource Include="Resources\ic_menu_mine_normal%403x.png" />
     <BundleResource Include="Resources\ic_menu_mine_selected%403x.png" />
     <BundleResource Include="Resources\ic_menu_alarm_normal%402x.png" />
-    <BundleResource Include="Resources\ic_menu_alarm_selected%402x.png" />
     <BundleResource Include="Resources\ic_menu_guardian_normal%402x.png" />
     <BundleResource Include="Resources\ic_menu_guardian_selected%402x.png" />
     <BundleResource Include="Resources\ic_menu_health_normal%402x.png" />

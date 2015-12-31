@@ -30,6 +30,7 @@ namespace lelaozuIphone
 			nav_alarm.TabBarItem.Image = UIImage.FromFile ("ic_menu_alarm_normal.png");
 			nav_alarm.TabBarItem.SelectedImage = UIImage.FromFile ("ic_menu_alarm_selected.png");
 
+
 			main_guardianController = new Main_GuardianController ();
 			var nav_guardian = new UINavigationController(main_guardianController);
 			nav_guardian.TabBarItem.Title = "监护人";

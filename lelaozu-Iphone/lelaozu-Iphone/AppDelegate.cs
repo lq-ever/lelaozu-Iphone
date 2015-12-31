@@ -21,6 +21,9 @@ namespace lelaozuIphone
 			  
 			// Override point for customization after application launch.
 			// If not required for your application you can safely delete this method
+
+			//NSThread.SleepFor(2);//show splash delay 延长LaunchScreen.xib启动画面 
+
  			Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
 			//judge is goto launched
@@ -38,6 +41,9 @@ namespace lelaozuIphone
 			Window.MakeKeyAndVisible ();
 			return true;
 		}
+
+
+	
 
 	
 

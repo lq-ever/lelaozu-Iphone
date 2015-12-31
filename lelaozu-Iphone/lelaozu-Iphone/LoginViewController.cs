@@ -259,18 +259,7 @@ namespace lelaozuIphone
 			base.ViewWillDisappear (animated);
 			this.NavigationController.SetNavigationBarHidden(false,true);
 		}
-//		public override void ViewWillAppear (bool animated)
-//		{
-//			base.ViewWillAppear (animated);
-//			this.NavigationController.SetNavigationBarHidden (true, true);
-//		}
-//
-//		public override void ViewWillDisappear (bool animated)
-//		{
-//			base.ViewWillDisappear (animated);
-//			this.NavigationController.SetNavigationBarHidden (false, true);
-//		}
-	
+
 		public override void DidReceiveMemoryWarning ()
 		{
 			base.DidReceiveMemoryWarning ();
