@@ -46,6 +46,7 @@ namespace lelaozuIphone
 				PresentViewController(alertdateController,true,null);
 				return textField.ResignFirstResponder();
 			};
+			btn_save.BackgroundColor = Color.Blue;
 			btn_save.TouchUpInside += (sender, e) => 
 			{
 				Save();

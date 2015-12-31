@@ -30,7 +30,9 @@
 	-r \
 	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/packages/RestSharp.105.2.3/lib/Xamarin.iOS10/RestSharp.dll \
 	-r \
-	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/packages/Newtonsoft.Json.7.0.1/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/packages/Newtonsoft.Json.8.0.1/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	-r \
+	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/packages/Xamarin.SDWebImage.3.7.3.4/lib/Xamarin.iOS/SDWebImage.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
@@ -40,7 +42,9 @@
 	-r \
 	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/packages/RestSharp.105.2.3/lib/Xamarin.iOS10/RestSharp.dll \
 	-r \
-	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/packages/Newtonsoft.Json.7.0.1/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/packages/Newtonsoft.Json.8.0.1/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	-r \
+	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/packages/Xamarin.SDWebImage.3.7.3.4/lib/Xamarin.iOS/SDWebImage.dll \
 	-r \
 	/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefresh/bin/Debug/MJRefresh.dll \
 	--target-framework \

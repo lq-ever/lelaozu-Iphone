@@ -35,8 +35,11 @@ namespace lelaozuIphone
 				}
 			}
 
+			btn_save.BackgroundColor = Color.Blue;
 			btn_save.TouchUpInside += (sender, e) => 
 			{
+				txt_fixedphonePre.ResignFirstResponder();
+				txt_fixedphoneLast.ResignFirstResponder();
 				Save();
 			};
 		}

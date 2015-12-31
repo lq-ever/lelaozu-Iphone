@@ -30,7 +30,7 @@ namespace lelaozuIphone
 			healthScrollView.Bounces = true;
 			healthScrollView.ScrollEnabled = true;
 			healthScrollView.ShowsVerticalScrollIndicator = true;
-			healthScrollView.BackgroundColor = UIColor.LightGray;
+			healthScrollView.BackgroundColor = Color.BgGray;
 			Console.WriteLine (healthScrollView.Frame.Y);
 
 

@@ -25,6 +25,7 @@ namespace lelaozuIphone
 			genderId = !string.IsNullOrEmpty (genderValue) ? genderValue : "1";
 			txt_gender.Text = genderValue.Equals ("0") ? "男" : "女";
 			InitGenderPicker ();
+			btn_save.BackgroundColor = Color.Blue;
 			btn_save.TouchUpInside += (sender, e) => 
 			{
 				Save();

@@ -137,6 +137,7 @@ namespace lelaozuIphone
 			cell.SelectionStyle = UITableViewCellSelectionStyle.Gray;
 			//todo:set imgeHead
 
+
 			return cell;
 		}
 

@@ -4,6 +4,14 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.monotouch-32/MJRefresh.dll</key>
+		<data>
+		hHoL0WrnwGIRaS3l1dXuTWY7yNI=
+		</data>
+		<key>.monotouch-32/MJRefresh.dll.mdb</key>
+		<data>
+		wM41HDklo8B79plnx04oMTnHMKY=
+		</data>
 		<key>.monotouch-32/MJRefreshSharp.dll</key>
 		<data>
 		IUicy8X0odDgmvE5OHkCl6Vgaac=
@@ -14,15 +22,15 @@
 		</data>
 		<key>.monotouch-32/Mono.Dynamic.Interpreter.dll</key>
 		<data>
-		OSbAAR/t1xQXa3sXMaX1qHUntuU=
+		GKMagEOs6mFpXTJw7wM+/yLP2/Q=
 		</data>
 		<key>.monotouch-32/Mono.Dynamic.Interpreter.dll.mdb</key>
 		<data>
-		niXwTEhGD268zKlmsrklFWor4LA=
+		Kx/Qn0uxMy1zLOwesbYeewoAEIg=
 		</data>
 		<key>.monotouch-32/Newtonsoft.Json.dll</key>
 		<data>
-		gSTma2YFMC/zOK5BDTT2Mw+jfFs=
+		Rv42mOJfgBDA3dIzQ2ZmTOoNJbc=
 		</data>
 		<key>.monotouch-32/RestSharp.dll</key>
 		<data>
@@ -30,19 +38,19 @@
 		</data>
 		<key>.monotouch-32/System.Core.dll</key>
 		<data>
-		KvE27RQoOsylIVue1b2t15rUlms=
+		L/ANiiWpEoKpyYLF7dykE1P+TaI=
 		</data>
 		<key>.monotouch-32/System.Core.dll.mdb</key>
 		<data>
-		le2X2tIt2iPypFUfmkRU5ism/xU=
+		X3HGQRvxcsRqrJGWFFNzxMQfKTQ=
 		</data>
 		<key>.monotouch-32/System.Runtime.Serialization.dll</key>
 		<data>
-		ZcBW40Rqor8kEX+Gw8Nj6639cu4=
+		ogfXKU/YCw64nqmg3JMeClLNZzU=
 		</data>
 		<key>.monotouch-32/System.Runtime.Serialization.dll.mdb</key>
 		<data>
-		IEbMGx+Xw51XuJLBGI9bobLdNUg=
+		yWQtUTHJSjw4V+Bjvu2+VMmhDEg=
 		</data>
 		<key>.monotouch-32/System.ServiceModel.Internals.dll</key>
 		<data>
@@ -54,123 +62,147 @@
 		</data>
 		<key>.monotouch-32/System.Xml.Linq.dll</key>
 		<data>
-		wEQu2si3s6XvqSutPuXRxSBdm+Q=
+		5aspIzsM+/+pcqmAWulLWLgZ/SM=
 		</data>
 		<key>.monotouch-32/System.Xml.Linq.dll.mdb</key>
 		<data>
-		WTauR50QMqoUjiv2avs2f+rE71U=
+		IbUDS7F8WDxCTULVFtiFZtcmpXo=
 		</data>
 		<key>.monotouch-32/System.Xml.dll</key>
 		<data>
-		uRgziTBLH79HW9cVnuUKg8JS75E=
+		kzK/9BM9DCXyGYqW/YORF8wxnxk=
 		</data>
 		<key>.monotouch-32/System.Xml.dll.mdb</key>
 		<data>
-		dLzRVRQbMtse/52ZyTf0KlEkC/Y=
+		Fs5AyY1y3J1NZwwUnR5zMnCd1zM=
 		</data>
 		<key>.monotouch-32/System.dll</key>
 		<data>
-		RBiW/zGosYwBpuQ7Qw2MMoFs/rk=
+		2vc6MdRa0TkBvgCyrTnxtsul4CI=
 		</data>
 		<key>.monotouch-32/System.dll.mdb</key>
 		<data>
-		s1WT0rl64Q6OufJLmrzsr2Miv/w=
+		TqonPoNeyILwd00ikPZ4gtGFCgM=
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll</key>
 		<data>
-		YDpULnVeyS6Sb8YHVdzij6C23gA=
+		fkU1Q7Ce7hQdEoWcUigkzsITMRg=
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll.mdb</key>
 		<data>
-		2ZjFJ0XMWC1Gl2EcbGBVZgTqTOI=
+		CrEfytm7xYdllJPxOU7hAsM6AbY=
 		</data>
 		<key>.monotouch-32/lelaozu-Iphone.exe</key>
 		<data>
-		t6paP+zsyhQjI/XngviR0g3yx8Y=
+		pO9R/eCgG4kzqhlweTmzKCviSKI=
 		</data>
 		<key>.monotouch-32/lelaozu-Iphone.exe.mdb</key>
 		<data>
-		IHv2WEC/yrM7Xdn4MAbu8syvkPg=
+		dDu8kAiGe0nR6/UFfBMH5O3nMI4=
 		</data>
 		<key>.monotouch-32/mscorlib.dll</key>
 		<data>
-		ge0Zy80j04OUproCToW66zOvCI8=
+		a9CJTtm4BKPfIhI59pB2tPhGz9c=
 		</data>
 		<key>.monotouch-32/mscorlib.dll.mdb</key>
 		<data>
-		YxVwiqU1LRk8AKWMP59TCUSVNcs=
+		Qur0l0PIHgzzMQxFB8YW+lA0qAo=
 		</data>
 		<key>AboutUsViewController.nib</key>
 		<data>
-		lGKDQCePW8k9WWWYbACfeqJ6uoQ=
+		q+752OZiXxgFj3w0xf6+rIVTPjM=
 		</data>
 		<key>AccountSecurityTableViewCell.nib</key>
 		<data>
-		WznSjmZ+pTAGhHaEAEP1yE1dKo0=
+		POZ1KZlcSiev+EIDNGNWXTqVF0o=
 		</data>
 		<key>AccountSecurityViewController.nib</key>
 		<data>
-		q+R8kt3Dd/n336uxFdxwWSpxp1Q=
+		2i2yRH3wOGBO/63efcvgn2hOt+Q=
 		</data>
 		<key>AdviceRecordTableViewCell.nib</key>
 		<data>
-		H/dLDVwqmo7hN+D/Uf7Q9CdyiWQ=
+		c2+3EV/UamnlShB4hjw04ZKtkow=
 		</data>
 		<key>AdviceRecordViewController.nib</key>
 		<data>
-		bE08AgZkBpe8m7xs/HfR2aLitNw=
+		3F1f/SPOiY9jhR+8FS9Y3gb/6ok=
 		</data>
 		<key>AdviceViewController.nib</key>
 		<data>
-		978EQmKeeyFKKeJbrQrlFednOxQ=
+		tH1zcUBpZQ2/4Z8G5ZJQj2whFsE=
 		</data>
 		<key>AlarmDetailViewController.nib</key>
 		<data>
-		PxMDl1J1OIYUuNIWCVXbIWGT0zs=
+		y9Z+BzUk5Zm0+mfdjpCwPSI3xI4=
 		</data>
 		<key>AlarmHandleCell.nib</key>
 		<data>
-		YHpexZRyC058C+tndhXm2EYtK3k=
+		r7mzK+vyE21ZV90j+rtnF4eGNN0=
 		</data>
 		<key>AlarmListTableViewCell.nib</key>
 		<data>
-		aNSmNnDGKm5GLpQTuYwCWpJ5yHM=
+		DWxBz0jpMicyzgByFLRcIu84i4A=
 		</data>
 		<key>AlarmLocationViewController.nib</key>
 		<data>
-		0DYBYuDphc+HD0OLo7fW89Aiw0k=
+		LHbha3W6K1tya0Z5Z3teGgSPk90=
+		</data>
+		<key>AppIcons40x40@3x.png</key>
+		<data>
+		Rz4f8NyKI3DZZqx3cl8fnNTLwHc=
+		</data>
+		<key>AppIcons57x57.png</key>
+		<data>
+		SexT0mZjggFOkF5UnYMMawqSNA0=
+		</data>
+		<key>AppIcons57x57@2x.png</key>
+		<data>
+		RvcR8KD55oewVuT+tqEM/IqM9zk=
+		</data>
+		<key>AppIcons60x60@2x.png</key>
+		<data>
+		Rz4f8NyKI3DZZqx3cl8fnNTLwHc=
+		</data>
+		<key>AppIcons60x60@3x.png</key>
+		<data>
+		l9m/+pbi//COfdCZsFsAjhE74BQ=
+		</data>
+		<key>Assets.car</key>
+		<data>
+		F5tB90N3VFCbD1gMshZgOUNpOm0=
 		</data>
 		<key>BindGuardianTableViewCell.nib</key>
 		<data>
-		xgpY9kHFo1Z7qp/hWo/EMenbHIs=
+		HV014pXtzY8S974xVBSXdmNBilU=
 		</data>
 		<key>BindGuardianViewController.nib</key>
 		<data>
-		3ev6MOBgn4bzo+9/qaxF06iVcRs=
+		86gsB5L6CmJLI9vixQbc00TqVx8=
 		</data>
 		<key>GuardianApplyTableViewCell.nib</key>
 		<data>
-		XFfXq/oMejw1WdM1/UM+dWsMS2I=
+		Lst2GPkKMLohXLBpxCpU3ktyK5U=
 		</data>
 		<key>GuardianApplyViewController.nib</key>
 		<data>
-		K4sLbYIltrYnB46uNC3pZnCQy7k=
+		NIGoNxUQoYPPBxgGuZEu5WoxsuA=
 		</data>
 		<key>GuardianDetailViewController.nib</key>
 		<data>
-		hQQriHMKp3iHACcEHFShTX9Yhww=
+		KlfFsEdBl/BhQQVV2uscme4yjPQ=
 		</data>
 		<key>GuardianListCell.nib</key>
 		<data>
-		Z4gDOo+B0iYTIqKqGF0QtrLMW50=
+		N4DJ4Ttf1wAbjNHhBm9rAI+0AeM=
 		</data>
 		<key>HealthDetailViewController.nib</key>
 		<data>
-		/w8jDGrb6IyPSpJYPHh5igwYtxA=
+		dNQeeM5Q3uiWTmO+nh76CVrLUUI=
 		</data>
 		<key>HealthListTableViewCell.nib</key>
 		<data>
-		SVufj7Pkckj5tuQRou/7TodOpJI=
+		QzkK0d0JrMHBLi6itTRHlsB1/xM=
 		</data>
 		<key>HealthTableViewCell.nib</key>
 		<data>
@@ -182,7 +214,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VvlrDZgN/XWIyYyhmi+OusrFwlc=
+		AoVsuxIKh6mENGcKVZAQVlaWb+w=
+		</data>
+		<key>LaunchImages-700-568h@2x.png</key>
+		<data>
+		4qVaE0SK+v5cFzNOCO22j+BVRtE=
+		</data>
+		<key>LaunchImages-700@2x.png</key>
+		<data>
+		FTTAOvgpeL7A6JjJYxDk/qzWcfI=
+		</data>
+		<key>LaunchImages-800-667h@2x.png</key>
+		<data>
+		vLfu/Sb6+uA3xM3W0H7NHRqRvLI=
+		</data>
+		<key>LaunchImages-800-Portrait-736h@3x.png</key>
+		<data>
+		Kfs42VECd2e5F6t8o7pr3NlmbrE=
 		</data>
 		<key>LaunchScreen.nib</key>
 		<data>
@@ -190,27 +238,27 @@
 		</data>
 		<key>LoginViewController.nib</key>
 		<data>
-		U4jtqJQ5NAyqPO8Taoecik9NK1w=
+		kWbVZ8OaycvRhekF08a/9BlRqdU=
 		</data>
 		<key>MainMyTableViewCell.nib</key>
 		<data>
-		r7nWE32TQTWatC+hj52WyK8J16M=
+		lmpPFsLu+UKsXruGSKgtbc1Hnm8=
 		</data>
 		<key>Main_AlarmController.nib</key>
 		<data>
-		6ynLW4ShMda2hC+sLscmGhb3P20=
+		XOFN0e1Of7y419rezXs5x+OEPOY=
 		</data>
 		<key>Main_GuardianController.nib</key>
 		<data>
-		87/RPVkB/4Mnen0rxbSn1XeHjtw=
+		lw8dDFjanYdzTMhMSWM8ocoGse0=
 		</data>
 		<key>Main_HealthController.nib</key>
 		<data>
-		WmdKNN5wtDizyUPgFRbp1lCc5eY=
+		YlZIQgqFYe/17ZvdM78LgeWQqo8=
 		</data>
 		<key>Main_MyController.nib</key>
 		<data>
-		SQbOFBx33zKHh8k0xA9BzFT8FTk=
+		Y6rOoyEAH65raAiC5k0j5eOh4Dw=
 		</data>
 		<key>MonoTouchDebugConfiguration.txt</key>
 		<data>
@@ -218,15 +266,15 @@
 		</data>
 		<key>MyAlarmViewController.nib</key>
 		<data>
-		5D805pDXlXN0JXc7PG3PK/4CYDs=
+		gaZNdbDEqoT1t9m+ORvMnjpV7qs=
 		</data>
 		<key>MyGuardianViewController.nib</key>
 		<data>
-		+/AagPulTHWVfHMpdIb3mIYuPFE=
+		4btLv86Sr0dlxdYK47wYQjlUMOA=
 		</data>
 		<key>MyHealthViewController.nib</key>
 		<data>
-		kPyH2N1otfv+Hkre4vTOKhY5Auk=
+		F88ozpdrHxFXRKcK47Qwfex+MzI=
 		</data>
 		<key>NOTICE</key>
 		<data>
@@ -234,51 +282,51 @@
 		</data>
 		<key>OtherAlarmViewController.nib</key>
 		<data>
-		ErsBYR7QOZmhAEn2JDHcOmXFNVY=
+		7CSqePXDCWMvbtlicAbXnKJ1zXA=
 		</data>
 		<key>OtherGuardianViewController.nib</key>
 		<data>
-		kkQVuqHpCCJpmU1i+h2JIaWvZ4M=
+		zlhmMI5bHnay1UfxQaCN3jRgJoM=
 		</data>
 		<key>OtherHealthViewController.nib</key>
 		<data>
-		GwAOI6TUr8gxKa6SKBp7MqL+2hA=
+		cmy/VxMSzRafvKvS5kD2DxDFnQ4=
 		</data>
 		<key>PersonInfoBirthViewController.nib</key>
 		<data>
-		r1GxC0xwfpAb0e2IuooCWHDVig8=
+		9VtlFYPZrV10akCHfY6sBIN+IrQ=
 		</data>
 		<key>PersonInfoCardLocationViewController.nib</key>
 		<data>
-		d5TXRs6N3n4BGMOJpVtnPDEqml0=
+		hrRvizl+HC8CoOtytzTlUFT2Ue4=
 		</data>
 		<key>PersonInfoEmailViewController.nib</key>
 		<data>
-		ayJMPfqcoBs1MUWgVrS7LHcmWFU=
+		axHVSWExFSfJEUM02P8vPCTNGGM=
 		</data>
 		<key>PersonInfoFixedPhoneViewController.nib</key>
 		<data>
-		B1FMmB2zdGn/E7jvnexFyrDJjO8=
+		T+IQq8s7cWzGnQIWLF1cvMXM9tU=
 		</data>
 		<key>PersonInfoGenderViewController.nib</key>
 		<data>
-		HzEg5U8QzUGR7DK7QBFfvKtGuF8=
+		DA7Bv6+mBEeq/lDoyWdq9OLXnhQ=
 		</data>
 		<key>PersonInfoIdCardNoViewController.nib</key>
 		<data>
-		EYysR1V6NMGEwAKU8l0GwIrQk08=
+		IYD+QJIWfDLo9AbhU8/LsF2sEcU=
 		</data>
 		<key>PersonInfoTableViewCell.nib</key>
 		<data>
-		oBalcboi8baUVU2lq+8MBquThDA=
+		HjUU6JNXBrsPET7OBEzP9ECfe8k=
 		</data>
 		<key>PersonInfoTrueNameViewController.nib</key>
 		<data>
-		lSlGtxMgRIZsECC4XzSgpF1CKiE=
+		VjLJfFlnCZp3EQYmQYquyUEiea0=
 		</data>
 		<key>PersonInfoViewController.nib</key>
 		<data>
-		qZb/JYOLHv8rHcHrN10A1JrRbbU=
+		G3iUBcccbKsRGcgm4N3U7g9WmsA=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -286,31 +334,31 @@
 		</data>
 		<key>RegisterResultViewController.nib</key>
 		<data>
-		ACl+zeWXqJzu0Q/FMfsNLgW8CbQ=
+		ueh35+lyfdPk9ESEbOfFqypJm/w=
 		</data>
 		<key>RegisterViewController.nib</key>
 		<data>
-		fr8GouYZpJ4kQS6CVqB8KRMsc3Y=
+		EjkTxLZ3XDR/Z4BKge99sUD6/Qc=
 		</data>
 		<key>SendSecurityCodeController.nib</key>
 		<data>
-		/FXA7BQbc4IPCo/NFnmhG/EsAjM=
+		fCjCKYGNasHvMuThzZNlOzqnAMI=
 		</data>
 		<key>ServiceAgreeViewController.nib</key>
 		<data>
-		PiWXytn8Peuh6iOI/pmIEU2nlhc=
+		/6y5ZCSefo1AA6TgDtm1BA8gpVo=
 		</data>
 		<key>SetPassWordViewController.nib</key>
 		<data>
-		4dHm4nX3y3RsdhPc6OJJOczuR9E=
+		DvZezW4x0PnmkoNisgxYGEGgIdk=
 		</data>
 		<key>SettingTableViewCell.nib</key>
 		<data>
-		SBAlG1/whJmT8tHLJsy4EeOHX6Y=
+		ynwexs4SQDF9vokdSZoxvMt/Eao=
 		</data>
 		<key>SettingViewController.nib</key>
 		<data>
-		jDvpl3LLX3VanoCpgj5XYR162FU=
+		se+BV+/7TeGc8drxCKpfFzQT7B4=
 		</data>
 		<key>Settings.bundle/Root.plist</key>
 		<data>
@@ -322,11 +370,11 @@
 		</data>
 		<key>UserGuiderViewController.nib</key>
 		<data>
-		E6QyN2a+56wiOsXpdFai9G0pPxU=
+		7MwKazbbvFd7LuJcdGFCLgDobmU=
 		</data>
 		<key>WriteAdviceViewController.nib</key>
 		<data>
-		PIMNpyUsmTn2pkL02zw16FkYKlU=
+		8YNOgf21sleqm3pjn4s4f2tWpa8=
 		</data>
 		<key>archived-expanded-entitlements.xcent</key>
 		<data>
@@ -539,6 +587,14 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>.monotouch-32/MJRefresh.dll</key>
+		<data>
+		hHoL0WrnwGIRaS3l1dXuTWY7yNI=
+		</data>
+		<key>.monotouch-32/MJRefresh.dll.mdb</key>
+		<data>
+		wM41HDklo8B79plnx04oMTnHMKY=
+		</data>
 		<key>.monotouch-32/MJRefreshSharp.dll</key>
 		<data>
 		IUicy8X0odDgmvE5OHkCl6Vgaac=
@@ -549,15 +605,15 @@
 		</data>
 		<key>.monotouch-32/Mono.Dynamic.Interpreter.dll</key>
 		<data>
-		OSbAAR/t1xQXa3sXMaX1qHUntuU=
+		GKMagEOs6mFpXTJw7wM+/yLP2/Q=
 		</data>
 		<key>.monotouch-32/Mono.Dynamic.Interpreter.dll.mdb</key>
 		<data>
-		niXwTEhGD268zKlmsrklFWor4LA=
+		Kx/Qn0uxMy1zLOwesbYeewoAEIg=
 		</data>
 		<key>.monotouch-32/Newtonsoft.Json.dll</key>
 		<data>
-		gSTma2YFMC/zOK5BDTT2Mw+jfFs=
+		Rv42mOJfgBDA3dIzQ2ZmTOoNJbc=
 		</data>
 		<key>.monotouch-32/RestSharp.dll</key>
 		<data>
@@ -565,19 +621,19 @@
 		</data>
 		<key>.monotouch-32/System.Core.dll</key>
 		<data>
-		KvE27RQoOsylIVue1b2t15rUlms=
+		L/ANiiWpEoKpyYLF7dykE1P+TaI=
 		</data>
 		<key>.monotouch-32/System.Core.dll.mdb</key>
 		<data>
-		le2X2tIt2iPypFUfmkRU5ism/xU=
+		X3HGQRvxcsRqrJGWFFNzxMQfKTQ=
 		</data>
 		<key>.monotouch-32/System.Runtime.Serialization.dll</key>
 		<data>
-		ZcBW40Rqor8kEX+Gw8Nj6639cu4=
+		ogfXKU/YCw64nqmg3JMeClLNZzU=
 		</data>
 		<key>.monotouch-32/System.Runtime.Serialization.dll.mdb</key>
 		<data>
-		IEbMGx+Xw51XuJLBGI9bobLdNUg=
+		yWQtUTHJSjw4V+Bjvu2+VMmhDEg=
 		</data>
 		<key>.monotouch-32/System.ServiceModel.Internals.dll</key>
 		<data>
@@ -589,123 +645,147 @@
 		</data>
 		<key>.monotouch-32/System.Xml.Linq.dll</key>
 		<data>
-		wEQu2si3s6XvqSutPuXRxSBdm+Q=
+		5aspIzsM+/+pcqmAWulLWLgZ/SM=
 		</data>
 		<key>.monotouch-32/System.Xml.Linq.dll.mdb</key>
 		<data>
-		WTauR50QMqoUjiv2avs2f+rE71U=
+		IbUDS7F8WDxCTULVFtiFZtcmpXo=
 		</data>
 		<key>.monotouch-32/System.Xml.dll</key>
 		<data>
-		uRgziTBLH79HW9cVnuUKg8JS75E=
+		kzK/9BM9DCXyGYqW/YORF8wxnxk=
 		</data>
 		<key>.monotouch-32/System.Xml.dll.mdb</key>
 		<data>
-		dLzRVRQbMtse/52ZyTf0KlEkC/Y=
+		Fs5AyY1y3J1NZwwUnR5zMnCd1zM=
 		</data>
 		<key>.monotouch-32/System.dll</key>
 		<data>
-		RBiW/zGosYwBpuQ7Qw2MMoFs/rk=
+		2vc6MdRa0TkBvgCyrTnxtsul4CI=
 		</data>
 		<key>.monotouch-32/System.dll.mdb</key>
 		<data>
-		s1WT0rl64Q6OufJLmrzsr2Miv/w=
+		TqonPoNeyILwd00ikPZ4gtGFCgM=
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll</key>
 		<data>
-		YDpULnVeyS6Sb8YHVdzij6C23gA=
+		fkU1Q7Ce7hQdEoWcUigkzsITMRg=
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll.mdb</key>
 		<data>
-		2ZjFJ0XMWC1Gl2EcbGBVZgTqTOI=
+		CrEfytm7xYdllJPxOU7hAsM6AbY=
 		</data>
 		<key>.monotouch-32/lelaozu-Iphone.exe</key>
 		<data>
-		t6paP+zsyhQjI/XngviR0g3yx8Y=
+		pO9R/eCgG4kzqhlweTmzKCviSKI=
 		</data>
 		<key>.monotouch-32/lelaozu-Iphone.exe.mdb</key>
 		<data>
-		IHv2WEC/yrM7Xdn4MAbu8syvkPg=
+		dDu8kAiGe0nR6/UFfBMH5O3nMI4=
 		</data>
 		<key>.monotouch-32/mscorlib.dll</key>
 		<data>
-		ge0Zy80j04OUproCToW66zOvCI8=
+		a9CJTtm4BKPfIhI59pB2tPhGz9c=
 		</data>
 		<key>.monotouch-32/mscorlib.dll.mdb</key>
 		<data>
-		YxVwiqU1LRk8AKWMP59TCUSVNcs=
+		Qur0l0PIHgzzMQxFB8YW+lA0qAo=
 		</data>
 		<key>AboutUsViewController.nib</key>
 		<data>
-		lGKDQCePW8k9WWWYbACfeqJ6uoQ=
+		q+752OZiXxgFj3w0xf6+rIVTPjM=
 		</data>
 		<key>AccountSecurityTableViewCell.nib</key>
 		<data>
-		WznSjmZ+pTAGhHaEAEP1yE1dKo0=
+		POZ1KZlcSiev+EIDNGNWXTqVF0o=
 		</data>
 		<key>AccountSecurityViewController.nib</key>
 		<data>
-		q+R8kt3Dd/n336uxFdxwWSpxp1Q=
+		2i2yRH3wOGBO/63efcvgn2hOt+Q=
 		</data>
 		<key>AdviceRecordTableViewCell.nib</key>
 		<data>
-		H/dLDVwqmo7hN+D/Uf7Q9CdyiWQ=
+		c2+3EV/UamnlShB4hjw04ZKtkow=
 		</data>
 		<key>AdviceRecordViewController.nib</key>
 		<data>
-		bE08AgZkBpe8m7xs/HfR2aLitNw=
+		3F1f/SPOiY9jhR+8FS9Y3gb/6ok=
 		</data>
 		<key>AdviceViewController.nib</key>
 		<data>
-		978EQmKeeyFKKeJbrQrlFednOxQ=
+		tH1zcUBpZQ2/4Z8G5ZJQj2whFsE=
 		</data>
 		<key>AlarmDetailViewController.nib</key>
 		<data>
-		PxMDl1J1OIYUuNIWCVXbIWGT0zs=
+		y9Z+BzUk5Zm0+mfdjpCwPSI3xI4=
 		</data>
 		<key>AlarmHandleCell.nib</key>
 		<data>
-		YHpexZRyC058C+tndhXm2EYtK3k=
+		r7mzK+vyE21ZV90j+rtnF4eGNN0=
 		</data>
 		<key>AlarmListTableViewCell.nib</key>
 		<data>
-		aNSmNnDGKm5GLpQTuYwCWpJ5yHM=
+		DWxBz0jpMicyzgByFLRcIu84i4A=
 		</data>
 		<key>AlarmLocationViewController.nib</key>
 		<data>
-		0DYBYuDphc+HD0OLo7fW89Aiw0k=
+		LHbha3W6K1tya0Z5Z3teGgSPk90=
+		</data>
+		<key>AppIcons40x40@3x.png</key>
+		<data>
+		Rz4f8NyKI3DZZqx3cl8fnNTLwHc=
+		</data>
+		<key>AppIcons57x57.png</key>
+		<data>
+		SexT0mZjggFOkF5UnYMMawqSNA0=
+		</data>
+		<key>AppIcons57x57@2x.png</key>
+		<data>
+		RvcR8KD55oewVuT+tqEM/IqM9zk=
+		</data>
+		<key>AppIcons60x60@2x.png</key>
+		<data>
+		Rz4f8NyKI3DZZqx3cl8fnNTLwHc=
+		</data>
+		<key>AppIcons60x60@3x.png</key>
+		<data>
+		l9m/+pbi//COfdCZsFsAjhE74BQ=
+		</data>
+		<key>Assets.car</key>
+		<data>
+		F5tB90N3VFCbD1gMshZgOUNpOm0=
 		</data>
 		<key>BindGuardianTableViewCell.nib</key>
 		<data>
-		xgpY9kHFo1Z7qp/hWo/EMenbHIs=
+		HV014pXtzY8S974xVBSXdmNBilU=
 		</data>
 		<key>BindGuardianViewController.nib</key>
 		<data>
-		3ev6MOBgn4bzo+9/qaxF06iVcRs=
+		86gsB5L6CmJLI9vixQbc00TqVx8=
 		</data>
 		<key>GuardianApplyTableViewCell.nib</key>
 		<data>
-		XFfXq/oMejw1WdM1/UM+dWsMS2I=
+		Lst2GPkKMLohXLBpxCpU3ktyK5U=
 		</data>
 		<key>GuardianApplyViewController.nib</key>
 		<data>
-		K4sLbYIltrYnB46uNC3pZnCQy7k=
+		NIGoNxUQoYPPBxgGuZEu5WoxsuA=
 		</data>
 		<key>GuardianDetailViewController.nib</key>
 		<data>
-		hQQriHMKp3iHACcEHFShTX9Yhww=
+		KlfFsEdBl/BhQQVV2uscme4yjPQ=
 		</data>
 		<key>GuardianListCell.nib</key>
 		<data>
-		Z4gDOo+B0iYTIqKqGF0QtrLMW50=
+		N4DJ4Ttf1wAbjNHhBm9rAI+0AeM=
 		</data>
 		<key>HealthDetailViewController.nib</key>
 		<data>
-		/w8jDGrb6IyPSpJYPHh5igwYtxA=
+		dNQeeM5Q3uiWTmO+nh76CVrLUUI=
 		</data>
 		<key>HealthListTableViewCell.nib</key>
 		<data>
-		SVufj7Pkckj5tuQRou/7TodOpJI=
+		QzkK0d0JrMHBLi6itTRHlsB1/xM=
 		</data>
 		<key>HealthTableViewCell.nib</key>
 		<data>
@@ -715,33 +795,49 @@
 		<data>
 		zmV6UqBSo6r1NOz798vd5O4zTBA=
 		</data>
+		<key>LaunchImages-700-568h@2x.png</key>
+		<data>
+		4qVaE0SK+v5cFzNOCO22j+BVRtE=
+		</data>
+		<key>LaunchImages-700@2x.png</key>
+		<data>
+		FTTAOvgpeL7A6JjJYxDk/qzWcfI=
+		</data>
+		<key>LaunchImages-800-667h@2x.png</key>
+		<data>
+		vLfu/Sb6+uA3xM3W0H7NHRqRvLI=
+		</data>
+		<key>LaunchImages-800-Portrait-736h@3x.png</key>
+		<data>
+		Kfs42VECd2e5F6t8o7pr3NlmbrE=
+		</data>
 		<key>LaunchScreen.nib</key>
 		<data>
 		R+T+sbIDXoGVwDU5/NyX5wqm9nQ=
 		</data>
 		<key>LoginViewController.nib</key>
 		<data>
-		U4jtqJQ5NAyqPO8Taoecik9NK1w=
+		kWbVZ8OaycvRhekF08a/9BlRqdU=
 		</data>
 		<key>MainMyTableViewCell.nib</key>
 		<data>
-		r7nWE32TQTWatC+hj52WyK8J16M=
+		lmpPFsLu+UKsXruGSKgtbc1Hnm8=
 		</data>
 		<key>Main_AlarmController.nib</key>
 		<data>
-		6ynLW4ShMda2hC+sLscmGhb3P20=
+		XOFN0e1Of7y419rezXs5x+OEPOY=
 		</data>
 		<key>Main_GuardianController.nib</key>
 		<data>
-		87/RPVkB/4Mnen0rxbSn1XeHjtw=
+		lw8dDFjanYdzTMhMSWM8ocoGse0=
 		</data>
 		<key>Main_HealthController.nib</key>
 		<data>
-		WmdKNN5wtDizyUPgFRbp1lCc5eY=
+		YlZIQgqFYe/17ZvdM78LgeWQqo8=
 		</data>
 		<key>Main_MyController.nib</key>
 		<data>
-		SQbOFBx33zKHh8k0xA9BzFT8FTk=
+		Y6rOoyEAH65raAiC5k0j5eOh4Dw=
 		</data>
 		<key>MonoTouchDebugConfiguration.txt</key>
 		<data>
@@ -749,15 +845,15 @@
 		</data>
 		<key>MyAlarmViewController.nib</key>
 		<data>
-		5D805pDXlXN0JXc7PG3PK/4CYDs=
+		gaZNdbDEqoT1t9m+ORvMnjpV7qs=
 		</data>
 		<key>MyGuardianViewController.nib</key>
 		<data>
-		+/AagPulTHWVfHMpdIb3mIYuPFE=
+		4btLv86Sr0dlxdYK47wYQjlUMOA=
 		</data>
 		<key>MyHealthViewController.nib</key>
 		<data>
-		kPyH2N1otfv+Hkre4vTOKhY5Auk=
+		F88ozpdrHxFXRKcK47Qwfex+MzI=
 		</data>
 		<key>NOTICE</key>
 		<data>
@@ -765,79 +861,79 @@
 		</data>
 		<key>OtherAlarmViewController.nib</key>
 		<data>
-		ErsBYR7QOZmhAEn2JDHcOmXFNVY=
+		7CSqePXDCWMvbtlicAbXnKJ1zXA=
 		</data>
 		<key>OtherGuardianViewController.nib</key>
 		<data>
-		kkQVuqHpCCJpmU1i+h2JIaWvZ4M=
+		zlhmMI5bHnay1UfxQaCN3jRgJoM=
 		</data>
 		<key>OtherHealthViewController.nib</key>
 		<data>
-		GwAOI6TUr8gxKa6SKBp7MqL+2hA=
+		cmy/VxMSzRafvKvS5kD2DxDFnQ4=
 		</data>
 		<key>PersonInfoBirthViewController.nib</key>
 		<data>
-		r1GxC0xwfpAb0e2IuooCWHDVig8=
+		9VtlFYPZrV10akCHfY6sBIN+IrQ=
 		</data>
 		<key>PersonInfoCardLocationViewController.nib</key>
 		<data>
-		d5TXRs6N3n4BGMOJpVtnPDEqml0=
+		hrRvizl+HC8CoOtytzTlUFT2Ue4=
 		</data>
 		<key>PersonInfoEmailViewController.nib</key>
 		<data>
-		ayJMPfqcoBs1MUWgVrS7LHcmWFU=
+		axHVSWExFSfJEUM02P8vPCTNGGM=
 		</data>
 		<key>PersonInfoFixedPhoneViewController.nib</key>
 		<data>
-		B1FMmB2zdGn/E7jvnexFyrDJjO8=
+		T+IQq8s7cWzGnQIWLF1cvMXM9tU=
 		</data>
 		<key>PersonInfoGenderViewController.nib</key>
 		<data>
-		HzEg5U8QzUGR7DK7QBFfvKtGuF8=
+		DA7Bv6+mBEeq/lDoyWdq9OLXnhQ=
 		</data>
 		<key>PersonInfoIdCardNoViewController.nib</key>
 		<data>
-		EYysR1V6NMGEwAKU8l0GwIrQk08=
+		IYD+QJIWfDLo9AbhU8/LsF2sEcU=
 		</data>
 		<key>PersonInfoTableViewCell.nib</key>
 		<data>
-		oBalcboi8baUVU2lq+8MBquThDA=
+		HjUU6JNXBrsPET7OBEzP9ECfe8k=
 		</data>
 		<key>PersonInfoTrueNameViewController.nib</key>
 		<data>
-		lSlGtxMgRIZsECC4XzSgpF1CKiE=
+		VjLJfFlnCZp3EQYmQYquyUEiea0=
 		</data>
 		<key>PersonInfoViewController.nib</key>
 		<data>
-		qZb/JYOLHv8rHcHrN10A1JrRbbU=
+		G3iUBcccbKsRGcgm4N3U7g9WmsA=
 		</data>
 		<key>RegisterResultViewController.nib</key>
 		<data>
-		ACl+zeWXqJzu0Q/FMfsNLgW8CbQ=
+		ueh35+lyfdPk9ESEbOfFqypJm/w=
 		</data>
 		<key>RegisterViewController.nib</key>
 		<data>
-		fr8GouYZpJ4kQS6CVqB8KRMsc3Y=
+		EjkTxLZ3XDR/Z4BKge99sUD6/Qc=
 		</data>
 		<key>SendSecurityCodeController.nib</key>
 		<data>
-		/FXA7BQbc4IPCo/NFnmhG/EsAjM=
+		fCjCKYGNasHvMuThzZNlOzqnAMI=
 		</data>
 		<key>ServiceAgreeViewController.nib</key>
 		<data>
-		PiWXytn8Peuh6iOI/pmIEU2nlhc=
+		/6y5ZCSefo1AA6TgDtm1BA8gpVo=
 		</data>
 		<key>SetPassWordViewController.nib</key>
 		<data>
-		4dHm4nX3y3RsdhPc6OJJOczuR9E=
+		DvZezW4x0PnmkoNisgxYGEGgIdk=
 		</data>
 		<key>SettingTableViewCell.nib</key>
 		<data>
-		SBAlG1/whJmT8tHLJsy4EeOHX6Y=
+		ynwexs4SQDF9vokdSZoxvMt/Eao=
 		</data>
 		<key>SettingViewController.nib</key>
 		<data>
-		jDvpl3LLX3VanoCpgj5XYR162FU=
+		se+BV+/7TeGc8drxCKpfFzQT7B4=
 		</data>
 		<key>Settings.bundle/Root.plist</key>
 		<data>
@@ -849,11 +945,11 @@
 		</data>
 		<key>UserGuiderViewController.nib</key>
 		<data>
-		E6QyN2a+56wiOsXpdFai9G0pPxU=
+		7MwKazbbvFd7LuJcdGFCLgDobmU=
 		</data>
 		<key>WriteAdviceViewController.nib</key>
 		<data>
-		PIMNpyUsmTn2pkL02zw16FkYKlU=
+		8YNOgf21sleqm3pjn4s4f2tWpa8=
 		</data>
 		<key>archived-expanded-entitlements.xcent</key>
 		<data>

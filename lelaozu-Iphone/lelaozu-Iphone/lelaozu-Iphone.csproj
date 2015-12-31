@@ -539,6 +539,7 @@
     <BundleResource Include="Resources\ic_login_username.png" />
     <BundleResource Include="Resources\ic_register_combox_normal.png" />
     <BundleResource Include="Resources\ic_register_combox_selected.png" />
+    <BundleResource Include="Resources\login_bg.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MJRefresh\MJRefresh.csproj">

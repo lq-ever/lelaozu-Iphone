@@ -26,6 +26,10 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "绑定监护人";
+			txt_Condition.ReturnKeyType = UIReturnKeyType.Search;
+			txt_Condition.ShouldReturn = ((textField) => {
+				return textField.ResignFirstResponder();
+			});
 			bindGuadianSource = new BindGuardianTableSource (searchBindGuardianList, this, tableView);
 			bindGuadianSource.RefreshAction = () => {
 				QuerryBindGuardian(txt_Condition.Text);
@@ -33,6 +37,7 @@ namespace lelaozuIphone
 			tableView.Source = bindGuadianSource;
 			btn_Search.TouchUpInside += (sender, e) => 
 			{
+				txt_Condition.ResignFirstResponder();
 				if(string.IsNullOrEmpty(txt_Condition.Text))
 					return;
 				QuerryBindGuardian(txt_Condition.Text);
