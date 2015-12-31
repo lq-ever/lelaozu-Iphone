@@ -6,6 +6,8 @@ using RestSharp;
 using Newtonsoft.Json;
 using Foundation;
 
+
+
 namespace lelaozuIphone
 {
 	public partial class RegisterResultViewController : UIViewController

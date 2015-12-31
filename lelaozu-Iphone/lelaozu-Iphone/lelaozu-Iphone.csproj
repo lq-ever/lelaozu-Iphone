@@ -85,16 +85,15 @@
       <HintPath>..\packages\RestSharp.105.2.3\lib\Xamarin.iOS10\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SDWebImage">
+      <HintPath>..\packages\Xamarin.SDWebImage.3.7.3.4\lib\Xamarin.iOS\SDWebImage.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
     <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\Contents.json" />
-    <ImageAsset Include="Resources\Images.xcassets\Images.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Images.xcassets\menu_alarm_selected\Contents.json" />
-    <ImageAsset Include="Resources\Images.xcassets\menu_alarm_selected\ic_menu_alarm_selected%402x.png" />
-    <ImageAsset Include="Resources\Images.xcassets\menu_alarm_selected\ic_menu_alarm_selected%403x.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\ic_launch_57x57.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\ic_launch_114x114.png" />
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\ic_launch_120x120.png" />
@@ -102,6 +101,43 @@
     <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\splash_1242x2208.png" />
     <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\splash_640x960.png" />
     <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\splash_640x1136.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\ic_launch_180x180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuAlarmNormal.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuAlarmNormal.imageset\ic_menu_alarm_normal%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuAlarmNormal.imageset\ic_menu_alarm_normal%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuAlarmSelected.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuAlarmSelected.imageset\ic_menu_alarm_selected%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuAlarmSelected.imageset\ic_menu_alarm_selected%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\guide1.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\guide1.imageset\guide1%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\guide1.imageset\guide1%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\guide2.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\guide2.imageset\guide2%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\guide2.imageset\guide2%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\guide3.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\guide4.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\guide3.imageset\guide3%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\guide3.imageset\guide3%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\guide4.imageset\guide4%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\guide4.imageset\guide4%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuHealthNormal.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuHealthNormal.imageset\ic_menu_health_normal%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuHealthNormal.imageset\ic_menu_health_normal%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuHealthSelected.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuHealthSelected.imageset\ic_menu_health_selected%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuHealthSelected.imageset\ic_menu_health_selected%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuGuardianNormal.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuGuardianNormal.imageset\ic_menu_guardian_normal%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuGuardianNormal.imageset\ic_menu_guardian_normal%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuGuardianSelected.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuGuardianSelected.imageset\ic_menu_guardian_selected%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuGuardianSelected.imageset\ic_menu_guardian_selected%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuMineNormal.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuMineSelected.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuMineNormal.imageset\ic_menu_mine_normal%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuMineNormal.imageset\ic_menu_mine_normal%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuMineSelected.imageset\ic_menu_mine_selected%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MenuMineSelected.imageset\ic_menu_mine_selected%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="UserGuiderViewController.xib" />
@@ -462,7 +498,6 @@
     <Folder Include="Controllers\My\" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Images.xcassets\Images.imageset\Root.plist" />
     <BundleResource Include="Resources\guider1.png" />
     <BundleResource Include="Resources\guider2.png" />
     <BundleResource Include="Resources\guider3.png" />
@@ -504,20 +539,6 @@
     <BundleResource Include="Resources\ic_login_username.png" />
     <BundleResource Include="Resources\ic_register_combox_normal.png" />
     <BundleResource Include="Resources\ic_register_combox_selected.png" />
-    <BundleResource Include="Resources\ic_menu_alarm_normal%403x.png" />
-    <BundleResource Include="Resources\ic_menu_guardian_normal%403x.png" />
-    <BundleResource Include="Resources\ic_menu_guardian_selected%403x.png" />
-    <BundleResource Include="Resources\ic_menu_health_normal%403x.png" />
-    <BundleResource Include="Resources\ic_menu_health_selected%403x.png" />
-    <BundleResource Include="Resources\ic_menu_mine_normal%403x.png" />
-    <BundleResource Include="Resources\ic_menu_mine_selected%403x.png" />
-    <BundleResource Include="Resources\ic_menu_alarm_normal%402x.png" />
-    <BundleResource Include="Resources\ic_menu_guardian_normal%402x.png" />
-    <BundleResource Include="Resources\ic_menu_guardian_selected%402x.png" />
-    <BundleResource Include="Resources\ic_menu_health_normal%402x.png" />
-    <BundleResource Include="Resources\ic_menu_health_selected%402x.png" />
-    <BundleResource Include="Resources\ic_menu_mine_normal%402x.png" />
-    <BundleResource Include="Resources\ic_menu_mine_selected%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MJRefresh\MJRefresh.csproj">

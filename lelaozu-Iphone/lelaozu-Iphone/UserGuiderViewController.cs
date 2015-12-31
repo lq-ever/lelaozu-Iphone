@@ -34,6 +34,7 @@ namespace lelaozuIphone
 
 			pageControl.CurrentPageIndicatorTintColor = Color.Blue;
 			pageControl.Pages = 4;//4-pages
+			pageControl.Center = new CGPoint(Constants.Screen_Width/2,Constants.Screen_Height-30);
 			this.View.AddSubview (pageControl);
 			// 创建imageview
 			CreateImageView ();
@@ -55,7 +56,7 @@ namespace lelaozuIphone
 			for (var i = 0; i < 4; i++) {
 				var imageview = new UIImageView (new CGRect (Constants.Screen_Width*i,0,Constants.Screen_Width,Constants.Screen_Height));
 				imageview.ContentMode = UIViewContentMode.ScaleAspectFit;
-				imageview.Image = UIImage.FromFile ("guider" + (i+1) + ".png");
+				imageview.Image = UIImage.FromBundle ("guide" + (i+1));
 				imageview.UserInteractionEnabled = true;
 //				imageview.AddGestureRecognizer(new UIGestureRecognizer(()=>
 //					{
@@ -67,7 +68,7 @@ namespace lelaozuIphone
 				//last page add btn_start
 				if (i == 3) {
 					var btn_Start = new UIButton (UIButtonType.Custom);
-					btn_Start.SetTitle ("立即使用", UIControlState.Normal);
+					btn_Start.SetTitle ("立即体验", UIControlState.Normal);
 					btn_Start.SetTitleColor (UIColor.White,UIControlState.Normal);
 					btn_Start.BackgroundColor = Color.Blue;
 					btn_Start.Frame = new CGRect ((Constants.Screen_Width-250)/2,Constants.Screen_Height-100,250,40);
