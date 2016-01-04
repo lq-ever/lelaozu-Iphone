@@ -4,6 +4,8 @@ using UIKit;
 using System.Collections.Generic;
 using CoreGraphics;
 using Foundation;
+using Newtonsoft.Json;
+using SDWebImage;
 
 namespace lelaozuIphone
 {
@@ -12,6 +14,9 @@ namespace lelaozuIphone
 		public List<MainMyItem> sectionOneList = new List<MainMyItem>();
 		public List<MainMyItem> sectionTwoList = new List<MainMyItem>() ;
 		UIImagePickerController imagePickerController;
+		private Dictionary<string,string> requestParams = new Dictionary<string,string> ();
+
+
 		public Main_MyController () : base ("Main_MyController", null)
 		{
 		}
@@ -39,8 +44,15 @@ namespace lelaozuIphone
 
 			//点击头像 --圆角图片
 			img_head.UserInteractionEnabled = true;
-			var img = UIImage.FromFile ("myInfomation_headImage.png");
-			img_head.Layer.Contents = img.CGImage;
+
+			//download image from server
+			SDWebImageManager.SharedManager.Download (new NSUrl (Constants.MyInfo.HeadImgReleaseUrl), SDWebImageOptions.ProgressiveDownload, null, (image, error, cacheType, finished,url) => {
+				if(image!=null)
+					img_head.Layer.Contents = image.CGImage;
+			});
+		
+			//img_head.SetImage(new NSUrl(Constants.MyInfo.HeadImgReleaseUrl),UIImage.FromFile("myInfomation_headImage.png"));
+			//img_head.Layer.Contents = img.CGImage;
 			img_head.Layer.MasksToBounds = true;
 			img_head.Layer.CornerRadius = img_head.Frame.Size.Width/2;
 			img_head.Layer.BorderWidth = 1.0f;
@@ -103,7 +115,7 @@ namespace lelaozuIphone
 				imagePickerController.AllowsEditing = true;
 				if (PresentedViewController == null)
 					PresentViewController (imagePickerController, true, null);
-				imagePickerController.Delegate = new AvatarPickerDelegate (img_head);
+				imagePickerController.Delegate = new AvatarPickerDelegate (img_head,this);
 				
 			} else {
 				var alertController = UIAlertController.Create("不支持","该设备不支持此操作",UIAlertControllerStyle.Alert);
@@ -155,7 +167,89 @@ namespace lelaozuIphone
 //			this.NavigationController.SetNavigationBarHidden(false,true);
 //		}
 
+		private bool ImageHasAlpha(UIImage image)
+		{
+			var imageAlpha = image.CGImage.AlphaInfo;
+			return(imageAlpha == CGImageAlphaInfo.First || imageAlpha == CGImageAlphaInfo.Last ||
+			imageAlpha == CGImageAlphaInfo.PremultipliedFirst || imageAlpha == CGImageAlphaInfo.PremultipliedLast);
 
+		}
+		/// <summary>
+		/// Sets the pic to local and server.头像上传到服务器
+		/// </summary>
+		/// <param name="pickImage">Pick image.</param>
+		public void SetPicToServer(UIImage pickImage) 
+		{
+			try
+			{
+				var headimgStr = string.Empty;
+				if (ImageHasAlpha (pickImage)) 
+					headimgStr = pickImage.AsPNG ().GetBase64EncodedString (NSDataBase64EncodingOptions.None);
+				else
+					headimgStr = pickImage.AsJPEG (0.23f).GetBase64EncodedString (NSDataBase64EncodingOptions.None);
+
+				//调用restapi提交头像
+				var headImgPostParam = new HeadImgPostParam () {
+					UId = Constants.MyInfo.UId,ImageStr = headimgStr
+				};
+				SetRestRequestParams (headImgPostParam);
+				var restSharpRequestUtil = new RestSharpRequestUtil(headImgPostParam.Url,requestParams);
+				restSharpRequestUtil.ExcuteAsync ((RestSharp.IRestResponse response) => {
+					if(response.ResponseStatus == RestSharp.ResponseStatus.Completed && response.StatusCode == System.Net.HttpStatusCode.OK)
+					{
+						//获取并解析返回resultJson获取安全码结果值
+						var result = response.Content;
+						var headimgJson = JsonConvert.DeserializeObject<HeadImgJson>(result);
+						if(headimgJson.statuscode == "1")
+							Constants.MyInfo.HeadImgUrl = headimgJson.data[0].HeadImgUrl;
+						else
+						{
+							InvokeOnMainThread(()=>
+								{
+									BTProgressHUD.ShowToast("头像上传失败",showToastCentered:false,timeoutMs:1000);
+								});
+						}
+
+					}
+
+				});
+			}
+			catch (Exception ex) {
+				Console.WriteLine (ex.Message);
+				BTProgressHUD.ShowToast("头像上传失败",showToastCentered:false,timeoutMs:1000);
+			}
+
+
+
+		}
+
+		/// <summary>
+		/// Sets the rest request parameters.
+		/// </summary>
+		/// <param name="registerInfoParam">Register info parameter.</param>
+		private void SetRestRequestParams(HeadImgPostParam headImgPostParam)
+		{
+			if (!requestParams.ContainsKey ("key"))
+				requestParams.Add ("key", headImgPostParam.Key);
+			else
+				requestParams ["key"] = headImgPostParam.Key;
+
+			if (!requestParams.ContainsKey ("eguid"))
+				requestParams.Add ("eguid", headImgPostParam.Euid);
+			else
+				requestParams ["eguid"] = headImgPostParam.Euid;
+
+			if (!requestParams.ContainsKey ("eimgstr"))
+				requestParams.Add ("eimgstr", headImgPostParam.EimageStr);
+			else
+				requestParams ["eimgstr"] = headImgPostParam.EimageStr;
+
+			if (!requestParams.ContainsKey ("md5"))
+				requestParams.Add ("md5", headImgPostParam.Md5);
+			else
+				requestParams ["md5"] = headImgPostParam.Md5;
+
+		}
 		public override void DidReceiveMemoryWarning ()
 		{
 			base.DidReceiveMemoryWarning ();
@@ -166,9 +260,11 @@ namespace lelaozuIphone
 	class AvatarPickerDelegate:UIImagePickerControllerDelegate 
 	{
 		UIImageView _avatar;
-		public AvatarPickerDelegate(UIImageView _imgView)
+		Main_MyController Controller;
+		public AvatarPickerDelegate(UIImageView _imgView,Main_MyController _controller)
 		{
 			_avatar = _imgView;
+			Controller = _controller;
 		}
 		public override void FinishedPickingImage (UIImagePickerController picker, UIImage image, NSDictionary editingInfo)
 		{
@@ -178,11 +274,13 @@ namespace lelaozuIphone
 			_avatar.Layer.Contents = image.CGImage;
 			//关闭UIImagePicker
 			picker.DismissViewController(true,null);
-			//todo:post the server
-
+			//post the server 头像上传到服务器
+			Controller.SetPicToServer(image);
 
 
 		}
+
+
     }
 
 	public class  mainMySource :UITableViewSource

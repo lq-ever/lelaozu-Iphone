@@ -3,6 +3,7 @@ using UIKit;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Foundation;
+using SDWebImage;
 
 namespace lelaozuIphone
 {
@@ -107,8 +108,8 @@ namespace lelaozuIphone
 			cell.Btn_Action.TouchUpInside -= ActionHandler;
 			cell.Btn_Action.TouchUpInside += ActionHandler;
 
-			//todo:set imgeHead
-
+			//set imgeHead
+			cell.Img_Head.SetImage(new NSUrl(item.HeadImgReleaseUrl),UIImage.FromFile("myInfomation_headImage.png"));
 			return cell;
 		}
 		/// <summary>

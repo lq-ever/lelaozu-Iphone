@@ -3,6 +3,7 @@ using UIKit;
 using System.Collections.Generic;
 using Foundation;
 using Newtonsoft.Json;
+using SDWebImage;
 
 namespace lelaozuIphone
 {
@@ -135,8 +136,8 @@ namespace lelaozuIphone
 
 			cell.Accessory = UITableViewCellAccessory.DisclosureIndicator;
 			cell.SelectionStyle = UITableViewCellSelectionStyle.Gray;
-			//todo:set imgeHead
-
+			//set imgeHead
+			cell.Img_Head.SetImage(new NSUrl(item.HeadImgReleaseUrl),UIImage.FromFile("myInfomation_headImage.png"));
 
 			return cell;
 		}

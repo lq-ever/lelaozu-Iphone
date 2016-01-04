@@ -3,6 +3,7 @@ using UIKit;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Foundation;
+using SDWebImage;
 
 namespace lelaozuIphone
 {
@@ -14,8 +15,7 @@ namespace lelaozuIphone
 		private Dictionary<string,string> requestParams = new Dictionary<string,string> ();
 		private ExamineBundGuardianParam examinebundGuardianParam = new ExamineBundGuardianParam();//请求参数对象
 		private RestSharpRequestUtil restSharpRequestUtil;
-		private NSString actionFlag = new NSString ("actionFlag");
-		private NSString _indexPath = new NSString("indexPath");
+
 
 		public Action RefreshAction {
 			get;
@@ -85,7 +85,8 @@ namespace lelaozuIphone
 
 			cell.Accessory = UITableViewCellAccessory.None;
 			cell.SelectionStyle = UITableViewCellSelectionStyle.Gray;
-			//todo:set imgeHead
+			//set imgeHead
+			cell.Img_Head.SetImage(new NSUrl(item.HeadImgReleaseUrl),UIImage.FromFile("myInfomation_headImage.png"));
 
 			cell.Lbl_Name.Text = FormatUtil.StrVaueFormat (item.TrueName);
 			cell.Lbl_PhoneNumber.Text = FormatUtil.StrVaueFormat (item.PhoneNumberOne);

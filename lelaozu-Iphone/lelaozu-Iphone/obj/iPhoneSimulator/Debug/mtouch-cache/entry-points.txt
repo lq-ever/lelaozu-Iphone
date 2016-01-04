@@ -203,3 +203,7 @@ CloseZStream
 Flush
 ReadZStream
 WriteZStream
+SDWebImageDownloadFinishNotification
+SDWebImageDownloadReceiveResponseNotification
+SDWebImageDownloadStartNotification
+SDWebImageDownloadStopNotification
