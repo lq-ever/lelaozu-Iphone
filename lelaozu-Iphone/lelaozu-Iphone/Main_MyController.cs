@@ -180,6 +180,8 @@ namespace lelaozuIphone
 			picker.DismissViewController(true,null);
 			//todo:post the server
 
+
+
 		}
     }
 

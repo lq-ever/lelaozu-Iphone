@@ -3,6 +3,7 @@
 using UIKit;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using MJRefresh;
 
 namespace lelaozuIphone
 {
@@ -17,6 +18,11 @@ namespace lelaozuIphone
 		protected bool HasLoadedOnce;
 		private List<SearchGuardianListItem> searchBindGuardianList = new List<SearchGuardianListItem>();
 		private BindGuardianTableSource bindGuadianSource;
+
+		MJRefreshNormalHeader header;
+		private bool IsRefreshing = false;//是否正在获取数据
+		private bool btnSearchFlag = false;//监听是否点击查询
+
 		public BindGuardianViewController () : base ("BindGuardianViewController", null)
 		{
 		}
@@ -28,18 +34,30 @@ namespace lelaozuIphone
 			this.NavigationItem.Title = "绑定监护人";
 			txt_Condition.ReturnKeyType = UIReturnKeyType.Search;
 			txt_Condition.ShouldReturn = ((textField) => {
+				QuerryBindGuardian(txt_Condition.Text);
 				return textField.ResignFirstResponder();
+
 			});
 			bindGuadianSource = new BindGuardianTableSource (searchBindGuardianList, this, tableView);
 			bindGuadianSource.RefreshAction = () => {
-				QuerryBindGuardian(txt_Condition.Text);
+				//QuerryBindGuardian(txt_Condition.Text);
+				header.BeginRefreshing();
 			};
+
+			header = new MJRefreshNormalHeader();
+			header.SetTitle(Constants.PullDownLbl, MJRefreshState.Idle);
+			header.SetTitle(Constants.PullDownReleaseLbl, MJRefreshState.Pulling);
+			header.SetTitle(Constants.PullDownRefreshLbl, MJRefreshState.Refreshing);
+			header.LastUpdatedTimeLabel.Hidden = true;
+			header.RefreshingBlock = () =>  {
+				OnPullDownToRefresh();
+			};
+			tableView.SetHeader (header);
 			tableView.Source = bindGuadianSource;
 			btn_Search.TouchUpInside += (sender, e) => 
 			{
+				btnSearchFlag = true;
 				txt_Condition.ResignFirstResponder();
-				if(string.IsNullOrEmpty(txt_Condition.Text))
-					return;
 				QuerryBindGuardian(txt_Condition.Text);
 			};
 
@@ -52,7 +70,12 @@ namespace lelaozuIphone
 		/// </summary>
 		private void QuerryBindGuardian(string condition)
 		{
-			BTProgressHUD.Show("正在加载中...",-1,ProgressHUD.MaskType.Black);
+
+			if(string.IsNullOrEmpty(condition))
+				return;
+			if(btnSearchFlag)
+				BTProgressHUD.Show("正在加载中...",-1,ProgressHUD.MaskType.Black);
+
 			//在状态栏中设置show网络指示器
 			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
 
@@ -133,7 +156,24 @@ namespace lelaozuIphone
 							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
 						});
 				}
+				InvokeOnMainThread(()=>
+					{
+						header.EndRefreshing();
+						IsRefreshing = false;
+					});
 			});
+		}
+
+		/// <summary>
+		/// Raises the pull down to refresh event.下拉刷新
+		/// </summary>
+		private void OnPullDownToRefresh()
+		{
+			if (!IsRefreshing) {
+				IsRefreshing = true;
+				btnSearchFlag = false;
+				QuerryBindGuardian (txt_Condition.Text);
+			} 
 		}
 		public override void DidReceiveMemoryWarning ()
 		{

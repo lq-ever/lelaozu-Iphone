@@ -100,10 +100,7 @@
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_login_username.png
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_register_combox_normal.png
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_register_combox_selected.png
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_menu_mine_normal@3x.png
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_menu_mine_selected@3x.png
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_menu_mine_normal@2x.png
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/ic_menu_mine_selected@2x.png
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/login_bg.png
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/lelaozu-Iphone.exe.mdb
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/lelaozu-Iphone.exe
@@ -114,4 +111,3 @@
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/SDWebImage.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/MJRefresh.dll
 /Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/bin/iPhoneSimulator/Debug/MJRefresh.dll.mdb
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/obj/iPhoneSimulator/Debug/optimized/login_bg.png

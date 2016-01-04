@@ -50,6 +50,8 @@ namespace lelaozuIphone
 			healthInfoParam = new SearchHealthInforParam ();
 			healthSource = new HealthTableSource(healthInfoLists,this,tableView);
 			tableView.Source = healthSource;
+			//btn_search
+			btn_Search.BackgroundColor = Color.Blue;
 			btn_Search.TouchUpInside += (sender, e) => 
 			{
 				btnSearchFlag = true;

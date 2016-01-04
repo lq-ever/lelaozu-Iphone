@@ -138,25 +138,25 @@ namespace lelaozuIphone
 				btn_action.SetTitle("申请绑定",UIControlState.Normal);
 
 				btn_action.Enabled = true;
-				btn_action.BackgroundColor = UIColor.Blue;
+				btn_action.BackgroundColor = Color.Blue;
 				break;
 
 			case "1"://同意
 				btn_action.SetTitle("已绑定",UIControlState.Normal);
 				btn_action.Enabled = false;
-				btn_action.BackgroundColor = UIColor.LightGray;
+				btn_action.BackgroundColor = Color.LightGray;
 				break;
 
 			case "2"://未同意
 				btn_action.SetTitle("申请绑定",UIControlState.Normal);
 				btn_action.Enabled = true;
-				btn_action.BackgroundColor = UIColor.Blue;
+				btn_action.BackgroundColor = Color.Blue;
 				break;
 
 			default:
 				btn_action.SetTitle("申请绑定",UIControlState.Normal);
 				btn_action.Enabled = true;
-				btn_action.BackgroundColor = UIColor.Blue;
+				btn_action.BackgroundColor = Color.Blue;
 				break;
 
 			}
@@ -168,15 +168,18 @@ namespace lelaozuIphone
 
 			var index = (int)(sender as UIButton).Tag;
 			var item = SearchGuardianInfoList[index];
-
+			UITextField txtMsgContent = null;
 			//留言内容
 			applyMsgContent = item.Remark;
 			Action removeTextFieldObserver = () => {
+				if(txtMsgContent!=null)
+					txtMsgContent.ResignFirstResponder();
 				if(observer !=null)
 					NSNotificationCenter.DefaultCenter.RemoveObserver(observer);
 			};
 			var applyBindAlertController = UIAlertController.Create ("申请绑定", "", UIAlertControllerStyle.Alert);
 			applyBindAlertController.AddTextField ((textfield) => {
+				txtMsgContent = textfield;
 				textfield.Placeholder = "请输入申请留言";
 				textfield.Text = FormatUtil.StrVaueFormat(item.Remark);
 				textfield.Frame = new CoreGraphics.CGRect(textfield.Frame.X,textfield.Frame.Y,textfield.Frame.Width,textfield.Frame.Height +30);
