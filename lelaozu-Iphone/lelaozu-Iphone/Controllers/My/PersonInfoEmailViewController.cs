@@ -22,6 +22,18 @@ namespace lelaozuIphone
 			//电子邮箱
 			txt_email.Text = FormatUtil.StrVaueFormat(Constants.MyInfo.Email);
 
+			txt_email.KeyboardType = UIKeyboardType.EmailAddress;
+			txt_email.ReturnKeyType = UIReturnKeyType.Done;
+			txt_email.ShouldReturn = ((textField) => {
+				return textField.ResignFirstResponder();
+			});
+			btn_save.BackgroundColor = Color.Blue;
+			btn_save.TouchUpInside += (object sender, EventArgs e) => 
+			{
+				txt_email.ResignFirstResponder();
+				Save();
+			};
+
 		}
 
 		/// <summary>

@@ -19,6 +19,20 @@ namespace lelaozuIphone
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "身份证所在地";
 			txt_idCardLocation.Text = FormatUtil.StrVaueFormat (Constants.MyInfo.IDAddress); 
+
+			txt_idCardLocation.KeyboardType = UIKeyboardType.Default;
+			txt_idCardLocation.ReturnKeyType = UIReturnKeyType.Done;
+			txt_idCardLocation.ShouldReturn = (textField) => {
+				return txt_idCardLocation.ResignFirstResponder();
+			};
+
+			//btn_save
+			btn_save.BackgroundColor = Color.Blue;
+			btn_save.TouchUpInside += (sender, e) => 
+			{
+				txt_idCardLocation.ResignFirstResponder();
+				Save();
+			};
 		}
 
 		/// <summary>

@@ -34,6 +34,17 @@ namespace lelaozuIphone
 					txt_fixedphoneLast.Text = splitPhones [1];
 				}
 			}
+			txt_fixedphonePre.KeyboardType = UIKeyboardType.NumbersAndPunctuation;
+			txt_fixedphoneLast.KeyboardType = UIKeyboardType.NumbersAndPunctuation;
+			txt_fixedphonePre.ReturnKeyType = UIReturnKeyType.Done;
+			txt_fixedphoneLast.ReturnKeyType = UIReturnKeyType.Done;
+			txt_fixedphonePre.ShouldReturn = (textField) => {
+				return textField.ResignFirstResponder();
+			};
+
+			txt_fixedphoneLast.ShouldReturn = (textField) => {
+				return textField.ResignFirstResponder();
+			};
 
 			btn_save.BackgroundColor = Color.Blue;
 			btn_save.TouchUpInside += (sender, e) => 

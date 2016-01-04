@@ -19,13 +19,15 @@ namespace lelaozuIphone
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title ="真实姓名";
 			txt_trueName.Text = FormatUtil.StrVaueFormat (Constants.MyInfo.TrueName);
-			txt_trueName.ReturnKeyType = UIReturnKeyType.Default;
+			txt_trueName.ReturnKeyType = UIReturnKeyType.Done;
 			txt_trueName.ShouldReturn = (textField) => {
 				return textField.ResignFirstResponder();
 			};
 			btn_save.BackgroundColor = Color.Blue;
+			//btn_save upside
 			btn_save.TouchUpInside += (object sender, EventArgs e) => 
 			{
+				txt_trueName.ResignFirstResponder();
 				Save();
 			};
 		}
