@@ -35,7 +35,8 @@ namespace lelaozuIphone
 		private Dictionary<string,string> requestsendcodeParams = new Dictionary<string,string> ();
 		private string securityCode;
 		private NSTimer timer;
-		private int secondsCountDown= 15;
+		private int secondsCountDown= 60;
+		//NSObject observer = null;
 		public SendSecurityCodeController () : base ("SendSecurityCodeController", null)
 		{
 		}
@@ -94,7 +95,8 @@ namespace lelaozuIphone
 			lbl_customPhone.AddGestureRecognizer (callPhoneRecognizer);
 
 			//发送验证码
-
+			btn_sendCode.Enabled = true;
+			btn_sendCode.BackgroundColor = Color.Blue;
 			btn_sendCode.TouchUpInside += (sender, e) => 
 			{
 				lbl_sendCodeStatusShow.Hidden = true;
@@ -104,58 +106,35 @@ namespace lelaozuIphone
 			};
 			//nstimer
 
-
-			timer = NSTimer.CreateScheduledTimer (1, this, new ObjCRuntime.Selector ("timeMethod"), null,true);
-
-//
-//			timer = NSTimer.CreateScheduledTimer (1, (NSTimer timer) => {
-//				if(secondsCountDown ==1)
-//				{
-//					timer.Invalidate();
-//					secondsCountDown =60;
-//					btn_sendCode.SetTitle("发送验证码",UIControlState.Normal);
-//					btn_sendCode.Enabled = true;
-//					btn_sendCode.BackgroundColor = Color.Blue;
-//
-//				}
-//				else
-//				{
-//					secondsCountDown --;
-//					btn_sendCode.SetTitle(secondsCountDown+"秒后可重发",UIControlState.Normal);
-//					btn_sendCode.Enabled = false;
-//					btn_sendCode.BackgroundColor = Color.LightGray;
-//				}
-//			});
-
-
-
+			//txt_phonenumber
+			txt_phoneNumber.KeyboardType = UIKeyboardType.NumbersAndPunctuation;
+			txt_phoneNumber.ReturnKeyType = UIReturnKeyType.Done;
+			txt_phoneNumber.ShouldReturn = (textField) => {
+				return textField.ResignFirstResponder();
+			};
 			//securityCode
 			txt_securityCode.ReturnKeyType = UIReturnKeyType.Done;
-			txt_securityCode.KeyboardType = UIKeyboardType.NumberPad;
+			txt_securityCode.KeyboardType = UIKeyboardType.NumbersAndPunctuation;
 			txt_securityCode.ShouldReturn = ((textField) => {
 				return textField.ResignFirstResponder();
 			});
 
-			txt_securityCode.EditingChanged += (sender, e) => 
-			{
-				if(txt_securityCode.Text.Length >0)
-				{
-					btn_next.Enabled = true;
-					btn_next.BackgroundColor = Color.Blue;
-				}
-				else
-				{
-					btn_next.Enabled = false;
-					btn_next.BackgroundColor = Color.Blue;
-				}
-			};
+//			Action removeTextFieldObserver = () => {
+//				if(observer !=null)
+//					NSNotificationCenter.DefaultCenter.RemoveObserver(observer);
+//			};
+			NSNotificationCenter.DefaultCenter.AddObserver (UITextField.TextFieldTextDidChangeNotification, (NSNotification obj) => {
+				var textField = obj.Object as UITextField;
+				btn_next.Enabled = textField.Text.Length >= 1;
+				btn_next.BackgroundColor = btn_next.Enabled?Color.Blue:Color.LightGray;
+			}, txt_securityCode);
 			//下一步
 			btn_next.Enabled = false;
 			btn_next.BackgroundColor = Color.LightGray;
 			btn_next.TouchUpInside += (object sender, EventArgs e) => 
 			{
+				
 				var inputCode = txt_securityCode.Text;
-
 				if(string.IsNullOrEmpty(inputCode) || !RegexUtil.IsSecurityCode(inputCode))
 				{
 					BTProgressHUD.ShowToast ("请输入接收到的手机验证码,且不能为空",showToastCentered:false,timeoutMs:1000);
@@ -178,12 +157,18 @@ namespace lelaozuIphone
 			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 
 		}
+		private void CreateNSTimerAndFire()
+		{
+			if(timer == null)
+				timer = NSTimer.CreateScheduledTimer (1, this, new ObjCRuntime.Selector ("timeMethod"), null,true);
+		}
 		[Export("timeMethod")]
 		public void TimeFireMethod()
 		{
 			if(secondsCountDown ==1)
 			{
 				timer.Invalidate ();
+				timer = null;
 				secondsCountDown =60;
 				btn_sendCode.SetTitle("发送验证码",UIControlState.Normal);
 				btn_sendCode.Enabled = true;
@@ -230,7 +215,6 @@ namespace lelaozuIphone
 		private void SendCode()
 		{
 			if (!ValidInput ()) {
-
 				return;
 			}
 
@@ -260,10 +244,11 @@ namespace lelaozuIphone
 					{
 						InvokeOnMainThread(()=>
 							{
+								
 								securityCode = sendCodeJson.data.ToString();
 								BTProgressHUD.ShowToast("验证码发送成功...",showToastCentered:false,timeoutMs:1000);
 								lbl_sendCodeStatusShow.Hidden = false;
-								timer.Fire();
+								CreateNSTimerAndFire();
 							});
 					}
 					else
@@ -329,6 +314,12 @@ namespace lelaozuIphone
 
 
 
+		}
+		public override void ViewWillDisappear (bool animated)
+		{
+			base.ViewWillDisappear (animated);
+			if (timer != null)
+				timer.Invalidate ();
 		}
 	}
 }

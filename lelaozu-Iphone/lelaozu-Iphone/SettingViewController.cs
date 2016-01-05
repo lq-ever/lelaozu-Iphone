@@ -12,7 +12,12 @@ namespace lelaozuIphone
 		public SettingViewController () : base ("SettingViewController", null)
 		{
 		}
-
+		public UITableView TableView
+		{
+			get {
+				return tableView;
+			}
+		}
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
@@ -20,6 +25,7 @@ namespace lelaozuIphone
 			this.NavigationItem.Title ="设置";
 			tableView.Frame = new CoreGraphics.CGRect(tableView.Frame.X, tableView.Frame.Y, tableView.Frame.Width, 160);
 			tableView.Source = new SettingSource (this);
+
 			LoadData ();
 			//退出进入登录界面
 			btn_exit.TouchUpInside += (sender, e) => 
@@ -100,6 +106,8 @@ namespace lelaozuIphone
 			else if(indexPath.Section ==1)
 			{
 				// todo:清除缓存
+				controller.sectionTwoList[0].TitleValue ="0MB";
+				controller.TableView.ReloadData ();
 				var clearAlertController = UIAlertController.Create("提示","清除缓存成功",UIAlertControllerStyle.Alert);
 				clearAlertController.AddAction (UIAlertAction.Create ("确定", UIAlertActionStyle.Default, null));
 				controller.PresentViewController (clearAlertController, true, null);

@@ -57,6 +57,8 @@ namespace lelaozuIphone
 
 		private NSTimer timer;
 
+		private int SecondsCountDown= 60;
+		//NSObject observer = null;
 		public RegisterResultViewController () : base ("RegisterResultViewController", null)
 		{
 		}
@@ -76,25 +78,9 @@ namespace lelaozuIphone
 			lbl_sendCodeStatusShow.Hidden = true;
 
 			//nstimer
-			var seconds = 60;
-			timer = NSTimer.CreateScheduledTimer (1, (NSTimer timer) => {
-				if(seconds ==1)
-				{
-					timer.Invalidate();
-					seconds =60;
-					btn_send.SetTitle("发送验证码",UIControlState.Normal);
-					btn_send.Enabled = true;
-					btn_send.BackgroundColor = Color.Blue;
-				}
-				else
-				{
-					seconds --;
-					btn_send.SetTitle(seconds+"秒后可重发",UIControlState.Normal);
-					btn_send.Enabled = false;
-					btn_send.BackgroundColor = Color.LightGray;
-				}
-			});
-			timer.Fire ();
+
+			//start timer
+			CreateNSTimerAndFire ();
 
 			//sendCode发送验证码
 			btn_send.Enabled = false;
@@ -105,31 +91,31 @@ namespace lelaozuIphone
 				btn_send.Enabled = false;
 				SendSMS(phoneNumber);
 			};
+
+//			Action removeTextFieldObserver = () => {
+//				if(observer !=null)
+//					NSNotificationCenter.DefaultCenter.RemoveObserver(observer);
+//			};
+			 NSNotificationCenter.DefaultCenter.AddObserver (UITextField.TextFieldTextDidChangeNotification, (NSNotification obj) => {
+				var textField = obj.Object as UITextField;
+				btn_submit.Enabled = textField.Text.Length >= 1;
+				btn_submit.BackgroundColor = btn_submit.Enabled?Color.Blue:Color.LightGray;
+			}, txt_securityCode);
+
 			txt_securityCode.ReturnKeyType = UIReturnKeyType.Done;
-			txt_securityCode.KeyboardType = UIKeyboardType.NumberPad;
-		
+			txt_securityCode.KeyboardType = UIKeyboardType.NumbersAndPunctuation;
+
 			txt_securityCode.ShouldReturn = ((textField) => {
 				return textField.ResignFirstResponder();
 			});
-			txt_securityCode.EditingChanged+= (sender, e) => 
-			{
-				if(txt_securityCode.Text.Length>0)
-				{
-					btn_submit.Enabled = true;
-					btn_submit.BackgroundColor = Color.Blue;
-				}
-				else
-				{
-					btn_submit.Enabled = false;
-					btn_submit.BackgroundColor = Color.LightGray;
-				}
-			};
+
 
 			//register
 			btn_submit.Enabled = false;
 			btn_submit.BackgroundColor = Color.LightGray;
 			btn_submit.TouchUpInside += (object sender, EventArgs e) => 
 			{
+				
 				txt_securityCode.ResignFirstResponder();
 				var inputCode = txt_securityCode.Text;
 
@@ -146,6 +132,35 @@ namespace lelaozuIphone
 				Reister();
 			};
 
+		}
+
+
+		private void CreateNSTimerAndFire()
+		{
+			if(timer == null)
+				timer = NSTimer.CreateScheduledTimer (1, this, new ObjCRuntime.Selector ("timeMethod"), null,true);
+		}
+		[Export("timeMethod")]
+		public void TimeFireMethod()
+		{
+			if(SecondsCountDown ==1)
+			{
+				timer.Invalidate ();
+				timer = null;
+				SecondsCountDown =60;
+				btn_send.SetTitle("发送验证码",UIControlState.Normal);
+				btn_send.Enabled = true;
+				btn_send.BackgroundColor = Color.Blue;
+
+
+			}
+			else
+			{
+				SecondsCountDown --;
+				btn_send.SetTitle(SecondsCountDown+"秒后可重发",UIControlState.Normal);
+				btn_send.Enabled = false;
+				btn_send.BackgroundColor = Color.LightGray;
+			}
 		}
 
 		#region 重新发送验证码
@@ -407,13 +422,14 @@ namespace lelaozuIphone
 
 
 		}
-
-		public override void ViewDidUnload ()
+		public override void ViewWillDisappear (bool animated)
 		{
-			base.ViewDidUnload ();
+			base.ViewWillDisappear (animated);
 			if (timer != null)
 				timer.Invalidate ();
+			
 		}
+
 		#endregion
 		public override void DidReceiveMemoryWarning ()
 		{

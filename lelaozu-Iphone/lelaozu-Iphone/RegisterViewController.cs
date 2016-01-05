@@ -46,7 +46,7 @@ namespace lelaozuIphone
 				return textField.ResignFirstResponder();
 			};
 			txt_phoneNum.ReturnKeyType = UIReturnKeyType.Done;
-			txt_phoneNum.KeyboardType = UIKeyboardType.NumberPad;
+			txt_phoneNum.KeyboardType = UIKeyboardType.NumbersAndPunctuation;
 			txt_phoneNum.ShouldReturn = (textField) => {
 				return textField.ResignFirstResponder();
 			};
@@ -68,7 +68,6 @@ namespace lelaozuIphone
 					btn_next.Enabled = true;
 					btn_next.BackgroundColor = Color.Blue;
 				}
-				
 				else
 				{
 					btn_next.Enabled = false;
