@@ -1,6 +1,9 @@
 ﻿
 using Foundation;
 using UIKit;
+using System;
+using JPush;
+
 
 namespace lelaozuIphone
 {
@@ -39,13 +42,50 @@ namespace lelaozuIphone
 			Window.RootViewController = rootViewController;
 			Window.BackgroundColor = UIColor.White;
 			Window.MakeKeyAndVisible ();
+			#region 极光推送配置
+			//Required
+			if(float.Parse(UIDevice.CurrentDevice.SystemVersion)>=8.0)
+			{
+				//可以添加自定义categories
+				APService.RegisterForRemoteNotificationTypes((uint)(UIUserNotificationType.Alert|UIUserNotificationType.Sound
+					|UIUserNotificationType.Badge),null);
+			}
+			else
+			{
+				//categories 必须为nil
+				APService.RegisterForRemoteNotificationTypes((uint)(UIUserNotificationType.Alert|UIUserNotificationType.Sound
+					|UIUserNotificationType.Badge),null);
+			}
+			// Required
+			APService.SetupWithOption(launchOptions);
+			#endregion
 			return true;
+
+		}
+
+		public override void RegisteredForRemoteNotifications (UIApplication application, NSData deviceToken)
+		{
+			//throw new System.NotImplementedException ();
+			// Required
+			APService.RegisterDeviceToken(deviceToken);
 		}
 
 
-	
+		public override void ReceivedRemoteNotification (UIApplication application, NSDictionary userInfo)
+		{
+			//throw new System.NotImplementedException ();
+			// Required
+			APService.HandleRemoteNotification(userInfo);
+		}
 
-	
+		public override void DidReceiveRemoteNotification (UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
+		{
+			// IOS 7 Support Required
+			APService.HandleRemoteNotification(userInfo);
+			if (completionHandler != null)
+				completionHandler (UIBackgroundFetchResult.NewData);
+		}
+
 
 		public override void OnResignActivation (UIApplication application)
 		{

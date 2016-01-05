@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lelaozu-Iphone", "lelaozu-I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MJRefresh", "MJRefresh\MJRefresh.csproj", "{0F570497-368C-4A8E-979D-FF00FC31BE7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JPush", "JPush\JPush.csproj", "{6724B78B-FB85-4BF0-B701-BA8D205463CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -21,6 +23,14 @@ Global
 		{0F570497-368C-4A8E-979D-FF00FC31BE7B}.Release|iPhone.Build.0 = Release|Any CPU
 		{0F570497-368C-4A8E-979D-FF00FC31BE7B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{0F570497-368C-4A8E-979D-FF00FC31BE7B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{6724B78B-FB85-4BF0-B701-BA8D205463CC}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{6724B78B-FB85-4BF0-B701-BA8D205463CC}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{6724B78B-FB85-4BF0-B701-BA8D205463CC}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{6724B78B-FB85-4BF0-B701-BA8D205463CC}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{6724B78B-FB85-4BF0-B701-BA8D205463CC}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{6724B78B-FB85-4BF0-B701-BA8D205463CC}.Release|iPhone.Build.0 = Release|Any CPU
+		{6724B78B-FB85-4BF0-B701-BA8D205463CC}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{6724B78B-FB85-4BF0-B701-BA8D205463CC}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{E854B3FC-FBDF-45D8-B10A-5E419A494FB6}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{E854B3FC-FBDF-45D8-B10A-5E419A494FB6}.Debug|iPhone.Build.0 = Debug|iPhone
 		{E854B3FC-FBDF-45D8-B10A-5E419A494FB6}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator

@@ -27,7 +27,7 @@
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer: Yuan Wang (23WBZ773NB)</CodesignKey>
     <MtouchProfiling>true</MtouchProfiling>
-    <CodesignProvision>e30a50db-8e8c-40c3-ab3b-9e192ba9b814</CodesignProvision>
+    <CodesignProvision>4c93d181-d18f-486d-8d95-169ab8ef8ca0</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -67,14 +67,14 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchFloat32>true</MtouchFloat32>
     <CodesignKey>iPhone Developer: Yuan Wang (23WBZ773NB)</CodesignKey>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchUseSGen>true</MtouchUseSGen>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchProfiling>true</MtouchProfiling>
-    <CodesignProvision>00f54542-599b-48b9-988d-999f753c863f</CodesignProvision>
+    <CodesignProvision>4c93d181-d18f-486d-8d95-169ab8ef8ca0</CodesignProvision>
+    <IpaPackageName>
+    </IpaPackageName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -540,11 +540,16 @@
     <BundleResource Include="Resources\ic_register_combox_normal.png" />
     <BundleResource Include="Resources\ic_register_combox_selected.png" />
     <BundleResource Include="Resources\login_bg.png" />
+    <BundleResource Include="PushConfig.plist" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MJRefresh\MJRefresh.csproj">
       <Project>{0F570497-368C-4A8E-979D-FF00FC31BE7B}</Project>
       <Name>MJRefresh</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JPush\JPush.csproj">
+      <Project>{6724B78B-FB85-4BF0-B701-BA8D205463CC}</Project>
+      <Name>JPush</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

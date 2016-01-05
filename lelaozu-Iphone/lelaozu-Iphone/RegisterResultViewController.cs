@@ -98,6 +98,7 @@ namespace lelaozuIphone
 //			};
 			 NSNotificationCenter.DefaultCenter.AddObserver (UITextField.TextFieldTextDidChangeNotification, (NSNotification obj) => {
 				var textField = obj.Object as UITextField;
+			
 				btn_submit.Enabled = textField.Text.Length >= 1;
 				btn_submit.BackgroundColor = btn_submit.Enabled?Color.Blue:Color.LightGray;
 			}, txt_securityCode);

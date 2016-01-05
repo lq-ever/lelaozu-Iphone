@@ -8,5 +8,7 @@
 	<string>2EPV24A8LB.com.eldyoung.lelaozu</string>
 	<key>com.apple.developer.team-identifier</key>
 	<string>2EPV24A8LB</string>
+	<key>aps-environment</key>
+	<string>development</string>
 </dict>
 </plist>
