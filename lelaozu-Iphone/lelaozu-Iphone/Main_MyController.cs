@@ -52,7 +52,7 @@ namespace lelaozuIphone
 			});
 		
 			//img_head.SetImage(new NSUrl(Constants.MyInfo.HeadImgReleaseUrl),UIImage.FromFile("myInfomation_headImage.png"));
-			//img_head.Layer.Contents = img.CGImage;
+
 			img_head.Layer.MasksToBounds = true;
 			img_head.Layer.CornerRadius = img_head.Frame.Size.Width/2;
 			img_head.Layer.BorderWidth = 1.0f;
@@ -96,8 +96,7 @@ namespace lelaozuIphone
 			sectionTwoList.Add (new MainMyItem (){ ImagPath ="ic_myInfomation_advice",Title="投诉建议",FuncType = FuncType.Advice});
 
 			tableView.Source = new mainMySource (this);
-			scrollview.ContentSize = new CGSize (Constants.Screen_Width,scrollview.Frame.Height+20);
-			scrollview.SetContentOffset(new CGPoint(0,0),true);
+			scrollview.ContentSize = new CGSize (Constants.Screen_Width,scrollview.Frame.Height+10);
 			//赋值
 			SetShowInfo ();
 
@@ -155,17 +154,17 @@ namespace lelaozuIphone
 			//Global.imageLoader.DisplayImage(Global.MyInfo.HeadImgReleaseUrl,img_head,Global.Options);
 		}
 
-//		public override void ViewWillAppear (bool animated)
-//		{
-//			base.ViewWillAppear (animated);
-//			this.NavigationController.SetNavigationBarHidden( true,true);
-//
-//		}
-//		public override void ViewWillDisappear (bool animated)
-//		{
-//			base.ViewWillDisappear (animated);
-//			this.NavigationController.SetNavigationBarHidden(false,true);
-//		}
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+			this.NavigationController.SetNavigationBarHidden(true,true);
+
+		}
+		public override void ViewWillDisappear (bool animated)
+		{
+			base.ViewWillDisappear (animated);
+			this.NavigationController.SetNavigationBarHidden(false,true);
+		}
 
 		private bool ImageHasAlpha(UIImage image)
 		{
