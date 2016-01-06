@@ -1,18 +1,17 @@
 ﻿<Properties StartupItem="lelaozu-Iphone/lelaozu-Iphone.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Jonny-Iphone" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/LoginViewController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/AppDelegate.cs">
     <Files>
-      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="228" Column="1" />
-      <File FileName="lelaozu-Iphone/RegisterResultViewController.cs" Line="327" Column="46" />
-      <File FileName="JPush/obj/Debug/ios/JPush/APService.g.cs" Line="179" Column="44" />
-      <File FileName="lelaozu-Iphone/Utils/RestSharpRequestUtil.cs" Line="113" Column="1" />
+      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="251" Column="31" />
+      <File FileName="lelaozu-Iphone/AppDelegate.cs" Line="145" Column="25" />
+      <File FileName="lelaozu-Iphone/Info.plist" />
+      <File FileName="lelaozu-Iphone/Controllers/Alarm/AlarmDetailViewController.cs" Line="31" Column="5" />
+      <File FileName="lelaozu-Iphone/Utils/JPushUtils.cs" Line="18" Column="26" />
+      <File FileName="lelaozu-Iphone/Main.cs" Line="10" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/Utils/JPushUtils.cs" line="37" column="1" />
-      <Breakpoint file="/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/Utils/JPushUtils.cs" line="31" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>

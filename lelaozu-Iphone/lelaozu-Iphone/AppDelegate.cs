@@ -19,13 +19,19 @@ namespace lelaozuIphone
 			set;
 		}
 
+		private bool isLaunchedByNotification =false;
+
+	//	BMKMapManager* _mapManager;   
+
 		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 		{
-			  
+			 
 			// Override point for customization after application launch.
 			// If not required for your application you can safely delete this method
 
 			//NSThread.SleepFor(2);//show splash delay 延长LaunchScreen.xib启动画面 
+
+			Console.WriteLine ("start finishedLaunching...\\n");
 
  			Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
@@ -60,32 +66,94 @@ namespace lelaozuIphone
 			APService.SetupWithOption(launchOptions);
 			APService.SetDebugMode();
 			#endregion
+
+			#region baidumap
+			// 要使用百度地图，请先启动BaiduMapManager  
+//			_mapManager = [[BMKMapManager alloc]init];   
+//			// 如果要关注网络及授权验证事件，请设定     generalDelegate参数  
+			//			BOOL ret = [_mapManager start:@"在此处输入您的授权Key"  generalDelegate:nil];  //gw1iEfOjrDPvibEuk4prqdP3
+//			if (!ret) {  
+//				NSLog(@"manager start failed!");  
+//			}  
+			#endregion
+			//UIApplicationLaunchOptionsRemoteNotificationKey 
+			if (launchOptions != null) {
+				NSDictionary remoteNotification = (NSDictionary)launchOptions.ObjectForKey (UIApplication.LaunchOptionsRemoteNotificationKey);
+				if (remoteNotification != null) {
+				
+					//通过点击通知栏进入应用
+					isLaunchedByNotification = true;
+
+				} else {
+					//通过点击应用图标进入应用
+					isLaunchedByNotification = false;
+				}
+			}
+
+
 			return true;
 
 		}
 
+		/// <summary>
+		/// Registereds for remote notifications.提交devicetoken
+		/// </summary>
+		/// <param name="application">Application.</param>
+		/// <param name="deviceToken">Device token.</param>
 		public override void RegisteredForRemoteNotifications (UIApplication application, NSData deviceToken)
 		{
 			//throw new System.NotImplementedException ();
+
 			// Required
 			APService.RegisterDeviceToken(deviceToken);
 		}
 
-
+		/// <summary>
+		/// Receiveds the remote notification.ios 6 bellow 接收到消息
+		/// </summary>
+		/// <param name="application">Application.</param>
+		/// <param name="userInfo">User info.</param>
 		public override void ReceivedRemoteNotification (UIApplication application, NSDictionary userInfo)
 		{
 			//throw new System.NotImplementedException ();
+			Console.WriteLine("start method ReceivedRemoteNotification...\n");
 			// Required
 			APService.HandleRemoteNotification(userInfo);
 		}
-
+		/// <summary>
+		/// Dids the receive remote notification.接收到消息IOS 7 Support Required and above
+		/// </summary>
+		/// <param name="application">Application.</param>
+		/// <param name="userInfo">User info.</param>
+		/// <param name="completionHandler">Completion handler.</param>
 		public override void DidReceiveRemoteNotification (UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
 		{
 			// IOS 7 Support Required
+			// 取得 APNs 标准信息内容
+//			NSDictionary *aps = [userInfo valueForKey:@"aps"];
+//			NSString *content = [aps valueForKey:@"alert"]; //推送显示的内容
+//			NSInteger badge = [[aps valueForKey:@"badge"] integerValue]; //badge数量
+//			NSString *sound = [aps valueForKey:@"sound"]; //播放的声音
+//
+//			// 取得Extras字段内容
+//			NSString *customizeField1 = [userInfo valueForKey:@"customizeExtras"]; //服务端中Extras字段，key是自己定义的
+//			NSLog(@"content =[%@], badge=[%d], sound=[%@], customize field  =[%@]",content,badge,sound,customizeField1);
+			Console.WriteLine("start method DidReceiveRemoteNotification...\n");
+			NSDictionary aps = (NSDictionary)userInfo.ValueForKey (new NSString ("aps"));
+			var content = aps.ValueForKey (new NSString("alert"));
+
+			var alarmId = userInfo.ValueForKey (new NSString("aid"));
+
+			Console.WriteLine (string.Format("content:{0};alarmId:{1}",content,alarmId));
 			APService.HandleRemoteNotification(userInfo);
 			if (completionHandler != null)
 				completionHandler (UIBackgroundFetchResult.NewData);
 		}
+
+
+
+
+
 
 
 		public override void OnResignActivation (UIApplication application)

@@ -60,6 +60,8 @@ namespace lelaozuIphone
 
 		private int SecondsCountDown= 60;
 		//NSObject observer = null;
+
+		private string guidAsAlias = string.Empty;
 		public RegisterResultViewController () : base ("RegisterResultViewController", null)
 		{
 		}
@@ -292,7 +294,7 @@ namespace lelaozuIphone
 		/// </summary>
 		private void Reister()
 		{
-
+			guidAsAlias = string.Empty;
 			BTProgressHUD.Show("正在注册...",-1,ProgressHUD.MaskType.Black);
 			//在状态栏中设置show网络指示器
 			UIApplication.SharedApplication.NetworkActivityIndicatorVisible = true;
@@ -325,29 +327,12 @@ namespace lelaozuIphone
 						Constants.MyInfo = registerJson.data.Table[0];
 
 						var Uid = Constants.MyInfo.UId;
-						var guidAsAlias = Uid.Replace("-","_");
+						var alias = Uid.Replace("-","_");
 						//注册用户成功，写极光推送别名,进入主界面
-//						_jpushUtil.SetAlias(guidAsAlias);
-//						sp_userinfo.Edit().PutString(Global.login_UserName,nickName).Commit();
-//						sp_userinfo.Edit().PutString(Global.login_Password,passWord).Commit();
-//						sp_userinfo.Edit().PutBoolean(Global.login_Password_Check,true).Commit();
-//						RunOnUiThread(()=>
-//							{
-//								//跳转到功能主界面
-//								var intent = new Intent(this,typeof(MainFragActivity));
-//								intent.SetFlags(ActivityFlags.ClearTask|ActivityFlags.NewTask);
-//								StartActivity(intent);			
-//								this.Finish();
-//								ProgressDialogUtil.StopProgressDialog();
-//								Toast.MakeText(this,"注册成功",ToastLength.Short).Show();
-//								OverridePendingTransition(Android.Resource.Animation.SlideInLeft,Android.Resource.Animation.SlideOutRight);
-//							});
-
 						InvokeOnMainThread(()=>
 							{
 								//调用极光接口设置别名
-								APService.SetAlias(guidAsAlias,new ObjCRuntime.Selector ("callBackSelector:tags:alias:"),this);
-
+								SetAlias(alias);
 								//save username and password 
 								NSUserDefaults.StandardUserDefaults.SetString(nickName,Constants.Login_UserName);
 								NSUserDefaults.StandardUserDefaults.SetString(passWord,Constants.Login_PassWorde);
@@ -390,11 +375,44 @@ namespace lelaozuIphone
 
 		}
 
+		/// <summary>
+		/// Sets the alias.设置别名
+		/// </summary>
+		/// <param name="alias">Alias.</param>
+		private void SetAlias(string alias)
+		{
+			if(string.IsNullOrEmpty(alias))
+				return;
+			if(!RegexUtil.IsValidTagAndAlias(alias))
+				return;
+			//判断是否已经设置过别名，若设置过，将不在设置
+			var jpush_alias = NSUserDefaults.StandardUserDefaults.StringForKey (Constants.JPush_Alias);
+			if (alias == jpush_alias)
+				return;
+			guidAsAlias = alias;
+			//调用极光接口设置别名
+			APService.SetAlias(guidAsAlias,new ObjCRuntime.Selector ("tagsAliasCallback:tags:alias:"),this);
 
+		}
+
+		/// <summary>
+		/// Tagses the alias callback.注册极光别名回调函数
+		/// </summary>
+		/// <param name="iResCode">I res code.</param>
+		/// <param name="tags">Tags.</param>
+		/// <param name="alias">Alias.</param>
 		[Export("tagsAliasCallback:tags:alias:")]
 		public void tagsAliasCallback(int iResCode,NSSet tags,NSString alias)
 		{
 			Console.WriteLine (string.Format ("resultcode:{0};nsstring alias {1}",iResCode,alias));
+			if (iResCode == 0) {
+				Console.WriteLine ("register alias sucess");
+				//write userdefaults
+				NSUserDefaults.StandardUserDefaults.SetString (guidAsAlias, Constants.JPush_Alias);
+			}
+			else
+				//调用极光接口设置别名
+				APService.SetAlias(guidAsAlias,new ObjCRuntime.Selector ("tagsAliasCallback:tags:alias:"),this);
 		}
 
 		/// <summary>

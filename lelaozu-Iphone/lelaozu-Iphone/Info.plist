@@ -53,5 +53,7 @@
 	<array>
 		<string>remote-notification</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>New Entry</string>
 </dict>
 </plist>
