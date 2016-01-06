@@ -47,8 +47,10 @@ namespace lelaozuIphone
 		public const string Login_UserName ="UserName";
 		public const string Login_PassWorde ="PassWord";
 
-
-
+		/// <summary>
+		/// The J push alias.
+		/// </summary>
+		public const string JPush_Alias = "Alias";
 
 
 

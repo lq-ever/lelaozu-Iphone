@@ -476,6 +476,7 @@
     </Compile>
     <Compile Include="Utils\UIColorExtensions.cs" />
     <Compile Include="Common\Color.cs" />
+    <Compile Include="Utils\JPushUtils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

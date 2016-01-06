@@ -58,6 +58,7 @@ namespace lelaozuIphone
 			}
 			// Required
 			APService.SetupWithOption(launchOptions);
+			APService.SetDebugMode();
 			#endregion
 			return true;
 

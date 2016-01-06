@@ -4,6 +4,7 @@ using UIKit;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Foundation;
+using JPush;
 
 
 namespace lelaozuIphone
@@ -128,6 +129,8 @@ namespace lelaozuIphone
 		/// </summary>
 		private void Login()
 		{
+
+
 			txt_Username.ResignFirstResponder ();
 			txt_Password.ResignFirstResponder ();
 			var userName = txt_Username.Text;
@@ -171,9 +174,15 @@ namespace lelaozuIphone
 					if(loginJson.statuscode == "1")
 					{
 						Constants.MyInfo = loginJson.data.Table[0];
+						var Uid = Constants.MyInfo.UId;
+						var guidAsAlias = Uid.Replace("-","_");
+						//new JPushUtils(this).SetAlias(guidAsAlias);
+					
 						InvokeOnMainThread(()=>
 							{
-								
+								//调用极光接口设置别名
+								APService.SetAlias(guidAsAlias,new ObjCRuntime.Selector ("callBackSelector:tags:alias:"),this);
+
 								//remember usename\password
 								if(cb_password.Selected)
 								{
@@ -215,6 +224,13 @@ namespace lelaozuIphone
 			});
 
 		}
+
+	    [Export("tagsAliasCallback:tags:alias:")]
+		public void tagsAliasCallback(int iResCode,NSSet tags,NSString alias)
+		{
+			Console.WriteLine (string.Format ("resultcode:{0};nsstring alias {1}",iResCode,alias));
+		}
+
 
 
 			

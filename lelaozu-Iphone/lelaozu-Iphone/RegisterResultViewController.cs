@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using RestSharp;
 using Newtonsoft.Json;
 using Foundation;
+using JPush;
 
 
 
@@ -344,9 +345,13 @@ namespace lelaozuIphone
 
 						InvokeOnMainThread(()=>
 							{
+								//调用极光接口设置别名
+								APService.SetAlias(guidAsAlias,new ObjCRuntime.Selector ("callBackSelector:tags:alias:"),this);
+
 								//save username and password 
 								NSUserDefaults.StandardUserDefaults.SetString(nickName,Constants.Login_UserName);
 								NSUserDefaults.StandardUserDefaults.SetString(passWord,Constants.Login_PassWorde);
+								NSUserDefaults.StandardUserDefaults.SetBool(true,Constants.Remember_Check);
 
 								this.View.Window.RootViewController = new MainTabBarController();
 							});
@@ -383,6 +388,13 @@ namespace lelaozuIphone
 
 			});
 
+		}
+
+
+		[Export("tagsAliasCallback:tags:alias:")]
+		public void tagsAliasCallback(int iResCode,NSSet tags,NSString alias)
+		{
+			Console.WriteLine (string.Format ("resultcode:{0};nsstring alias {1}",iResCode,alias));
 		}
 
 		/// <summary>
