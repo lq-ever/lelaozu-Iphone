@@ -124,7 +124,7 @@ namespace lelaozuIphone
 					{
 						InvokeOnMainThread(()=>
 							{
-								BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+								BTProgressHUD.ShowErrorWithStatus(Constants.ErrorStatusDes,1000);
 							});
 					}
 

@@ -104,6 +104,8 @@ namespace lelaozuIphone
 
 		}
 
+	
+
 		public override void DidReceiveMemoryWarning ()
 		{
 			base.DidReceiveMemoryWarning ();
@@ -111,34 +113,9 @@ namespace lelaozuIphone
 
 		}
 
-//		partial void Btn_go_TouchUpInside (UIButton sender)
-//		{
-////			var _healthDetailViewController = new HealthDetailViewController();
-////			_healthDetailViewController.HidesBottomBarWhenPushed = true;
-////			this.NavigationController.PushViewController(_healthDetailViewController,true);
-//
-//			var showlbl = new UILabel(new CGRect((Constants.Screen_Width-160)/2,Constants.Screen_Height-120,160,50));
-//			showlbl.Text ="login sucess";
-//			showlbl.TextAlignment = UITextAlignment.Center;
-//			showlbl.BackgroundColor = UIColor.LightGray;
-//			showlbl.Alpha = 0;
-//			this.View.AddSubview(showlbl);
-//			UIView.Animate(2,()=>
-//				{
-//					showlbl.Alpha =1;
-//				},()=>
-//				{
-//					showlbl.RemoveFromSuperview();
-//				});
-//
-//		}
 
-//		partial void Btn_add_TouchUpInside (UIButton sender)
-//		{
-//			var tesc = new test();
-//			tesc.HidesBottomBarWhenPushed = true;
-//			this.NavigationController.PushViewController(tesc,true);
-//		}
+
+
 	}
 }
 

@@ -35,6 +35,7 @@ namespace lelaozuIphone
 					{
 						var loginViewController = new UINavigationController(new LoginViewController());
 						this.View.Window.RootViewController = loginViewController;
+						Constants.HasLogin = false;
 					}));
 				exitAlertController.AddAction(UIAlertAction.Create("取消",UIAlertActionStyle.Cancel,null));
 				PresentViewController(exitAlertController,true,null);

@@ -52,6 +52,11 @@ namespace lelaozuIphone
 		/// </summary>
 		public const string JPush_Alias = "Alias";
 
+		public static bool PushNot = false;
+		public static string PushAlarmId= string.Empty;
+
+		public const string ErrorStatusDes="未知错误，请联系管理员...";
+
 		/// <summary>
 		/// The has login.程序是否已经登录
 		/// </summary>

@@ -238,7 +238,7 @@ namespace lelaozuIphone
 				{
 					InvokeOnMainThread(()=>
 						{
-							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+							BTProgressHUD.ShowErrorWithStatus(Constants.ErrorStatusDes,1000);
 							btn_send.Enabled = true;
 						});
 				}
@@ -367,7 +367,7 @@ namespace lelaozuIphone
 				{
 					InvokeOnMainThread(()=>
 						{
-							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+							BTProgressHUD.ShowErrorWithStatus(Constants.ErrorStatusDes,1000);
 						});
 				}
 

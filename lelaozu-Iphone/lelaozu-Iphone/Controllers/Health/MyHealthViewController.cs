@@ -100,6 +100,18 @@ namespace lelaozuIphone
 			tableView.SetFooter (footer);
 			//第一次进入自动刷新
 			header.BeginRefreshing();
+
+			// 如果收到消息未登陆，登陆之后，在去跳转到消息面
+			if (Constants.PushNot && !string.IsNullOrEmpty (Constants.PushAlarmId)) {
+				var alarmDetaiController = new AlarmDetailViewController () {
+					AlarmId = Constants.PushAlarmId,
+					HidesBottomBarWhenPushed = true
+				};
+				this.NavigationController.PushViewController(alarmDetaiController, true);
+				//clear
+				Constants.PushNot = false;
+				Constants.PushAlarmId = string.Empty;
+			}
 		}
 
 		/// <summary>
@@ -154,7 +166,7 @@ namespace lelaozuIphone
 				else{
 					InvokeOnMainThread(()=>
 						{
-							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+							BTProgressHUD.ShowErrorWithStatus(,1000);
 						});
 				}
 				InvokeOnMainThread(()=>
@@ -299,7 +311,7 @@ namespace lelaozuIphone
 					pageIndex --;
 					InvokeOnMainThread(()=>
 						{
-							BTProgressHUD.ShowErrorWithStatus(response.StatusDescription,1000);
+							BTProgressHUD.ShowErrorWithStatus(Constants.ErrorStatusDes,1000);
 						});
 				}
 				InvokeOnMainThread(()=>
@@ -309,7 +321,11 @@ namespace lelaozuIphone
 					});
 			});
 		}
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
 
+		}
 		public override void DidReceiveMemoryWarning ()
 		{
 			base.DidReceiveMemoryWarning ();

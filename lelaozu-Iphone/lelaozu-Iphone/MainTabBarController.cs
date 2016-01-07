@@ -48,6 +48,21 @@ namespace lelaozuIphone
 				nav_health,nav_alarm,nav_guardian,nav_my
 			};
 		}
+
+		public override void ViewWillAppear (bool animated)
+		{
+			base.ViewWillAppear (animated);
+
+
+		}
+
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (animated);
+
+				
+
+		}
 			
 	}
 }
