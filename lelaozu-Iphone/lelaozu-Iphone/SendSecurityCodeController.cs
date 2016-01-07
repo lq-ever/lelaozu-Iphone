@@ -274,7 +274,7 @@ namespace lelaozuIphone
 				{
 					InvokeOnMainThread(()=>
 						{
-							BTProgressHUD.ShowErrorWithStatus(Constants.ErrorStatusDes,1000);
+							BTProgressHUD.ShowErrorWithStatus(Constants.ErrorStatusDes,2000);
 							btn_sendCode.Enabled = true;
 							btn_sendCode.BackgroundColor = Color.Blue;
 						});

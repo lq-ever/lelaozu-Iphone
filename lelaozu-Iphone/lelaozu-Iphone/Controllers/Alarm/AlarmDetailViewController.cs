@@ -40,6 +40,8 @@ namespace lelaozuIphone
 				btn_viewMap.Hidden = false;
 				loadData ();
 			}
+			alarmScrollView.BackgroundColor = Color.BgGray;
+			alarmScrollView.ContentSize = new CGSize (Constants.Screen_Frame.Size.Width, Constants.Screen_Frame.Size.Height + 10);
 		}
 
 		private void loadData()
@@ -155,7 +157,7 @@ namespace lelaozuIphone
 				{
 					InvokeOnMainThread(()=>
 						{
-							BTProgressHUD.ShowErrorWithStatus(Constants.ErrorStatusDes,1000);
+							BTProgressHUD.ShowErrorWithStatus(Constants.ErrorStatusDes,2000);
 						});
 				}
 

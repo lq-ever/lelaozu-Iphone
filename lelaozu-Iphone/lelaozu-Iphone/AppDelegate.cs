@@ -163,7 +163,9 @@ namespace lelaozuIphone
 			// Required
 			APService.HandleRemoteNotification(userInfo);
 			//clear badge 
-			UIApplication.SharedApplication.ApplicationIconBadgeNumber=0;
+			if(UIApplication.SharedApplication.ApplicationIconBadgeNumber>0)
+				UIApplication.SharedApplication.ApplicationIconBadgeNumber--;
+			APService.SetBadge (UIApplication.SharedApplication.ApplicationIconBadgeNumber);
 			// UIApplicationStateActive, 在前台运行
 			// UIApplicationStateInactive,未启动app
 			//UIApplicationStateBackground    app在后台
