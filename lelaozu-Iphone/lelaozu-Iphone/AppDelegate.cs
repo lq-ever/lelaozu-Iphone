@@ -153,7 +153,7 @@ namespace lelaozuIphone
 			// Required
 			APService.HandleRemoteNotification(userInfo);
 			//clear badge 
-			UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+			UIApplication.SharedApplication.ApplicationIconBadgeNumber--;
 			// UIApplicationStateActive, 在前台运行
 			// UIApplicationStateInactive,未启动app
 			//UIApplicationStateBackground    app在后台
@@ -175,7 +175,7 @@ namespace lelaozuIphone
 			} 
 			else 
 			{
-				//未启动app /app在后台 能收到通知栏提醒 ,但必须触摸通知栏消息才能进入此分支，如果是只是点击应用图标启动，将不会进入分支
+				//未启动app or app在后台 能收到通知栏提醒 ,但必须触摸通知栏消息才能进入此分支，如果是只是点击应用图标启动，将不会进入分支
 			}
 
 

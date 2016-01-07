@@ -34,7 +34,12 @@ namespace lelaozuIphone
 				alarmLocationViewController.HidesBottomBarWhenPushed = true;
 				this.NavigationController.PushViewController(alarmLocationViewController,true);
 			};
-			loadData();
+			//view the map
+			btn_viewMap.BackgroundColor = Color.Blue;
+			if (!string.IsNullOrEmpty (AlarmId)) {
+				btn_viewMap.Hidden = false;
+				loadData ();
+			}
 		}
 
 		private void loadData()
