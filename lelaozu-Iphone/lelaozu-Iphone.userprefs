@@ -1,16 +1,9 @@
 ﻿<Properties StartupItem="lelaozu-Iphone/lelaozu-Iphone.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Jonny-Iphone" />
   <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/AppDelegate.cs">
     <Files>
-      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="196" Column="44" />
-      <File FileName="lelaozu-Iphone/AppDelegate.cs" Line="157" Column="30" />
-      <File FileName="lelaozu-Iphone/Info.plist" />
-      <File FileName="lelaozu-Iphone/Controllers/Alarm/AlarmDetailViewController.cs" Line="1" Column="1" />
-      <File FileName="lelaozu-Iphone/Common/Constants.cs" Line="56" Column="29" />
-      <File FileName="lelaozu-Iphone/Custom/AlarmTableSource.cs" Line="83" Column="4" />
-      <File FileName="lelaozu-Iphone/MainTabBarController.cs" Line="21" Column="72" />
-      <File FileName="lelaozu-Iphone/Main_AlarmController.cs" Line="23" Column="43" />
-      <File FileName="lelaozu-Iphone/Main_HealthController.cs" Line="14" Column="9" />
+      <File FileName="lelaozu-Iphone/AppDelegate.cs" Line="137" Column="4" />
+      <File FileName="lelaozu-Iphone/Controllers/Alarm/AlarmDetailViewController.cs" Line="61" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
