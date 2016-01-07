@@ -52,7 +52,10 @@ namespace lelaozuIphone
 		/// </summary>
 		public const string JPush_Alias = "Alias";
 
-
+		/// <summary>
+		/// The has login.程序是否已经登录
+		/// </summary>
+		public static bool HasLogin = false;
 
 		/// <summary>
 		/// The screen frame.
@@ -135,6 +138,9 @@ namespace lelaozuIphone
 		public const string PullUpLbl ="点击或上拉加载更多";
 		public const string PullUpRefreshLbl ="正在加载...";
 		public const string PullUpReleaseLbl ="释放即可加载";
+
+
+
 
 	}
 }

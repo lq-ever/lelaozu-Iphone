@@ -11,7 +11,7 @@ namespace lelaozuIphone
 	{
 		private MyHealthViewController _myHealthViewController;
 		private OtherHealthViewController _otherHealthViewController;
-		private UIViewController _currentViewController;
+		public UIViewController _currentViewController;
 		public Main_HealthController () : base ("Main_HealthController", null)
 		{
 		}

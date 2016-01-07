@@ -31,7 +31,7 @@ namespace lelaozuIphone
 
 			//NSThread.SleepFor(2);//show splash delay 延长LaunchScreen.xib启动画面 
 
-			Console.WriteLine ("start finishedLaunching...\\n");
+			Console.WriteLine ("start method: finishedLaunching...\\n");
 
  			Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
@@ -78,16 +78,21 @@ namespace lelaozuIphone
 			#endregion
 			//UIApplicationLaunchOptionsRemoteNotificationKey 
 			if (launchOptions != null) {
+				Console.WriteLine (" launchOptions is not null...\n");
 				NSDictionary remoteNotification = (NSDictionary)launchOptions.ObjectForKey (UIApplication.LaunchOptionsRemoteNotificationKey);
 				if (remoteNotification != null) {
 				
 					//通过点击通知栏进入应用
+					Console.WriteLine (" 通过点击通知栏进入应用...\n");
 					isLaunchedByNotification = true;
 
 				} else {
 					//通过点击应用图标进入应用
+					Console.WriteLine (" 通过点击应用图标进入应用...\n");
 					isLaunchedByNotification = false;
 				}
+			} else {
+				Console.WriteLine (" launchOptions is null...\n");
 			}
 
 
@@ -128,7 +133,6 @@ namespace lelaozuIphone
 		/// <param name="completionHandler">Completion handler.</param>
 		public override void DidReceiveRemoteNotification (UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
 		{
-			// IOS 7 Support Required
 			// 取得 APNs 标准信息内容
 //			NSDictionary *aps = [userInfo valueForKey:@"aps"];
 //			NSString *content = [aps valueForKey:@"alert"]; //推送显示的内容
@@ -140,12 +144,41 @@ namespace lelaozuIphone
 //			NSLog(@"content =[%@], badge=[%d], sound=[%@], customize field  =[%@]",content,badge,sound,customizeField1);
 			Console.WriteLine("start method DidReceiveRemoteNotification...\n");
 			NSDictionary aps = (NSDictionary)userInfo.ValueForKey (new NSString ("aps"));
-			var content = aps.ValueForKey (new NSString("alert"));
+			var content = aps.ValueForKey (new NSString("alert"));//推送显示的内容
 
+			//报警消息id
 			var alarmId = userInfo.ValueForKey (new NSString("aid"));
 
 			Console.WriteLine (string.Format("content:{0};alarmId:{1}",content,alarmId));
+			// Required
 			APService.HandleRemoteNotification(userInfo);
+			//clear badge 
+			UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+			// UIApplicationStateActive, 在前台运行
+			// UIApplicationStateInactive,未启动app
+			//UIApplicationStateBackground    app在后台
+
+			if (UIApplication.SharedApplication.ApplicationState == UIApplicationState.Active) {
+				//此时app在前台运行,不会收到通知栏提醒，需要手动创建一个alertview框，进行提醒
+				var notificationController = UIAlertController.Create("推送消息",content.ToString(),UIAlertControllerStyle.Alert);
+				notificationController.AddAction (UIAlertAction.Create("忽略",UIAlertActionStyle.Cancel,(UIAlertAction obj) => 
+					{
+					}));
+				notificationController.AddAction (UIAlertAction.Create ("查看", UIAlertActionStyle.Default, (UIAlertAction obj) => {
+					//this.Window.RootViewController.NavigationController.PushViewController(new AlarmDetailViewController(){AlarmId=alarmId.ToString()},true);
+					var tableMainController = Window.RootViewController as UITabBarController;
+					(tableMainController.ViewControllers[0] as UINavigationController).ViewControllers[0].NavigationController.PushViewController(new AlarmDetailViewController(){AlarmId=alarmId.ToString()},true);
+
+				}));
+				this.Window.RootViewController.PresentViewController (notificationController, true, null);
+
+			} 
+			else 
+			{
+				//未启动app /app在后台 能收到通知栏提醒 ,但必须触摸通知栏消息才能进入此分支，如果是只是点击应用图标启动，将不会进入分支
+			}
+
+
 			if (completionHandler != null)
 				completionHandler (UIBackgroundFetchResult.NewData);
 		}

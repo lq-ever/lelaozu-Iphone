@@ -338,6 +338,8 @@ namespace lelaozuIphone
 								NSUserDefaults.StandardUserDefaults.SetString(passWord,Constants.Login_PassWorde);
 								NSUserDefaults.StandardUserDefaults.SetBool(true,Constants.Remember_Check);
 
+								//set hasLogin true
+								Constants.HasLogin =true;
 								this.View.Window.RootViewController = new MainTabBarController();
 							});
 
