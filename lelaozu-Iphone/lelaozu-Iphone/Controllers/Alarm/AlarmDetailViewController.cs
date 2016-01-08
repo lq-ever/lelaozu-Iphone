@@ -25,6 +25,7 @@ namespace lelaozuIphone
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
+			btn_viewMap.BackgroundColor = Color.Blue;
 			btn_viewMap.Hidden = true;
 			btn_viewMap.TouchUpInside += (object sender, EventArgs e) => 
 			{
@@ -35,9 +36,7 @@ namespace lelaozuIphone
 				this.NavigationController.PushViewController(alarmLocationViewController,true);
 			};
 			//view the map
-			btn_viewMap.BackgroundColor = Color.Blue;
 			if (!string.IsNullOrEmpty (AlarmId)) {
-				btn_viewMap.Hidden = false;
 				loadData ();
 			}
 			alarmScrollView.BackgroundColor = Color.BgGray;
@@ -131,8 +130,6 @@ namespace lelaozuIphone
 								});
 
 						}
-
-
 					}
 					else
 					{

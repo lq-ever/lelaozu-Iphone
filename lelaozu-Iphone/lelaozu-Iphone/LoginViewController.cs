@@ -238,8 +238,10 @@ namespace lelaozuIphone
 				return;
 			//判断是否已经设置过别名，若设置过，将不在设置
 			var jpush_alias = NSUserDefaults.StandardUserDefaults.StringForKey (Constants.JPush_Alias);
-			if (alias == jpush_alias)
+			if (alias == jpush_alias) {
+				Console.WriteLine ("has set alias");
 				return;
+			}
 			guidAsAlias = alias;
 			//调用极光接口设置别名
 			APService.SetAlias(guidAsAlias,new ObjCRuntime.Selector ("tagsAliasCallback:tags:alias:"),this);

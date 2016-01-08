@@ -1,0 +1,5 @@
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefresh/obj/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefresh/bin/Debug/MJRefresh.dll.mdb
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefresh/bin/Debug/MJRefresh.dll
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefresh/obj/Debug/MJRefresh.dll
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/MJRefresh/obj/Debug/MJRefresh.dll.mdb
