@@ -47,9 +47,17 @@ namespace lelaozuIphone
 
 		private void InitView()
 		{
-			health_Segment.SelectedSegment = 0;
+
 			health_Segment.ControlStyle = UISegmentedControlStyle.Bordered;
-		    
+			health_Segment.Frame = new CoreGraphics.CGRect (5, 5, Constants.Screen_Frame.Width - 10, 60);
+			health_Segment.SelectedSegment = 0;
+			health_Segment.TintColor = Color.Blue;
+			var textselectAttributes = new UITextAttributes ();
+			textselectAttributes.TextColor = UIColor.White;
+			var textNomarlAttributes = new UITextAttributes ();
+			textNomarlAttributes.TextColor = Color.EditGray;
+			health_Segment.SetTitleTextAttributes (textselectAttributes, UIControlState.Selected);
+			health_Segment.SetTitleTextAttributes (textNomarlAttributes, UIControlState.Normal);
 		
 			health_Segment.ValueChanged += (object sender, EventArgs e) => 
 			{

@@ -43,8 +43,20 @@ namespace lelaozuIphone
 		private void InitView()
 		{
 
-			alarm_Segment.SelectedSegment = 0;
+		
+		
 			alarm_Segment.ControlStyle = UISegmentedControlStyle.Bordered;
+			alarm_Segment.Frame = new CoreGraphics.CGRect (5, 5, Constants.Screen_Frame.Width - 10, 60);
+			alarm_Segment.SelectedSegment = 0;
+			alarm_Segment.TintColor = Color.Blue;
+
+			var textselectAttributes = new UITextAttributes ();
+			textselectAttributes.TextColor = UIColor.White;
+			var textNomarlAttributes = new UITextAttributes ();
+			textNomarlAttributes.TextColor = Color.EditGray;
+			alarm_Segment.SetTitleTextAttributes (textselectAttributes, UIControlState.Selected);
+			alarm_Segment.SetTitleTextAttributes (textNomarlAttributes, UIControlState.Normal);
+
 			alarm_Segment.ValueChanged += (object sender, EventArgs e) => 
 			{
 				_currentViewController.View.RemoveFromSuperview();

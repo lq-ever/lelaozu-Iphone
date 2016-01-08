@@ -44,8 +44,8 @@ namespace lelaozuIphone
 		{
 			
 			txt_healthTime.Placeholder = "请输入体检时间";
-			//defaultTime = DateTime.Now.ToString ("yyyy-MM-dd");
-			defaultTime = "2015-11-05";
+			defaultTime = DateTime.Now.ToString ("yyyy-MM-dd");
+			//defaultTime = "2015-11-05";
 			txt_healthTime.Text = defaultTime;
 			healthInfoParam = new SearchHealthInforParam ();
 			healthSource = new HealthTableSource(healthInfoLists,this,tableView);

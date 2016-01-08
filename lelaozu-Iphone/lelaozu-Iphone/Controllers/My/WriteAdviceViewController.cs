@@ -22,13 +22,40 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 
+			txt_adviceTitle.KeyboardType = UIKeyboardType.Default;
+			txt_adviceTitle.ReturnKeyType = UIReturnKeyType.Done;
+			txt_adviceTitle.ShouldReturn = (textField) => {
+				return textField.ResignFirstResponder();
+			};
+
+			txt_adviceContent.KeyboardType = UIKeyboardType.Default;
+			txt_adviceContent.ReturnKeyType = UIReturnKeyType.Default;
+			txt_adviceContent.Layer.BorderColor = Color.Blue.CGColor;
+			txt_adviceContent.Layer.BorderWidth = 1;
+			txt_adviceContent.Layer.CornerRadius = 2;
+			txt_adviceContent.TextColor = Color.LightGray;
+			//设置工具栏
+			UIToolbar toolHigh = new UIToolbar();
+			toolHigh.SizeToFit ();
+			toolHigh.BackgroundColor = Color.LightGray;
+			var doneHigh = new UIBarButtonItem ("完成", UIBarButtonItemStyle.Done, (sender, e) => {
+				txt_adviceContent.ResignFirstResponder();
+			});
+			toolHigh.SetItems (new UIBarButtonItem[]{ doneHigh }, true);
+			txt_adviceContent.InputAccessoryView = toolHigh;
+
+
 			txt_adviceType.Text = "咨询";
 			InitAdviceTypePicker ();
 			//publish
+			btn_publish.BackgroundColor = Color.Blue;
 			btn_publish.TouchUpInside += (sender, e) => 
 			{
+				txt_adviceTitle.ResignFirstResponder();
+				txt_adviceContent.ResignFirstResponder();
 				PublishAdvice();
 			};
+			scrollView.BackgroundColor = Color.BgGray;
 			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 
 		}

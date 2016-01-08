@@ -33,8 +33,19 @@ namespace lelaozuIphone
 
 		private void InitView()
 		{
-			adviceSegment.SelectedSegment = 0;
+
 			adviceSegment.ControlStyle = UISegmentedControlStyle.Bordered;
+			adviceSegment.Frame = new CoreGraphics.CGRect (5, 5, Constants.Screen_Frame.Width - 10, 60);
+			adviceSegment.SelectedSegment = 0;
+			adviceSegment.TintColor = Color.Blue;
+
+			var textselectAttributes = new UITextAttributes ();
+			textselectAttributes.TextColor = UIColor.White;
+			var textNomarlAttributes = new UITextAttributes ();
+			textNomarlAttributes.TextColor = Color.EditGray;
+			adviceSegment.SetTitleTextAttributes (textselectAttributes, UIControlState.Selected);
+			adviceSegment.SetTitleTextAttributes (textNomarlAttributes, UIControlState.Normal);
+
 			adviceSegment.ValueChanged += (object sender, EventArgs e) => 
 			{
 				_currentController.View.RemoveFromSuperview();

@@ -1,6 +1,0 @@
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/JPush/obj/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/JPush/obj/Debug/JPush.APService.h
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/JPush/bin/Debug/JPush.dll.mdb
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/JPush/bin/Debug/JPush.dll
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/JPush/obj/Debug/JPush.dll
-/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/JPush/obj/Debug/JPush.dll.mdb

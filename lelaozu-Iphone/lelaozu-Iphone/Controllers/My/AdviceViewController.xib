@@ -23,9 +23,10 @@
                         <segment title="写留言"/>
                         <segment title="留言记录"/>
                     </segments>
+                    <color key="tintColor" colorSpace="calibratedRGB" red="0.00392156862745098" green="0.67450980392156867" blue="1" alpha="1"/>
                 </segmentedControl>
                 <view contentMode="scaleToFill" id="22" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                    <rect key="frame" x="0.0" y="40" width="375" height="565"/>
+                    <rect key="frame" x="0.0" y="38" width="375" height="565"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
             </subviews>

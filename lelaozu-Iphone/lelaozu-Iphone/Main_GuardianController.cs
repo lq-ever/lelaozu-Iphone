@@ -53,10 +53,20 @@ namespace lelaozuIphone
 		}
 		private void InitView()
 		{
-			guardian_Segment.SelectedSegment = 0;
+			
 			guardian_Segment.ControlStyle = UISegmentedControlStyle.Bordered;
 
+			guardian_Segment.Frame = new CoreGraphics.CGRect (5, 5, Constants.Screen_Frame.Width - 10, 60);
+			guardian_Segment.SelectedSegment = 0;
+			guardian_Segment.TintColor = Color.Blue;
 
+			var textselectAttributes = new UITextAttributes ();
+			textselectAttributes.TextColor = UIColor.White;
+			var textNomarlAttributes = new UITextAttributes ();
+			textNomarlAttributes.TextColor = Color.EditGray;
+			guardian_Segment.SetTitleTextAttributes (textselectAttributes, UIControlState.Selected);
+			guardian_Segment.SetTitleTextAttributes (textNomarlAttributes, UIControlState.Normal);
+		
 			guardian_Segment.ValueChanged += (object sender, EventArgs e) => 
 			{
 				_currentViewController.View.RemoveFromSuperview();
