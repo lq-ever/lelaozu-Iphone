@@ -82,6 +82,7 @@ namespace lelaozuIphone
 				this.NavigationController.PushViewController(forgetPwdController,true);
 			};
 			//login
+			btn_Login.SetTitleColor(Color.Blue,UIControlState.Normal);
 			btn_Login.TouchUpInside += (sender, e) => 
 			{
 				txt_Username.ResignFirstResponder();
@@ -123,7 +124,9 @@ namespace lelaozuIphone
 //				}
 //			});
 
-			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
+			scrollView.Frame = new CoreGraphics.CGRect (0, 0, Constants.Screen_Frame.Width, Constants.Screen_Frame.Height);
+			scrollView.BackgroundColor =UIColor.FromPatternImage(UIImage.FromBundle("login_bg"));
+			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height);
 		}
 		/// <summary>
 		/// login
@@ -304,12 +307,14 @@ namespace lelaozuIphone
 		{
 			base.ViewWillAppear (animated);
 			this.NavigationController.SetNavigationBarHidden( true,true);
+			UIApplication.SharedApplication.SetStatusBarHidden (true, false);//hide statusbar
 
 		}
 		public override void ViewWillDisappear (bool animated)
 		{
 			base.ViewWillDisappear (animated);
 			this.NavigationController.SetNavigationBarHidden(false,true);
+			UIApplication.SharedApplication.SetStatusBarHidden (false, false);//show statusbar
 		}
 
 		public override void DidReceiveMemoryWarning ()

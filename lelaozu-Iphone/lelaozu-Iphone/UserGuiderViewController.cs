@@ -98,7 +98,7 @@ namespace lelaozuIphone
 		{
 			base.ViewWillDisappear (animated);
 			this.NavigationController.SetNavigationBarHidden (false, true);
-			UIApplication.SharedApplication.SetStatusBarHidden (false, false);//show statusbar
+			//UIApplication.SharedApplication.SetStatusBarHidden (false, false);//show statusbar
 		}
 		public override void DidReceiveMemoryWarning ()
 		{

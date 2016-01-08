@@ -138,6 +138,14 @@
     <ImageAsset Include="Resources\Images.xcassets\MenuMineNormal.imageset\ic_menu_mine_normal%403x.png" />
     <ImageAsset Include="Resources\Images.xcassets\MenuMineSelected.imageset\ic_menu_mine_selected%403x.png" />
     <ImageAsset Include="Resources\Images.xcassets\MenuMineSelected.imageset\ic_menu_mine_selected%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\login_bg.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\login_bg.imageset\login_bg.png" />
+    <ImageAsset Include="Resources\Images.xcassets\login_bg.imageset\login_bg%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\login_bg.imageset\login_bg%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_search.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_search.imageset\ic_search%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_search.imageset\ic_search%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_search.imageset\ic_search.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="UserGuiderViewController.xib" />
