@@ -12,6 +12,7 @@
                 <outlet property="btn_submit" destination="17" id="name-outlet-17"/>
                 <outlet property="lbl_sendCodeStatusShow" destination="18" id="name-outlet-18"/>
                 <outlet property="txt_phoneNumber" destination="13" id="name-outlet-13"/>
+                <outlet property="scrollView" destination="11" id="name-outlet-11"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -128,5 +129,7 @@
         <image name="MenuMineNormal" width="29" height="25"/>
         <image name="MenuMineSelected" width="29" height="25"/>
         <image name="login_bg.png" width="1080" height="1920"/>
+        <image name="login_bg" width="320" height="480"/>
+        <image name="ic_search" width="14" height="14"/>
     </resources>
 </document>

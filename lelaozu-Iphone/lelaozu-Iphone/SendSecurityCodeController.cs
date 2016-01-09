@@ -59,6 +59,7 @@ namespace lelaozuIphone
 		/// </summary>
 		private void InitView()
 		{
+			scrollView.Frame = Constants.Screen_Frame;
 			//default hidden
 			lbl_sendCodeStatusShow.Hidden = true;
 			

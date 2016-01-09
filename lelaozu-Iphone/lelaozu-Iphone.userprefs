@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="lelaozu-Iphone/lelaozu-Iphone.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/LoginViewController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Jonny-Iphone" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/Controllers/Alarm/AlarmLocationViewController.cs">
     <Files>
-      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="132" Column="12" />
-      <File FileName="lelaozu-Iphone/MainTabBarController.cs" Line="1" Column="1" />
-      <File FileName="lelaozu-Iphone/UserGuiderViewController.cs" Line="1" Column="1" />
+      <File FileName="lelaozu-Iphone/LoginViewController.cs" Line="79" Column="38" />
+      <File FileName="lelaozu-Iphone/Controllers/Alarm/AlarmLocationViewController.cs" Line="50" Column="15" />
+      <File FileName="lelaozu-Iphone/AppDelegate.cs" Line="35" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

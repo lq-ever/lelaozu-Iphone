@@ -1,0 +1,11 @@
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/BaiduApi/obj/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/BaiduApi/obj/Debug/BaiduApi.BMKGeneralDelegate.h
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/BaiduApi/obj/Debug/BaiduApi.BMKLocationService.h
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/BaiduApi/obj/Debug/BaiduApi.BMKMapManager.h
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/BaiduApi/obj/Debug/BaiduApi.BMKMapView.h
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/BaiduApi/obj/Debug/BaiduApi.BMKUserLocation.h
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/BaiduApi/obj/Debug/BaiduApi.BMapKit.h
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/BaiduApi/bin/Debug/BaiduApi.dll.mdb
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/BaiduApi/bin/Debug/BaiduApi.dll
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/BaiduApi/obj/Debug/BaiduApi.dll
+/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/BaiduApi/obj/Debug/BaiduApi.dll.mdb

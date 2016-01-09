@@ -72,6 +72,7 @@ namespace lelaozuIphone
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "填写短信验证码";
 
+			scrollView.Frame = Constants.Screen_Frame;
 			//set the phoneNumber
 			if (!string.IsNullOrEmpty (phoneNumber))
 				txt_phoneNumber.Text = phoneNumber;
@@ -135,7 +136,7 @@ namespace lelaozuIphone
 				}
 				Reister();
 			};
-
+			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 		}
 
 

@@ -1,0 +1,18 @@
+// WARNING
+// This file has been generated automatically by Xamarin Studio to
+// mirror C# types. Changes in this file made by drag-connecting
+// from the UI designer will be synchronized back to C#, but
+// more complex manual changes may not transfer correctly.
+
+
+#import "MyAlarmViewController.h"
+
+@implementation MyAlarmViewController
+
+@synthesize btn_search = _btn_search;
+@synthesize tableView = _tableView;
+@synthesize txt_alarmType = _txt_alarmType;
+@synthesize txt_endTime = _txt_endTime;
+@synthesize txt_startTime = _txt_startTime;
+
+@end

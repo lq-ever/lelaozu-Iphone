@@ -25,6 +25,7 @@ namespace lelaozuIphone
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
+			this.NavigationItem.Title = "报警详情";
 			btn_viewMap.BackgroundColor = Color.Blue;
 			btn_viewMap.Hidden = true;
 			btn_viewMap.TouchUpInside += (object sender, EventArgs e) => 

@@ -28,6 +28,10 @@ namespace lelaozuIphone
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIScrollView scrollView { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField txt_phoneNumber { get; set; }
 
 		[Outlet]
@@ -47,6 +51,10 @@ namespace lelaozuIphone
 			if (lbl_sendCodeStatusShow != null) {
 				lbl_sendCodeStatusShow.Dispose ();
 				lbl_sendCodeStatusShow = null;
+			}
+			if (scrollView != null) {
+				scrollView.Dispose ();
+				scrollView = null;
 			}
 			if (txt_phoneNumber != null) {
 				txt_phoneNumber.Dispose ();

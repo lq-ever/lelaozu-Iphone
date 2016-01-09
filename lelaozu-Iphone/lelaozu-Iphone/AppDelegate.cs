@@ -4,7 +4,6 @@ using UIKit;
 using System;
 using JPush;
 
-
 namespace lelaozuIphone
 {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the
@@ -77,6 +76,12 @@ namespace lelaozuIphone
 //			if (!ret) {  
 //				NSLog(@"manager start failed!");  
 //			}  
+
+//			var mapManager = new BMKMapManager();
+//			bool ret= mapManager.start("gw1iEfOjrDPvibEuk4prqdP3",null);
+//			if(!ret)
+//				Console.WriteLine("manager start failed...");
+			
 			#endregion
 			//UIApplicationLaunchOptionsRemoteNotificationKey 
 			if (launchOptions != null) {
