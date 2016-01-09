@@ -124,9 +124,9 @@ namespace lelaozuIphone
 //				}
 //			});
 
-			scrollView.Frame = new CoreGraphics.CGRect (0, 0, Constants.Screen_Frame.Width, Constants.Screen_Frame.Height);
+			scrollView.Frame = Constants.Screen_Frame;
 			scrollView.BackgroundColor =UIColor.FromPatternImage(UIImage.FromBundle("login_bg"));
-			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height);
+			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height+10);
 		}
 		/// <summary>
 		/// login
