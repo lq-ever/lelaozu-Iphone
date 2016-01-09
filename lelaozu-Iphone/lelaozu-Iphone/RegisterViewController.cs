@@ -25,11 +25,12 @@ namespace lelaozuIphone
 			this.NavigationController.NavigationBarHidden = false;
 			this.Title = "注册";
 			InitView();
-			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 
 		}
 		private void InitView()
 		{
+			scrollView.Frame = Constants.Screen_Frame;
+
 			txt_registerUserName.ReturnKeyType = UIReturnKeyType.Done;
 			txt_registerUserName.ShouldReturn = (textField) => {
 				return textField.ResignFirstResponder();
@@ -99,6 +100,9 @@ namespace lelaozuIphone
 						
 				}
 			};
+
+			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
+
 		}
 
 		/// <summary>
