@@ -1,0 +1,1014 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C883E1E0000000000000000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EE89D20000000000000000 /* UIKit.framework */; };
+		38F731800000000000000000 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D7D3400000000000000000 /* MapKit.framework */; };
+		356624E20000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC709600000000000000000 /* Foundation.framework */; };
+		2516BAEB0000000000000000 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A7C7890000000000000000 /* CoreGraphics.framework */; };
+		1519D0380000000000000000 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73B63F800000000000000000 /* Images.xcassets */; };
+		1188C39A0000000000000000 /* UserGuiderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA575A00000000000000000 /* UserGuiderViewController.xib */; };
+		DF7B6FC00000000000000000 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 194ABC000000000000000000 /* LoginViewController.xib */; };
+		A66AA5E00000000000000000 /* Main_AlarmController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147B20A00000000000000000 /* Main_AlarmController.xib */; };
+		6D59DC000000000000000000 /* HealthDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D8BEA800000000000000000 /* HealthDetailViewController.xib */; };
+		344912200000000000000000 /* Main_GuardianController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 869CB4600000000000000000 /* Main_GuardianController.xib */; };
+		3FB384840000000000000000 /* Main_HealthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFAD7E400000000000000000 /* Main_HealthController.xib */; };
+		3C2277E60000000000000000 /* MyHealthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8BE48200000000000000000 /* MyHealthViewController.xib */; };
+		38916B480000000000000000 /* OtherHealthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 131CF1200000000000000000 /* OtherHealthViewController.xib */; };
+		35005EAA0000000000000000 /* HealthListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16ADFDBE0000000000000000 /* HealthListTableViewCell.xib */; };
+		316F520C0000000000000000 /* MyAlarmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A3F0A5C0000000000000000 /* MyAlarmViewController.xib */; };
+		2DDE456E0000000000000000 /* AlarmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD016FA0000000000000000 /* AlarmDetailViewController.xib */; };
+		2A4D38D00000000000000000 /* AlarmLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 216123980000000000000000 /* AlarmLocationViewController.xib */; };
+		26BC2C320000000000000000 /* AlarmListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F230360000000000000000 /* AlarmListTableViewCell.xib */; };
+		232B1F940000000000000000 /* OtherAlarmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28833CD40000000000000000 /* OtherAlarmViewController.xib */; };
+		1F9A12F60000000000000000 /* AlarmHandleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1449720000000000000000 /* AlarmHandleCell.xib */; };
+		1C0906580000000000000000 /* MyGuardianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA556100000000000000000 /* MyGuardianViewController.xib */; };
+		1877F9BA0000000000000000 /* OtherGuardianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333662AE0000000000000000 /* OtherGuardianViewController.xib */; };
+		14E6ED1C0000000000000000 /* GuardianListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36C76F4C0000000000000000 /* GuardianListCell.xib */; };
+		1155E07E0000000000000000 /* GuardianDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A587BEA0000000000000000 /* GuardianDetailViewController.xib */; };
+		DC4D3E000000000000000000 /* GuardianApplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE988880000000000000000 /* GuardianApplyViewController.xib */; };
+		A33C74200000000000000000 /* BindGuardianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A952600000000000000000 /* BindGuardianViewController.xib */; };
+		6A2BAA400000000000000000 /* BindGuardianTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50BA1C400000000000000000 /* BindGuardianTableViewCell.xib */; };
+		311AE0600000000000000000 /* GuardianApplyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89CAE6200000000000000000 /* GuardianApplyTableViewCell.xib */; };
+		3F80A1680000000000000000 /* AccountSecurityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2DBB0000000000000000000 /* AccountSecurityViewController.xib */; };
+		3BEF94CA0000000000000000 /* AdviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBEC79E00000000000000000 /* AdviceViewController.xib */; };
+		385E882C0000000000000000 /* PersonInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134FD43C0000000000000000 /* PersonInfoViewController.xib */; };
+		34CD7B8E0000000000000000 /* PersonInfoBirthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16E0E0DA0000000000000000 /* PersonInfoBirthViewController.xib */; };
+		313C6EF00000000000000000 /* PersonInfoEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A71ED780000000000000000 /* PersonInfoEmailViewController.xib */; };
+		2DAB62520000000000000000 /* PersonInfoFixedPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E02FA160000000000000000 /* PersonInfoFixedPhoneViewController.xib */; };
+		2A1A55B40000000000000000 /* PersonInfoGenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219406B40000000000000000 /* PersonInfoGenderViewController.xib */; };
+		268949160000000000000000 /* PersonInfoIdCardNoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 252513520000000000000000 /* PersonInfoIdCardNoViewController.xib */; };
+		22F83C780000000000000000 /* Main_MyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28B61FF00000000000000000 /* Main_MyController.xib */; };
+		1F672FDA0000000000000000 /* MainMyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C472C8E0000000000000000 /* MainMyTableViewCell.xib */; };
+		1BD6233C0000000000000000 /* PersonInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD8392C0000000000000000 /* PersonInfoTableViewCell.xib */; };
+		1845169E0000000000000000 /* PersonInfoCardLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 336945CA0000000000000000 /* PersonInfoCardLocationViewController.xib */; };
+		14B40A000000000000000000 /* PersonInfoTrueNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36FA52680000000000000000 /* PersonInfoTrueNameViewController.xib */; };
+		1122FD620000000000000000 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B5F060000000000000000 /* RegisterViewController.xib */; };
+		D91F0C400000000000000000 /* SendSecurityCodeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E1C6BA40000000000000000 /* SendSecurityCodeController.xib */; };
+		A00E42600000000000000000 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD784200000000000000000 /* SettingViewController.xib */; };
+		66FD78800000000000000000 /* AdviceRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53E84E000000000000000000 /* AdviceRecordViewController.xib */; };
+		2DECAEA00000000000000000 /* AdviceRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CF917E00000000000000000 /* AdviceRecordTableViewCell.xib */; };
+		3F4DBE4C0000000000000000 /* AccountSecurityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C609E1C00000000000000000 /* AccountSecurityTableViewCell.xib */; };
+		3BBCB1AE0000000000000000 /* WriteAdviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF1AABA00000000000000000 /* WriteAdviceViewController.xib */; };
+		382BA5100000000000000000 /* ServiceAgreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1382B7580000000000000000 /* ServiceAgreeViewController.xib */; };
+		349A98720000000000000000 /* RegisterResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1713C3F60000000000000000 /* RegisterResultViewController.xib */; };
+		31098BD40000000000000000 /* SetPassWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA4D0940000000000000000 /* SetPassWordViewController.xib */; };
+		2D787F360000000000000000 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E35DD320000000000000000 /* AboutUsViewController.xib */; };
+		29E772980000000000000000 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21C6E9D00000000000000000 /* SettingTableViewCell.xib */; };
+		265665FA0000000000000000 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2557F66E0000000000000000 /* Info.plist */; };
+		22C5595C0000000000000000 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28E9030C0000000000000000 /* Entitlements.plist */; };
+		1F344CBE0000000000000000 /* guider1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C7A0FAA0000000000000000 /* guider1.png */; };
+		1BA340200000000000000000 /* guider2.png in Resources */ = {isa = PBXBuildFile; fileRef = 300B1C480000000000000000 /* guider2.png */; };
+		181233820000000000000000 /* guider3.png in Resources */ = {isa = PBXBuildFile; fileRef = 339C28E60000000000000000 /* guider3.png */; };
+		148126E40000000000000000 /* guider4.png in Resources */ = {isa = PBXBuildFile; fileRef = 372D35840000000000000000 /* guider4.png */; };
+		10F01A460000000000000000 /* ic_launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABE42220000000000000000 /* ic_launch.png */; };
+		D5F0DA800000000000000000 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4F4EC00000000000000000 /* error.png */; };
+		9CE010A00000000000000000 /* error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E05B5E00000000000000000 /* error@2x.png */; };
+		63CF46C00000000000000000 /* error_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 57167FC00000000000000000 /* error_7.png */; };
+		2ABE7CE00000000000000000 /* error_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 902749A00000000000000000 /* error_7@2x.png */; };
+		3F1ADB300000000000000000 /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = C93813800000000000000000 /* success.png */; };
+		3B89CE920000000000000000 /* success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10248DD60000000000000000 /* success@2x.png */; };
+		37F8C1F40000000000000000 /* success_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B59A740000000000000000 /* success_7.png */; };
+		3467B5560000000000000000 /* success_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1746A7120000000000000000 /* success_7@2x.png */; };
+		30D6A8B80000000000000000 /* uparrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD7B3B00000000000000000 /* uparrow.png */; };
+		2D459C1A0000000000000000 /* ic_basicInformation.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E68C04E0000000000000000 /* ic_basicInformation.png */; };
+		29B48F7C0000000000000000 /* ic_sex_man.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F9CCEC0000000000000000 /* ic_sex_man.png */; };
+		262382DE0000000000000000 /* ic_sex_woman.png in Resources */ = {isa = PBXBuildFile; fileRef = 258AD98A0000000000000000 /* ic_sex_woman.png */; };
+		229276400000000000000000 /* ic_medicalHistory.png in Resources */ = {isa = PBXBuildFile; fileRef = 291BE6280000000000000000 /* ic_medicalHistory.png */; };
+		1F0169A20000000000000000 /* ic_myInfo_advision_jianyi.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CACF2C60000000000000000 /* ic_myInfo_advision_jianyi.png */; };
+		1B705D040000000000000000 /* ic_myInfo_advision_qita.png in Resources */ = {isa = PBXBuildFile; fileRef = 303DFF640000000000000000 /* ic_myInfo_advision_qita.png */; };
+		17DF50660000000000000000 /* ic_myInfo_advision_tousu.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CF0C020000000000000000 /* ic_myInfo_advision_tousu.png */; };
+		144E43C80000000000000000 /* ic_myInfo_advision_zixun.png in Resources */ = {isa = PBXBuildFile; fileRef = 376018A00000000000000000 /* ic_myInfo_advision_zixun.png */; };
+		10BD372A0000000000000000 /* ic_myInfomation_aboutUs.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AF1253E0000000000000000 /* ic_myInfomation_aboutUs.png */; };
+		D2C2A8C00000000000000000 /* ic_myInfomation_accountSecurity.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E8231DC0000000000000000 /* ic_myInfomation_accountSecurity.png */; };
+		99B1DEE00000000000000000 /* ic_myInfomation_advice.png in Resources */ = {isa = PBXBuildFile; fileRef = 2133E7A00000000000000000 /* ic_myInfomation_advice.png */; };
+		60A115000000000000000000 /* ic_myInfomation_cacheRemover.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A44B1800000000000000000 /* ic_myInfomation_cacheRemover.png */; };
+		27904B200000000000000000 /* ic_myInfomation_call.png in Resources */ = {isa = PBXBuildFile; fileRef = 93557B600000000000000000 /* ic_myInfomation_call.png */; };
+		3EE7F8140000000000000000 /* ic_myInfomation_message.png in Resources */ = {isa = PBXBuildFile; fileRef = CC6645400000000000000000 /* ic_myInfomation_message.png */; };
+		3B56EB760000000000000000 /* ic_myInfomation_personalData.png in Resources */ = {isa = PBXBuildFile; fileRef = 105770F20000000000000000 /* ic_myInfomation_personalData.png */; };
+		37C5DED80000000000000000 /* ic_myInfomation_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E87D900000000000000000 /* ic_myInfomation_phone.png */; };
+		3434D23A0000000000000000 /* ic_myInfomation_userName.png in Resources */ = {isa = PBXBuildFile; fileRef = 17798A2E0000000000000000 /* ic_myInfomation_userName.png */; };
+		30A3C59C0000000000000000 /* ic_myInfomation_versionDetection.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0A96CC0000000000000000 /* ic_myInfomation_versionDetection.png */; };
+		2D12B8FE0000000000000000 /* myInfomation_headImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E9BA36A0000000000000000 /* myInfomation_headImage.png */; };
+		2981AC600000000000000000 /* myInfomation_setup_aboutus_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 222CB0080000000000000000 /* myInfomation_setup_aboutus_logo.png */; };
+		25F09FC20000000000000000 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 25BDBCA60000000000000000 /* setting.png */; };
+		225F93240000000000000000 /* ic_login_eye_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 294EC9440000000000000000 /* ic_login_eye_normal.png */; };
+		1ECE86860000000000000000 /* ic_login_eye_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFD5E20000000000000000 /* ic_login_eye_selected.png */; };
+		1B3D79E80000000000000000 /* ic_login_password.png in Resources */ = {isa = PBXBuildFile; fileRef = 3070E2800000000000000000 /* ic_login_password.png */; };
+		17AC6D4A0000000000000000 /* ic_login_username.png in Resources */ = {isa = PBXBuildFile; fileRef = 3401EF1E0000000000000000 /* ic_login_username.png */; };
+		108A540E0000000000000000 /* ic_register_combox_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3792FBBC0000000000000000 /* ic_register_combox_normal.png */; };
+		CF9477000000000000000000 /* ic_register_combox_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B24085A0000000000000000 /* ic_register_combox_selected.png */; };
+		9683AD200000000000000000 /* login_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB514F80000000000000000 /* login_bg.png */; };
+		5D72E3400000000000000000 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 246219600000000000000000 /* PushConfig.plist */; };
+		3DB6A56C0000000000000000 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 63A091200000000000000000 /* AppDelegate.h */; };
+		3A2598CE0000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB15B000000000000000000 /* AppDelegate.m */; };
+		36948C300000000000000000 /* Main_HealthController.h in Sources */ = {isa = PBXBuildFile; fileRef = D5C224E00000000000000000 /* Main_HealthController.h */; };
+		33037F920000000000000000 /* Main_HealthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10ED2EEC0000000000000000 /* Main_HealthController.m */; };
+		2F7272F40000000000000000 /* UserGuiderViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 147E3B8A0000000000000000 /* UserGuiderViewController.h */; };
+		2BE166560000000000000000 /* UserGuiderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F48280000000000000000 /* UserGuiderViewController.m */; };
+		285059B80000000000000000 /* LoginViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 1BA054C60000000000000000 /* LoginViewController.h */; };
+		24BF4D1A0000000000000000 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3161640000000000000000 /* LoginViewController.m */; };
+		212E407C0000000000000000 /* Main_AlarmController.h in Sources */ = {isa = PBXBuildFile; fileRef = 22C26E020000000000000000 /* Main_AlarmController.h */; };
+		1D9D33DE0000000000000000 /* Main_AlarmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26537AA00000000000000000 /* Main_AlarmController.m */; };
+		1A0C27400000000000000000 /* Main_GuardianController.h in Sources */ = {isa = PBXBuildFile; fileRef = 29E4873E0000000000000000 /* Main_GuardianController.h */; };
+		167B1AA20000000000000000 /* Main_GuardianController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7593DC0000000000000000 /* Main_GuardianController.m */; };
+		12EA0E040000000000000000 /* MyHealthViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 3106A07A0000000000000000 /* MyHealthViewController.h */; };
+		F59016600000000000000000 /* MyHealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3497AD180000000000000000 /* MyHealthViewController.m */; };
+		BC7F4C800000000000000000 /* OtherHealthViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 3828B9B60000000000000000 /* OtherHealthViewController.h */; };
+		836E82A00000000000000000 /* OtherHealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB9C6540000000000000000 /* OtherHealthViewController.m */; };
+		4A5DB8C00000000000000000 /* HealthListTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 3F4AD2F20000000000000000 /* HealthListTableViewCell.h */; };
+		114CEEE00000000000000000 /* HealthListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBDF9000000000000000000 /* HealthListTableViewCell.m */; };
+		3D83C2500000000000000000 /* HealthDetailViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 66CEC2E00000000000000000 /* HealthDetailViewController.h */; };
+		39F2B5B20000000000000000 /* HealthDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF8CC00000000000000000 /* HealthDetailViewController.m */; };
+		3661A9140000000000000000 /* MyAlarmViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D8F056A00000000000000000 /* MyAlarmViewController.h */; };
+		32D09C760000000000000000 /* MyAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112012080000000000000000 /* MyAlarmViewController.m */; };
+		2F3F8FD80000000000000000 /* OtherAlarmViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 14B11EA60000000000000000 /* OtherAlarmViewController.h */; };
+		2BAE833A0000000000000000 /* OtherAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18422B440000000000000000 /* OtherAlarmViewController.m */; };
+		281D769C0000000000000000 /* AlarmLocationViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 1BD337E20000000000000000 /* AlarmLocationViewController.h */; };
+		248C69FE0000000000000000 /* AlarmLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6444800000000000000000 /* AlarmLocationViewController.m */; };
+		20FB5D600000000000000000 /* AlarmListTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 22F5511E0000000000000000 /* AlarmListTableViewCell.h */; };
+		1D6A50C20000000000000000 /* AlarmListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26865DBC0000000000000000 /* AlarmListTableViewCell.m */; };
+		19D944240000000000000000 /* AlarmDetailViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 2A176A5A0000000000000000 /* AlarmDetailViewController.h */; };
+		164837860000000000000000 /* AlarmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA876F80000000000000000 /* AlarmDetailViewController.m */; };
+		12B72AE80000000000000000 /* AlarmHandleCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 313983960000000000000000 /* AlarmHandleCell.h */; };
+		F261E4A00000000000000000 /* AlarmHandleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34CA90340000000000000000 /* AlarmHandleCell.m */; };
+		B9511AC00000000000000000 /* MyGuardianViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 385B9CD20000000000000000 /* MyGuardianViewController.h */; };
+		804050E00000000000000000 /* MyGuardianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BECA9700000000000000000 /* MyGuardianViewController.m */; };
+		472F87000000000000000000 /* OtherGuardianViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 3F7DB60E0000000000000000 /* OtherGuardianViewController.h */; };
+		E1EBD2000000000000000000 /* OtherGuardianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EC2AC00000000000000000 /* OtherGuardianViewController.m */; };
+		3D50DF340000000000000000 /* GuardianListCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 69FCF4A00000000000000000 /* GuardianListCell.h */; };
+		39BFD2960000000000000000 /* GuardianListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A30DBE800000000000000000 /* GuardianListCell.m */; };
+		362EC5F80000000000000000 /* GuardianDetailViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = DC1E88600000000000000000 /* GuardianDetailViewController.h */; };
+		329DB95A0000000000000000 /* GuardianDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1152F5240000000000000000 /* GuardianDetailViewController.m */; };
+		2F0CACBC0000000000000000 /* GuardianApplyViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 14E401C20000000000000000 /* GuardianApplyViewController.h */; };
+		2B7BA01E0000000000000000 /* GuardianApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18750E600000000000000000 /* GuardianApplyViewController.m */; };
+		27EA93800000000000000000 /* BindGuardianViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 1C061AFE0000000000000000 /* BindGuardianViewController.h */; };
+		245986E20000000000000000 /* BindGuardianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F97279C0000000000000000 /* BindGuardianViewController.m */; };
+		20C87A440000000000000000 /* BindGuardianTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 2328343A0000000000000000 /* BindGuardianTableViewCell.h */; };
+		1D376DA60000000000000000 /* BindGuardianTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B940D80000000000000000 /* BindGuardianTableViewCell.m */; };
+		19A661080000000000000000 /* GuardianApplyTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A4D760000000000000000 /* GuardianApplyTableViewCell.h */; };
+		1615546A0000000000000000 /* GuardianApplyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB5A140000000000000000 /* GuardianApplyTableViewCell.m */; };
+		128447CC0000000000000000 /* AccountSecurityViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 316C66B20000000000000000 /* AccountSecurityViewController.h */; };
+		EF33B2E00000000000000000 /* AccountSecurityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD73500000000000000000 /* AccountSecurityViewController.m */; };
+		B622E9000000000000000000 /* AdviceViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 388E7FEE0000000000000000 /* AdviceViewController.h */; };
+		7D121F200000000000000000 /* AdviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F8C8C0000000000000000 /* AdviceViewController.m */; };
+		440155400000000000000000 /* PersonInfoViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 3FB0992A0000000000000000 /* PersonInfoViewController.h */; };
+		AF08B6000000000000000000 /* PersonInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 341A5C800000000000000000 /* PersonInfoViewController.m */; };
+		3D1DFC180000000000000000 /* PersonInfoBirthViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 6D2B26600000000000000000 /* PersonInfoBirthViewController.h */; };
+		398CEF7A0000000000000000 /* PersonInfoBirthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A63BF0400000000000000000 /* PersonInfoBirthViewController.m */; };
+		35FBE2DC0000000000000000 /* PersonInfoEmailViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = DF4CBA200000000000000000 /* PersonInfoEmailViewController.h */; };
+		326AD63E0000000000000000 /* PersonInfoEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1185D8400000000000000000 /* PersonInfoEmailViewController.m */; };
+		2ED9C9A00000000000000000 /* PersonInfoFixedPhoneViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 1516E4DE0000000000000000 /* PersonInfoFixedPhoneViewController.h */; };
+		2B48BD020000000000000000 /* PersonInfoFixedPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F17C0000000000000000 /* PersonInfoFixedPhoneViewController.m */; };
+		27B7B0640000000000000000 /* PersonInfoGenderViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 1C38FE1A0000000000000000 /* PersonInfoGenderViewController.h */; };
+		2426A3C60000000000000000 /* PersonInfoGenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA0AB80000000000000000 /* PersonInfoGenderViewController.m */; };
+		209597280000000000000000 /* PersonInfoIdCardNoViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 235B17560000000000000000 /* PersonInfoIdCardNoViewController.h */; };
+		1D048A8A0000000000000000 /* PersonInfoIdCardNoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EC23F40000000000000000 /* PersonInfoIdCardNoViewController.m */; };
+		19737DEC0000000000000000 /* MainMyTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D30920000000000000000 /* MainMyTableViewCell.h */; };
+		15E2714E0000000000000000 /* MainMyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E3D300000000000000000 /* MainMyTableViewCell.m */; };
+		125164B00000000000000000 /* PersonInfoTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 319F49CE0000000000000000 /* PersonInfoTableViewCell.h */; };
+		EC0581200000000000000000 /* PersonInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3530566C0000000000000000 /* PersonInfoTableViewCell.m */; };
+		B2F4B7400000000000000000 /* Main_MyController.h in Sources */ = {isa = PBXBuildFile; fileRef = 38C1630A0000000000000000 /* Main_MyController.h */; };
+		79E3ED600000000000000000 /* Main_MyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C526FA80000000000000000 /* Main_MyController.m */; };
+		40D323800000000000000000 /* PersonInfoCardLocationViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 3FE37C460000000000000000 /* PersonInfoCardLocationViewController.h */; };
+		7C259A000000000000000000 /* PersonInfoCardLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37488E400000000000000000 /* PersonInfoCardLocationViewController.m */; };
+		3CEB18FC0000000000000000 /* PersonInfoTrueNameViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 705958200000000000000000 /* PersonInfoTrueNameViewController.h */; };
+		395A0C5E0000000000000000 /* PersonInfoTrueNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96A22000000000000000000 /* PersonInfoTrueNameViewController.m */; };
+		35C8FFC00000000000000000 /* RegisterViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = E27AEBE00000000000000000 /* RegisterViewController.h */; };
+		3237F3220000000000000000 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B8BB5C0000000000000000 /* RegisterViewController.m */; };
+		2EA6E6840000000000000000 /* SendSecurityCodeController.h in Sources */ = {isa = PBXBuildFile; fileRef = 1549C7FA0000000000000000 /* SendSecurityCodeController.h */; };
+		2B15D9E60000000000000000 /* SendSecurityCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DAD4980000000000000000 /* SendSecurityCodeController.m */; };
+		2784CD480000000000000000 /* SettingViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 1C6BE1360000000000000000 /* SettingViewController.h */; };
+		23F3C0AA0000000000000000 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFCEDD40000000000000000 /* SettingViewController.m */; };
+		2062B40C0000000000000000 /* AdviceRecordViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 238DFA720000000000000000 /* AdviceRecordViewController.h */; };
+		1CD1A76E0000000000000000 /* AdviceRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271F07100000000000000000 /* AdviceRecordViewController.m */; };
+		19409AD00000000000000000 /* AdviceRecordTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 2AB013AE0000000000000000 /* AdviceRecordTableViewCell.h */; };
+		15AF8E320000000000000000 /* AdviceRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E41204C0000000000000000 /* AdviceRecordTableViewCell.m */; };
+		121E81940000000000000000 /* AccountSecurityTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 31D22CEA0000000000000000 /* AccountSecurityTableViewCell.h */; };
+		E8D74F600000000000000000 /* AccountSecurityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356339880000000000000000 /* AccountSecurityTableViewCell.m */; };
+		AFC685800000000000000000 /* WriteAdviceViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 38F446260000000000000000 /* WriteAdviceViewController.h */; };
+		76B5BBA00000000000000000 /* WriteAdviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8552C40000000000000000 /* WriteAdviceViewController.m */; };
+		3DA4F1C00000000000000000 /* ServiceAgreeViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 165F62000000000000000000 /* ServiceAgreeViewController.h */; };
+		49427E000000000000000000 /* ServiceAgreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A76C0000000000000000000 /* ServiceAgreeViewController.m */; };
+		3CB835E00000000000000000 /* RegisterResultViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 738789E00000000000000000 /* RegisterResultViewController.h */; };
+		392729420000000000000000 /* RegisterResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9853C00000000000000000 /* RegisterResultViewController.m */; };
+		35961CA40000000000000000 /* SetPassWordViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = E5A91DA00000000000000000 /* SetPassWordViewController.h */; };
+		320510060000000000000000 /* SetPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EB9E780000000000000000 /* SetPassWordViewController.m */; };
+		2E7403680000000000000000 /* AboutUsViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 157CAB160000000000000000 /* AboutUsViewController.h */; };
+		2AE2F6CA0000000000000000 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 190DB7B40000000000000000 /* AboutUsViewController.m */; };
+		2751EA2C0000000000000000 /* SettingTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 1C9EC4520000000000000000 /* SettingTableViewCell.h */; };
+		23C0DD8E0000000000000000 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 202FD0F00000000000000000 /* SettingTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		157F96700000000000000000 /* lelaozu-Iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "lelaozu-Iphone.app"; path = "lelaozu-Iphone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11EE89D20000000000000000 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; };
+		E5D7D3400000000000000000 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; };
+		ACC709600000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; };
+		28A7C7890000000000000000 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreGraphics.framework"; path = "System/Library/Frameworks/CoreGraphics.framework"; sourceTree = SDKROOT; };
+		73B63F800000000000000000 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images.xcassets"; path = "Images.xcassets"; sourceTree = "<group>"; };
+		3AA575A00000000000000000 /* UserGuiderViewController.xib */ = {isa = PBXFileReference; name = "UserGuiderViewController.xib"; path = "UserGuiderViewController.xib"; sourceTree = "<group>"; };
+		194ABC000000000000000000 /* LoginViewController.xib */ = {isa = PBXFileReference; name = "LoginViewController.xib"; path = "LoginViewController.xib"; sourceTree = "<group>"; };
+		147B20A00000000000000000 /* Main_AlarmController.xib */ = {isa = PBXFileReference; name = "Main_AlarmController.xib"; path = "Main_AlarmController.xib"; sourceTree = "<group>"; };
+		4D8BEA800000000000000000 /* HealthDetailViewController.xib */ = {isa = PBXFileReference; name = "HealthDetailViewController.xib"; path = "Controllers/Health/HealthDetailViewController.xib"; sourceTree = "<group>"; };
+		869CB4600000000000000000 /* Main_GuardianController.xib */ = {isa = PBXFileReference; name = "Main_GuardianController.xib"; path = "Main_GuardianController.xib"; sourceTree = "<group>"; };
+		BFAD7E400000000000000000 /* Main_HealthController.xib */ = {isa = PBXFileReference; name = "Main_HealthController.xib"; path = "Main_HealthController.xib"; sourceTree = "<group>"; };
+		F8BE48200000000000000000 /* MyHealthViewController.xib */ = {isa = PBXFileReference; name = "MyHealthViewController.xib"; path = "Controllers/Health/MyHealthViewController.xib"; sourceTree = "<group>"; };
+		131CF1200000000000000000 /* OtherHealthViewController.xib */ = {isa = PBXFileReference; name = "OtherHealthViewController.xib"; path = "Controllers/Health/OtherHealthViewController.xib"; sourceTree = "<group>"; };
+		16ADFDBE0000000000000000 /* HealthListTableViewCell.xib */ = {isa = PBXFileReference; name = "HealthListTableViewCell.xib"; path = "CustomTableViewCell/HealthListTableViewCell.xib"; sourceTree = "<group>"; };
+		1A3F0A5C0000000000000000 /* MyAlarmViewController.xib */ = {isa = PBXFileReference; name = "MyAlarmViewController.xib"; path = "Controllers/Alarm/MyAlarmViewController.xib"; sourceTree = "<group>"; };
+		1DD016FA0000000000000000 /* AlarmDetailViewController.xib */ = {isa = PBXFileReference; name = "AlarmDetailViewController.xib"; path = "Controllers/Alarm/AlarmDetailViewController.xib"; sourceTree = "<group>"; };
+		216123980000000000000000 /* AlarmLocationViewController.xib */ = {isa = PBXFileReference; name = "AlarmLocationViewController.xib"; path = "Controllers/Alarm/AlarmLocationViewController.xib"; sourceTree = "<group>"; };
+		24F230360000000000000000 /* AlarmListTableViewCell.xib */ = {isa = PBXFileReference; name = "AlarmListTableViewCell.xib"; path = "CustomTableViewCell/AlarmListTableViewCell.xib"; sourceTree = "<group>"; };
+		28833CD40000000000000000 /* OtherAlarmViewController.xib */ = {isa = PBXFileReference; name = "OtherAlarmViewController.xib"; path = "Controllers/Alarm/OtherAlarmViewController.xib"; sourceTree = "<group>"; };
+		2C1449720000000000000000 /* AlarmHandleCell.xib */ = {isa = PBXFileReference; name = "AlarmHandleCell.xib"; path = "CustomTableViewCell/AlarmHandleCell.xib"; sourceTree = "<group>"; };
+		2FA556100000000000000000 /* MyGuardianViewController.xib */ = {isa = PBXFileReference; name = "MyGuardianViewController.xib"; path = "Controllers/Guardians/MyGuardianViewController.xib"; sourceTree = "<group>"; };
+		333662AE0000000000000000 /* OtherGuardianViewController.xib */ = {isa = PBXFileReference; name = "OtherGuardianViewController.xib"; path = "Controllers/Guardians/OtherGuardianViewController.xib"; sourceTree = "<group>"; };
+		36C76F4C0000000000000000 /* GuardianListCell.xib */ = {isa = PBXFileReference; name = "GuardianListCell.xib"; path = "CustomTableViewCell/GuardianListCell.xib"; sourceTree = "<group>"; };
+		3A587BEA0000000000000000 /* GuardianDetailViewController.xib */ = {isa = PBXFileReference; name = "GuardianDetailViewController.xib"; path = "Controllers/Guardians/GuardianDetailViewController.xib"; sourceTree = "<group>"; };
+		3DE988880000000000000000 /* GuardianApplyViewController.xib */ = {isa = PBXFileReference; name = "GuardianApplyViewController.xib"; path = "Controllers/Guardians/GuardianApplyViewController.xib"; sourceTree = "<group>"; };
+		17A952600000000000000000 /* BindGuardianViewController.xib */ = {isa = PBXFileReference; name = "BindGuardianViewController.xib"; path = "Controllers/Guardians/BindGuardianViewController.xib"; sourceTree = "<group>"; };
+		50BA1C400000000000000000 /* BindGuardianTableViewCell.xib */ = {isa = PBXFileReference; name = "BindGuardianTableViewCell.xib"; path = "CustomTableViewCell/BindGuardianTableViewCell.xib"; sourceTree = "<group>"; };
+		89CAE6200000000000000000 /* GuardianApplyTableViewCell.xib */ = {isa = PBXFileReference; name = "GuardianApplyTableViewCell.xib"; path = "CustomTableViewCell/GuardianApplyTableViewCell.xib"; sourceTree = "<group>"; };
+		C2DBB0000000000000000000 /* AccountSecurityViewController.xib */ = {isa = PBXFileReference; name = "AccountSecurityViewController.xib"; path = "Controllers/My/AccountSecurityViewController.xib"; sourceTree = "<group>"; };
+		FBEC79E00000000000000000 /* AdviceViewController.xib */ = {isa = PBXFileReference; name = "AdviceViewController.xib"; path = "Controllers/My/AdviceViewController.xib"; sourceTree = "<group>"; };
+		134FD43C0000000000000000 /* PersonInfoViewController.xib */ = {isa = PBXFileReference; name = "PersonInfoViewController.xib"; path = "Controllers/My/PersonInfoViewController.xib"; sourceTree = "<group>"; };
+		16E0E0DA0000000000000000 /* PersonInfoBirthViewController.xib */ = {isa = PBXFileReference; name = "PersonInfoBirthViewController.xib"; path = "Controllers/My/PersonInfoBirthViewController.xib"; sourceTree = "<group>"; };
+		1A71ED780000000000000000 /* PersonInfoEmailViewController.xib */ = {isa = PBXFileReference; name = "PersonInfoEmailViewController.xib"; path = "Controllers/My/PersonInfoEmailViewController.xib"; sourceTree = "<group>"; };
+		1E02FA160000000000000000 /* PersonInfoFixedPhoneViewController.xib */ = {isa = PBXFileReference; name = "PersonInfoFixedPhoneViewController.xib"; path = "Controllers/My/PersonInfoFixedPhoneViewController.xib"; sourceTree = "<group>"; };
+		219406B40000000000000000 /* PersonInfoGenderViewController.xib */ = {isa = PBXFileReference; name = "PersonInfoGenderViewController.xib"; path = "Controllers/My/PersonInfoGenderViewController.xib"; sourceTree = "<group>"; };
+		252513520000000000000000 /* PersonInfoIdCardNoViewController.xib */ = {isa = PBXFileReference; name = "PersonInfoIdCardNoViewController.xib"; path = "Controllers/My/PersonInfoIdCardNoViewController.xib"; sourceTree = "<group>"; };
+		28B61FF00000000000000000 /* Main_MyController.xib */ = {isa = PBXFileReference; name = "Main_MyController.xib"; path = "Main_MyController.xib"; sourceTree = "<group>"; };
+		2C472C8E0000000000000000 /* MainMyTableViewCell.xib */ = {isa = PBXFileReference; name = "MainMyTableViewCell.xib"; path = "CustomTableViewCell/MainMyTableViewCell.xib"; sourceTree = "<group>"; };
+		2FD8392C0000000000000000 /* PersonInfoTableViewCell.xib */ = {isa = PBXFileReference; name = "PersonInfoTableViewCell.xib"; path = "CustomTableViewCell/PersonInfoTableViewCell.xib"; sourceTree = "<group>"; };
+		336945CA0000000000000000 /* PersonInfoCardLocationViewController.xib */ = {isa = PBXFileReference; name = "PersonInfoCardLocationViewController.xib"; path = "Controllers/My/PersonInfoCardLocationViewController.xib"; sourceTree = "<group>"; };
+		36FA52680000000000000000 /* PersonInfoTrueNameViewController.xib */ = {isa = PBXFileReference; name = "PersonInfoTrueNameViewController.xib"; path = "Controllers/My/PersonInfoTrueNameViewController.xib"; sourceTree = "<group>"; };
+		3A8B5F060000000000000000 /* RegisterViewController.xib */ = {isa = PBXFileReference; name = "RegisterViewController.xib"; path = "RegisterViewController.xib"; sourceTree = "<group>"; };
+		3E1C6BA40000000000000000 /* SendSecurityCodeController.xib */ = {isa = PBXFileReference; name = "SendSecurityCodeController.xib"; path = "SendSecurityCodeController.xib"; sourceTree = "<group>"; };
+		1AD784200000000000000000 /* SettingViewController.xib */ = {isa = PBXFileReference; name = "SettingViewController.xib"; path = "SettingViewController.xib"; sourceTree = "<group>"; };
+		53E84E000000000000000000 /* AdviceRecordViewController.xib */ = {isa = PBXFileReference; name = "AdviceRecordViewController.xib"; path = "Controllers/My/AdviceRecordViewController.xib"; sourceTree = "<group>"; };
+		8CF917E00000000000000000 /* AdviceRecordTableViewCell.xib */ = {isa = PBXFileReference; name = "AdviceRecordTableViewCell.xib"; path = "CustomTableViewCell/AdviceRecordTableViewCell.xib"; sourceTree = "<group>"; };
+		C609E1C00000000000000000 /* AccountSecurityTableViewCell.xib */ = {isa = PBXFileReference; name = "AccountSecurityTableViewCell.xib"; path = "CustomTableViewCell/AccountSecurityTableViewCell.xib"; sourceTree = "<group>"; };
+		FF1AABA00000000000000000 /* WriteAdviceViewController.xib */ = {isa = PBXFileReference; name = "WriteAdviceViewController.xib"; path = "Controllers/My/WriteAdviceViewController.xib"; sourceTree = "<group>"; };
+		1382B7580000000000000000 /* ServiceAgreeViewController.xib */ = {isa = PBXFileReference; name = "ServiceAgreeViewController.xib"; path = "ServiceAgreeViewController.xib"; sourceTree = "<group>"; };
+		1713C3F60000000000000000 /* RegisterResultViewController.xib */ = {isa = PBXFileReference; name = "RegisterResultViewController.xib"; path = "RegisterResultViewController.xib"; sourceTree = "<group>"; };
+		1AA4D0940000000000000000 /* SetPassWordViewController.xib */ = {isa = PBXFileReference; name = "SetPassWordViewController.xib"; path = "SetPassWordViewController.xib"; sourceTree = "<group>"; };
+		1E35DD320000000000000000 /* AboutUsViewController.xib */ = {isa = PBXFileReference; name = "AboutUsViewController.xib"; path = "AboutUsViewController.xib"; sourceTree = "<group>"; };
+		21C6E9D00000000000000000 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; name = "SettingTableViewCell.xib"; path = "CustomTableViewCell/SettingTableViewCell.xib"; sourceTree = "<group>"; };
+		2557F66E0000000000000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = "Info.plist"; sourceTree = "<group>"; };
+		28E9030C0000000000000000 /* Entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Entitlements.plist"; path = "Entitlements.plist"; sourceTree = "<group>"; };
+		2C7A0FAA0000000000000000 /* guider1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "guider1.png"; path = "guider1.png"; sourceTree = "<group>"; };
+		300B1C480000000000000000 /* guider2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "guider2.png"; path = "guider2.png"; sourceTree = "<group>"; };
+		339C28E60000000000000000 /* guider3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "guider3.png"; path = "guider3.png"; sourceTree = "<group>"; };
+		372D35840000000000000000 /* guider4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "guider4.png"; path = "guider4.png"; sourceTree = "<group>"; };
+		3ABE42220000000000000000 /* ic_launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_launch.png"; path = "ic_launch.png"; sourceTree = "<group>"; };
+		3E4F4EC00000000000000000 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "error.png"; path = "error.png"; sourceTree = "<group>"; };
+		1E05B5E00000000000000000 /* error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "error@2x.png"; path = "error@2x.png"; sourceTree = "<group>"; };
+		57167FC00000000000000000 /* error_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "error_7.png"; path = "error_7.png"; sourceTree = "<group>"; };
+		902749A00000000000000000 /* error_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "error_7@2x.png"; path = "error_7@2x.png"; sourceTree = "<group>"; };
+		C93813800000000000000000 /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "success.png"; path = "success.png"; sourceTree = "<group>"; };
+		10248DD60000000000000000 /* success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "success@2x.png"; path = "success@2x.png"; sourceTree = "<group>"; };
+		13B59A740000000000000000 /* success_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "success_7.png"; path = "success_7.png"; sourceTree = "<group>"; };
+		1746A7120000000000000000 /* success_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "success_7@2x.png"; path = "success_7@2x.png"; sourceTree = "<group>"; };
+		1AD7B3B00000000000000000 /* uparrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "uparrow.png"; path = "uparrow.png"; sourceTree = "<group>"; };
+		1E68C04E0000000000000000 /* ic_basicInformation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_basicInformation.png"; path = "ic_basicInformation.png"; sourceTree = "<group>"; };
+		21F9CCEC0000000000000000 /* ic_sex_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_sex_man.png"; path = "ic_sex_man.png"; sourceTree = "<group>"; };
+		258AD98A0000000000000000 /* ic_sex_woman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_sex_woman.png"; path = "ic_sex_woman.png"; sourceTree = "<group>"; };
+		291BE6280000000000000000 /* ic_medicalHistory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_medicalHistory.png"; path = "ic_medicalHistory.png"; sourceTree = "<group>"; };
+		2CACF2C60000000000000000 /* ic_myInfo_advision_jianyi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_myInfo_advision_jianyi.png"; path = "ic_myInfo_advision_jianyi.png"; sourceTree = "<group>"; };
+		303DFF640000000000000000 /* ic_myInfo_advision_qita.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_myInfo_advision_qita.png"; path = "ic_myInfo_advision_qita.png"; sourceTree = "<group>"; };
+		33CF0C020000000000000000 /* ic_myInfo_advision_tousu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_myInfo_advision_tousu.png"; path = "ic_myInfo_advision_tousu.png"; sourceTree = "<group>"; };
+		376018A00000000000000000 /* ic_myInfo_advision_zixun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_myInfo_advision_zixun.png"; path = "ic_myInfo_advision_zixun.png"; sourceTree = "<group>"; };
+		3AF1253E0000000000000000 /* ic_myInfomation_aboutUs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_myInfomation_aboutUs.png"; path = "ic_myInfomation_aboutUs.png"; sourceTree = "<group>"; };
+		3E8231DC0000000000000000 /* ic_myInfomation_accountSecurity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_myInfomation_accountSecurity.png"; path = "ic_myInfomation_accountSecurity.png"; sourceTree = "<group>"; };
+		2133E7A00000000000000000 /* ic_myInfomation_advice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_myInfomation_advice.png"; path = "ic_myInfomation_advice.png"; sourceTree = "<group>"; };
+		5A44B1800000000000000000 /* ic_myInfomation_cacheRemover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_myInfomation_cacheRemover.png"; path = "ic_myInfomation_cacheRemover.png"; sourceTree = "<group>"; };
+		93557B600000000000000000 /* ic_myInfomation_call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_myInfomation_call.png"; path = "ic_myInfomation_call.png"; sourceTree = "<group>"; };
+		CC6645400000000000000000 /* ic_myInfomation_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_myInfomation_message.png"; path = "ic_myInfomation_message.png"; sourceTree = "<group>"; };
+		105770F20000000000000000 /* ic_myInfomation_personalData.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_myInfomation_personalData.png"; path = "ic_myInfomation_personalData.png"; sourceTree = "<group>"; };
+		13E87D900000000000000000 /* ic_myInfomation_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_myInfomation_phone.png"; path = "ic_myInfomation_phone.png"; sourceTree = "<group>"; };
+		17798A2E0000000000000000 /* ic_myInfomation_userName.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_myInfomation_userName.png"; path = "ic_myInfomation_userName.png"; sourceTree = "<group>"; };
+		1B0A96CC0000000000000000 /* ic_myInfomation_versionDetection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_myInfomation_versionDetection.png"; path = "ic_myInfomation_versionDetection.png"; sourceTree = "<group>"; };
+		1E9BA36A0000000000000000 /* myInfomation_headImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "myInfomation_headImage.png"; path = "myInfomation_headImage.png"; sourceTree = "<group>"; };
+		222CB0080000000000000000 /* myInfomation_setup_aboutus_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "myInfomation_setup_aboutus_logo.png"; path = "myInfomation_setup_aboutus_logo.png"; sourceTree = "<group>"; };
+		25BDBCA60000000000000000 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "setting.png"; path = "setting.png"; sourceTree = "<group>"; };
+		294EC9440000000000000000 /* ic_login_eye_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_login_eye_normal.png"; path = "ic_login_eye_normal.png"; sourceTree = "<group>"; };
+		2CDFD5E20000000000000000 /* ic_login_eye_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_login_eye_selected.png"; path = "ic_login_eye_selected.png"; sourceTree = "<group>"; };
+		3070E2800000000000000000 /* ic_login_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_login_password.png"; path = "ic_login_password.png"; sourceTree = "<group>"; };
+		3401EF1E0000000000000000 /* ic_login_username.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_login_username.png"; path = "ic_login_username.png"; sourceTree = "<group>"; };
+		3792FBBC0000000000000000 /* ic_register_combox_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_register_combox_normal.png"; path = "ic_register_combox_normal.png"; sourceTree = "<group>"; };
+		3B24085A0000000000000000 /* ic_register_combox_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_register_combox_selected.png"; path = "ic_register_combox_selected.png"; sourceTree = "<group>"; };
+		3EB514F80000000000000000 /* login_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login_bg.png"; path = "login_bg.png"; sourceTree = "<group>"; };
+		246219600000000000000000 /* PushConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PushConfig.plist"; path = "PushConfig.plist"; sourceTree = "<group>"; };
+		63A091200000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate.h"; path = "AppDelegate.h"; sourceTree = "<group>"; };
+		9CB15B000000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate.m"; path = "AppDelegate.m"; sourceTree = "<group>"; };
+		D5C224E00000000000000000 /* Main_HealthController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Main_HealthController.h"; path = "Main_HealthController.h"; sourceTree = "<group>"; };
+		10ED2EEC0000000000000000 /* Main_HealthController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Main_HealthController.m"; path = "Main_HealthController.m"; sourceTree = "<group>"; };
+		147E3B8A0000000000000000 /* UserGuiderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UserGuiderViewController.h"; path = "UserGuiderViewController.h"; sourceTree = "<group>"; };
+		180F48280000000000000000 /* UserGuiderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UserGuiderViewController.m"; path = "UserGuiderViewController.m"; sourceTree = "<group>"; };
+		1BA054C60000000000000000 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "LoginViewController.h"; path = "LoginViewController.h"; sourceTree = "<group>"; };
+		1F3161640000000000000000 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "LoginViewController.m"; path = "LoginViewController.m"; sourceTree = "<group>"; };
+		22C26E020000000000000000 /* Main_AlarmController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Main_AlarmController.h"; path = "Main_AlarmController.h"; sourceTree = "<group>"; };
+		26537AA00000000000000000 /* Main_AlarmController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Main_AlarmController.m"; path = "Main_AlarmController.m"; sourceTree = "<group>"; };
+		29E4873E0000000000000000 /* Main_GuardianController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Main_GuardianController.h"; path = "Main_GuardianController.h"; sourceTree = "<group>"; };
+		2D7593DC0000000000000000 /* Main_GuardianController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Main_GuardianController.m"; path = "Main_GuardianController.m"; sourceTree = "<group>"; };
+		3106A07A0000000000000000 /* MyHealthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MyHealthViewController.h"; path = "MyHealthViewController.h"; sourceTree = "<group>"; };
+		3497AD180000000000000000 /* MyHealthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MyHealthViewController.m"; path = "MyHealthViewController.m"; sourceTree = "<group>"; };
+		3828B9B60000000000000000 /* OtherHealthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "OtherHealthViewController.h"; path = "OtherHealthViewController.h"; sourceTree = "<group>"; };
+		3BB9C6540000000000000000 /* OtherHealthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "OtherHealthViewController.m"; path = "OtherHealthViewController.m"; sourceTree = "<group>"; };
+		3F4AD2F20000000000000000 /* HealthListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HealthListTableViewCell.h"; path = "HealthListTableViewCell.h"; sourceTree = "<group>"; };
+		2DBDF9000000000000000000 /* HealthListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "HealthListTableViewCell.m"; path = "HealthListTableViewCell.m"; sourceTree = "<group>"; };
+		66CEC2E00000000000000000 /* HealthDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HealthDetailViewController.h"; path = "HealthDetailViewController.h"; sourceTree = "<group>"; };
+		9FDF8CC00000000000000000 /* HealthDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "HealthDetailViewController.m"; path = "HealthDetailViewController.m"; sourceTree = "<group>"; };
+		D8F056A00000000000000000 /* MyAlarmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MyAlarmViewController.h"; path = "MyAlarmViewController.h"; sourceTree = "<group>"; };
+		112012080000000000000000 /* MyAlarmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MyAlarmViewController.m"; path = "MyAlarmViewController.m"; sourceTree = "<group>"; };
+		14B11EA60000000000000000 /* OtherAlarmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "OtherAlarmViewController.h"; path = "OtherAlarmViewController.h"; sourceTree = "<group>"; };
+		18422B440000000000000000 /* OtherAlarmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "OtherAlarmViewController.m"; path = "OtherAlarmViewController.m"; sourceTree = "<group>"; };
+		1BD337E20000000000000000 /* AlarmLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AlarmLocationViewController.h"; path = "AlarmLocationViewController.h"; sourceTree = "<group>"; };
+		1F6444800000000000000000 /* AlarmLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AlarmLocationViewController.m"; path = "AlarmLocationViewController.m"; sourceTree = "<group>"; };
+		22F5511E0000000000000000 /* AlarmListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AlarmListTableViewCell.h"; path = "AlarmListTableViewCell.h"; sourceTree = "<group>"; };
+		26865DBC0000000000000000 /* AlarmListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AlarmListTableViewCell.m"; path = "AlarmListTableViewCell.m"; sourceTree = "<group>"; };
+		2A176A5A0000000000000000 /* AlarmDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AlarmDetailViewController.h"; path = "AlarmDetailViewController.h"; sourceTree = "<group>"; };
+		2DA876F80000000000000000 /* AlarmDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AlarmDetailViewController.m"; path = "AlarmDetailViewController.m"; sourceTree = "<group>"; };
+		313983960000000000000000 /* AlarmHandleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AlarmHandleCell.h"; path = "AlarmHandleCell.h"; sourceTree = "<group>"; };
+		34CA90340000000000000000 /* AlarmHandleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AlarmHandleCell.m"; path = "AlarmHandleCell.m"; sourceTree = "<group>"; };
+		385B9CD20000000000000000 /* MyGuardianViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MyGuardianViewController.h"; path = "MyGuardianViewController.h"; sourceTree = "<group>"; };
+		3BECA9700000000000000000 /* MyGuardianViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MyGuardianViewController.m"; path = "MyGuardianViewController.m"; sourceTree = "<group>"; };
+		3F7DB60E0000000000000000 /* OtherGuardianViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "OtherGuardianViewController.h"; path = "OtherGuardianViewController.h"; sourceTree = "<group>"; };
+		30EC2AC00000000000000000 /* OtherGuardianViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "OtherGuardianViewController.m"; path = "OtherGuardianViewController.m"; sourceTree = "<group>"; };
+		69FCF4A00000000000000000 /* GuardianListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GuardianListCell.h"; path = "GuardianListCell.h"; sourceTree = "<group>"; };
+		A30DBE800000000000000000 /* GuardianListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "GuardianListCell.m"; path = "GuardianListCell.m"; sourceTree = "<group>"; };
+		DC1E88600000000000000000 /* GuardianDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GuardianDetailViewController.h"; path = "GuardianDetailViewController.h"; sourceTree = "<group>"; };
+		1152F5240000000000000000 /* GuardianDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "GuardianDetailViewController.m"; path = "GuardianDetailViewController.m"; sourceTree = "<group>"; };
+		14E401C20000000000000000 /* GuardianApplyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GuardianApplyViewController.h"; path = "GuardianApplyViewController.h"; sourceTree = "<group>"; };
+		18750E600000000000000000 /* GuardianApplyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "GuardianApplyViewController.m"; path = "GuardianApplyViewController.m"; sourceTree = "<group>"; };
+		1C061AFE0000000000000000 /* BindGuardianViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "BindGuardianViewController.h"; path = "BindGuardianViewController.h"; sourceTree = "<group>"; };
+		1F97279C0000000000000000 /* BindGuardianViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "BindGuardianViewController.m"; path = "BindGuardianViewController.m"; sourceTree = "<group>"; };
+		2328343A0000000000000000 /* BindGuardianTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "BindGuardianTableViewCell.h"; path = "BindGuardianTableViewCell.h"; sourceTree = "<group>"; };
+		26B940D80000000000000000 /* BindGuardianTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "BindGuardianTableViewCell.m"; path = "BindGuardianTableViewCell.m"; sourceTree = "<group>"; };
+		2A4A4D760000000000000000 /* GuardianApplyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GuardianApplyTableViewCell.h"; path = "GuardianApplyTableViewCell.h"; sourceTree = "<group>"; };
+		2DDB5A140000000000000000 /* GuardianApplyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "GuardianApplyTableViewCell.m"; path = "GuardianApplyTableViewCell.m"; sourceTree = "<group>"; };
+		316C66B20000000000000000 /* AccountSecurityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AccountSecurityViewController.h"; path = "AccountSecurityViewController.h"; sourceTree = "<group>"; };
+		34FD73500000000000000000 /* AccountSecurityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AccountSecurityViewController.m"; path = "AccountSecurityViewController.m"; sourceTree = "<group>"; };
+		388E7FEE0000000000000000 /* AdviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AdviceViewController.h"; path = "AdviceViewController.h"; sourceTree = "<group>"; };
+		3C1F8C8C0000000000000000 /* AdviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AdviceViewController.m"; path = "AdviceViewController.m"; sourceTree = "<group>"; };
+		3FB0992A0000000000000000 /* PersonInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PersonInfoViewController.h"; path = "PersonInfoViewController.h"; sourceTree = "<group>"; };
+		341A5C800000000000000000 /* PersonInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PersonInfoViewController.m"; path = "PersonInfoViewController.m"; sourceTree = "<group>"; };
+		6D2B26600000000000000000 /* PersonInfoBirthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PersonInfoBirthViewController.h"; path = "PersonInfoBirthViewController.h"; sourceTree = "<group>"; };
+		A63BF0400000000000000000 /* PersonInfoBirthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PersonInfoBirthViewController.m"; path = "PersonInfoBirthViewController.m"; sourceTree = "<group>"; };
+		DF4CBA200000000000000000 /* PersonInfoEmailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PersonInfoEmailViewController.h"; path = "PersonInfoEmailViewController.h"; sourceTree = "<group>"; };
+		1185D8400000000000000000 /* PersonInfoEmailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PersonInfoEmailViewController.m"; path = "PersonInfoEmailViewController.m"; sourceTree = "<group>"; };
+		1516E4DE0000000000000000 /* PersonInfoFixedPhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PersonInfoFixedPhoneViewController.h"; path = "PersonInfoFixedPhoneViewController.h"; sourceTree = "<group>"; };
+		18A7F17C0000000000000000 /* PersonInfoFixedPhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PersonInfoFixedPhoneViewController.m"; path = "PersonInfoFixedPhoneViewController.m"; sourceTree = "<group>"; };
+		1C38FE1A0000000000000000 /* PersonInfoGenderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PersonInfoGenderViewController.h"; path = "PersonInfoGenderViewController.h"; sourceTree = "<group>"; };
+		1FCA0AB80000000000000000 /* PersonInfoGenderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PersonInfoGenderViewController.m"; path = "PersonInfoGenderViewController.m"; sourceTree = "<group>"; };
+		235B17560000000000000000 /* PersonInfoIdCardNoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PersonInfoIdCardNoViewController.h"; path = "PersonInfoIdCardNoViewController.h"; sourceTree = "<group>"; };
+		26EC23F40000000000000000 /* PersonInfoIdCardNoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PersonInfoIdCardNoViewController.m"; path = "PersonInfoIdCardNoViewController.m"; sourceTree = "<group>"; };
+		2A7D30920000000000000000 /* MainMyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MainMyTableViewCell.h"; path = "MainMyTableViewCell.h"; sourceTree = "<group>"; };
+		2E0E3D300000000000000000 /* MainMyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MainMyTableViewCell.m"; path = "MainMyTableViewCell.m"; sourceTree = "<group>"; };
+		319F49CE0000000000000000 /* PersonInfoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PersonInfoTableViewCell.h"; path = "PersonInfoTableViewCell.h"; sourceTree = "<group>"; };
+		3530566C0000000000000000 /* PersonInfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PersonInfoTableViewCell.m"; path = "PersonInfoTableViewCell.m"; sourceTree = "<group>"; };
+		38C1630A0000000000000000 /* Main_MyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Main_MyController.h"; path = "Main_MyController.h"; sourceTree = "<group>"; };
+		3C526FA80000000000000000 /* Main_MyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Main_MyController.m"; path = "Main_MyController.m"; sourceTree = "<group>"; };
+		3FE37C460000000000000000 /* PersonInfoCardLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PersonInfoCardLocationViewController.h"; path = "PersonInfoCardLocationViewController.h"; sourceTree = "<group>"; };
+		37488E400000000000000000 /* PersonInfoCardLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PersonInfoCardLocationViewController.m"; path = "PersonInfoCardLocationViewController.m"; sourceTree = "<group>"; };
+		705958200000000000000000 /* PersonInfoTrueNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PersonInfoTrueNameViewController.h"; path = "PersonInfoTrueNameViewController.h"; sourceTree = "<group>"; };
+		A96A22000000000000000000 /* PersonInfoTrueNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PersonInfoTrueNameViewController.m"; path = "PersonInfoTrueNameViewController.m"; sourceTree = "<group>"; };
+		E27AEBE00000000000000000 /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RegisterViewController.h"; path = "RegisterViewController.h"; sourceTree = "<group>"; };
+		11B8BB5C0000000000000000 /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "RegisterViewController.m"; path = "RegisterViewController.m"; sourceTree = "<group>"; };
+		1549C7FA0000000000000000 /* SendSecurityCodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SendSecurityCodeController.h"; path = "SendSecurityCodeController.h"; sourceTree = "<group>"; };
+		18DAD4980000000000000000 /* SendSecurityCodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SendSecurityCodeController.m"; path = "SendSecurityCodeController.m"; sourceTree = "<group>"; };
+		1C6BE1360000000000000000 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SettingViewController.h"; path = "SettingViewController.h"; sourceTree = "<group>"; };
+		1FFCEDD40000000000000000 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SettingViewController.m"; path = "SettingViewController.m"; sourceTree = "<group>"; };
+		238DFA720000000000000000 /* AdviceRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AdviceRecordViewController.h"; path = "AdviceRecordViewController.h"; sourceTree = "<group>"; };
+		271F07100000000000000000 /* AdviceRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AdviceRecordViewController.m"; path = "AdviceRecordViewController.m"; sourceTree = "<group>"; };
+		2AB013AE0000000000000000 /* AdviceRecordTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AdviceRecordTableViewCell.h"; path = "AdviceRecordTableViewCell.h"; sourceTree = "<group>"; };
+		2E41204C0000000000000000 /* AdviceRecordTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AdviceRecordTableViewCell.m"; path = "AdviceRecordTableViewCell.m"; sourceTree = "<group>"; };
+		31D22CEA0000000000000000 /* AccountSecurityTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AccountSecurityTableViewCell.h"; path = "AccountSecurityTableViewCell.h"; sourceTree = "<group>"; };
+		356339880000000000000000 /* AccountSecurityTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AccountSecurityTableViewCell.m"; path = "AccountSecurityTableViewCell.m"; sourceTree = "<group>"; };
+		38F446260000000000000000 /* WriteAdviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "WriteAdviceViewController.h"; path = "WriteAdviceViewController.h"; sourceTree = "<group>"; };
+		3C8552C40000000000000000 /* WriteAdviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "WriteAdviceViewController.m"; path = "WriteAdviceViewController.m"; sourceTree = "<group>"; };
+		165F62000000000000000000 /* ServiceAgreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ServiceAgreeViewController.h"; path = "ServiceAgreeViewController.h"; sourceTree = "<group>"; };
+		3A76C0000000000000000000 /* ServiceAgreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ServiceAgreeViewController.m"; path = "ServiceAgreeViewController.m"; sourceTree = "<group>"; };
+		738789E00000000000000000 /* RegisterResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RegisterResultViewController.h"; path = "RegisterResultViewController.h"; sourceTree = "<group>"; };
+		AC9853C00000000000000000 /* RegisterResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "RegisterResultViewController.m"; path = "RegisterResultViewController.m"; sourceTree = "<group>"; };
+		E5A91DA00000000000000000 /* SetPassWordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SetPassWordViewController.h"; path = "SetPassWordViewController.h"; sourceTree = "<group>"; };
+		11EB9E780000000000000000 /* SetPassWordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SetPassWordViewController.m"; path = "SetPassWordViewController.m"; sourceTree = "<group>"; };
+		157CAB160000000000000000 /* AboutUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AboutUsViewController.h"; path = "AboutUsViewController.h"; sourceTree = "<group>"; };
+		190DB7B40000000000000000 /* AboutUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AboutUsViewController.m"; path = "AboutUsViewController.m"; sourceTree = "<group>"; };
+		1C9EC4520000000000000000 /* SettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SettingTableViewCell.h"; path = "SettingTableViewCell.h"; sourceTree = "<group>"; };
+		202FD0F00000000000000000 /* SettingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SettingTableViewCell.m"; path = "SettingTableViewCell.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3A49D400000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C883E1E0000000000000000 /* UIKit.framework in Frameworks */,
+				38F731800000000000000000 /* MapKit.framework in Frameworks */,
+				356624E20000000000000000 /* Foundation.framework in Frameworks */,
+				2516BAEB0000000000000000 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C4794EF0000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				1A127DC00000000000000000 /* lelaozu-Iphone */,
+				3706E13C0000000000000000 /* Frameworks */,
+				26FABAC90000000000000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26FABAC90000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				157F96700000000000000000 /* lelaozu-Iphone.app */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		3706E13C0000000000000000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11EE89D20000000000000000 /* UIKit.framework */,
+				E5D7D3400000000000000000 /* MapKit.framework */,
+				ACC709600000000000000000 /* Foundation.framework */,
+				28A7C7890000000000000000 /* CoreGraphics.framework */,
+			);
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		1A127DC00000000000000000 /* lelaozu-Iphone */ = {
+			isa = PBXGroup;
+			children = (
+				157CAB160000000000000000 /* AboutUsViewController.h */,
+				1E35DD320000000000000000 /* AboutUsViewController.xib */,
+				31D22CEA0000000000000000 /* AccountSecurityTableViewCell.h */,
+				316C66B20000000000000000 /* AccountSecurityViewController.h */,
+				2AB013AE0000000000000000 /* AdviceRecordTableViewCell.h */,
+				238DFA720000000000000000 /* AdviceRecordViewController.h */,
+				388E7FEE0000000000000000 /* AdviceViewController.h */,
+				2A176A5A0000000000000000 /* AlarmDetailViewController.h */,
+				313983960000000000000000 /* AlarmHandleCell.h */,
+				22F5511E0000000000000000 /* AlarmListTableViewCell.h */,
+				1BD337E20000000000000000 /* AlarmLocationViewController.h */,
+				63A091200000000000000000 /* AppDelegate.h */,
+				2328343A0000000000000000 /* BindGuardianTableViewCell.h */,
+				1C061AFE0000000000000000 /* BindGuardianViewController.h */,
+				28E9030C0000000000000000 /* Entitlements.plist */,
+				3E4F4EC00000000000000000 /* error.png */,
+				1E05B5E00000000000000000 /* error@2x.png */,
+				57167FC00000000000000000 /* error_7.png */,
+				902749A00000000000000000 /* error_7@2x.png */,
+				2A4A4D760000000000000000 /* GuardianApplyTableViewCell.h */,
+				14E401C20000000000000000 /* GuardianApplyViewController.h */,
+				DC1E88600000000000000000 /* GuardianDetailViewController.h */,
+				69FCF4A00000000000000000 /* GuardianListCell.h */,
+				2C7A0FAA0000000000000000 /* guider1.png */,
+				300B1C480000000000000000 /* guider2.png */,
+				339C28E60000000000000000 /* guider3.png */,
+				372D35840000000000000000 /* guider4.png */,
+				66CEC2E00000000000000000 /* HealthDetailViewController.h */,
+				3F4AD2F20000000000000000 /* HealthListTableViewCell.h */,
+				1E68C04E0000000000000000 /* ic_basicInformation.png */,
+				3ABE42220000000000000000 /* ic_launch.png */,
+				294EC9440000000000000000 /* ic_login_eye_normal.png */,
+				2CDFD5E20000000000000000 /* ic_login_eye_selected.png */,
+				3070E2800000000000000000 /* ic_login_password.png */,
+				3401EF1E0000000000000000 /* ic_login_username.png */,
+				291BE6280000000000000000 /* ic_medicalHistory.png */,
+				2CACF2C60000000000000000 /* ic_myInfo_advision_jianyi.png */,
+				303DFF640000000000000000 /* ic_myInfo_advision_qita.png */,
+				33CF0C020000000000000000 /* ic_myInfo_advision_tousu.png */,
+				376018A00000000000000000 /* ic_myInfo_advision_zixun.png */,
+				3AF1253E0000000000000000 /* ic_myInfomation_aboutUs.png */,
+				3E8231DC0000000000000000 /* ic_myInfomation_accountSecurity.png */,
+				2133E7A00000000000000000 /* ic_myInfomation_advice.png */,
+				5A44B1800000000000000000 /* ic_myInfomation_cacheRemover.png */,
+				93557B600000000000000000 /* ic_myInfomation_call.png */,
+				CC6645400000000000000000 /* ic_myInfomation_message.png */,
+				105770F20000000000000000 /* ic_myInfomation_personalData.png */,
+				13E87D900000000000000000 /* ic_myInfomation_phone.png */,
+				17798A2E0000000000000000 /* ic_myInfomation_userName.png */,
+				1B0A96CC0000000000000000 /* ic_myInfomation_versionDetection.png */,
+				3792FBBC0000000000000000 /* ic_register_combox_normal.png */,
+				3B24085A0000000000000000 /* ic_register_combox_selected.png */,
+				21F9CCEC0000000000000000 /* ic_sex_man.png */,
+				258AD98A0000000000000000 /* ic_sex_woman.png */,
+				73B63F800000000000000000 /* Images.xcassets */,
+				2557F66E0000000000000000 /* Info.plist */,
+				3EB514F80000000000000000 /* login_bg.png */,
+				1BA054C60000000000000000 /* LoginViewController.h */,
+				194ABC000000000000000000 /* LoginViewController.xib */,
+				22C26E020000000000000000 /* Main_AlarmController.h */,
+				147B20A00000000000000000 /* Main_AlarmController.xib */,
+				29E4873E0000000000000000 /* Main_GuardianController.h */,
+				869CB4600000000000000000 /* Main_GuardianController.xib */,
+				D5C224E00000000000000000 /* Main_HealthController.h */,
+				BFAD7E400000000000000000 /* Main_HealthController.xib */,
+				38C1630A0000000000000000 /* Main_MyController.h */,
+				28B61FF00000000000000000 /* Main_MyController.xib */,
+				2A7D30920000000000000000 /* MainMyTableViewCell.h */,
+				D8F056A00000000000000000 /* MyAlarmViewController.h */,
+				385B9CD20000000000000000 /* MyGuardianViewController.h */,
+				3106A07A0000000000000000 /* MyHealthViewController.h */,
+				1E9BA36A0000000000000000 /* myInfomation_headImage.png */,
+				222CB0080000000000000000 /* myInfomation_setup_aboutus_logo.png */,
+				14B11EA60000000000000000 /* OtherAlarmViewController.h */,
+				3F7DB60E0000000000000000 /* OtherGuardianViewController.h */,
+				3828B9B60000000000000000 /* OtherHealthViewController.h */,
+				6D2B26600000000000000000 /* PersonInfoBirthViewController.h */,
+				3FE37C460000000000000000 /* PersonInfoCardLocationViewController.h */,
+				DF4CBA200000000000000000 /* PersonInfoEmailViewController.h */,
+				1516E4DE0000000000000000 /* PersonInfoFixedPhoneViewController.h */,
+				1C38FE1A0000000000000000 /* PersonInfoGenderViewController.h */,
+				235B17560000000000000000 /* PersonInfoIdCardNoViewController.h */,
+				319F49CE0000000000000000 /* PersonInfoTableViewCell.h */,
+				705958200000000000000000 /* PersonInfoTrueNameViewController.h */,
+				3FB0992A0000000000000000 /* PersonInfoViewController.h */,
+				246219600000000000000000 /* PushConfig.plist */,
+				738789E00000000000000000 /* RegisterResultViewController.h */,
+				1713C3F60000000000000000 /* RegisterResultViewController.xib */,
+				E27AEBE00000000000000000 /* RegisterViewController.h */,
+				3A8B5F060000000000000000 /* RegisterViewController.xib */,
+				1549C7FA0000000000000000 /* SendSecurityCodeController.h */,
+				3E1C6BA40000000000000000 /* SendSecurityCodeController.xib */,
+				165F62000000000000000000 /* ServiceAgreeViewController.h */,
+				1382B7580000000000000000 /* ServiceAgreeViewController.xib */,
+				E5A91DA00000000000000000 /* SetPassWordViewController.h */,
+				1AA4D0940000000000000000 /* SetPassWordViewController.xib */,
+				25BDBCA60000000000000000 /* setting.png */,
+				1C9EC4520000000000000000 /* SettingTableViewCell.h */,
+				1C6BE1360000000000000000 /* SettingViewController.h */,
+				1AD784200000000000000000 /* SettingViewController.xib */,
+				C93813800000000000000000 /* success.png */,
+				10248DD60000000000000000 /* success@2x.png */,
+				13B59A740000000000000000 /* success_7.png */,
+				1746A7120000000000000000 /* success_7@2x.png */,
+				1AD7B3B00000000000000000 /* uparrow.png */,
+				147E3B8A0000000000000000 /* UserGuiderViewController.h */,
+				3AA575A00000000000000000 /* UserGuiderViewController.xib */,
+				38F446260000000000000000 /* WriteAdviceViewController.h */,
+				2C3ADC280000000000000000 /* Controllers */,
+				2187B64E0000000000000000 /* CustomTableViewCell */,
+				C216A9A00000000000000000 /* Supporting Files */,
+			);
+			name = "lelaozu-Iphone";
+			sourceTree = "<group>";
+		};
+		2C3ADC280000000000000000 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C2E23610000000000000000 /* Alarm */,
+				16D490740000000000000000 /* Guardians */,
+				6E1493B00000000000000000 /* Health */,
+				317AFD870000000000000000 /* My */,
+			);
+			name = "Controllers";
+			sourceTree = "<group>";
+		};
+		6E1493B00000000000000000 /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				4D8BEA800000000000000000 /* HealthDetailViewController.xib */,
+				F8BE48200000000000000000 /* MyHealthViewController.xib */,
+				131CF1200000000000000000 /* OtherHealthViewController.xib */,
+			);
+			name = "Health";
+			sourceTree = "<group>";
+		};
+		2187B64E0000000000000000 /* CustomTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C609E1C00000000000000000 /* AccountSecurityTableViewCell.xib */,
+				8CF917E00000000000000000 /* AdviceRecordTableViewCell.xib */,
+				2C1449720000000000000000 /* AlarmHandleCell.xib */,
+				24F230360000000000000000 /* AlarmListTableViewCell.xib */,
+				50BA1C400000000000000000 /* BindGuardianTableViewCell.xib */,
+				89CAE6200000000000000000 /* GuardianApplyTableViewCell.xib */,
+				36C76F4C0000000000000000 /* GuardianListCell.xib */,
+				16ADFDBE0000000000000000 /* HealthListTableViewCell.xib */,
+				2C472C8E0000000000000000 /* MainMyTableViewCell.xib */,
+				2FD8392C0000000000000000 /* PersonInfoTableViewCell.xib */,
+				21C6E9D00000000000000000 /* SettingTableViewCell.xib */,
+			);
+			name = "CustomTableViewCell";
+			sourceTree = "<group>";
+		};
+		3C2E23610000000000000000 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				1DD016FA0000000000000000 /* AlarmDetailViewController.xib */,
+				216123980000000000000000 /* AlarmLocationViewController.xib */,
+				1A3F0A5C0000000000000000 /* MyAlarmViewController.xib */,
+				28833CD40000000000000000 /* OtherAlarmViewController.xib */,
+			);
+			name = "Alarm";
+			sourceTree = "<group>";
+		};
+		16D490740000000000000000 /* Guardians */ = {
+			isa = PBXGroup;
+			children = (
+				17A952600000000000000000 /* BindGuardianViewController.xib */,
+				3DE988880000000000000000 /* GuardianApplyViewController.xib */,
+				3A587BEA0000000000000000 /* GuardianDetailViewController.xib */,
+				2FA556100000000000000000 /* MyGuardianViewController.xib */,
+				333662AE0000000000000000 /* OtherGuardianViewController.xib */,
+			);
+			name = "Guardians";
+			sourceTree = "<group>";
+		};
+		317AFD870000000000000000 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				C2DBB0000000000000000000 /* AccountSecurityViewController.xib */,
+				53E84E000000000000000000 /* AdviceRecordViewController.xib */,
+				FBEC79E00000000000000000 /* AdviceViewController.xib */,
+				16E0E0DA0000000000000000 /* PersonInfoBirthViewController.xib */,
+				336945CA0000000000000000 /* PersonInfoCardLocationViewController.xib */,
+				1A71ED780000000000000000 /* PersonInfoEmailViewController.xib */,
+				1E02FA160000000000000000 /* PersonInfoFixedPhoneViewController.xib */,
+				219406B40000000000000000 /* PersonInfoGenderViewController.xib */,
+				252513520000000000000000 /* PersonInfoIdCardNoViewController.xib */,
+				36FA52680000000000000000 /* PersonInfoTrueNameViewController.xib */,
+				134FD43C0000000000000000 /* PersonInfoViewController.xib */,
+				FF1AABA00000000000000000 /* WriteAdviceViewController.xib */,
+			);
+			name = "My";
+			sourceTree = "<group>";
+		};
+		C216A9A00000000000000000 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				190DB7B40000000000000000 /* AboutUsViewController.m */,
+				356339880000000000000000 /* AccountSecurityTableViewCell.m */,
+				34FD73500000000000000000 /* AccountSecurityViewController.m */,
+				2E41204C0000000000000000 /* AdviceRecordTableViewCell.m */,
+				271F07100000000000000000 /* AdviceRecordViewController.m */,
+				3C1F8C8C0000000000000000 /* AdviceViewController.m */,
+				2DA876F80000000000000000 /* AlarmDetailViewController.m */,
+				34CA90340000000000000000 /* AlarmHandleCell.m */,
+				26865DBC0000000000000000 /* AlarmListTableViewCell.m */,
+				1F6444800000000000000000 /* AlarmLocationViewController.m */,
+				9CB15B000000000000000000 /* AppDelegate.m */,
+				26B940D80000000000000000 /* BindGuardianTableViewCell.m */,
+				1F97279C0000000000000000 /* BindGuardianViewController.m */,
+				2DDB5A140000000000000000 /* GuardianApplyTableViewCell.m */,
+				18750E600000000000000000 /* GuardianApplyViewController.m */,
+				1152F5240000000000000000 /* GuardianDetailViewController.m */,
+				A30DBE800000000000000000 /* GuardianListCell.m */,
+				9FDF8CC00000000000000000 /* HealthDetailViewController.m */,
+				2DBDF9000000000000000000 /* HealthListTableViewCell.m */,
+				1F3161640000000000000000 /* LoginViewController.m */,
+				26537AA00000000000000000 /* Main_AlarmController.m */,
+				2D7593DC0000000000000000 /* Main_GuardianController.m */,
+				10ED2EEC0000000000000000 /* Main_HealthController.m */,
+				3C526FA80000000000000000 /* Main_MyController.m */,
+				2E0E3D300000000000000000 /* MainMyTableViewCell.m */,
+				112012080000000000000000 /* MyAlarmViewController.m */,
+				3BECA9700000000000000000 /* MyGuardianViewController.m */,
+				3497AD180000000000000000 /* MyHealthViewController.m */,
+				18422B440000000000000000 /* OtherAlarmViewController.m */,
+				30EC2AC00000000000000000 /* OtherGuardianViewController.m */,
+				3BB9C6540000000000000000 /* OtherHealthViewController.m */,
+				A63BF0400000000000000000 /* PersonInfoBirthViewController.m */,
+				37488E400000000000000000 /* PersonInfoCardLocationViewController.m */,
+				1185D8400000000000000000 /* PersonInfoEmailViewController.m */,
+				18A7F17C0000000000000000 /* PersonInfoFixedPhoneViewController.m */,
+				1FCA0AB80000000000000000 /* PersonInfoGenderViewController.m */,
+				26EC23F40000000000000000 /* PersonInfoIdCardNoViewController.m */,
+				3530566C0000000000000000 /* PersonInfoTableViewCell.m */,
+				A96A22000000000000000000 /* PersonInfoTrueNameViewController.m */,
+				341A5C800000000000000000 /* PersonInfoViewController.m */,
+				AC9853C00000000000000000 /* RegisterResultViewController.m */,
+				11B8BB5C0000000000000000 /* RegisterViewController.m */,
+				18DAD4980000000000000000 /* SendSecurityCodeController.m */,
+				3A76C0000000000000000000 /* ServiceAgreeViewController.m */,
+				11EB9E780000000000000000 /* SetPassWordViewController.m */,
+				202FD0F00000000000000000 /* SettingTableViewCell.m */,
+				1FFCEDD40000000000000000 /* SettingViewController.m */,
+				180F48280000000000000000 /* UserGuiderViewController.m */,
+				3C8552C40000000000000000 /* WriteAdviceViewController.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B26A6000000000000000000 /* lelaozu-Iphone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3720E51E0000000000000000 /* Build configuration list for PBXNativeTarget "lelaozu-Iphone" */;
+			buildPhases = (
+				31D518440000000000000000 /* Sources */,
+				C3A49D400000000000000000 /* Frameworks */,
+				2E440BA60000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "lelaozu-Iphone";
+			productName = "lelaozu-Iphone";
+			productReference = 157F96700000000000000000 /* lelaozu-Iphone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32DFD45C0000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 170773900000000000000000 /* Build configuration list for PBXProject "lelaozu-Iphone" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1C4794EF0000000000000000;
+			productRefGroup = 26FABAC90000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B26A6000000000000000000 /* lelaozu-Iphone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E440BA60000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1519D0380000000000000000 /* Images.xcassets in Resources */,
+				1188C39A0000000000000000 /* UserGuiderViewController.xib in Resources */,
+				DF7B6FC00000000000000000 /* LoginViewController.xib in Resources */,
+				A66AA5E00000000000000000 /* Main_AlarmController.xib in Resources */,
+				6D59DC000000000000000000 /* HealthDetailViewController.xib in Resources */,
+				344912200000000000000000 /* Main_GuardianController.xib in Resources */,
+				3FB384840000000000000000 /* Main_HealthController.xib in Resources */,
+				3C2277E60000000000000000 /* MyHealthViewController.xib in Resources */,
+				38916B480000000000000000 /* OtherHealthViewController.xib in Resources */,
+				35005EAA0000000000000000 /* HealthListTableViewCell.xib in Resources */,
+				316F520C0000000000000000 /* MyAlarmViewController.xib in Resources */,
+				2DDE456E0000000000000000 /* AlarmDetailViewController.xib in Resources */,
+				2A4D38D00000000000000000 /* AlarmLocationViewController.xib in Resources */,
+				26BC2C320000000000000000 /* AlarmListTableViewCell.xib in Resources */,
+				232B1F940000000000000000 /* OtherAlarmViewController.xib in Resources */,
+				1F9A12F60000000000000000 /* AlarmHandleCell.xib in Resources */,
+				1C0906580000000000000000 /* MyGuardianViewController.xib in Resources */,
+				1877F9BA0000000000000000 /* OtherGuardianViewController.xib in Resources */,
+				14E6ED1C0000000000000000 /* GuardianListCell.xib in Resources */,
+				1155E07E0000000000000000 /* GuardianDetailViewController.xib in Resources */,
+				DC4D3E000000000000000000 /* GuardianApplyViewController.xib in Resources */,
+				A33C74200000000000000000 /* BindGuardianViewController.xib in Resources */,
+				6A2BAA400000000000000000 /* BindGuardianTableViewCell.xib in Resources */,
+				311AE0600000000000000000 /* GuardianApplyTableViewCell.xib in Resources */,
+				3F80A1680000000000000000 /* AccountSecurityViewController.xib in Resources */,
+				3BEF94CA0000000000000000 /* AdviceViewController.xib in Resources */,
+				385E882C0000000000000000 /* PersonInfoViewController.xib in Resources */,
+				34CD7B8E0000000000000000 /* PersonInfoBirthViewController.xib in Resources */,
+				313C6EF00000000000000000 /* PersonInfoEmailViewController.xib in Resources */,
+				2DAB62520000000000000000 /* PersonInfoFixedPhoneViewController.xib in Resources */,
+				2A1A55B40000000000000000 /* PersonInfoGenderViewController.xib in Resources */,
+				268949160000000000000000 /* PersonInfoIdCardNoViewController.xib in Resources */,
+				22F83C780000000000000000 /* Main_MyController.xib in Resources */,
+				1F672FDA0000000000000000 /* MainMyTableViewCell.xib in Resources */,
+				1BD6233C0000000000000000 /* PersonInfoTableViewCell.xib in Resources */,
+				1845169E0000000000000000 /* PersonInfoCardLocationViewController.xib in Resources */,
+				14B40A000000000000000000 /* PersonInfoTrueNameViewController.xib in Resources */,
+				1122FD620000000000000000 /* RegisterViewController.xib in Resources */,
+				D91F0C400000000000000000 /* SendSecurityCodeController.xib in Resources */,
+				A00E42600000000000000000 /* SettingViewController.xib in Resources */,
+				66FD78800000000000000000 /* AdviceRecordViewController.xib in Resources */,
+				2DECAEA00000000000000000 /* AdviceRecordTableViewCell.xib in Resources */,
+				3F4DBE4C0000000000000000 /* AccountSecurityTableViewCell.xib in Resources */,
+				3BBCB1AE0000000000000000 /* WriteAdviceViewController.xib in Resources */,
+				382BA5100000000000000000 /* ServiceAgreeViewController.xib in Resources */,
+				349A98720000000000000000 /* RegisterResultViewController.xib in Resources */,
+				31098BD40000000000000000 /* SetPassWordViewController.xib in Resources */,
+				2D787F360000000000000000 /* AboutUsViewController.xib in Resources */,
+				29E772980000000000000000 /* SettingTableViewCell.xib in Resources */,
+				265665FA0000000000000000 /* Info.plist in Resources */,
+				22C5595C0000000000000000 /* Entitlements.plist in Resources */,
+				1F344CBE0000000000000000 /* guider1.png in Resources */,
+				1BA340200000000000000000 /* guider2.png in Resources */,
+				181233820000000000000000 /* guider3.png in Resources */,
+				148126E40000000000000000 /* guider4.png in Resources */,
+				10F01A460000000000000000 /* ic_launch.png in Resources */,
+				D5F0DA800000000000000000 /* error.png in Resources */,
+				9CE010A00000000000000000 /* error@2x.png in Resources */,
+				63CF46C00000000000000000 /* error_7.png in Resources */,
+				2ABE7CE00000000000000000 /* error_7@2x.png in Resources */,
+				3F1ADB300000000000000000 /* success.png in Resources */,
+				3B89CE920000000000000000 /* success@2x.png in Resources */,
+				37F8C1F40000000000000000 /* success_7.png in Resources */,
+				3467B5560000000000000000 /* success_7@2x.png in Resources */,
+				30D6A8B80000000000000000 /* uparrow.png in Resources */,
+				2D459C1A0000000000000000 /* ic_basicInformation.png in Resources */,
+				29B48F7C0000000000000000 /* ic_sex_man.png in Resources */,
+				262382DE0000000000000000 /* ic_sex_woman.png in Resources */,
+				229276400000000000000000 /* ic_medicalHistory.png in Resources */,
+				1F0169A20000000000000000 /* ic_myInfo_advision_jianyi.png in Resources */,
+				1B705D040000000000000000 /* ic_myInfo_advision_qita.png in Resources */,
+				17DF50660000000000000000 /* ic_myInfo_advision_tousu.png in Resources */,
+				144E43C80000000000000000 /* ic_myInfo_advision_zixun.png in Resources */,
+				10BD372A0000000000000000 /* ic_myInfomation_aboutUs.png in Resources */,
+				D2C2A8C00000000000000000 /* ic_myInfomation_accountSecurity.png in Resources */,
+				99B1DEE00000000000000000 /* ic_myInfomation_advice.png in Resources */,
+				60A115000000000000000000 /* ic_myInfomation_cacheRemover.png in Resources */,
+				27904B200000000000000000 /* ic_myInfomation_call.png in Resources */,
+				3EE7F8140000000000000000 /* ic_myInfomation_message.png in Resources */,
+				3B56EB760000000000000000 /* ic_myInfomation_personalData.png in Resources */,
+				37C5DED80000000000000000 /* ic_myInfomation_phone.png in Resources */,
+				3434D23A0000000000000000 /* ic_myInfomation_userName.png in Resources */,
+				30A3C59C0000000000000000 /* ic_myInfomation_versionDetection.png in Resources */,
+				2D12B8FE0000000000000000 /* myInfomation_headImage.png in Resources */,
+				2981AC600000000000000000 /* myInfomation_setup_aboutus_logo.png in Resources */,
+				25F09FC20000000000000000 /* setting.png in Resources */,
+				225F93240000000000000000 /* ic_login_eye_normal.png in Resources */,
+				1ECE86860000000000000000 /* ic_login_eye_selected.png in Resources */,
+				1B3D79E80000000000000000 /* ic_login_password.png in Resources */,
+				17AC6D4A0000000000000000 /* ic_login_username.png in Resources */,
+				108A540E0000000000000000 /* ic_register_combox_normal.png in Resources */,
+				CF9477000000000000000000 /* ic_register_combox_selected.png in Resources */,
+				9683AD200000000000000000 /* login_bg.png in Resources */,
+				5D72E3400000000000000000 /* PushConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31D518440000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB6A56C0000000000000000 /* AppDelegate.h in Sources */,
+				3A2598CE0000000000000000 /* AppDelegate.m in Sources */,
+				36948C300000000000000000 /* Main_HealthController.h in Sources */,
+				33037F920000000000000000 /* Main_HealthController.m in Sources */,
+				2F7272F40000000000000000 /* UserGuiderViewController.h in Sources */,
+				2BE166560000000000000000 /* UserGuiderViewController.m in Sources */,
+				285059B80000000000000000 /* LoginViewController.h in Sources */,
+				24BF4D1A0000000000000000 /* LoginViewController.m in Sources */,
+				212E407C0000000000000000 /* Main_AlarmController.h in Sources */,
+				1D9D33DE0000000000000000 /* Main_AlarmController.m in Sources */,
+				1A0C27400000000000000000 /* Main_GuardianController.h in Sources */,
+				167B1AA20000000000000000 /* Main_GuardianController.m in Sources */,
+				12EA0E040000000000000000 /* MyHealthViewController.h in Sources */,
+				F59016600000000000000000 /* MyHealthViewController.m in Sources */,
+				BC7F4C800000000000000000 /* OtherHealthViewController.h in Sources */,
+				836E82A00000000000000000 /* OtherHealthViewController.m in Sources */,
+				4A5DB8C00000000000000000 /* HealthListTableViewCell.h in Sources */,
+				114CEEE00000000000000000 /* HealthListTableViewCell.m in Sources */,
+				3D83C2500000000000000000 /* HealthDetailViewController.h in Sources */,
+				39F2B5B20000000000000000 /* HealthDetailViewController.m in Sources */,
+				3661A9140000000000000000 /* MyAlarmViewController.h in Sources */,
+				32D09C760000000000000000 /* MyAlarmViewController.m in Sources */,
+				2F3F8FD80000000000000000 /* OtherAlarmViewController.h in Sources */,
+				2BAE833A0000000000000000 /* OtherAlarmViewController.m in Sources */,
+				281D769C0000000000000000 /* AlarmLocationViewController.h in Sources */,
+				248C69FE0000000000000000 /* AlarmLocationViewController.m in Sources */,
+				20FB5D600000000000000000 /* AlarmListTableViewCell.h in Sources */,
+				1D6A50C20000000000000000 /* AlarmListTableViewCell.m in Sources */,
+				19D944240000000000000000 /* AlarmDetailViewController.h in Sources */,
+				164837860000000000000000 /* AlarmDetailViewController.m in Sources */,
+				12B72AE80000000000000000 /* AlarmHandleCell.h in Sources */,
+				F261E4A00000000000000000 /* AlarmHandleCell.m in Sources */,
+				B9511AC00000000000000000 /* MyGuardianViewController.h in Sources */,
+				804050E00000000000000000 /* MyGuardianViewController.m in Sources */,
+				472F87000000000000000000 /* OtherGuardianViewController.h in Sources */,
+				E1EBD2000000000000000000 /* OtherGuardianViewController.m in Sources */,
+				3D50DF340000000000000000 /* GuardianListCell.h in Sources */,
+				39BFD2960000000000000000 /* GuardianListCell.m in Sources */,
+				362EC5F80000000000000000 /* GuardianDetailViewController.h in Sources */,
+				329DB95A0000000000000000 /* GuardianDetailViewController.m in Sources */,
+				2F0CACBC0000000000000000 /* GuardianApplyViewController.h in Sources */,
+				2B7BA01E0000000000000000 /* GuardianApplyViewController.m in Sources */,
+				27EA93800000000000000000 /* BindGuardianViewController.h in Sources */,
+				245986E20000000000000000 /* BindGuardianViewController.m in Sources */,
+				20C87A440000000000000000 /* BindGuardianTableViewCell.h in Sources */,
+				1D376DA60000000000000000 /* BindGuardianTableViewCell.m in Sources */,
+				19A661080000000000000000 /* GuardianApplyTableViewCell.h in Sources */,
+				1615546A0000000000000000 /* GuardianApplyTableViewCell.m in Sources */,
+				128447CC0000000000000000 /* AccountSecurityViewController.h in Sources */,
+				EF33B2E00000000000000000 /* AccountSecurityViewController.m in Sources */,
+				B622E9000000000000000000 /* AdviceViewController.h in Sources */,
+				7D121F200000000000000000 /* AdviceViewController.m in Sources */,
+				440155400000000000000000 /* PersonInfoViewController.h in Sources */,
+				AF08B6000000000000000000 /* PersonInfoViewController.m in Sources */,
+				3D1DFC180000000000000000 /* PersonInfoBirthViewController.h in Sources */,
+				398CEF7A0000000000000000 /* PersonInfoBirthViewController.m in Sources */,
+				35FBE2DC0000000000000000 /* PersonInfoEmailViewController.h in Sources */,
+				326AD63E0000000000000000 /* PersonInfoEmailViewController.m in Sources */,
+				2ED9C9A00000000000000000 /* PersonInfoFixedPhoneViewController.h in Sources */,
+				2B48BD020000000000000000 /* PersonInfoFixedPhoneViewController.m in Sources */,
+				27B7B0640000000000000000 /* PersonInfoGenderViewController.h in Sources */,
+				2426A3C60000000000000000 /* PersonInfoGenderViewController.m in Sources */,
+				209597280000000000000000 /* PersonInfoIdCardNoViewController.h in Sources */,
+				1D048A8A0000000000000000 /* PersonInfoIdCardNoViewController.m in Sources */,
+				19737DEC0000000000000000 /* MainMyTableViewCell.h in Sources */,
+				15E2714E0000000000000000 /* MainMyTableViewCell.m in Sources */,
+				125164B00000000000000000 /* PersonInfoTableViewCell.h in Sources */,
+				EC0581200000000000000000 /* PersonInfoTableViewCell.m in Sources */,
+				B2F4B7400000000000000000 /* Main_MyController.h in Sources */,
+				79E3ED600000000000000000 /* Main_MyController.m in Sources */,
+				40D323800000000000000000 /* PersonInfoCardLocationViewController.h in Sources */,
+				7C259A000000000000000000 /* PersonInfoCardLocationViewController.m in Sources */,
+				3CEB18FC0000000000000000 /* PersonInfoTrueNameViewController.h in Sources */,
+				395A0C5E0000000000000000 /* PersonInfoTrueNameViewController.m in Sources */,
+				35C8FFC00000000000000000 /* RegisterViewController.h in Sources */,
+				3237F3220000000000000000 /* RegisterViewController.m in Sources */,
+				2EA6E6840000000000000000 /* SendSecurityCodeController.h in Sources */,
+				2B15D9E60000000000000000 /* SendSecurityCodeController.m in Sources */,
+				2784CD480000000000000000 /* SettingViewController.h in Sources */,
+				23F3C0AA0000000000000000 /* SettingViewController.m in Sources */,
+				2062B40C0000000000000000 /* AdviceRecordViewController.h in Sources */,
+				1CD1A76E0000000000000000 /* AdviceRecordViewController.m in Sources */,
+				19409AD00000000000000000 /* AdviceRecordTableViewCell.h in Sources */,
+				15AF8E320000000000000000 /* AdviceRecordTableViewCell.m in Sources */,
+				121E81940000000000000000 /* AccountSecurityTableViewCell.h in Sources */,
+				E8D74F600000000000000000 /* AccountSecurityTableViewCell.m in Sources */,
+				AFC685800000000000000000 /* WriteAdviceViewController.h in Sources */,
+				76B5BBA00000000000000000 /* WriteAdviceViewController.m in Sources */,
+				3DA4F1C00000000000000000 /* ServiceAgreeViewController.h in Sources */,
+				49427E000000000000000000 /* ServiceAgreeViewController.m in Sources */,
+				3CB835E00000000000000000 /* RegisterResultViewController.h in Sources */,
+				392729420000000000000000 /* RegisterResultViewController.m in Sources */,
+				35961CA40000000000000000 /* SetPassWordViewController.h in Sources */,
+				320510060000000000000000 /* SetPassWordViewController.m in Sources */,
+				2E7403680000000000000000 /* AboutUsViewController.h in Sources */,
+				2AE2F6CA0000000000000000 /* AboutUsViewController.m in Sources */,
+				2751EA2C0000000000000000 /* SettingTableViewCell.h in Sources */,
+				23C0DD8E0000000000000000 /* SettingTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A8FC7400000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = MonoTouch;
+		};
+		213ACF500000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				PRODUCT_NAME = "lelaozu-Iphone";
+				WRAPPER_EXTENSION = app;
+			};
+			name = MonoTouch;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		170773900000000000000000 /* Build configuration list for PBXProject "lelaozu-Iphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A8FC7400000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+		3720E51E0000000000000000 /* Build configuration list for PBXNativeTarget "lelaozu-Iphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				213ACF500000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 32DFD45C0000000000000000 /* Project object */;
+}
