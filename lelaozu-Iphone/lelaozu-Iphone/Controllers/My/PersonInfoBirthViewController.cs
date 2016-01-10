@@ -21,6 +21,7 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "生日";
+			scrollView.Frame = Constants.Screen_Frame;
 			txt_birth.Text = FormatUtil.StrToShortData(Constants.MyInfo.Age);
 			//set the time
 			txt_birth.ShouldBeginEditing = (textField) => {
@@ -51,6 +52,7 @@ namespace lelaozuIphone
 			{
 				Save();
 			};
+			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 		}
 
 		public override void DidReceiveMemoryWarning ()

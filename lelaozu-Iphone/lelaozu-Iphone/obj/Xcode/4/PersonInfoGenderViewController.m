@@ -10,6 +10,7 @@
 @implementation PersonInfoGenderViewController
 
 @synthesize btn_save = _btn_save;
+@synthesize scrollView = _scrollView;
 @synthesize txt_gender = _txt_gender;
 
 @end

@@ -11,10 +11,13 @@
 
 @interface PersonInfoGenderViewController : UIViewController {
 	UIButton *_btn_save;
+	UIScrollView *_scrollView;
 	UITextField *_txt_gender;
 }
 
 @property (nonatomic, retain) IBOutlet UIButton *btn_save;
+
+@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 
 @property (nonatomic, retain) IBOutlet UITextField *txt_gender;
 

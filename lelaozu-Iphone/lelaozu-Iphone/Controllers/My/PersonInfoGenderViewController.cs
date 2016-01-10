@@ -21,6 +21,7 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "性别";
+			scrollView.Frame = Constants.Screen_Frame;
 			var genderValue = FormatUtil.StrVaueFormat (Constants.MyInfo.Gender);
 			genderId = !string.IsNullOrEmpty (genderValue) ? genderValue : "1";
 			txt_gender.Text = genderValue.Equals ("0") ? "男" : "女";
@@ -30,6 +31,7 @@ namespace lelaozuIphone
 			{
 				Save();
 			};
+			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 		}
 
 		private void InitGenderPicker()

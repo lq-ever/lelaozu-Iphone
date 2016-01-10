@@ -10,6 +10,7 @@
 @implementation PersonInfoBirthViewController
 
 @synthesize btn_save = _btn_save;
+@synthesize scrollView = _scrollView;
 @synthesize txt_birth = _txt_birth;
 
 @end

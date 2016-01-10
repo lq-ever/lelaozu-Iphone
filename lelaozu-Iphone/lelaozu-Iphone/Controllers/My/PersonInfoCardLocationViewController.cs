@@ -18,6 +18,8 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "身份证所在地";
+			scrollView.Frame = Constants.Screen_Frame;
+
 			txt_idCardLocation.Text = FormatUtil.StrVaueFormat (Constants.MyInfo.IDAddress); 
 
 			txt_idCardLocation.KeyboardType = UIKeyboardType.Default;
@@ -33,6 +35,7 @@ namespace lelaozuIphone
 				txt_idCardLocation.ResignFirstResponder();
 				Save();
 			};
+			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 		}
 
 		/// <summary>

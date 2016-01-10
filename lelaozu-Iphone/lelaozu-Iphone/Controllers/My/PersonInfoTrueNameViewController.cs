@@ -18,6 +18,7 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title ="真实姓名";
+			scrollView.Frame = Constants.Screen_Frame;
 			txt_trueName.Text = FormatUtil.StrVaueFormat (Constants.MyInfo.TrueName);
 			txt_trueName.ReturnKeyType = UIReturnKeyType.Done;
 			txt_trueName.ShouldReturn = (textField) => {
@@ -30,6 +31,7 @@ namespace lelaozuIphone
 				txt_trueName.ResignFirstResponder();
 				Save();
 			};
+			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 		}
 
 

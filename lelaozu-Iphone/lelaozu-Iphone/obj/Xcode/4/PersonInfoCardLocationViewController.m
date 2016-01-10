@@ -10,6 +10,7 @@
 @implementation PersonInfoCardLocationViewController
 
 @synthesize btn_save = _btn_save;
+@synthesize scrollView = _scrollView;
 @synthesize txt_idCardLocation = _txt_idCardLocation;
 
 @end

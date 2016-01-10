@@ -10,6 +10,7 @@
 @implementation PersonInfoEmailViewController
 
 @synthesize btn_save = _btn_save;
+@synthesize scrollView = _scrollView;
 @synthesize txt_email = _txt_email;
 
 @end

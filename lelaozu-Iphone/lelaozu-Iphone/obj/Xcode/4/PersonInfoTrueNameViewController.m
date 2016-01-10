@@ -10,6 +10,7 @@
 @implementation PersonInfoTrueNameViewController
 
 @synthesize btn_save = _btn_save;
+@synthesize scrollView = _scrollView;
 @synthesize txt_trueName = _txt_trueName;
 
 @end
