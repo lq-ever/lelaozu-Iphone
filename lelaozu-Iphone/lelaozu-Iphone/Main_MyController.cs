@@ -24,6 +24,7 @@ namespace lelaozuIphone
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+			scrollview.Frame = Constants.Screen_Frame;
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "我的";
 			this.NavigationController.NavigationBar.BarTintColor = Color.Blue;
@@ -96,7 +97,7 @@ namespace lelaozuIphone
 			sectionTwoList.Add (new MainMyItem (){ ImagPath ="ic_myInfomation_advice",Title="投诉建议",FuncType = FuncType.Advice});
 
 			tableView.Source = new mainMySource (this);
-			scrollview.ContentSize = new CGSize (Constants.Screen_Width,scrollview.Frame.Height+10);
+			scrollview.ContentSize = new CGSize (scrollview.Frame.Width,scrollview.Frame.Height+10);
 			//赋值
 			SetShowInfo ();
 

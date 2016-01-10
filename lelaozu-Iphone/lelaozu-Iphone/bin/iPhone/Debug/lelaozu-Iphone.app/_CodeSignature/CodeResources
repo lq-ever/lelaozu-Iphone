@@ -118,11 +118,11 @@
 		</data>
 		<key>.monotouch-64/lelaozu-Iphone.exe</key>
 		<data>
-		XC5gSsiAZgYp3PhZZBucfuRHHsc=
+		cOGSNhuyph9vR1rR8KMbL3oWKpw=
 		</data>
 		<key>.monotouch-64/lelaozu-Iphone.exe.mdb</key>
 		<data>
-		x8b2EVu5F8opCMjpW8JfMl2B9Rc=
+		dG82BuYkb/Yq69JCVDqI00hT3S8=
 		</data>
 		<key>.monotouch-64/mscorlib.dll</key>
 		<data>
@@ -158,7 +158,7 @@
 		</data>
 		<key>AlarmDetailViewController.nib</key>
 		<data>
-		5grDBlbFO52djX6Dn7CrMVXAXuo=
+		UZjV70a/RAL42uskO0x8a5wPFEw=
 		</data>
 		<key>AlarmHandleCell.nib</key>
 		<data>
@@ -214,7 +214,7 @@
 		</data>
 		<key>GuardianDetailViewController.nib</key>
 		<data>
-		PeNyuYILIjUwWJHgu8Hy4DaAMBU=
+		HpcwJfztDz1hFN4T63Bv1UnsqVo=
 		</data>
 		<key>GuardianListCell.nib</key>
 		<data>
@@ -222,7 +222,7 @@
 		</data>
 		<key>HealthDetailViewController.nib</key>
 		<data>
-		gPXJHd/RVc5NOEyCQNco39N0gFE=
+		2//mXUpaYJk38GmDTAAExXqJQE8=
 		</data>
 		<key>HealthListTableViewCell.nib</key>
 		<data>
@@ -250,7 +250,7 @@
 		</data>
 		<key>LoginViewController.nib</key>
 		<data>
-		d75T0Q8/+PzFvVXtSn2q6Bp034k=
+		pxA57K/C1xWakpAMmz+zvgsuy+k=
 		</data>
 		<key>MainMyTableViewCell.nib</key>
 		<data>
@@ -258,7 +258,7 @@
 		</data>
 		<key>Main_AlarmController.nib</key>
 		<data>
-		zVznVKy8drzmsP1kHMhDc3HTAOI=
+		SHayCjWVad5uOPQC9I1IVyeqlnM=
 		</data>
 		<key>Main_GuardianController.nib</key>
 		<data>
@@ -266,11 +266,11 @@
 		</data>
 		<key>Main_HealthController.nib</key>
 		<data>
-		AJmaKJiI8ULdSrwTlr+qJelxDs4=
+		BSZZFmAKwnuGihnniP62VS8w5UA=
 		</data>
 		<key>Main_MyController.nib</key>
 		<data>
-		VV/UIaWVNRK26U7fQHKFGcZjLr8=
+		4ov8JHaltNloQawpGTHNqa8oh1Q=
 		</data>
 		<key>MonoTouchDebugConfiguration.txt</key>
 		<data>
@@ -286,7 +286,7 @@
 		</data>
 		<key>MyHealthViewController.nib</key>
 		<data>
-		Udpg2c1/YnqjC0Nvb/DjprlMFVw=
+		KC3AHtPniHWIztlqpecN9kWgYcg=
 		</data>
 		<key>NOTICE</key>
 		<data>
@@ -350,15 +350,15 @@
 		</data>
 		<key>RegisterResultViewController.nib</key>
 		<data>
-		PjMXl7/QNn8vf0KjWbt6+TFo8k8=
+		n+VyzK7IAZZr8padPv31WTE6iyw=
 		</data>
 		<key>RegisterViewController.nib</key>
 		<data>
-		XkBCS/QLGsmGmmdScez2JxyrZds=
+		k+t7XE+178rBhlzPyBcNs6Zh6Ys=
 		</data>
 		<key>SendSecurityCodeController.nib</key>
 		<data>
-		zaAsdNtKrRfhAkuJDVhSsfvfcx8=
+		eb0N0WdH43Kv8otKI9acmxcj4CM=
 		</data>
 		<key>ServiceAgreeViewController.nib</key>
 		<data>
@@ -374,7 +374,7 @@
 		</data>
 		<key>SettingViewController.nib</key>
 		<data>
-		kcpJEoBC0dq/6sD52gANdS1Thvw=
+		vP0V2ka5u51cueXomZR0ferwCyE=
 		</data>
 		<key>Settings.bundle/Root.plist</key>
 		<data>
@@ -791,11 +791,11 @@
 		</data>
 		<key>.monotouch-64/lelaozu-Iphone.exe</key>
 		<data>
-		XC5gSsiAZgYp3PhZZBucfuRHHsc=
+		cOGSNhuyph9vR1rR8KMbL3oWKpw=
 		</data>
 		<key>.monotouch-64/lelaozu-Iphone.exe.mdb</key>
 		<data>
-		x8b2EVu5F8opCMjpW8JfMl2B9Rc=
+		dG82BuYkb/Yq69JCVDqI00hT3S8=
 		</data>
 		<key>.monotouch-64/mscorlib.dll</key>
 		<data>
@@ -831,7 +831,7 @@
 		</data>
 		<key>AlarmDetailViewController.nib</key>
 		<data>
-		5grDBlbFO52djX6Dn7CrMVXAXuo=
+		UZjV70a/RAL42uskO0x8a5wPFEw=
 		</data>
 		<key>AlarmHandleCell.nib</key>
 		<data>
@@ -887,7 +887,7 @@
 		</data>
 		<key>GuardianDetailViewController.nib</key>
 		<data>
-		PeNyuYILIjUwWJHgu8Hy4DaAMBU=
+		HpcwJfztDz1hFN4T63Bv1UnsqVo=
 		</data>
 		<key>GuardianListCell.nib</key>
 		<data>
@@ -895,7 +895,7 @@
 		</data>
 		<key>HealthDetailViewController.nib</key>
 		<data>
-		gPXJHd/RVc5NOEyCQNco39N0gFE=
+		2//mXUpaYJk38GmDTAAExXqJQE8=
 		</data>
 		<key>HealthListTableViewCell.nib</key>
 		<data>
@@ -919,7 +919,7 @@
 		</data>
 		<key>LoginViewController.nib</key>
 		<data>
-		d75T0Q8/+PzFvVXtSn2q6Bp034k=
+		pxA57K/C1xWakpAMmz+zvgsuy+k=
 		</data>
 		<key>MainMyTableViewCell.nib</key>
 		<data>
@@ -927,7 +927,7 @@
 		</data>
 		<key>Main_AlarmController.nib</key>
 		<data>
-		zVznVKy8drzmsP1kHMhDc3HTAOI=
+		SHayCjWVad5uOPQC9I1IVyeqlnM=
 		</data>
 		<key>Main_GuardianController.nib</key>
 		<data>
@@ -935,11 +935,11 @@
 		</data>
 		<key>Main_HealthController.nib</key>
 		<data>
-		AJmaKJiI8ULdSrwTlr+qJelxDs4=
+		BSZZFmAKwnuGihnniP62VS8w5UA=
 		</data>
 		<key>Main_MyController.nib</key>
 		<data>
-		VV/UIaWVNRK26U7fQHKFGcZjLr8=
+		4ov8JHaltNloQawpGTHNqa8oh1Q=
 		</data>
 		<key>MonoTouchDebugConfiguration.txt</key>
 		<data>
@@ -955,7 +955,7 @@
 		</data>
 		<key>MyHealthViewController.nib</key>
 		<data>
-		Udpg2c1/YnqjC0Nvb/DjprlMFVw=
+		KC3AHtPniHWIztlqpecN9kWgYcg=
 		</data>
 		<key>NOTICE</key>
 		<data>
@@ -1015,15 +1015,15 @@
 		</data>
 		<key>RegisterResultViewController.nib</key>
 		<data>
-		PjMXl7/QNn8vf0KjWbt6+TFo8k8=
+		n+VyzK7IAZZr8padPv31WTE6iyw=
 		</data>
 		<key>RegisterViewController.nib</key>
 		<data>
-		XkBCS/QLGsmGmmdScez2JxyrZds=
+		k+t7XE+178rBhlzPyBcNs6Zh6Ys=
 		</data>
 		<key>SendSecurityCodeController.nib</key>
 		<data>
-		zaAsdNtKrRfhAkuJDVhSsfvfcx8=
+		eb0N0WdH43Kv8otKI9acmxcj4CM=
 		</data>
 		<key>ServiceAgreeViewController.nib</key>
 		<data>
@@ -1039,7 +1039,7 @@
 		</data>
 		<key>SettingViewController.nib</key>
 		<data>
-		kcpJEoBC0dq/6sD52gANdS1Thvw=
+		vP0V2ka5u51cueXomZR0ferwCyE=
 		</data>
 		<key>Settings.bundle/Root.plist</key>
 		<data>

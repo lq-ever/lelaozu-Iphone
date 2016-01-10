@@ -23,6 +23,7 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title ="设置";
+			scrollView.Frame = Constants.Screen_Frame;
 			tableView.Frame = new CoreGraphics.CGRect(tableView.Frame.X, tableView.Frame.Y, tableView.Frame.Width, 160);
 			tableView.Source = new SettingSource (this);
 
