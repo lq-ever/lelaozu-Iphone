@@ -20,6 +20,10 @@ namespace lelaozuIphone
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIScrollView scrollView { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField txt_fixedphoneLast { get; set; }
 
 		[Outlet]
@@ -31,6 +35,10 @@ namespace lelaozuIphone
 			if (btn_save != null) {
 				btn_save.Dispose ();
 				btn_save = null;
+			}
+			if (scrollView != null) {
+				scrollView.Dispose ();
+				scrollView = null;
 			}
 			if (txt_fixedphoneLast != null) {
 				txt_fixedphoneLast.Dispose ();

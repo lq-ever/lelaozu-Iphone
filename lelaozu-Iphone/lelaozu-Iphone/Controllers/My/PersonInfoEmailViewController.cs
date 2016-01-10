@@ -19,6 +19,7 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "电子邮箱";
+			scrollView.Frame = Constants.Screen_Frame;
 			//电子邮箱
 			txt_email.Text = FormatUtil.StrVaueFormat(Constants.MyInfo.Email);
 
@@ -33,7 +34,7 @@ namespace lelaozuIphone
 				txt_email.ResignFirstResponder();
 				Save();
 			};
-
+			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 		}
 
 		/// <summary>

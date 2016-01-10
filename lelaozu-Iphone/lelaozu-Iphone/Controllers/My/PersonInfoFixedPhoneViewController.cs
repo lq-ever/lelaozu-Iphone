@@ -18,8 +18,8 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "固定电话";
+			scrollView.Frame = Constants.Screen_Frame;
 			//固定电话
-
 			if (string.IsNullOrEmpty (Constants.MyInfo.TelePhoneNumber)) {
 				txt_fixedphonePre.Text = string.Empty;
 				txt_fixedphoneLast.Text = string.Empty;
@@ -53,6 +53,7 @@ namespace lelaozuIphone
 				txt_fixedphoneLast.ResignFirstResponder();
 				Save();
 			};
+			scrollView.ContentSize = new CoreGraphics.CGSize (scrollView.Frame.Width, scrollView.Frame.Height + 10);
 		}
 		/// <summary>
 		/// 保存
