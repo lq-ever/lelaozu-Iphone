@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonInfoGenderViewController">
+            <connections>
+                <outlet property="btn_save" destination="6" id="name-outlet-6"/>
+                <outlet property="scrollView" destination="9" id="name-outlet-9"/>
+                <outlet property="txt_gender" destination="5" id="name-outlet-5"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9">
+                    <rect key="frame" x="-1" y="-1" width="376" height="668"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6">
+                            <rect key="frame" x="44" y="312" width="288" height="44"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.0" green="0.74901960784313726" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="jgs-wX-B9z"/>
+                            </constraints>
+                            <state key="normal" title="保存">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="性别" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                            <rect key="frame" x="25" y="66" width="327" height="30"/>
+                            <animations/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <animations/>
+                    <constraints>
+                        <constraint firstItem="5" firstAttribute="top" secondItem="9" secondAttribute="top" constant="66" id="4xP-k8-nlI"/>
+                        <constraint firstItem="5" firstAttribute="centerX" secondItem="6" secondAttribute="centerX" id="ETk-OG-Vfd"/>
+                        <constraint firstItem="6" firstAttribute="leading" secondItem="9" secondAttribute="leading" constant="44" id="X5E-fR-Euo"/>
+                        <constraint firstAttribute="bottom" secondItem="6" secondAttribute="bottom" constant="312" id="b80-1c-SwL"/>
+                        <constraint firstItem="6" firstAttribute="centerX" secondItem="9" secondAttribute="centerX" id="grs-DO-sho"/>
+                        <constraint firstItem="5" firstAttribute="leading" secondItem="9" secondAttribute="leading" constant="25" id="lhJ-9h-gu7"/>
+                        <constraint firstItem="6" firstAttribute="centerY" secondItem="9" secondAttribute="centerY" id="nRh-oL-6Bh"/>
+                        <constraint firstAttribute="trailing" secondItem="5" secondAttribute="trailing" constant="24" id="ugr-yr-92J"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="9" firstAttribute="centerY" secondItem="2" secondAttribute="centerY" id="9FO-8L-hBv"/>
+                <constraint firstAttribute="bottom" secondItem="9" secondAttribute="bottom" id="BHy-IE-NRd"/>
+                <constraint firstAttribute="trailing" secondItem="9" secondAttribute="trailing" id="HeI-Ij-UO5"/>
+                <constraint firstItem="9" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="PDx-yC-VKL"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>

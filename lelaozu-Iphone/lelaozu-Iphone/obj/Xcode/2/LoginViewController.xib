@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
+            <connections>
+                <outlet property="btn_Login" destination="10" id="name-outlet-10"/>
+                <outlet property="btn_forgetPwd" destination="14" id="name-outlet-14"/>
+                <outlet property="btn_register" destination="13" id="name-outlet-13"/>
+                <outlet property="cb_password" destination="17" id="name-outlet-17"/>
+                <outlet property="scrollView" destination="21" id="name-outlet-21"/>
+                <outlet property="txt_Password" destination="8" id="name-outlet-8"/>
+                <outlet property="txt_Username" destination="7" id="name-outlet-7"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名或邮箱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7">
+                            <rect key="frame" x="36" y="326" width="302" height="30"/>
+                            <animations/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                            <rect key="frame" x="36" y="382" width="302" height="30"/>
+                            <animations/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="记住密码" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="18">
+                            <rect key="frame" x="65" y="471" width="83" height="21"/>
+                            <animations/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="83" id="VXG-Rb-3rt"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17">
+                            <rect key="frame" x="36" y="471" width="21" height="21"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="21" id="JOf-HU-iak"/>
+                                <constraint firstAttribute="height" constant="21" id="QYW-Bz-pkI"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="ic_register_combox_selected.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10">
+                            <rect key="frame" x="36" y="500" width="302" height="44"/>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="8ER-R8-l0x"/>
+                            </constraints>
+                            <state key="normal" title="登 录">
+                                <color key="titleColor" red="0.015686274509803921" green="0.64313725490196083" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14">
+                            <rect key="frame" x="36" y="552" width="91" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="91" id="FUB-EP-ddJ"/>
+                            </constraints>
+                            <state key="normal" title="忘记密码">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13">
+                            <rect key="frame" x="244" y="552" width="90" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="90" id="ohJ-v2-9V8"/>
+                            </constraints>
+                            <state key="normal" title="注册">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <constraints>
+                        <constraint firstItem="10" firstAttribute="top" secondItem="17" secondAttribute="bottom" constant="8" symbolic="YES" id="3Nw-dQ-XZY"/>
+                        <constraint firstItem="7" firstAttribute="leading" secondItem="21" secondAttribute="leading" constant="36" id="5iF-Jw-Rct"/>
+                        <constraint firstItem="17" firstAttribute="top" secondItem="18" secondAttribute="top" id="8cv-yq-5bk"/>
+                        <constraint firstItem="7" firstAttribute="top" secondItem="21" secondAttribute="top" constant="326" id="ASa-5K-ztS"/>
+                        <constraint firstItem="17" firstAttribute="leading" secondItem="10" secondAttribute="leading" id="BKr-qn-nSY"/>
+                        <constraint firstItem="7" firstAttribute="trailing" secondItem="8" secondAttribute="trailing" id="EY6-t9-dBg"/>
+                        <constraint firstAttribute="trailing" secondItem="7" secondAttribute="trailing" constant="37" id="Jea-Vg-qvh"/>
+                        <constraint firstItem="14" firstAttribute="baseline" secondItem="13" secondAttribute="baseline" id="NGf-jD-4Yu"/>
+                        <constraint firstAttribute="bottom" secondItem="14" secondAttribute="bottom" constant="85" id="Wmb-13-OuB"/>
+                        <constraint firstItem="17" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="59" id="ZBw-ao-Tur"/>
+                        <constraint firstItem="14" firstAttribute="top" secondItem="10" secondAttribute="bottom" constant="8" symbolic="YES" id="drw-v4-U4t"/>
+                        <constraint firstItem="17" firstAttribute="leading" secondItem="8" secondAttribute="leading" id="gIL-wO-QlT"/>
+                        <constraint firstItem="8" firstAttribute="top" secondItem="7" secondAttribute="bottom" constant="26" id="heP-Dl-xmL"/>
+                        <constraint firstItem="8" firstAttribute="leading" secondItem="7" secondAttribute="leading" id="jc4-oT-RUP"/>
+                        <constraint firstItem="8" firstAttribute="trailing" secondItem="10" secondAttribute="trailing" id="jnS-1O-9Hq"/>
+                        <constraint firstAttribute="trailing" secondItem="13" secondAttribute="trailing" constant="41" id="kum-YQ-BLy"/>
+                        <constraint firstItem="10" firstAttribute="leading" secondItem="14" secondAttribute="leading" id="lej-qM-WrO"/>
+                        <constraint firstItem="18" firstAttribute="leading" secondItem="17" secondAttribute="trailing" constant="8" symbolic="YES" id="wUG-Fq-4ID"/>
+                        <constraint firstItem="10" firstAttribute="centerX" secondItem="21" secondAttribute="centerX" id="xct-kr-2y7"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <animations/>
+            <constraints>
+                <constraint firstItem="21" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="CFi-8H-30X"/>
+                <constraint firstAttribute="trailing" secondItem="21" secondAttribute="trailing" id="KlP-yb-zQS"/>
+                <constraint firstAttribute="bottom" secondItem="21" secondAttribute="bottom" id="LNF-Ex-Dp4"/>
+                <constraint firstItem="21" firstAttribute="top" secondItem="2" secondAttribute="top" id="jtn-Sa-Vju"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_register_combox_selected.png" width="42" height="42"/>
+    </resources>
+</document>

@@ -36,11 +36,11 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="9" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="ic_basicInformation.png">
-                                    <rect key="frame" x="10" y="10" width="24" height="21"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="9" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="ic_basicinformation">
+                                    <rect key="frame" x="10" y="13" width="16" height="14"/>
                                 </imageView>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="警情详情" lineBreakMode="tailTruncation" minimumFontSize="10" id="10" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                    <rect key="frame" x="50" y="6" width="154" height="30"/>
+                                    <rect key="frame" x="45" y="6" width="154" height="30"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
@@ -234,11 +234,11 @@
                             <rect key="frame" x="0.0" y="385" width="375" height="43"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="46" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="ic_basicInformation.png">
-                                    <rect key="frame" x="10" y="10" width="24" height="21"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="46" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="ic_basicinformation">
+                                    <rect key="frame" x="10" y="15" width="16" height="14"/>
                                 </imageView>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="处理警情详情" lineBreakMode="tailTruncation" minimumFontSize="10" id="47" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                    <rect key="frame" x="50" y="6" width="154" height="30"/>
+                                    <rect key="frame" x="48" y="7" width="154" height="30"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
@@ -311,5 +311,8 @@
         <image name="ic_register_combox_normal.png" width="42" height="42"/>
         <image name="ic_register_combox_selected.png" width="42" height="42"/>
         <image name="login_bg.png" width="1080" height="1920"/>
+        <image name="login_bg" width="320" height="480"/>
+        <image name="ic_search" width="14" height="14"/>
+        <image name="ic_basicinformation" width="16" height="14"/>
     </resources>
 </document>

@@ -146,6 +146,10 @@
     <ImageAsset Include="Resources\Images.xcassets\ic_search.imageset\ic_search%403x.png" />
     <ImageAsset Include="Resources\Images.xcassets\ic_search.imageset\ic_search%402x.png" />
     <ImageAsset Include="Resources\Images.xcassets\ic_search.imageset\ic_search.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_basicinformation.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_basicinformation.imageset\ic_basicInformation.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_basicinformation.imageset\ic_basicInformation%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ic_basicinformation.imageset\ic_basicInformation%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="UserGuiderViewController.xib" />
@@ -521,7 +525,6 @@
     <BundleResource Include="Resources\success_7.png" />
     <BundleResource Include="Resources\success_7%402x.png" />
     <BundleResource Include="Resources\uparrow.png" />
-    <BundleResource Include="Resources\ic_basicInformation.png" />
     <BundleResource Include="Resources\ic_sex_man.png" />
     <BundleResource Include="Resources\ic_sex_woman.png" />
     <BundleResource Include="Resources\ic_medicalHistory.png" />
@@ -548,7 +551,6 @@
     <BundleResource Include="Resources\ic_login_username.png" />
     <BundleResource Include="Resources\ic_register_combox_normal.png" />
     <BundleResource Include="Resources\ic_register_combox_selected.png" />
-    <BundleResource Include="Resources\login_bg.png" />
     <BundleResource Include="PushConfig.plist" />
   </ItemGroup>
   <ItemGroup>

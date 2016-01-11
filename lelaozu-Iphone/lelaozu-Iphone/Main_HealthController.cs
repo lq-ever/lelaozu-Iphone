@@ -49,7 +49,7 @@ namespace lelaozuIphone
 		{
 
 			health_Segment.ControlStyle = UISegmentedControlStyle.Bordered;
-			health_Segment.Frame = new CoreGraphics.CGRect (5, 5, Constants.Screen_Frame.Width - 10, 60);
+			//health_Segment.Frame = new CoreGraphics.CGRect (5, 5, Constants.Screen_Frame.Width - 10, 60);
 			health_Segment.SelectedSegment = 0;
 			health_Segment.TintColor = Color.Blue;
 			var textselectAttributes = new UITextAttributes ();
