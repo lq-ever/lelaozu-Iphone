@@ -130,8 +130,6 @@ namespace lelaozuIphone
 			};
 			tableView.SetFooter (footer);
 
-
-
 			InitAlarmTypePicker();
 			InitUserPicker ();
 
