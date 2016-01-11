@@ -26,6 +26,7 @@ namespace lelaozuIphone
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.NavigationItem.Title = "报警详情";
+			alarmScrollView.Frame = Constants.Screen_Frame;
 			btn_viewMap.BackgroundColor = Color.Blue;
 			btn_viewMap.Hidden = true;
 			btn_viewMap.TouchUpInside += (object sender, EventArgs e) => 
@@ -41,7 +42,7 @@ namespace lelaozuIphone
 				loadData ();
 			}
 			alarmScrollView.BackgroundColor = Color.BgGray;
-			alarmScrollView.ContentSize = new CGSize (Constants.Screen_Frame.Size.Width, Constants.Screen_Frame.Size.Height + 10);
+			alarmScrollView.ContentSize = new CGSize (alarmScrollView.Frame.Width, alarmScrollView.Frame.Height + 10);
 		}
 
 		private void loadData()
