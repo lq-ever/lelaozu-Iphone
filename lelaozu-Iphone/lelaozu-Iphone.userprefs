@@ -1,9 +1,8 @@
 ﻿<Properties StartupItem="lelaozu-Iphone/lelaozu-Iphone.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.9.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/Controllers/Health/HealthDetailViewController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6sPlus.9.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="lelaozu-Iphone/AboutUsViewController.cs">
     <Files>
-      <File FileName="lelaozu-Iphone/Controllers/Alarm/AlarmDetailViewController.cs" Line="1" Column="1" />
-      <File FileName="lelaozu-Iphone/Controllers/Health/HealthDetailViewController.cs" Line="1" Column="1" />
+      <File FileName="lelaozu-Iphone/AboutUsViewController.cs" Line="16" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

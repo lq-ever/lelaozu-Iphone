@@ -101,7 +101,7 @@ namespace lelaozuIphone
 			alarmSource = new AlarmTableSource (alarmInfoLists, this, tableView);
 			tableView.Source = alarmSource;
 			//search
-			btn_search.BackgroundColor = Color.Blue;
+			//btn_search.BackgroundColor = Color.Blue;
 			btn_search.TouchUpInside += (object sender, EventArgs e) => 
 			{
 				btnSearchFlag = true;

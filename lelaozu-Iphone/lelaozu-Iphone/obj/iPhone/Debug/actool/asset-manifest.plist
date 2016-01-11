@@ -75,6 +75,18 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
+				<string>./AppIcons.appiconset/[ipad][83.5x83.5][][][2x][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/Resources/Images.xcassets</string>
+			<key>message</key>
+			<string>The app icon set "AppIcons" has an unassigned child.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
 				<string>./LaunchImages.launchimage/[ipad][][2x][landscape][full-screen][9.0][2d][(null)]</string>
 				<string>./LaunchImages.launchimage/[ipad][][2x][portrait][full-screen][9.0][2d][(null)]</string>
 			</array>
@@ -82,18 +94,6 @@
 			<string>/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/Resources/Images.xcassets</string>
 			<key>message</key>
 			<string>The launch image set "LaunchImages" has 2 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./AppIcons.appiconset/[ipad][83.5x83.5][][][2x][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/shuoyang/Projects/lelaozu-Iphone/lelaozu-Iphone/lelaozu-Iphone/Resources/Images.xcassets</string>
-			<key>message</key>
-			<string>The app icon set "AppIcons" has an unassigned child.</string>
 			<key>type</key>
 			<string>Ambiguous Content</string>
 		</dict>
